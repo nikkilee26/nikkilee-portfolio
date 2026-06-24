@@ -1,0 +1,828 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sorcea Labs — Nikki Lee</title>
+    <meta
+      name="description"
+      content="Sorcea Labs case study by Nikki Lee, UI/UX Designer."
+    />
+    <meta name="theme-color" content="#f7f2df" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script defer src="../script.js"></script>
+  </head>
+  <body class="case-page sorcea-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <header class="site-header" data-header>
+      <nav class="nav shell" aria-label="Main navigation">
+        <a class="brand" href="../index.html" aria-label="Nikki Lee home"
+          >nikki lee</a
+        >
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-menu"
+          data-nav-toggle
+        >
+          <span class="nav-toggle-line" aria-hidden="true"></span>
+          <span class="sr-only">Open menu</span>
+        </button>
+
+        <div class="nav-pill" id="site-menu" data-nav-menu>
+          <a href="../index.html#home">home</a>
+          <a href="../index.html#about">about</a>
+          <a href="../index.html#contact">contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="case-cover" id="top">
+        <div class="case-cover-art sorcea-hero-art" data-reveal>
+          <img
+            src="../assets/sorcea/hero.webp"
+            alt="Sorcea Labs and Sorcea final design mockups on laptops"
+          />
+        </div>
+      </section>
+
+      <section class="case-hero-intro" aria-labelledby="case-title">
+        <div class="shell case-hero-grid" data-reveal>
+          <div>
+            <a class="back-link" href="../index.html#work">← back to work</a>
+            <h1 id="case-title">Sorcea Labs</h1>
+            <p class="case-subtitle">Skincare Market Insights Platform</p>
+            <div class="tag-row case-tags" aria-label="Project tags">
+              <span>UX/UI Design</span>
+              <span>Internship</span>
+            </div>
+          </div>
+          <div class="case-problem-card">
+            <p class="section-kicker">Problem</p>
+            <p>
+              After rebranding from SearchOwl, Sorcea Labs lacked a clear
+              identity to attract partners, while skincare shoppers struggled to
+              find products they trusted, leading to abandoned carts.
+            </p>
+          </div>
+        </div>
+        <div class="shell case-hero-facts" data-reveal>
+          <div>
+            <h2>Team</h2>
+            <p>3 Designers<br />1 Developer<br />2 Co-Founders</p>
+          </div>
+          <div>
+            <h2>Role</h2>
+            <p>UX/UI Design Intern</p>
+          </div>
+          <div>
+            <h2>Duration</h2>
+            <p>May – Aug 2025</p>
+          </div>
+        </div>
+        <div class="shell case-product-grid" data-reveal>
+          <div>
+            <h2>Product</h2>
+            <p>
+              Sorcea Labs is a beauty-tech startup combining AI and skincare to
+              help shoppers find personalized products while giving brands
+              real-time market analytics.
+            </p>
+          </div>
+          <div>
+            <h2>Goal</h2>
+            <p>
+              Rebrand the Sorcea Labs website to build trust with partners, and
+              redesign the Sorcea consumer platform to make skincare shopping
+              more intuitive and confidence-driven.
+            </p>
+          </div>
+          <div>
+            <h2>Responsibilities</h2>
+            <p>
+              Competitive Analysis • Branding • Wireframing • Design Iterations
+              • High-Fidelity Mockups • Stakeholder Collaboration
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <nav class="case-jump shell" aria-label="Case study sections" data-reveal>
+        <a href="#problem">define</a>
+        <a href="#research">research</a>
+        <a href="#ideation">ideation</a>
+        <a href="#design">design</a>
+        <a href="#solution">solution</a>
+        <a href="#impact">impact</a>
+        <a href="#reflection">reflection</a>
+      </nav>
+
+      <section
+        class="case-section"
+        id="problem"
+        aria-labelledby="problem-title"
+      >
+        <div class="shell narrative-block">
+          <p class="section-kicker">01 Define</p>
+          <h2 id="problem-title">Lacking trust from shoppers and brands.</h2>
+          <p>The two main problems we were tasked with addressing:</p>
+          <div class="problem-grid">
+            <article class="insight-card interactive-card" data-reveal>
+              <span class="mini-logo">Sorcea Labs</span>
+              <h3>Need for clear business brand identity</h3>
+              <p>
+                After rebranding from SearchOwl, Sorcea Labs lacked a clear
+                identity to communicate its mission and attract potential
+                partners.
+              </p>
+            </article>
+            <article class="insight-card interactive-card" data-reveal>
+              <span class="mini-logo">Sorcea</span>
+              <h3>Shoppers lack confidence in products</h3>
+              <p>
+                Skincare shoppers often feel uncertain about which products will
+                work for them, leading to endless scrolling through reviews and
+                abandoned carts.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section compact" aria-labelledby="objectives-title">
+        <div class="shell narrative-block">
+          <p class="section-kicker">Primary objectives</p>
+          <h2 id="objectives-title">
+            Reimagining the business and skincare websites to build trust with
+            customers and brands.
+          </h2>
+          <p>
+            Based on these challenges, my role focused on two main design goals:
+          </p>
+          <ul class="body-list">
+            <li>
+              <strong>Business Website (Sorcea Labs)</strong> — How might we
+              develop a more sophisticated, professional identity that blends
+              tech and skincare aesthetics to better appeal to brands?
+            </li>
+            <li>
+              <strong>Skincare Platform (Sorcea)</strong> — How might we
+              simplify the shopping process to help users feel more confident in
+              their product choices?
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section
+        class="case-section"
+        id="research"
+        aria-labelledby="research-title"
+      >
+        <div class="shell narrative-block">
+          <p class="section-kicker">02 Research</p>
+          <h2 id="research-title">Competitive analysis.</h2>
+          <p>
+            Based on my conversations with the co-founders, the
+            <strong>Sorcea Labs</strong> website aimed to merge beauty and tech
+            aesthetics, while the <strong>Sorcea</strong> website focused
+            primarily on a beauty-driven look and feel. To guide this direction,
+            I conducted a <strong>SWOT analysis</strong> of competitors in the
+            tech and skincare industries.
+          </p>
+          <p>
+            My goal was to understand not only the functionality of these sites,
+            but also what visual and experiential elements made a website feel
+            “tech-y” versus “beauty-focused.”
+          </p>
+          <div class="artifact-grid two-up">
+            <figure class="artifact-card" data-reveal>
+              <img
+                src="../assets/sorcea/research-tech-swot.jpg"
+                alt="SWOT analysis table for tech websites"
+                loading="lazy"
+              />
+              <figcaption>Tech website competitor notes</figcaption>
+            </figure>
+            <figure class="artifact-card" data-reveal>
+              <img
+                src="../assets/sorcea/research-beauty-swot.jpg"
+                alt="SWOT analysis table for skincare and beauty websites"
+                loading="lazy"
+              />
+              <figcaption>
+                Skincare and beauty website competitor notes
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="case-section"
+        id="ideation"
+        aria-labelledby="principles-title"
+      >
+        <div class="shell narrative-block">
+          <p class="section-kicker">03 Ideation</p>
+          <h2 id="principles-title">Key design principles.</h2>
+          <p>
+            From my competitive analysis research, I gathered key principles to
+            guide me through Sorcea Labs’ business and skincare platform
+            designs.
+          </p>
+
+          <div class="principle-group" data-reveal>
+            <h3>Sorcea Labs</h3>
+            <div class="principle-grid labs-theme">
+              <article>
+                <span
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    width="22"
+                    height="22"
+                  >
+                    <path
+                      d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"
+                    /></svg
+                ></span>
+                <h4>Build Trust</h4>
+                <p>
+                  Showcase case studies and clearly highlight what sets the
+                  brand apart to establish credibility.
+                </p>
+              </article>
+              <article>
+                <span
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    width="22"
+                    height="22"
+                  >
+                    <path d="M7 2v11h3v9l7-12h-4l4-8z" /></svg
+                ></span>
+                <h4>Lead With Impact</h4>
+                <p>
+                  Use a bold hero section with strong visuals and a clear
+                  tagline to immediately capture attention.
+                </p>
+              </article>
+              <article>
+                <span
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    width="22"
+                    height="22"
+                  >
+                    <path
+                      d="M19 9l1.25-2.75L23 5l-2.75-1.25L19 1l-1.25 2.75L15 5l2.75 1.25L19 9zm-7.5.5L9 4 6.5 9.5 1 12l5.5 2.5L9 20l2.5-5.5L17 12l-5.5-2.5zM19 15l-1.25 2.75L15 19l2.75 1.25L19 23l1.25-2.75L23 19l-2.75-1.25L19 15z"
+                    /></svg
+                ></span>
+                <h4>Create Modern Feel</h4>
+                <p>
+                  Incorporating interactive and dynamic elements creates a
+                  modern, tech-driven aesthetic.
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <div class="principle-group" data-reveal>
+            <h3>Sorcea</h3>
+            <div class="principle-grid skincare-theme">
+              <article>
+                <span
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    width="22"
+                    height="22"
+                  >
+                    <path
+                      d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+                    /></svg
+                ></span>
+                <h4>Personalization</h4>
+                <p>
+                  Highlight individual skincare concerns and guide users toward
+                  products tailored to their needs.
+                </p>
+              </article>
+              <article>
+                <span
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    width="22"
+                    height="22"
+                  >
+                    <path
+                      d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                    /></svg
+                ></span>
+                <h4>Credibility &amp; Trust</h4>
+                <p>
+                  Establish a strong first impression with a visually appealing
+                  landing page, clear values, and testimonials.
+                </p>
+              </article>
+              <article>
+                <span
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    width="22"
+                    height="22"
+                  >
+                    <path
+                      d="M12 22c4.97 0 9-4.03 9-9-4.97 0-9 4.03-9 9zM5.6 10.25c0 1.38 1.12 2.5 2.5 2.5.53 0 1.01-.16 1.42-.44l-.02.19c0 1.38 1.12 2.5 2.5 2.5s2.5-1.12 2.5-2.5l-.02-.19c.4.28.89.44 1.42.44 1.38 0 2.5-1.12 2.5-2.5 0-1-.59-1.85-1.43-2.25.84-.4 1.43-1.25 1.43-2.25 0-1.38-1.12-2.5-2.5-2.5-.53 0-1.01.16-1.42.44l.02-.19C14.5 2.12 13.38 1 12 1S9.5 2.12 9.5 3.5l.02.19c-.4-.28-.89-.44-1.42-.44-1.38 0-2.5 1.12-2.5 2.5 0 1 .59 1.85 1.43 2.25-.84.4-1.43 1.25-1.43 2.25zM12 5.5c1.38 0 2.5 1.12 2.5 2.5S13.38 10.5 12 10.5 9.5 9.38 9.5 8s1.12-2.5 2.5-2.5zM3 13c0 4.97 4.03 9 9 9 0-4.97-4.03-9-9-9z"
+                    /></svg
+                ></span>
+                <h4>Skincare Aesthetic</h4>
+                <p>
+                  Use clean, neutral colors and high-quality visuals to create a
+                  calming, beauty-focused look and feel.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section" id="design" aria-labelledby="design-title">
+        <div class="shell narrative-block">
+          <p class="section-kicker">04 Design</p>
+          <h2 id="design-title">
+            Collaborative team environment and design iterations.
+          </h2>
+          <p>
+            The other designers and I had the freedom to bring our own visions
+            for the websites to life, and we regularly came together to share
+            our progress, gather feedback, and combine our ideas. The final
+            designs were a combination of all of our work.
+          </p>
+
+          <div class="iteration-set" data-reveal>
+            <div class="iteration-heading">
+              <h3>Sorcea Labs landing page evolution</h3>
+              <p>
+                Each iteration helped narrow the business site from a busy
+                visual direction into a more sophisticated, tech-forward
+                identity.
+              </p>
+            </div>
+            <div class="iteration-grid three-up">
+              <article class="iteration-card">
+                <img
+                  src="../assets/portfolio/sorcea-labs-iteration-1.png"
+                  alt="Sorcea Labs landing page iteration 1"
+                  loading="lazy"
+                />
+                <h4>Iteration 1</h4>
+                <ul>
+                  <li>Email capture was direct and clear.</li>
+                  <li>Moving background felt distracting and hard to read.</li>
+                  <li>
+                    Visuals felt busy and did not yet communicate the brand
+                    difference.
+                  </li>
+                </ul>
+              </article>
+              <article class="iteration-card">
+                <img
+                  src="../assets/portfolio/sorcea-labs-iteration-2.png"
+                  alt="Sorcea Labs landing page iteration 2"
+                  loading="lazy"
+                />
+                <h4>Iteration 2</h4>
+                <ul>
+                  <li>
+                    “Unlock the future of beauty” became a stronger, more
+                    memorable tagline.
+                  </li>
+                  <li>
+                    The hero image aligned better with the tech direction.
+                  </li>
+                  <li>
+                    Additional sections helped advertise the company more
+                    clearly.
+                  </li>
+                </ul>
+              </article>
+              <article class="iteration-card is-selected">
+                <img
+                  src="../assets/portfolio/sorcea-labs-iteration-3.png"
+                  alt="Sorcea Labs landing page iteration 3"
+                  loading="lazy"
+                />
+                <h4>Iteration 3</h4>
+                <ul>
+                  <li>
+                    Background color and type felt more aligned with the brand.
+                  </li>
+                  <li>
+                    The header made it easier for brands to navigate to Sorcea.
+                  </li>
+                  <li>
+                    Card-based selling points made the page easier to digest.
+                  </li>
+                </ul>
+              </article>
+            </div>
+          </div>
+
+          <div class="before-after-inline" data-reveal>
+            <div class="iteration-heading">
+              <h3>“Why Us” interaction</h3>
+              <p>
+                From a single large slideshow of questions to smaller bubbles
+                that cycle through questions and support interactive scrolling.
+              </p>
+            </div>
+            <div class="mini-artifact-grid">
+              <figure class="artifact-card">
+                <img
+                  src="../assets/portfolio/whyus-before.png"
+                  alt="Before version of Sorcea Labs Why Us section"
+                  loading="lazy"
+                />
+                <figcaption>
+                  Before: one large slideshow made the questions harder to scan.
+                </figcaption>
+              </figure>
+              <figure class="artifact-card">
+                <img
+                  src="../assets/portfolio/whyus-after.png"
+                  alt="After version of Sorcea Labs Why Us section"
+                  loading="lazy"
+                />
+                <figcaption>
+                  After: smaller bubbles made the section more playful and
+                  digestible.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="split-note" data-reveal>
+            <div>
+              <h3>Sorcea platform exploration</h3>
+              <p>
+                For Sorcea’s landing page, I aimed to present all key
+                information on a single, easy-to-navigate page. I also refined
+                the design while preserving Sorcea’s natural language search and
+                filters to help users find personalized products.
+              </p>
+            </div>
+            <div class="note-card">
+              <strong>Design direction</strong>
+              <span>Dynamic imagery</span>
+              <span>Editable filters</span>
+              <span>Clear product path</span>
+            </div>
+          </div>
+
+          <div class="iteration-set" data-reveal>
+            <div class="iteration-heading">
+              <h3>Landing page styles</h3>
+              <p>
+                Exploring how imagery, search, and layout could balance beauty,
+                clarity, and confidence.
+              </p>
+            </div>
+            <div class="iteration-grid three-up compact-visuals">
+              <article class="iteration-card">
+                <img
+                  src="../assets/portfolio/sorcea-landing-design-1.png"
+                  alt="Sorcea landing page design 1"
+                  loading="lazy"
+                />
+                <h4>Design 1</h4>
+                <p>Background might be too distracting and hard to read.</p>
+              </article>
+              <article class="iteration-card">
+                <img
+                  src="../assets/portfolio/sorcea-landing-design-2.png"
+                  alt="Sorcea landing page design 2"
+                  loading="lazy"
+                />
+                <h4>Design 2</h4>
+                <p>Almost there, but needs to be more dynamic.</p>
+              </article>
+              <article class="iteration-card is-selected">
+                <img
+                  src="../assets/portfolio/sorcea-landing-design-3.png"
+                  alt="Sorcea landing page design 3"
+                  loading="lazy"
+                />
+                <h4>Design 3</h4>
+                <p>Dynamic, moving images balance information on the right.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="iteration-set" data-reveal>
+            <div class="iteration-heading">
+              <h3>Search and filter designs</h3>
+              <p>
+                Moving filters closer to the search box reduced extra steps and
+                made the interaction feel more editable.
+              </p>
+            </div>
+            <div class="iteration-grid three-up compact-visuals">
+              <article class="iteration-card">
+                <img
+                  src="../assets/portfolio/filters-design-1.png"
+                  alt="Search and filter design 1"
+                  loading="lazy"
+                />
+                <h4>Design 1</h4>
+                <p>
+                  Filters could only be edited in a pop-up, which might be
+                  inconvenient.
+                </p>
+              </article>
+              <article class="iteration-card">
+                <img
+                  src="../assets/portfolio/filters-design-2.png"
+                  alt="Search and filter design 2"
+                  loading="lazy"
+                />
+                <h4>Design 2</h4>
+                <p>
+                  Users had to open two dropdowns, which could add friction.
+                </p>
+              </article>
+              <article class="iteration-card is-selected">
+                <img
+                  src="../assets/portfolio/filters-design-3.png"
+                  alt="Search and filter design 3"
+                  loading="lazy"
+                />
+                <h4>Design 3</h4>
+                <p>
+                  Filters are integrated into the search box and can be easily
+                  edited.
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <div class="before-after-inline" data-reveal>
+            <div class="iteration-heading">
+              <h3>Favorites page mockups</h3>
+              <p>
+                Developed mockups for Sorcea’s new favorites page to improve
+                navigation and personalization.
+              </p>
+            </div>
+            <div class="mini-artifact-grid">
+              <figure class="artifact-card">
+                <img
+                  src="../assets/portfolio/favorites-design-1.png"
+                  alt="Favorites page design 1"
+                  loading="lazy"
+                />
+                <figcaption>
+                  Design 1: longer list format with more details per product.
+                </figcaption>
+              </figure>
+              <figure class="artifact-card is-selected">
+                <img
+                  src="../assets/portfolio/favorites-design-2.png"
+                  alt="Favorites page design 2 with horizontal cards"
+                  loading="lazy"
+                />
+                <figcaption>
+                  Design 2: horizontal cards made favorites more concise,
+                  simple, and easy to see.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="case-section"
+        id="solution"
+        aria-labelledby="solution-title"
+      >
+        <div class="shell narrative-block">
+          <p class="section-kicker">05 Solution</p>
+          <h2 id="solution-title">Final direction.</h2>
+
+          <div class="solution-block" data-reveal>
+            <div class="before-after-grid">
+              <figure>
+                <span>Before</span>
+                <img
+                  src="../assets/portfolio/searchowl-before.png"
+                  alt="SearchOwl business website before redesign"
+                  loading="lazy"
+                />
+              </figure>
+              <figure>
+                <span>After</span>
+                <img
+                  src="../assets/portfolio/searchowl-after.png"
+                  alt="Sorcea Labs business website after redesign"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+            <div class="solution-copy">
+              <p class="case-eyebrow">Sorcea Labs</p>
+              <h3>Reintroducing SearchOwl as Sorcea Labs.</h3>
+              <ul class="body-list compact-list">
+                <li>Sophisticated, tech-forward aesthetic</li>
+                <li>Clear and consistent brand identity</li>
+                <li>
+                  Highlighted key selling points and projects to build trust
+                  with brands
+                </li>
+                <li>
+                  Compelling hero section with strong visuals and messaging
+                </li>
+                <li>Dynamic, interactive interface</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="solution-block reverse" data-reveal>
+            <div class="solution-copy">
+              <p class="case-eyebrow">Sorcea</p>
+              <h3>Crafting Sorcea’s bold, personalized experience.</h3>
+              <ul class="body-list compact-list">
+                <li>Eye-catching, dynamic front cover</li>
+                <li>Memorable and impactful tagline</li>
+                <li>Personalized, user-centered experience</li>
+              </ul>
+            </div>
+            <div class="before-after-grid">
+              <figure>
+                <span>Before</span>
+                <img
+                  src="../assets/portfolio/sorcea-before.png"
+                  alt="Sorcea skincare platform before redesign"
+                  loading="lazy"
+                />
+              </figure>
+              <figure>
+                <span>After</span>
+                <img
+                  src="../assets/portfolio/sorcea-after.png"
+                  alt="Sorcea skincare platform after redesign"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section" id="impact" aria-labelledby="impact-title">
+        <div class="shell narrative-block">
+          <p class="section-kicker">06 Impact</p>
+          <h2 id="impact-title">Future metrics for measuring impact.</h2>
+          <p>
+            Because Sorcea Labs is still undergoing many design changes, we
+            don’t yet have many finalized statistics. However, we did observe a
+            <strong>7% increase in average active time</strong> on the skincare
+            website.
+          </p>
+          <p>
+            If we were to measure how effective our designs are at increasing
+            user and brand trust, I would track metrics such as:
+          </p>
+          <div class="metric-grid">
+            <article class="metric-card labs-metric" data-reveal>
+              <span>↗</span>
+              <h3>For Brands</h3>
+              <ul>
+                <li>Number of brand inquiries</li>
+                <li>Time spent on website</li>
+                <li>Brand retention</li>
+              </ul>
+            </article>
+            <article class="metric-card skincare-metric" data-reveal>
+              <span
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="22"
+                  height="22"
+                >
+                  <path
+                    d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"
+                  /></svg
+              ></span>
+              <h3>For Users</h3>
+              <ul>
+                <li>Cart abandonment rate</li>
+                <li>Number of return visits</li>
+                <li>Favorites saved</li>
+                <li>Conversion rate</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="case-section"
+        id="reflection"
+        aria-labelledby="reflection-title"
+      >
+        <div class="shell narrative-block reflection-block">
+          <p class="section-kicker">07 Reflection</p>
+          <h2 id="reflection-title">My takeaways.</h2>
+          <p>
+            This was my first role as a UX/UI designer on a team, and I learned
+            so much about how to
+            <strong
+              >collaborate with other designers, respond to feedback, and
+              research competitors.</strong
+            >
+            I also discovered that creativity isn’t always linear; sometimes, my
+            half-baked ideas resonated more with the team than the ones I felt
+            confident in.
+          </p>
+          <p>
+            This experience taught me the value of sharing openly, thinking
+            creatively, and always keeping users’ needs in mind.
+          </p>
+          <p>
+            Thank you so much to Sorcea Labs for giving me this opportunity!
+          </p>
+          <a class="text-arrow back-top" href="#top">back to top ↑</a>
+        </div>
+      </section>
+
+      <section
+        class="case-section other-work"
+        aria-labelledby="other-work-title"
+      >
+        <div class="shell">
+          <h2 id="other-work-title">View Other Work</h2>
+          <div class="other-work-grid three-cards">
+            <a class="small-work-card" href="../project-dialogue/" data-reveal>
+              <img
+                src="../assets/portfolio/thumb-dialogue.png"
+                alt="Project Dialogue case study"
+                loading="lazy"
+              />
+              <h3>Project Dialogue | Social Media Platform</h3>
+            </a>
+            <a class="small-work-card" href="../transit-pal/" data-reveal>
+              <img
+                src="../assets/portfolio/thumb-transit.png"
+                alt="Transit Pal mobile app mockups"
+                loading="lazy"
+              />
+              <h3>Transit Pal | NYC Tourist Transit App</h3>
+            </a>
+            <a class="small-work-card" href="../beli/" data-reveal>
+              <img
+                src="../assets/portfolio/thumb-beli.png"
+                alt="Beli food rating app mockups"
+                loading="lazy"
+              />
+              <h3>Beli | Food Rating App</h3>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer shell">
+      <div>
+        <p>Contact me · ✤</p>
+        <a href="mailto:nikki062604@gmail.com">nikki062604@gmail.com</a>
+      </div>
+      <div>
+        <p>Let’s connect · ✧</p>
+        <a
+          href="https://www.linkedin.com/in/nikkilee26/"
+          target="_blank"
+          rel="noreferrer"
+          >LinkedIn</a
+        >
+      </div>
+      <div>
+        <p>All rights reserved to Nikki Lee © <span data-year></span></p>
+        <strong>Made with ♥</strong>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Transit Pal — Nikki Lee</title>
+  <meta name="description" content="Transit Pal case study by Nikki Lee, UI/UX Designer." />
+  <meta name="theme-color" content="#f7f2df" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../styles.css" />
+  <script defer src="../script.js"></script>
+</head>
+<body class="case-page transit-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="site-header" data-header>
+    <nav class="nav shell" aria-label="Main navigation">
+      <a class="brand" href="../index.html" aria-label="Nikki Lee home">nikki lee</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" data-nav-toggle>
+        <span class="nav-toggle-line" aria-hidden="true"></span>
+        <span class="sr-only">Open menu</span>
+      </button>
+      <div class="nav-pill" id="site-menu" data-nav-menu>
+        <a href="../index.html#home">home</a>
+        <a href="../index.html#about">about</a>
+        <a href="../index.html#contact">contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="case-cover" id="top">
+      <div class="case-cover-art transit-hero-art" data-reveal>
+        <img src="../assets/transit/hero.webp" alt="Transit Pal main app screens" />
+      </div>
+    </section>
+
+    <section class="case-hero-intro" aria-labelledby="case-title">
+      <div class="shell case-hero-grid" data-reveal>
+        <div>
+          <a class="back-link" href="../index.html#work">← back to work</a>
+          <h1 id="case-title">Transit Pal</h1>
+          <p class="case-subtitle">NYC Tourist Transit App</p>
+          <div class="tag-row case-tags" aria-label="Project tags">
+            <span>UX/UI Design</span>
+            <span>Personal Project</span>
+          </div>
+        </div>
+        <div class="case-problem-card">
+          <p class="section-kicker">Problem</p>
+          <p>NYC tourists struggle with unreliable transit, confusing station terminology, and apps that don't account for delays or offer trustworthy local recommendations.</p>
+        </div>
+      </div>
+      <div class="shell case-hero-facts" data-reveal>
+        <div>
+          <h2>Team</h2>
+          <p>Solo</p>
+        </div>
+        <div>
+          <h2>Role</h2>
+          <p>UX/UI Designer</p>
+        </div>
+        <div>
+          <h2>Duration</h2>
+          <p>Jun – Aug 2025</p>
+        </div>
+      </div>
+      <div class="shell case-product-grid" data-reveal>
+        <div>
+          <h2>Product</h2>
+          <p>Transit Pal is a tourist-focused NYC transit app featuring Safe Arrival mode, curated local recommendations, and an integrated AI chatbot to help visitors navigate the city stress-free.</p>
+        </div>
+        <div>
+          <h2>Goal</h2>
+          <p>Design a tourist-friendly transit app that solves navigation confusion, accounts for delays, simplifies payment, and surfaces local recommendations — all in one place.</p>
+        </div>
+        <div>
+          <h2>Responsibilities</h2>
+          <p>UX Research • User Interviews • Competitive Analysis • Wireframing • Prototyping • High-Fidelity Mockups</p>
+        </div>
+      </div>
+    </section>
+
+    <nav class="case-jump shell" aria-label="Case study sections" data-reveal>
+      <a href="#research">research</a>
+      <a href="#define">define</a>
+      <a href="#ideation">ideation</a>
+      <a href="#design">design</a>
+      <a href="#solution">solution</a>
+      <a href="#impact">impact</a>
+      <a href="#reflection">reflection</a>
+    </nav>
+
+    <section class="case-section" id="research" aria-labelledby="research-title">
+      <div class="shell narrative-block">
+        <p class="section-kicker">01 Research</p>
+        <h2 id="research-title">Interviewing tourists to discover their pain points.</h2>
+        <p>I interviewed four non-native New Yorkers in their 20s who had previously visited NYC, gathering their tourist pain points and organizing them into four key categories.</p>
+        <figure class="artifact-card wide-artifact" data-reveal>
+          <img src="../assets/transit/research-board.webp" alt="Transit Pal interview pain points organized into four key categories" loading="lazy" />
+        </figure>
+        <div class="quote-grid" data-reveal>
+          <blockquote>"My stop was skipped so many times because I accidentally got on the express train, not knowing it was different from the local."</blockquote>
+          <blockquote>"I'm always confused by terms like 'uptown' vs. 'downtown' or 'Queens-bound' vs. 'Brooklyn-bound.' I'm not familiar with the city's geography."</blockquote>
+        </div>
+
+        <div class="subsection" data-reveal>
+          <h3>Competitive analysis of existing transit apps.</h3>
+          <p>Before designing my app, I conducted a SWOT analysis of popular tourist transit apps to discover effective features as well as where they fell short for tourists' needs.</p>
+          <figure class="artifact-card wide-artifact full-artifact">
+            <img src="../assets/transit/competitive-analysis.webp" alt="SWOT analysis of Google Maps, Apple Maps, and Transit" loading="lazy" />
+          </figure>
+          <p>Competitive analysis revealed that <strong>existing transit apps are not tailored to the needs of tourists.</strong> They often fail to explain city-specific terminology, account for delays, or provide recommendations relevant to users.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section" id="define" aria-labelledby="define-title">
+      <div class="shell narrative-block">
+        <p class="section-kicker">02 Define</p>
+        <h2 id="define-title">Identifying four main pain points.</h2>
+        <p>Through interviews and competitive analysis, I was able to identify and group the issues into four key pain points:</p>
+        <div class="problem-grid pain-grid">
+          <article class="insight-card interactive-card" data-reveal>
+            <span class="card-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></span>
+            <h3>Navigation &amp; Accessibility</h3>
+            <p>Directions are often unclear and use terminology that is unfamiliar to users who are not from the city.</p>
+          </article>
+          <article class="insight-card interactive-card" data-reveal>
+            <span class="card-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg></span>
+            <h3>Timing &amp; Scheduling</h3>
+            <p>Delays and transfer times are often unaccounted for on transit apps, causing users to arrive late.</p>
+          </article>
+          <article class="insight-card interactive-card" data-reveal>
+            <span class="card-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg></span>
+            <h3>Payment</h3>
+            <p>Payment methods and reload options for MetroCards and OMNY are unclear.</p>
+          </article>
+          <article class="insight-card interactive-card" data-reveal>
+            <span class="card-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></span>
+            <h3>Recommendations &amp; Discovery</h3>
+            <p>Tourists lack curated discovery options in current navigation apps.</p>
+          </article>
+        </div>
+        <div class="hmw-panel" data-reveal>
+          <p>With these ideas, I kept a primary objective in mind:</p>
+          <h3>How might I design a tourist-friendly transit app that addresses these pain points and meets the unique needs of users unfamiliar with New York City?</h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section" id="ideation" aria-labelledby="ideation-title">
+      <div class="shell narrative-block">
+        <p class="section-kicker">03 Ideation</p>
+        <h2 id="ideation-title">I began brainstorming features that targeted each of these pain points.</h2>
+        <div class="problem-grid pain-grid feature-grid">
+          <article class="insight-card" data-reveal>
+            <span class="card-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></span>
+            <h3>Navigation &amp; Accessibility</h3>
+            <ul>
+              <li>Natural language AI chat bot</li>
+              <li>Pop-up messages that explain unfamiliar concepts and accessible stations</li>
+            </ul>
+          </article>
+          <article class="insight-card" data-reveal>
+            <span class="card-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg></span>
+            <h3>Timing &amp; Scheduling</h3>
+            <ul>
+              <li>Safe Arrival mode that adds buffer time to commutes</li>
+              <li>Include walking times for transfers and exiting</li>
+              <li>Simplify delay/alert descriptions</li>
+            </ul>
+          </article>
+          <article class="insight-card" data-reveal>
+            <span class="card-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg></span>
+            <h3>Payment</h3>
+            <ul>
+              <li>Access to transit cards and add money to OMNY card from app</li>
+              <li>Pop-up notification to explain payment methods</li>
+            </ul>
+          </article>
+          <article class="insight-card" data-reveal>
+            <span class="card-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></span>
+            <h3>Recommendations &amp; Discovery</h3>
+            <ul>
+              <li>Recommendations on home page</li>
+              <li>Sections for tourists with different interests (local spots, landmarks)</li>
+              <li>AI chat bot can give recommendations and create itineraries</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section" id="design" aria-labelledby="design-title">
+      <div class="shell narrative-block">
+        <p class="section-kicker">04 Design</p>
+        <h2 id="design-title">Sketches and wireframes.</h2>
+        <div class="subsection">
+          <h3>Home Screen:</h3>
+          <p>I started with a map-first home screen for quick transit access — but after reconsidering tourist needs, I redesigned it to combine recommendations with navigation, giving users flexibility based on their goal.</p>
+          <div class="image-grid two-up" data-reveal>
+            <figure class="artifact-card">
+              <img src="../assets/transit/recommendations-designs.webp" alt="Initial home page sketches Design 1 and Design 2 with annotations" loading="lazy" />
+              <figcaption>Initial Home Page Sketches</figcaption>
+            </figure>
+            <figure class="artifact-card">
+              <img src="../assets/transit/sketch-navbot.webp" alt="Revised home screen with Hi Nikki welcome message and recommendations" loading="lazy" />
+              <figcaption>Revised home screen: friendlier feel with recommendations and navigation alongside each other.</figcaption>
+            </figure>
+          </div>
+          <p class="pain-addressed"><strong>Pain Points Addressed:</strong> Navigation &amp; Accessibility · Recommendations &amp; Discovery</p>
+        </div>
+
+        <div class="subsection">
+          <h3>Nav Bot Screen:</h3>
+          <p>I integrated an <strong>AI chatbot</strong> to support commuters encountering unpredictable issues like delays, missed trains, or construction, where quick help isn't always available. NavBot lets users ask real-time, specific questions and get instant, tailored responses.</p>
+          <p>When designing NavBot's interface, I wanted to make it feel like a messaging app, as if the user were texting a friend, and included suggested prompts to guide user interaction. I experimented with different layouts to optimize usability:</p>
+          <figure class="artifact-card wide-artifact" data-reveal>
+            <img src="../assets/transit/sketch-home.webp" alt="NavBot screen sketches showing Design 1 and Design 2" loading="lazy" />
+            <figcaption>★ Design 2: Placing the questions in the center makes better use of space and immediately draws the user's attention to possible prompts they can ask.</figcaption>
+          </figure>
+          <p class="pain-addressed"><strong>Pain Points Addressed:</strong> Navigation &amp; Accessibility · Recommendations &amp; Discovery</p>
+        </div>
+
+        <div class="subsection">
+          <h3>Directions Page:</h3>
+          <div class="sketch-with-text" data-reveal>
+            <p>When designing the directions page, I wanted to include a <strong>Safe Arrival feature</strong> that added buffer time to the commute that accounted for delays, walking, and missed transfers. Including <strong>pop-up notifications</strong> about city-specific terminology, delays, construction, how to pay, etc. directly into the commute would allow users to better understand their journey as they are traveling to their destination.</p>
+            <figure class="artifact-card">
+              <img src="../assets/transit/wireframe-directions-safe-arrival.webp" alt="Directions page sketch showing Safe Arrival Mode and pop-up notification stops" loading="lazy" />
+              <figcaption>Safe Arrival Mode dropdown breaks down the buffer times. Pop-up notifications to inform users about their journeys.</figcaption>
+            </figure>
+          </div>
+          <p>I also experimented with different layouts for displaying multiple commutes:</p>
+          <div class="image-grid two-up" data-reveal>
+            <figure class="artifact-card">
+              <img src="../assets/transit/wireframe-directions-d1.webp" alt="Commute layout Design 1: vertical single-route view" loading="lazy" />
+              <figcaption>Design 1: The vertical layout makes it harder for users to view multiple options at once.</figcaption>
+            </figure>
+            <figure class="artifact-card">
+              <img src="../assets/transit/wireframe-directions-d2.webp" alt="Commute layout Design 2: horizontal cards showing multiple routes at a glance" loading="lazy" />
+              <figcaption>★ Design 2: The horizontal layout lets users compare multiple commute options at a glance.</figcaption>
+            </figure>
+          </div>
+          <p class="pain-addressed"><strong>Pain Points Addressed:</strong> Navigation &amp; Accessibility · Timing &amp; Scheduling</p>
+        </div>
+
+        <div class="subsection">
+          <h3>Recommendations Page:</h3>
+          <p>Tourists visit New York City for many reasons — to sightsee, try new restaurants, or explore fun activities. To accommodate different types of users, I designed a recommendations page organized into six main categories, ranging from local favorites to major attractions. This structure helps users quickly find what they're looking for without endlessly scrolling through options.</p>
+          <div class="image-grid two-up" data-reveal>
+            <figure class="artifact-card">
+              <img src="../assets/transit/wireframe-recommendations-d1.webp" alt="Recommendations Design 1: photo grid layout" loading="lazy" />
+              <figcaption>Design 1: Photo grids represent each category.</figcaption>
+            </figure>
+            <figure class="artifact-card">
+              <img src="../assets/transit/wireframe-recommendations-d2.webp" alt="Recommendations Design 2: icon list layout with dark navy circles" loading="lazy" />
+              <figcaption>★ Design 2: Simple icons are more effective for abstract categories like "Top Picks from Locals," reserving photos for actual locations.</figcaption>
+            </figure>
+          </div>
+          <p class="pain-addressed"><strong>Pain Points Addressed:</strong> Recommendations &amp; Discovery</p>
+        </div>
+
+        <div class="subsection">
+          <h3>Profile Page:</h3>
+          <div class="sketch-with-text" data-reveal>
+            <p>Currently, there is no app that allows users to add money to their OMNY cards. Commuters have to visit the OMNY website or use subway kiosks. To streamline the transit payment process, I designed a feature that lets users link their OMNY card directly to their profile. This allows them to easily add funds and track their commuting expenses all in one place.</p>
+            <figure class="artifact-card">
+              <img src="../assets/transit/profile-sketch.webp" alt="Transit Pal profile page sketch" loading="lazy" />
+              <figcaption>Users can add OMNY card and credit cards to their profile to see how much they have spent.</figcaption>
+            </figure>
+          </div>
+          <p class="pain-addressed"><strong>Pain Points Addressed:</strong> Payment</p>
+        </div>
+
+        <div class="subsection color-palette">
+          <h3>Choosing a color palette.</h3>
+          <p>My goal was to create a navigation experience that feels trustworthy, confident, and calm. I tied the design back to the MTA by using a blue reminiscent of its logo.</p>
+          <div class="palette-grid" data-reveal>
+            <div>
+              <h4>Primary Colors</h4>
+              <div class="swatches">
+                <span style="--swatch:#2E5AAC">2E5AAC</span>
+                <span style="--swatch:#B8D1FF">B8D1FF</span>
+                <span style="--swatch:#2E4060">2E4060</span>
+              </div>
+              <h4>Secondary Colors</h4>
+              <div class="swatches">
+                <span style="--swatch:#FFB347">FFB347</span>
+                <span style="--swatch:#F5F5F5">F5F5F5</span>
+                <span style="--swatch:#9E0D0D">9E0D0D</span>
+                <span style="--swatch:#0D9E12">0D9E12</span>
+                <span style="--swatch:#000000">000000</span>
+                <span style="--swatch:#FFFFFF">FFFFFF</span>
+              </div>
+            </div>
+            <div class="type-card">
+              <strong>SF Pro</strong>
+              <p><span>Heading 1</span> Body Medium</p>
+              <p><span>Heading 2</span> Body Regular</p>
+              <p><span>Heading 3</span> Body Light</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section" id="solution" aria-labelledby="solution-title">
+      <div class="shell narrative-block">
+        <p class="section-kicker">05 Solution</p>
+        <h2 id="solution-title">Transit Pal - Main Screens</h2>
+        <div class="solution-block phone-solution" data-reveal>
+          <div class="phone-stage">
+            <img src="../assets/transit/departures.gif" alt="Transit Pal main screens animation" loading="lazy" />
+          </div>
+          <div class="solution-copy">
+            <ul class="body-list large-list">
+              <li><strong>Homepage:</strong> Search bar and discovery feature</li>
+              <li><strong>Saved:</strong> Upcoming and past journeys, plus saved locations</li>
+              <li><strong>Departures:</strong> Real-time schedules for nearby transportation</li>
+              <li><strong>Profile:</strong> Travel cards to manage funds and track transit spending</li>
+            </ul>
+            <a class="button button-primary" href="https://www.figma.com/proto/2vDDAxQ1nMdrb86BqnSd2e/NY-Tourist-Transit-App?node-id=2142-12729&p=f&t=dwxX9uehJjtiSE8g-1&scaling=scale-down&content-scaling=fixed&page-id=84%3A816&starting-point-node-id=2142%3A12729&show-proto-sidebar=1" target="_blank" rel="noreferrer">View Prototype →</a>
+          </div>
+        </div>
+
+        <div class="phone-feature-grid">
+          <article class="phone-feature" data-reveal>
+            <div>
+              <h3>Directions Made Easy</h3>
+              <ul>
+                <li><strong>Smart notifications</strong> with tips and insights tourists might not know</li>
+                <li><strong>Safe Arrival Mode</strong> that adds buffer time for delays and walking</li>
+                <li><strong>Multi-trip planning</strong> to combine several trips into one journey</li>
+              </ul>
+            </div>
+            <img src="../assets/transit/directions.gif" alt="Transit Pal directions screen" loading="lazy" />
+          </article>
+          <article class="phone-feature" data-reveal>
+            <div>
+              <h3>Departures Near You</h3>
+              <ul>
+                <li><strong>Schedule widgets</strong> showing transportation times and routes</li>
+                <li><strong>Favorite train and bus lines</strong> for quick access to your most frequent trips</li>
+                <li><strong>Live status updates and crowd meter</strong> to help you plan ahead</li>
+              </ul>
+            </div>
+            <img src="../assets/transit/main-flow.gif" alt="Transit Pal departures screens" loading="lazy" />
+          </article>
+          <article class="phone-feature" data-reveal>
+            <div>
+              <h3>NavBot</h3>
+              <ul>
+                <li><strong>Ask any question</strong> in natural language</li>
+                <li><strong>Get immediate responses</strong> for emergencies and in-trip assistance</li>
+                <li><strong>Receive personalized tips</strong> based on your journey</li>
+              </ul>
+            </div>
+            <img src="../assets/transit/navbot.gif" alt="Transit Pal NavBot screen" loading="lazy" />
+          </article>
+          <article class="phone-feature" data-reveal>
+            <div>
+              <h3>Recommendations</h3>
+              <ul>
+                <li><strong>Various recommendations</strong> ranging from local favorites to popular must-sees, tailored to every tourist's needs</li>
+                <li><strong>Featured spots</strong> for when you're unsure where to go</li>
+                <li><strong>Ratings</strong> to guide your decisions</li>
+              </ul>
+            </div>
+            <img src="../assets/transit/recommendations.gif" alt="Transit Pal recommendations screen" loading="lazy" />
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section" id="impact" aria-labelledby="impact-title">
+      <div class="shell narrative-block">
+        <p class="section-kicker">06 Impact</p>
+        <h2 id="impact-title">Possible metrics to measure impact.</h2>
+        <p>While I developed Transit Pal independently, if I were approaching it from the perspective of a design team, to determine if the app met its intended goals, I would track metrics such as:</p>
+        <div class="metric-grid">
+          <article class="metric-card transit-metric" data-reveal>
+            <span><svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></span>
+            <h3>Navigation &amp; Accessibility Metrics</h3>
+            <ul>
+              <li>Successful trip completion rate</li>
+              <li>Reduced navigation errors</li>
+              <li>Arrival time accuracy</li>
+            </ul>
+          </article>
+          <article class="metric-card transit-metric" data-reveal>
+            <span><svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg></span>
+            <h3>Timing &amp; Scheduling Metrics</h3>
+            <ul>
+              <li>Accuracy of displayed arrival times vs. actual</li>
+              <li>Percent of users who found pop-ups helpful</li>
+              <li>Number of users arriving on time</li>
+            </ul>
+          </article>
+          <article class="metric-card transit-metric" data-reveal>
+            <span><svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg></span>
+            <h3>Payment Metrics</h3>
+            <ul>
+              <li>Number of users linking and managing travel cards</li>
+              <li>Percent of users who found payment reloading useful and easy</li>
+              <li>Reduced use of physical kiosks</li>
+            </ul>
+          </article>
+          <article class="metric-card transit-metric" data-reveal>
+            <span><svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></span>
+            <h3>Recommendations &amp; Discovery Metrics</h3>
+            <ul>
+              <li>Recommendations engagement rate</li>
+              <li>Percent of users who go to a recommended location</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section" id="reflection" aria-labelledby="reflection-title">
+      <div class="shell narrative-block reflection-block">
+        <p class="section-kicker">07 Reflection</p>
+        <h2 id="reflection-title">My takeaways.</h2>
+        <p>Transit Pal was my first project that I designed entirely from scratch. I went through a lot of trial and error to create a cohesive and intuitive design. Sometimes, I would take a prototype all the way to completion, only to realize a page needed a full redesign. I really enjoyed the freedom of building my own app, exploring research and prototyping, and sharing ideas with my peers.</p>
+        <h2>My next steps.</h2>
+        <p>There are still many ideas I would like to expand upon with Transit Pal. I wanted to make the app more personal, including an onboarding screen to record users' trip goals and interests to tailor their recommendations. I also hope to add a system that adjusts schedules automatically, notifying users if they haven't left a location or if later events require time shifts.</p>
+        <a class="text-arrow back-top" href="#top">back to top ↑</a>
+      </div>
+    </section>
+
+    <section class="case-section other-work" aria-labelledby="other-work-title">
+      <div class="shell">
+        <h2 id="other-work-title">View Other Work</h2>
+        <div class="other-work-grid three-cards">
+          <a class="small-work-card" href="../project-dialogue/" data-reveal>
+            <img src="../assets/portfolio/thumb-dialogue.png" alt="Project Dialogue case study" loading="lazy" />
+            <h3>Project Dialogue | Social Media Platform</h3>
+          </a>
+          <a class="small-work-card" href="../sorcea-labs/" data-reveal>
+            <img src="../assets/portfolio/thumb-sorcea.png" alt="Sorcea Labs case study" loading="lazy" />
+            <h3>Sorcea Labs | Skincare Market Insights Platform</h3>
+          </a>
+          <a class="small-work-card" href="../beli/" data-reveal>
+            <img src="../assets/portfolio/thumb-beli.png" alt="Beli case study" loading="lazy" />
+            <h3>Beli | Food Rating App</h3>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer shell">
+    <div>
+      <p>Contact me · ✤</p>
+      <a href="mailto:nikki062604@gmail.com">nikki062604@gmail.com</a>
+    </div>
+    <div>
+      <p>Let’s connect · ✧</p>
+      <a href="https://www.linkedin.com/in/nikkilee26/" target="_blank" rel="noreferrer">LinkedIn</a>
+    </div>
+    <div>
+      <p>All rights reserved to Nikki Lee © <span data-year></span></p>
+      <strong>Made with ♥</strong>
+    </div>
+  </footer>
+</body>
+</html>

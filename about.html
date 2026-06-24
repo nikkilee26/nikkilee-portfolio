@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About — Nikki Lee</title>
+    <meta
+      name="description"
+      content="Learn about Nikki Lee, a UI/UX designer with a background in computer science and visual art."
+    />
+    <meta name="theme-color" content="#f7f2df" />
+    <meta property="og:title" content="About — Nikki Lee" />
+    <meta
+      property="og:description"
+      content="Learn about Nikki Lee, a UI/UX designer with a background in computer science and visual art."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <header class="site-header" data-header>
+      <nav class="nav shell" aria-label="Main navigation">
+        <a class="brand" href="index.html" aria-label="Nikki Lee home"
+          >nikki lee</a
+        >
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-menu"
+          data-nav-toggle
+        >
+          <span class="nav-toggle-line" aria-hidden="true"></span>
+          <span class="sr-only">Open menu</span>
+        </button>
+
+        <div class="nav-pill" id="site-menu" data-nav-menu>
+          <a href="index.html#home">home</a>
+          <a href="about.html">about</a>
+          <a href="index.html#footer">contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section
+        class="section about-section"
+        id="about"
+        aria-labelledby="about-title"
+      >
+        <div class="shell about-grid">
+          <div class="about-image" data-reveal>
+            <div class="about-photo-cluster">
+              <img class="about-photo photo-1" src="assets/about/photo-beach.gif" alt="Nikki at the beach" />
+              <img class="about-photo photo-2" src="assets/about/photo-baroque.webp" alt="Nikki in Europe" />
+            </div>
+          </div>
+          <div data-reveal>
+            <p class="micro-label">about me</p>
+            <h2 id="about-title" class="about-hello">hey there! i'm <span>nikki.</span></h2>
+          </div>
+          <div class="about-copy" data-reveal>
+            <p>
+              I'm a senior majoring in Computer Science at Williams College with
+              a passion for designing thoughtful, user-centered experiences. I
+              was drawn to UX/UI design because it combines creativity with
+              intention—every interface choice matters!
+            </p>
+            <p>
+              I have over a year of hands-on UX/UI experience and currently
+              serve as Lead UX/UI Designer and Co-Engineer at an early-stage
+              startup, where I'm building a 0→1 platform to bridge differences
+              through structured, facilitated online conversations.
+            </p>
+            <p>
+              I'm always looking to grow as a designer, exploring ways to make
+              interfaces intuitive, accessible, and enjoyable for every user.
+            </p>
+            <div class="focus-cloud" aria-label="Focus areas">
+              <span>user flows</span>
+              <span>research</span>
+              <span>visual systems</span>
+              <span>prototyping</span>
+              <span>interaction design</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer shell" id="footer">
+      <div>
+        <p>Contact me · ✤</p>
+        <a href="mailto:nikki062604@gmail.com">nikki062604@gmail.com</a>
+      </div>
+      <div>
+        <p>Let's connect · ✧</p>
+        <a
+          href="https://www.linkedin.com/in/nikkilee26/"
+          target="_blank"
+          rel="noreferrer"
+          >LinkedIn</a
+        >
+      </div>
+      <div>
+        <p>All rights reserved to Nikki Lee © <span data-year></span></p>
+        <strong>Made with ♥</strong>
+      </div>
+    </footer>
+  </body>
+</html>

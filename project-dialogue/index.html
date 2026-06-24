@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Project Dialogue — Nikki Lee</title>
+    <meta
+      name="description"
+      content="Project Dialogue case study by Nikki Lee, UI/UX Designer."
+    />
+    <meta name="theme-color" content="#061f49" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script>
+      if (sessionStorage.getItem("dialogue-auth") !== "1") {
+        window.location.replace("gate.html");
+      }
+    </script>
+    <script defer src="../script.js"></script>
+  </head>
+  <body class="case-page dialogue-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <header class="site-header dialogue-header" data-header>
+      <nav class="nav shell" aria-label="Main navigation">
+        <a class="brand" href="../index.html" aria-label="Nikki Lee home"
+          >nikki lee</a
+        >
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-menu"
+          data-nav-toggle
+        >
+          <span class="nav-toggle-line" aria-hidden="true"></span>
+          <span class="sr-only">Open menu</span>
+        </button>
+        <div class="nav-pill" id="site-menu" data-nav-menu>
+          <a href="../index.html#home">home</a>
+          <a href="../index.html#about">about</a>
+          <a href="../index.html#contact">contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="dialogue-hero" id="top" aria-labelledby="case-title">
+        <div class="shell dialogue-hero-grid">
+          <div data-reveal>
+            <a class="back-link light-link" href="../index.html#work"
+              >← back to work</a
+            >
+            <h1 id="case-title">Project Dialogue</h1>
+            <p class="dialogue-subtitle">Social Media Platform</p>
+            <div class="tag-row pink-tags" aria-label="Project tags">
+              <span>Early-stage Startup</span>
+              <span>UX/UI Design</span>
+            </div>
+          </div>
+          <div class="dialogue-hero-card" data-reveal>
+            <p class="section-kicker">Problem</p>
+            <p>
+              Social platforms are designed to maximize engagement, not
+              understanding, which makes it difficult for people with different
+              viewpoints to connect, learn from one another, and find common
+              ground.
+            </p>
+          </div>
+        </div>
+
+        <div class="shell dialogue-facts" data-reveal>
+          <div>
+            <h2>Team</h2>
+            <p>Founder<br />3 Engineers</p>
+          </div>
+          <div>
+            <h2>Role</h2>
+            <p>Lead UI/UX Designer,<br />Advisory Board Member</p>
+          </div>
+          <div>
+            <h2>Duration</h2>
+            <p>Feb 2026 - Current</p>
+          </div>
+        </div>
+
+        <div class="shell dialogue-product-grid" data-reveal>
+          <div>
+            <h2>Product</h2>
+            <p>
+              Project Dialogue is an early-stage startup building a social
+              platform that encourages constructive conversations through
+              intentional algorithm design, dialogue literacy, user well-being
+              controls, and AI-assisted communication tools.
+            </p>
+            <p>
+              <em
+                >** Confidentiality Notice: Project Dialogue is a pseudonym for
+                a pre-launch startup. Due to confidentiality agreements and the
+                product's ongoing development, certain details, designs, and
+                features have been omitted or generalized in this case
+                study.</em
+              >
+            </p>
+          </div>
+          <div>
+            <h2>Goal</h2>
+            <p>
+              Design a 0-to-1 social platform that fosters more constructive
+              conversations across differing perspectives, using branding, user
+              journeys, wireframes, a scalable design system, and high-fidelity
+              prototypes to translate the product vision into a launch-ready
+              experience.
+            </p>
+          </div>
+          <div>
+            <h2>Responsibilities</h2>
+            <p>
+              UX Strategy • Branding • Competitive Analysis • User Journey
+              Mapping • Wireframing • Low and High-Fidelity Mockups • Design
+              Systems • Stakeholder Collaboration
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <nav class="case-jump shell" aria-label="Case study sections" data-reveal>
+        <a href="#research">research</a>
+        <a href="#ideation">ideation</a>
+        <a href="#solution">solution</a>
+        <a href="#next-steps">next steps</a>
+        <a href="#conclusion">conclusion</a>
+      </nav>
+
+      <section
+        class="case-section dialogue-research"
+        id="research"
+        aria-labelledby="research-title"
+      >
+        <div class="shell narrative-block">
+          <p class="section-kicker">Research</p>
+          <div class="centered-heading" data-reveal>
+            <h2 id="research-title">Let's Talk Competition.</h2>
+            <div class="competitor-icons" aria-label="Competitor apps">
+              <img
+                src="../assets/dialogue/tinder.webp"
+                alt="Tinder icon"
+                loading="lazy"
+              />
+              <img
+                src="../assets/dialogue/facebook.webp"
+                alt="Facebook icon"
+                loading="lazy"
+              />
+              <img
+                src="../assets/dialogue/instagram.webp"
+                alt="Instagram icon"
+                loading="lazy"
+              />
+              <img
+                src="../assets/dialogue/tiktok.webp"
+                alt="TikTok icon"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <p>
+            Before designing the platform, I conducted a competitive analysis of
+            social media and dating apps to understand how users are matched
+            with others, identify successful engagement patterns, and find
+            opportunities for more meaningful cross-perspective interactions.
+            Here are my key findings:
+          </p>
+          <div class="research-columns" data-reveal>
+            <article>
+              <h3>Common Strengths</h3>
+              <ul>
+                <li>Strong content discovery</li>
+                <li>Personalized recommendations</li>
+                <li>Low-friction user matching</li>
+                <li>Interest-based communities</li>
+                <li>High user engagement</li>
+              </ul>
+            </article>
+            <article>
+              <h3>Common Weaknesses</h3>
+              <ul>
+                <li>Echo chambers and censorship</li>
+                <li>Outrage-driven engagement</li>
+                <li>Surface-level interactions</li>
+                <li>Limited exposure to differing perspectives</li>
+                <li>Few tools for productive dialogue</li>
+              </ul>
+            </article>
+            <article>
+              <h3>Matching Process</h3>
+              <ul>
+                <li>
+                  Recommendations by shared interests, demographics, behaviors,
+                  or past engagement
+                </li>
+                <li>
+                  Matching is similarity-based to optimize for engagement and
+                  retention
+                </li>
+                <li>Little support for navigating disagreement</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="subsection" data-reveal>
+            <h3>How are people engaging with one another currently?</h3>
+            <p>
+              I explored research and data to confirm the patterns I was seeing
+              in existing platforms and understand whether they actually lead to
+              real negative effects.
+            </p>
+            <div class="stat-grid dialogue-stats">
+              <article>
+                <strong>53%</strong>
+                <p>of content shown on Facebook is from like-minded sources</p>
+              </article>
+              <article>
+                <strong>33%</strong>
+                <p>
+                  of Americans report avoiding conversations with people who
+                  hold different political views.
+                </p>
+              </article>
+              <article>
+                <strong>64%</strong>
+                <p>
+                  of people have experienced or witnessed harassment on social
+                  media platforms.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="case-section dialogue-dark"
+        id="ideation"
+        aria-labelledby="ideation-title"
+      >
+        <div class="shell narrative-block">
+          <p class="section-kicker">Ideation</p>
+          <h2 id="ideation-title">User Flow</h2>
+          <p>
+            After discussing with the founder on product goals, we had three key
+            priorities in mind:
+          </p>
+
+          <div class="dialogue-priority-grid" data-reveal>
+            <div class="dialogue-priority-card">
+              <div class="priority-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                  />
+                </svg>
+              </div>
+              <h3>User Wellbeing</h3>
+              <p>Encourage healthy engagement, not endless scrolling.</p>
+            </div>
+            <div class="dialogue-priority-card">
+              <div class="priority-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"
+                  />
+                </svg>
+              </div>
+              <h3>Improve Communication</h3>
+              <p>
+                Teach empathy, active listening, and productive disagreement
+                will carry into careers, classrooms, communities, and personal
+                relationships.
+              </p>
+            </div>
+            <div class="dialogue-priority-card">
+              <div class="priority-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"
+                  />
+                </svg>
+              </div>
+              <h3>Meaningful Connections</h3>
+              <p>
+                Create opportunities for understanding and genuine connection
+                across different perspectives.
+              </p>
+            </div>
+          </div>
+
+          <p>
+            I then started working on a user flow to map the end-to-end
+            experience and communicate our vision to the engineering team.
+          </p>
+
+          <figure class="artifact-card dialogue-artifact" data-reveal>
+            <img
+              src="../assets/dialogue/user-flow.webp"
+              alt="Blurred Project Dialogue user flow"
+              loading="lazy"
+            />
+            <figcaption>
+              Contents of user flow has been blurred for confidentiality
+              purposes.
+            </figcaption>
+          </figure>
+
+          <div class="subsection" data-reveal>
+            <h3>Wireframes and Mockups: Lots of Trial and Error</h3>
+            <p>
+              Because Project Dialogue is built around connecting users with
+              people who hold different perspectives, we initially wanted
+              onboarding to teach our core values and gather detailed user
+              insights through:
+            </p>
+
+            <ul class="dialogue-feature-list">
+              <li>Educational modules</li>
+              <li>A 40+ question questionnaire</li>
+              <li>3 guided conversations with matched users</li>
+            </ul>
+
+            <figure class="artifact-card dialogue-artifact">
+              <img
+                src="../assets/dialogue/wireframes.webp"
+                alt="Project Dialogue early wireframes and mockups"
+                loading="lazy"
+              />
+              <figcaption>
+                Original mockups of only half of our onboarding process!
+              </figcaption>
+            </figure>
+
+            <p>
+              However, we realized that requiring so much effort before users
+              could experience the platform's value would likely increase
+              drop-off and reduce engagement.
+            </p>
+          </div>
+
+          <div class="dialogue-hmw" data-reveal>
+            <blockquote class="hmw-question">
+              How might we introduce users to a completely new conversation
+              platform and its unique interaction model without overwhelming
+              them with lengthy explanations?
+            </blockquote>
+
+            <p>
+              To streamline the onboarding experience, we reduced onboarding
+              time by 50% by:
+            </p>
+
+            <ul class="dialogue-feature-list">
+              <li>Cutting the questionnaire in half</li>
+              <li>
+                Moving educational content from onboarding into the platform
+              </li>
+              <li>
+                Replacing matched conversations with an AI-powered practice
+                session and personalized feedback
+              </li>
+            </ul>
+
+            <figure class="artifact-card dialogue-artifact" data-reveal>
+              <img
+                src="../assets/dialogue/hi-fi-sage.webp"
+                alt="High-fidelity mockup of AI Practice Conversation with Guided Suggestions"
+                loading="lazy"
+              />
+              <figcaption>
+                High-Fidelity Mockup of AI Practice Conversation with Guided
+                Suggestions
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="case-section dialogue-solution"
+        id="solution"
+        aria-labelledby="solution-title"
+      >
+        <div class="shell narrative-block">
+          <p class="section-kicker">Our Solution</p>
+          <h2 id="solution-title">A Better, Healthier Feed</h2>
+          <p>
+            Project Dialogue combines guided conversations, AI-powered coaching,
+            and educational resources to help users engage more constructively
+            with people who hold different perspectives.
+          </p>
+
+          <div class="solution-feature-grid" data-reveal>
+            <div class="solution-feature-card">
+              <h3>AI-Guided Conversations</h3>
+              <p>
+                Live, personalized feedback helps users practice healthy debate,
+                active listening, and finding common ground.
+              </p>
+            </div>
+            <div class="solution-feature-card">
+              <h3>Conversation Insights</h3>
+              <p>
+                Detailed profiles provide users with feedback on their
+                communication style, strengths, and areas for growth.
+              </p>
+            </div>
+            <div class="solution-feature-card">
+              <h3>Continuous Learning</h3>
+              <p>
+                An on-demand learning hub offers stories, lessons, and exercises
+                designed to strengthen conversation skills.
+              </p>
+            </div>
+          </div>
+
+          <p class="solution-goal">
+            Our goal is to help users build habits that extend beyond the
+            platform—enabling more thoughtful conversations with family,
+            friends, colleagues, and their broader communities.
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="case-section compact dialogue-dark"
+        id="next-steps"
+        aria-labelledby="next-title"
+      >
+        <div class="shell narrative-block">
+          <p class="section-kicker">Next Steps</p>
+          <h2 id="next-title">What's Upcoming?</h2>
+          <div class="next-step-grid" data-reveal>
+            <article>
+              <strong>1</strong>
+              <h3>Final Designs</h3>
+              <p>
+                Deliver all finalized mockups to the engineering team by next
+                month!
+              </p>
+            </article>
+            <article>
+              <strong>2</strong>
+              <h3>Expert Consultations</h3>
+              <p>
+                Meet with professionals across Computer Science, Psychology, and
+                Political Science to gather insights and validate product ideas.
+              </p>
+            </article>
+            <article>
+              <strong>3</strong>
+              <h3>Advertise</h3>
+              <p>
+                Design our website and advertise the platform before launching.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="case-section dialogue-dark"
+        id="conclusion"
+        aria-labelledby="conclusion-title"
+      >
+        <div class="shell narrative-block">
+          <p class="section-kicker">Conclusion</p>
+          <p id="conclusion-title">
+            There's still plenty of work ahead, but over the past several months
+            we've spent countless hours brainstorming, iterating, and refining
+            our core features. Through the process, I've learned a great deal
+            about taking ownership of a product, adapting when ideas don't work
+            out as expected, and making thoughtful design decisions under tight
+            deadlines.
+          </p>
+          <a class="text-arrow back-top" href="#top">back to top ↑</a>
+        </div>
+      </section>
+
+      <section
+        class="case-section other-work"
+        aria-labelledby="other-work-title"
+      >
+        <div class="shell">
+          <h2 id="other-work-title">View Other Work</h2>
+          <div class="other-work-grid three-cards">
+            <a class="small-work-card" href="../sorcea-labs/" data-reveal>
+              <img
+                src="../assets/portfolio/thumb-sorcea.png"
+                alt="Sorcea Labs case study"
+                loading="lazy"
+              />
+              <h3>Sorcea Labs | Skincare Market Insights Platform</h3>
+            </a>
+            <a class="small-work-card" href="../transit-pal/" data-reveal>
+              <img
+                src="../assets/transit/hero.webp"
+                alt="Transit Pal case study"
+                loading="lazy"
+              />
+              <h3>Transit Pal | NYC Tourist Transit App</h3>
+            </a>
+            <a class="small-work-card" href="../beli/" data-reveal>
+              <img
+                src="../assets/portfolio/thumb-beli.png"
+                alt="Beli case study"
+                loading="lazy"
+              />
+              <h3>Beli | Food Rating App</h3>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      window.addEventListener("pagehide", function () {
+        sessionStorage.removeItem("dialogue-auth");
+      });
+    </script>
+
+    <footer class="footer shell">
+      <div>
+        <p>Contact me · ✤</p>
+        <a href="mailto:nikki062604@gmail.com">nikki062604@gmail.com</a>
+      </div>
+      <div>
+        <p>Let’s connect · ✧</p>
+        <a
+          href="https://www.linkedin.com/in/nikkilee26/"
+          target="_blank"
+          rel="noreferrer"
+          >LinkedIn</a
+        >
+      </div>
+      <div>
+        <p>All rights reserved to Nikki Lee © <span data-year></span></p>
+        <strong>Made with ♥</strong>
+      </div>
+    </footer>
+  </body>
+</html>

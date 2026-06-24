@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Project Dialogue — Nikki Lee</title>
+    <meta
+      name="description"
+      content="Project Dialogue case study — password protected."
+    />
+    <meta name="theme-color" content="#061f49" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script>
+      if (sessionStorage.getItem("dialogue-auth") === "1") {
+        window.location.replace("index.html");
+      }
+    </script>
+  </head>
+  <body class="case-page dialogue-page">
+    <div class="grain" aria-hidden="true"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <header class="site-header dialogue-header" data-header>
+      <nav class="nav shell" aria-label="Main navigation">
+        <a class="brand" href="../index.html" aria-label="Nikki Lee home"
+          >nikki lee</a
+        >
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-menu"
+          data-nav-toggle
+        >
+          <span class="nav-toggle-line" aria-hidden="true"></span>
+          <span class="sr-only">Open menu</span>
+        </button>
+        <div class="nav-pill" id="site-menu" data-nav-menu>
+          <a href="../index.html#home">home</a>
+          <a href="../about.html">about</a>
+          <a href="../index.html#footer">contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="gate-section">
+        <div class="gate-wrap shell">
+          <a class="back-link light-link gate-back" href="../index.html#work"
+            >← back to work</a
+          >
+
+          <div class="gate-icon" aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            </svg>
+          </div>
+
+          <h1 class="gate-title">Project Dialogue</h1>
+          <p class="dialogue-subtitle gate-sub">Social Media Platform</p>
+          <div class="tag-row pink-tags gate-tags" aria-label="Project tags">
+            <span>Early-stage Startup</span>
+            <span>UX/UI Design</span>
+          </div>
+
+          <p class="gate-desc">
+            This case study is password protected. For access, please reach out
+            at
+            <a href="mailto:nikki062604@gmail.com">nikki062604@gmail.com</a>.
+          </p>
+
+          <form class="gate-form" id="gate-form" novalidate>
+            <div class="gate-field">
+              <label for="pw-input" class="sr-only">Password</label>
+              <input
+                type="password"
+                id="pw-input"
+                class="gate-input"
+                placeholder="Enter password"
+                autocomplete="current-password"
+                aria-describedby="gate-error"
+              />
+              <button type="submit" class="gate-btn">Enter →</button>
+            </div>
+            <p class="gate-error" id="gate-error" role="alert" hidden>
+              Incorrect password. Please try again.
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script defer src="../script.js"></script>
+    <script>
+      document
+        .getElementById("gate-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const input = document.getElementById("pw-input").value;
+          const error = document.getElementById("gate-error");
+          if (input === "NikkisPortfolioPassword") {
+            sessionStorage.setItem("dialogue-auth", "1");
+            window.location.href = "index.html";
+          } else {
+            error.hidden = false;
+            document.getElementById("pw-input").value = "";
+            document.getElementById("pw-input").focus();
+          }
+        });
+    </script>
+  </body>
+</html>

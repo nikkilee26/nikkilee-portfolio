@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="NL">
+  <rect width="64" height="64" rx="18" fill="#f4efe5"/>
+  <circle cx="48" cy="14" r="18" fill="#a8b293" opacity="0.55"/>
+  <circle cx="16" cy="50" r="20" fill="#ad765f" opacity="0.25"/>
+  <text x="32" y="38" text-anchor="middle" font-family="Georgia, serif" font-size="24" font-weight="700" fill="#2f4c38">NL</text>
+</svg>

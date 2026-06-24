@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nikki Lee — UI/UX Designer</title>
+    <meta
+      name="description"
+      content="Nikki Lee is a UI/UX designer with a background in computer science and visual art, creating thoughtful digital products that solve real problems and connect with people."
+    />
+    <meta name="theme-color" content="#f7f2df" />
+    <meta property="og:title" content="Nikki Lee — UI/UX Designer" />
+    <meta
+      property="og:description"
+      content="UI/UX designer creating thoughtful digital products that solve real problems and connect with people."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <header class="site-header" data-header>
+      <nav class="nav shell" aria-label="Main navigation">
+        <a class="brand" href="#home" aria-label="Nikki Lee home">nikki lee</a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-menu"
+          data-nav-toggle
+        >
+          <span class="nav-toggle-line" aria-hidden="true"></span>
+          <span class="sr-only">Open menu</span>
+        </button>
+
+        <div class="nav-pill" id="site-menu" data-nav-menu>
+          <a href="#home">home</a>
+          <a href="about.html">about</a>
+          <a href="#footer">contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero-home" id="home" aria-labelledby="hero-title">
+        <div class="shell hero-home-grid">
+          <div class="hero-copy" data-reveal>
+            <p class="micro-label">UI/UX Designer · Product Thinker</p>
+            <h1 id="hero-title">
+              <span class="spark-word">Designing</span><br />
+              digital experiences<br />
+              <em>that feel as good as they look.</em>
+            </h1>
+            <p class="hero-intro">
+              I’m a UI/UX designer with a background in computer science and
+              visual art, creating thoughtful digital products that solve real
+              problems and connect with people.
+            </p>
+            <div class="hero-actions" aria-label="Primary actions">
+              <a class="button button-primary" href="#work"
+                >explore my work ↓</a
+              >
+              <a class="button button-quiet" href="about.html">about me →</a>
+            </div>
+          </div>
+
+          <div class="hero-visual" data-reveal>
+            <div class="blob blob-one" aria-hidden="true"></div>
+            <div class="blob blob-two" aria-hidden="true"></div>
+            <img
+              class="portrait-cluster"
+              src="assets/portfolio/home-page.png"
+              alt="Nikki Lee surrounded by greenhouse plants"
+            />
+            <div class="location-tag" aria-label="Based in New York City">
+              ⌖ based in nyc
+            </div>
+            <div class="round-stamp" aria-hidden="true">
+              <span>UI/UX Designer</span>
+              <strong>✶</strong>
+              <span>Product Thinker</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section work-section"
+        id="work"
+        aria-labelledby="work-title"
+      >
+        <div class="shell">
+          <div class="section-bar" data-reveal>
+            <h2 id="work-title" class="sr-only">Featured work</h2>
+            <p class="section-kicker">✶ ✧ Featured Work</p>
+            <span></span>
+          </div>
+
+          <div class="work-list" aria-labelledby="work-title">
+            <a
+              class="work-card interactive-card"
+              href="project-dialogue/"
+              data-reveal
+            >
+              <div class="work-image work-image-dark">
+                <img
+                  src="assets/portfolio/thumb-dialogue.png"
+                  alt="Project Dialogue early-stage startup case study"
+                  loading="lazy"
+                />
+              </div>
+              <div class="work-copy">
+                <p class="project-index">01 · Current</p>
+                <h2>Project Dialogue</h2>
+                <p class="project-subtitle">Social Media Platform</p>
+                <div class="tag-row dialogue-card-tags" aria-label="Project tags">
+                  <span>Early-stage Startup</span>
+                  <span>UX/UI Design</span>
+                </div>
+                <p>
+                  Project Dialogue is an early-stage startup building a social
+                  platform that encourages constructive conversations through
+                  intentional algorithm design, dialogue literacy, user
+                  well-being controls, and AI-assisted communication tools.
+                </p>
+                <span class="text-arrow">view project →</span>
+              </div>
+            </a>
+
+            <a
+              class="work-card interactive-card"
+              href="sorcea-labs/"
+              data-reveal
+            >
+              <div class="work-image">
+                <img
+                  src="assets/portfolio/thumb-sorcea.png"
+                  alt="Sorcea Labs website and skincare platform mockups"
+                  loading="lazy"
+                />
+              </div>
+              <div class="work-copy">
+                <p class="project-index">02 · Internship</p>
+                <h2>Sorcea Labs</h2>
+                <p class="project-subtitle">
+                  Skincare Market Insights Platform
+                </p>
+                <div class="tag-row sorcea-card-tags" aria-label="Project tags">
+                  <span>UX/UI Design</span>
+                  <span>Internship</span>
+                </div>
+                <p>
+                  Redefining the brand identity and e-commerce experience for a
+                  beauty-tech startup.
+                </p>
+                <span class="text-arrow">view project →</span>
+              </div>
+            </a>
+
+            <a
+              class="work-card interactive-card"
+              href="transit-pal/"
+              data-reveal
+            >
+              <div class="work-image">
+                <img
+                  src="assets/portfolio/thumb-transit.webp"
+                  alt="Transit Pal mobile app mockups"
+                  loading="lazy"
+                />
+              </div>
+              <div class="work-copy">
+                <p class="project-index">03 · Personal Project</p>
+                <h2>Transit Pal</h2>
+                <p class="project-subtitle">NYC Tourist Transit App</p>
+                <div class="tag-row transit-card-tags" aria-label="Project tags">
+                  <span>UX/UI Design</span>
+                  <span>Personal Project</span>
+                </div>
+                <p>
+                  Crafting a transit app to help tourists seamlessly navigate
+                  and discover NYC.
+                </p>
+                <span class="text-arrow">view project →</span>
+              </div>
+            </a>
+
+            <a class="work-card interactive-card" href="beli/" data-reveal>
+              <div class="work-image">
+                <img
+                  src="assets/portfolio/thumb-beli.png"
+                  alt="Beli food rating app mockups"
+                  loading="lazy"
+                />
+              </div>
+              <div class="work-copy">
+                <p class="project-index">04 · Personal Project</p>
+                <h2>Beli</h2>
+                <p class="project-subtitle">Food Rating App</p>
+                <div class="tag-row beli-card-tags" aria-label="Project tags">
+                  <span>UX/UI Design</span>
+                  <span>Personal Project</span>
+                </div>
+                <p>
+                  Designing a menu search and autofill feature, and streamlining
+                  food review flow.
+                </p>
+                <span class="text-arrow">view project →</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer shell" id="footer">
+      <div>
+        <p>Contact me · ✤</p>
+        <a href="mailto:nikki062604@gmail.com">nikki062604@gmail.com</a>
+      </div>
+      <div>
+        <p>Let’s connect · ✧</p>
+        <a
+          href="https://www.linkedin.com/in/nikkilee26/"
+          target="_blank"
+          rel="noreferrer"
+          >LinkedIn</a
+        >
+      </div>
+      <div>
+        <p>All rights reserved to Nikki Lee © <span data-year></span></p>
+        <strong>Made with ♥</strong>
+      </div>
+    </footer>
+  </body>
+</html>
