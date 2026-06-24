@@ -677,7 +677,8 @@ button {
   width: 126px;
   height: 126px;
   border-radius: 50%;
-  grid: place-items: center;
+  display: grid;
+  place-items: center;
   color: var(--ink);
   border: 1px dashed rgba(17, 20, 16, 0.36);
   background: rgba(255, 253, 244, 0.54);
@@ -2812,8 +2813,8 @@ body.dialogue-page {
 .gate-section {
   min-height: 100vh;
   display: flex;
-  align-items: center;
-  padding-block: clamp(80px, 12vw, 140px);
+  align-items: flex-start;
+  padding-block: clamp(16px, 3vw, 32px);
 }
 
 .gate-wrap {
@@ -2823,14 +2824,14 @@ body.dialogue-page {
 
 .gate-back {
   display: inline-block;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   text-align: left;
 }
 
 .gate-icon {
-  width: 72px;
-  height: 72px;
-  margin: 0 auto 28px;
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 16px;
   border-radius: 50%;
   background: rgba(255, 63, 133, 0.14);
   border: 1px solid rgba(255, 63, 133, 0.32);
@@ -2841,30 +2842,30 @@ body.dialogue-page {
 }
 
 .gate-icon svg {
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
 }
 
 .gate-title {
   margin: 0;
   color: #fff;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2.6rem, 6vw, 5rem);
+  font-size: clamp(2rem, 5vw, 3.6rem);
   line-height: 1;
   letter-spacing: -0.06em;
 }
 
 .gate-sub {
-  margin-top: 16px;
+  margin-top: 10px;
 }
 
 .gate-tags {
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 12px;
 }
 
 .gate-desc {
-  margin-block: 32px 0;
+  margin-block: 18px 0;
   color: rgba(255, 255, 255, 0.62);
   font-size: 0.95rem;
   line-height: 1.7;
@@ -2877,7 +2878,7 @@ body.dialogue-page {
 }
 
 .gate-form {
-  margin-top: 28px;
+  margin-top: 16px;
 }
 
 .gate-field {
