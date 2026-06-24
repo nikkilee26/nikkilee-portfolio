@@ -9,11 +9,11 @@
       content="Project Dialogue case study — password protected."
     />
     <meta name="theme-color" content="#061f49" />
-    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../../styles.css" />
     <script>
       if (sessionStorage.getItem("dialogue-auth") === "1") {
-        window.location.replace("index.html");
+        window.location.replace("../");
       }
     </script>
   </head>
@@ -23,7 +23,7 @@
 
     <header class="site-header dialogue-header" data-header>
       <nav class="nav shell" aria-label="Main navigation">
-        <a class="brand" href="../index.html" aria-label="Nikki Lee home"
+        <a class="brand" href="../../" aria-label="Nikki Lee home"
           >nikki lee</a
         >
         <button
@@ -37,9 +37,9 @@
           <span class="sr-only">Open menu</span>
         </button>
         <div class="nav-pill" id="site-menu" data-nav-menu>
-          <a href="../index.html#home">home</a>
-          <a href="../about.html">about</a>
-          <a href="../index.html#footer">contact</a>
+          <a href="../../">home</a>
+          <a href="../../about/">about</a>
+          <a href="../../#footer">contact</a>
         </div>
       </nav>
     </header>
@@ -47,7 +47,7 @@
     <main>
       <section class="gate-section">
         <div class="gate-wrap shell">
-          <a class="back-link light-link gate-back" href="../index.html#work"
+          <a class="back-link light-link gate-back" href="../../#work"
             >← back to work</a
           >
 
@@ -100,7 +100,7 @@
       </section>
     </main>
 
-    <script defer src="../script.js"></script>
+    <script defer src="../../script.js"></script>
     <script>
       document
         .getElementById("gate-form")
@@ -110,7 +110,7 @@
           const error = document.getElementById("gate-error");
           if (input === "NikkisPortfolioPassword") {
             sessionStorage.setItem("dialogue-auth", "1");
-            window.location.href = "index.html";
+            window.location.href = "../";
           } else {
             error.hidden = false;
             document.getElementById("pw-input").value = "";
