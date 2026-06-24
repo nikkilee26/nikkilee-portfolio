@@ -433,6 +433,7 @@ button {
 .text-arrow,
 .back-link {
   display: inline-flex;
+  position: relative;
   width: fit-content;
   align-items: center;
   gap: 6px;
