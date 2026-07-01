@@ -910,6 +910,68 @@ button {
   font-size: 0.86rem;
 }
 
+/* ── Art Gallery ── */
+.art-gallery-section {
+  background: var(--paper-soft);
+}
+
+.art-grid {
+  columns: 3;
+  column-gap: 14px;
+  margin-top: 40px;
+}
+
+.art-item {
+  break-inside: avoid;
+  position: relative;
+  margin-bottom: 14px;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.art-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 350ms var(--ease);
+}
+
+.art-item:hover img {
+  transform: scale(1.04);
+}
+
+.art-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.18) 55%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px 18px;
+  opacity: 0;
+  transition: opacity 250ms ease;
+}
+
+.art-item:hover .art-overlay {
+  opacity: 1;
+}
+
+.art-title {
+  margin: 0 0 4px;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.art-meta {
+  margin: 0;
+  color: rgba(255,255,255,0.75);
+  font-size: 0.8rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}
+
 .contact-section {
   background: linear-gradient(180deg, #ffffff, var(--paper-soft));
 }
@@ -1533,6 +1595,10 @@ button {
   .case-cover-art {
     min-height: 300px;
   }
+
+  .art-grid {
+    columns: 2;
+  }
 }
 
 @media (max-width: 720px) {
@@ -1631,6 +1697,10 @@ button {
   .section,
   .case-section {
     padding-block: 64px;
+  }
+
+  .art-grid {
+    columns: 1;
   }
 
   .section-bar {
