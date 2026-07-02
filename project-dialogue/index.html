@@ -47,6 +47,7 @@
     </header>
 
     <main id="main">
+      <!-- ── HERO ── -->
       <section class="dialogue-hero" id="top" aria-labelledby="case-title">
         <div class="shell dialogue-hero-grid">
           <div data-reveal>
@@ -60,14 +61,23 @@
               <span>UX/UI Design</span>
             </div>
           </div>
-          <div class="dialogue-hero-card" data-reveal>
-            <p class="section-kicker">Problem</p>
-            <p>
-              Social platforms are designed to maximize engagement, not
-              understanding, which makes it difficult for people with different
-              viewpoints to connect, learn from one another, and find common
-              ground.
-            </p>
+          <div class="dialogue-hero-cards" data-reveal>
+            <div class="dialogue-hero-card">
+              <p class="section-kicker">Societal Problem</p>
+              <p>
+                Social platforms optimize for engagement over understanding,
+                leaving little room for people with different viewpoints to
+                connect meaningfully.
+              </p>
+            </div>
+            <div class="dialogue-hero-card">
+              <p class="section-kicker">Product Challenge</p>
+              <p>
+                How might we onboard users to a new kind of dialogue platform
+                while teaching constructive conversation skills without
+                overwhelming them before they experience its value?
+              </p>
+            </div>
           </div>
         </div>
 
@@ -82,7 +92,20 @@
           </div>
           <div>
             <h2>Duration</h2>
-            <p>Feb 2026 - Current</p>
+            <p>Feb 2026 – Current</p>
+          </div>
+        </div>
+
+        <!-- Key outcome callout -->
+        <div class="shell" data-reveal>
+          <div class="dialogue-shift-callout">
+            <p class="section-kicker">Key Outcome</p>
+            <p>
+              I replaced a lengthy onboarding flow with an AI-powered practice
+              conversation,
+              <strong>reducing onboarding by ~50%</strong>
+              while preserving the core goal of teaching constructive dialogue.
+            </p>
           </div>
         </div>
 
@@ -90,50 +113,95 @@
           <div>
             <h2>Product</h2>
             <p>
-              Project Dialogue is an early-stage startup building a social
-              platform that encourages constructive conversations through
-              intentional algorithm design, dialogue literacy, user well-being
-              controls, and AI-assisted communication tools.
+              A social platform for constructive conversations across different
+              perspectives, built on intentional algorithms, dialogue literacy,
+              and AI-assisted communication tools.
             </p>
-            <p>
+            <p class="dialogue-confidentiality">
               <em
-                >** Confidentiality Notice: Project Dialogue is a pseudonym for
-                a pre-launch startup. Due to confidentiality agreements and the
-                product's ongoing development, certain details, designs, and
-                features have been omitted or generalized in this case
-                study.</em
+                >Some details have been generalized or blurred for
+                confidentiality. Process, decisions, and patterns shown reflect
+                my actual work.</em
               >
             </p>
           </div>
           <div>
             <h2>Goal</h2>
             <p>
-              Design a 0-to-1 social platform that fosters more constructive
-              conversations across differing perspectives, using branding, user
-              journeys, wireframes, a scalable design system, and high-fidelity
-              prototypes to translate the product vision into a launch-ready
-              experience.
+              Design a 0-to-1 platform, from MVP user journey to launch-ready
+              flows and high-fidelity prototypes.
             </p>
           </div>
           <div>
             <h2>Responsibilities</h2>
-            <p>
-              UX Strategy • Branding • Competitive Analysis • User Journey
-              Mapping • Wireframing • Low and High-Fidelity Mockups • Design
-              Systems • Stakeholder Collaboration
-            </p>
+            <ul class="responsibility-list">
+              <li>
+                Defined the MVP user journey from onboarding to first
+                conversation
+              </li>
+              <li>
+                Mapped user flows and identified high-friction onboarding steps
+              </li>
+              <li>
+                Designed low- and high-fidelity mockups for onboarding and AI
+                practice
+              </li>
+              <li>Built brand identity and design system from scratch</li>
+              <li>
+                Collaborated with founder and engineers to ship launch-ready
+                flows
+              </li>
+            </ul>
           </div>
         </div>
       </section>
 
+      <!-- ── JUMP NAV ── -->
       <nav class="case-jump shell" aria-label="Case study sections" data-reveal>
+        <a href="#goals">goals</a>
         <a href="#research">research</a>
         <a href="#ideation">ideation</a>
         <a href="#solution">solution</a>
         <a href="#next-steps">next steps</a>
-        <a href="#conclusion">conclusion</a>
+        <a href="#conclusion">reflection</a>
       </nav>
 
+      <!-- ── PRODUCT GOALS ── -->
+      <section
+        class="case-section dialogue-solution"
+        id="goals"
+        aria-labelledby="goals-title"
+      >
+        <div class="shell narrative-block">
+          <p class="section-kicker">Product Goals</p>
+          <h2 id="goals-title">Goals That Guided Every Decision</h2>
+          <div class="solution-feature-grid" data-reveal>
+            <div class="solution-feature-card">
+              <h3>Teach Constructive Dialogue</h3>
+              <p>
+                Help users navigate disagreements through AI coaching,
+                post-conversation insights, and continuous learning.
+              </p>
+            </div>
+            <div class="solution-feature-card">
+              <h3>Foster Meaningful Connections</h3>
+              <p>
+                Match based on meaningful differences rather than similarities
+                to encourage conversations they wouldn't otherwise have.
+              </p>
+            </div>
+            <div class="solution-feature-card">
+              <h3>Prioritize User Well-Being</h3>
+              <p>
+                Design for intentional engagement instead of maximizing screen
+                time through wellness features and reduced cognitive load.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── RESEARCH ── -->
       <section
         class="case-section dialogue-research"
         id="research"
@@ -167,11 +235,8 @@
             </div>
           </div>
           <p>
-            Before designing the platform, I conducted a competitive analysis of
-            social media and dating apps to understand how users are matched
-            with others, identify successful engagement patterns, and find
-            opportunities for more meaningful cross-perspective interactions.
-            Here are my key findings:
+            I analyzed social media and match-making apps to find gaps in how
+            platforms support cross-perspective connection.
           </p>
           <div class="research-columns" data-reveal>
             <article>
@@ -179,61 +244,90 @@
               <ul>
                 <li>Strong content discovery</li>
                 <li>Personalized recommendations</li>
-                <li>Low-friction user matching</li>
+                <li>Low-friction matching</li>
                 <li>Interest-based communities</li>
-                <li>High user engagement</li>
+                <li>High engagement</li>
               </ul>
             </article>
             <article>
               <h3>Common Weaknesses</h3>
               <ul>
-                <li>Echo chambers and censorship</li>
+                <li>Echo chambers</li>
                 <li>Outrage-driven engagement</li>
                 <li>Surface-level interactions</li>
-                <li>Limited exposure to differing perspectives</li>
-                <li>Few tools for productive dialogue</li>
+                <li>No exposure to differing perspectives</li>
+                <li>No tools for productive dialogue</li>
               </ul>
             </article>
             <article>
               <h3>Matching Process</h3>
               <ul>
-                <li>
-                  Recommendations by shared interests, demographics, behaviors,
-                  or past engagement
-                </li>
-                <li>
-                  Matching is similarity-based to optimize for engagement and
-                  retention
-                </li>
-                <li>Little support for navigating disagreement</li>
+                <li>Optimizes for shared interests and retention</li>
+                <li>No support for navigating disagreement</li>
               </ul>
             </article>
           </div>
 
+          <!-- Research Insight → Design Decision -->
           <div class="subsection" data-reveal>
-            <h3>How are people engaging with one another currently?</h3>
-            <p>
-              I explored research and data to confirm the patterns I was seeing
-              in existing platforms and understand whether they actually lead to
-              real negative effects.
-            </p>
+            <h3>What This Meant for Our Design</h3>
+            <div class="insight-grid">
+              <div class="insight-card">
+                <span class="insight-num">01</span>
+                <p>
+                  <span class="insight-title"
+                    >Match based on meaningful differences</span
+                  >
+                  rather than similarities.
+                </p>
+              </div>
+              <div class="insight-card">
+                <span class="insight-num">02</span>
+                <p>
+                  <span class="insight-title">Coach conversations with AI</span>
+                  instead of moderating opinions.
+                </p>
+              </div>
+              <div class="insight-card">
+                <span class="insight-num">03</span>
+                <p>
+                  <span class="insight-title">Design for user well-being</span>
+                  over engagement.
+                </p>
+              </div>
+              <div class="insight-card">
+                <span class="insight-num">04</span>
+                <p>
+                  <span class="insight-title">Increase self-awareness</span>
+                  through transparent conversation insights and progress over
+                  time.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stats -->
+          <div class="subsection" data-reveal>
+            <h3>How Are People Engaging Right Now?</h3>
             <div class="stat-grid dialogue-stats">
               <article>
                 <strong>53%</strong>
-                <p>of content shown on Facebook is from like-minded sources</p>
+                <span class="stat-source">Pew Research Center, 2024</span>
+                <p>of Facebook content comes from like-minded sources</p>
               </article>
               <article>
-                <strong>33%</strong>
+                <strong>41%</strong>
+                <span class="stat-source">Pew Research Center, 2024</span>
                 <p>
-                  of Americans report avoiding conversations with people who
-                  hold different political views.
+                  of U.S. adults have personally experienced online harassment
                 </p>
               </article>
               <article>
-                <strong>64%</strong>
+                <strong>53%</strong>
+                <span class="stat-source">Pew Research Center, 2016</span>
                 <p>
-                  of people have experienced or witnessed harassment on social
-                  media platforms.
+                  say political discussions online are less respectful than
+                  in-person
                 </p>
               </article>
             </div>
@@ -241,6 +335,7 @@
         </div>
       </section>
 
+      <!-- ── IDEATION ── -->
       <section
         class="case-section dialogue-dark"
         id="ideation"
@@ -248,59 +343,31 @@
       >
         <div class="shell narrative-block">
           <p class="section-kicker">Ideation</p>
-          <h2 id="ideation-title">User Flow</h2>
-          <p>
-            After discussing with the founder on product goals, we had three key
-            priorities in mind:
-          </p>
+          <h2 id="ideation-title">Defining the Experience</h2>
 
-          <div class="dialogue-priority-grid" data-reveal>
-            <div class="dialogue-priority-card">
-              <div class="priority-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-                  />
-                </svg>
-              </div>
-              <h3>User Wellbeing</h3>
-              <p>Encourage healthy engagement, not endless scrolling.</p>
-            </div>
-            <div class="dialogue-priority-card">
-              <div class="priority-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"
-                  />
-                </svg>
-              </div>
-              <h3>Improve Communication</h3>
-              <p>
-                Teach empathy, active listening, and productive disagreement
-                will carry into careers, classrooms, communities, and personal
-                relationships.
-              </p>
-            </div>
-            <div class="dialogue-priority-card">
-              <div class="priority-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"
-                  />
-                </svg>
-              </div>
-              <h3>Meaningful Connections</h3>
-              <p>
-                Create opportunities for understanding and genuine connection
-                across different perspectives.
-              </p>
-            </div>
+          <!-- Target users -->
+          <div class="subsection" data-reveal>
+            <h3>Who Are We Designing For?</h3>
+            <ul class="dialogue-feature-list">
+              <li>
+                Young adults burned out by hostile or shallow social
+                interactions
+              </li>
+              <li>
+                People who want to discuss hard topics but avoid toxic online
+                spaces
+              </li>
+              <li>
+                Users who want to build communication skills across different
+                perspectives
+              </li>
+            </ul>
           </div>
 
-          <p>
-            I then started working on a user flow to map the end-to-end
-            experience and communicate our vision to the engineering team.
-          </p>
+          <!-- User Flow -->
+          <div class="subsection" data-reveal>
+            <h3>User Flow</h3>
+          </div>
 
           <figure class="artifact-card dialogue-artifact" data-reveal>
             <img
@@ -309,24 +376,46 @@
               loading="lazy"
             />
             <figcaption>
-              Contents of user flow has been blurred for confidentiality
-              purposes.
+              End-to-end user flow — onboarding through first conversation.
+              Blurred for confidentiality; simplified version below.
             </figcaption>
           </figure>
 
+          <!-- Simplified sanitized flow -->
           <div class="subsection" data-reveal>
-            <h3>Wireframes and Mockups: Lots of Trial and Error</h3>
-            <p>
-              Because Project Dialogue is built around connecting users with
-              people who hold different perspectives, we initially wanted
-              onboarding to teach our core values and gather detailed user
-              insights through:
-            </p>
+            <h3>Simplified Flow Overview</h3>
+            <div class="flow-steps">
+              <div class="flow-step">
+                <span class="flow-num">1</span>
+                <p>User signs up and shares initial perspective</p>
+              </div>
+              <div class="flow-step">
+                <span class="flow-num">2</span>
+                <p>Completes short questionnaire to personalize experience</p>
+              </div>
+              <div class="flow-step">
+                <span class="flow-num">3</span>
+                <p>Enters AI-powered practice conversation</p>
+              </div>
+              <div class="flow-step">
+                <span class="flow-num">4</span>
+                <p>Receives communication feedback and insights</p>
+              </div>
+              <div class="flow-step">
+                <span class="flow-num">5</span>
+                <p>Enters main platform feed with matched conversations</p>
+              </div>
+            </div>
+          </div>
 
+          <!-- Wireframes + Before/After -->
+          <div class="subsection" data-reveal>
+            <h3>Wireframes: From Complex to Focused</h3>
+            <p>Our initial onboarding required:</p>
             <ul class="dialogue-feature-list">
               <li>Educational modules</li>
-              <li>A 40+ question questionnaire</li>
-              <li>3 guided conversations with matched users</li>
+              <li>40+ question questionnaire</li>
+              <li>3 guided conversations before reaching the platform</li>
             </ul>
 
             <figure class="artifact-card dialogue-artifact">
@@ -336,17 +425,18 @@
                 loading="lazy"
               />
               <figcaption>
-                Original mockups of only half of our onboarding process!
+                Early wireframes — only half the original onboarding flow.
+                Blurred for confidentiality.
               </figcaption>
             </figure>
 
             <p>
-              However, we realized that requiring so much effort before users
-              could experience the platform's value would likely increase
-              drop-off and reduce engagement.
+              Too much friction before users could experience the platform's
+              value —> guaranteed drop-off.
             </p>
           </div>
 
+          <!-- HMW -->
           <div class="dialogue-hmw" data-reveal>
             <blockquote class="hmw-question">
               How might we introduce users to a completely new conversation
@@ -354,37 +444,101 @@
               them with lengthy explanations?
             </blockquote>
 
-            <p>
-              To streamline the onboarding experience, we reduced onboarding
-              time by 50% by:
-            </p>
-
-            <ul class="dialogue-feature-list">
-              <li>Cutting the questionnaire in half</li>
-              <li>
-                Moving educational content from onboarding into the platform
-              </li>
-              <li>
-                Replacing matched conversations with an AI-powered practice
-                session and personalized feedback
-              </li>
-            </ul>
+            <!-- Before/After -->
+            <div class="before-after-grid">
+              <div class="before-card">
+                <h4>Before: High-Friction Onboarding</h4>
+                <ul>
+                  <li>Educational modules upfront</li>
+                  <li>40+ questions before platform access</li>
+                  <li>3 matched conversations required</li>
+                  <li>
+                    <strong>Risk:</strong> Drop-off before value was clear
+                  </li>
+                </ul>
+              </div>
+              <div class="after-card">
+                <h4>After: Practice-First Onboarding</h4>
+                <ul>
+                  <li>Short AI-guided practice conversation</li>
+                  <li>Platform teaches through use, not explanation</li>
+                  <li>
+                    Post-practice summary of communication strengths and areas
+                    to improve
+                  </li>
+                  <li>
+                    Educational content available as optional in-platform
+                    support
+                  </li>
+                  <li>
+                    <strong>Result:</strong> ~50% reduction in onboarding steps
+                  </li>
+                </ul>
+              </div>
+            </div>
 
             <figure class="artifact-card dialogue-artifact" data-reveal>
               <img
                 src="../assets/dialogue/hi-fi-sage.webp"
-                alt="High-fidelity mockup of AI Practice Conversation with Guided Suggestions (First Iteration)"
+                alt="High-fidelity mockup of AI Practice Conversation with Guided Suggestions"
                 loading="lazy"
               />
               <figcaption>
-                High-Fidelity Mockup of AI Practice Conversation with Guided
-                Suggestions (First Iteration)"
+                High-Fidelity Mockup: AI Practice Conversation with Guided
+                Suggestions (First Iteration)
               </figcaption>
             </figure>
+
+            <!-- Annotated callouts -->
+            <div class="subsection" data-reveal>
+              <h3>Design Decisions in the Practice Screen</h3>
+              <div class="annotation-grid">
+                <div class="annotation-item">
+                  <span class="annotation-dot" aria-hidden="true"></span>
+                  <div>
+                    <h4>2-Minute Timer</h4>
+                    <p>
+                      Low-commitment, bounded — users know what they're signing
+                      up for.
+                    </p>
+                  </div>
+                </div>
+                <div class="annotation-item">
+                  <span class="annotation-dot" aria-hidden="true"></span>
+                  <div>
+                    <h4>Conversation Pulse</h4>
+                    <p>
+                      Real-time emotional tone, without interrupting the flow.
+                    </p>
+                  </div>
+                </div>
+                <div class="annotation-item">
+                  <span class="annotation-dot" aria-hidden="true"></span>
+                  <div>
+                    <h4>Guided Suggestions</h4>
+                    <p>
+                      Tips, not commands. Users accept or dismiss freely —
+                      supports their voice, not replaces it.
+                    </p>
+                  </div>
+                </div>
+                <div class="annotation-item">
+                  <span class="annotation-dot" aria-hidden="true"></span>
+                  <div>
+                    <h4>AI Practice Partner</h4>
+                    <p>
+                      Safe space to experience productive disagreement before
+                      live interactions.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
+      <!-- ── SOLUTION ── -->
       <section
         class="case-section dialogue-solution"
         id="solution"
@@ -393,44 +547,117 @@
         <div class="shell narrative-block">
           <p class="section-kicker">Our Solution</p>
           <h2 id="solution-title">A Better, Healthier Feed</h2>
-          <p>
-            Project Dialogue combines guided conversations, AI-powered coaching,
-            and educational resources to help users engage more constructively
-            with people who hold different perspectives.
-          </p>
 
           <div class="solution-feature-grid" data-reveal>
             <div class="solution-feature-card">
               <h3>AI-Guided Conversations</h3>
               <p>
-                Live, personalized feedback helps users practice healthy debate,
-                active listening, and finding common ground.
+                Live feedback to practice healthy debate and active listening.
               </p>
             </div>
             <div class="solution-feature-card">
               <h3>Conversation Insights</h3>
               <p>
-                Detailed profiles provide users with feedback on their
-                communication style, strengths, and areas for growth.
+                Post-conversation feedback on communication strengths and growth
+                areas.
               </p>
             </div>
             <div class="solution-feature-card">
               <h3>Continuous Learning</h3>
               <p>
-                An on-demand learning hub offers stories, lessons, and exercises
-                designed to strengthen conversation skills.
+                In-app stories, lessons, and exercises to build dialogue skills.
               </p>
             </div>
           </div>
 
-          <p class="solution-goal">
-            Our goal is to help users build habits that extend beyond the
-            platform—enabling more thoughtful conversations with family,
-            friends, colleagues, and their broader communities.
-          </p>
+          <!-- Conversation Awareness -->
+          <div class="subsection" data-reveal>
+            <h3>Conversation Awareness</h3>
+            <p>
+              We designed three real-time indicators to help users understand
+              <em>how</em> they communicate, not just <em>what</em> they say:
+            </p>
+            <div class="solution-feature-grid">
+              <div class="solution-feature-card">
+                <h3>Difference Barometer</h3>
+                <p>How different are your perspectives?</p>
+              </div>
+              <div class="solution-feature-card">
+                <h3>Collaboration Barometer</h3>
+                <p>How collaboratively are you each engaging?</p>
+              </div>
+              <div class="solution-feature-card">
+                <h3>Conversation Trajectory</h3>
+                <p>
+                  Is the discussion building understanding, or escalating
+                  tension?
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Design Tradeoff -->
+          <div class="subsection" data-reveal>
+            <h3>Design Tradeoff: Feedback vs. Focus</h3>
+            <p>
+              <strong>Challenge:</strong> Live indicators add cognitive load to
+              an already demanding interaction.
+            </p>
+            <p>
+              <strong>Decision:</strong> Made the barometers collapsible — users
+              choose between continuous feedback or a distraction-free
+              conversation. Balancing <em>transparency</em> with
+              <em>simplicity</em>.
+            </p>
+          </div>
+
+          <!-- Responsible AI -->
+          <div class="subsection" data-reveal>
+            <h3>Designing AI Responsibly</h3>
+            <ul class="dialogue-feature-list">
+              <li>AI supports users without speaking for them.</li>
+              <li>Feedback focuses on communication, not beliefs.</li>
+              <li>The goal is long-term skill building.</li>
+            </ul>
+          </div>
+
+          <!-- Success metrics -->
+          <div class="subsection" data-reveal>
+            <h3>How We'll Measure Success</h3>
+            <p>Beta metrics, anchored to our three product goals:</p>
+            <div class="metrics-grid">
+              <div class="metric-card">
+                <h4>Goal 1: Reduce Onboarding Friction</h4>
+                <ul>
+                  <li>Onboarding completion rate</li>
+                  <li>Drop-off rate</li>
+                  <li>Average onboarding completion time</li>
+                </ul>
+              </div>
+              <div class="metric-card">
+                <h4>Goal 2: Improve Conversation Quality</h4>
+                <ul>
+                  <li>AI suggestion acceptance rate</li>
+                  <li>Conversation completion rate</li>
+                  <li>
+                    Change in collaboration/open-mindedness barometers over time
+                  </li>
+                </ul>
+              </div>
+              <div class="metric-card">
+                <h4>Goal 3: Encourage Meaningful Engagement</h4>
+                <ul>
+                  <li>Weekly conversations per user</li>
+                  <li>Match acceptance rate</li>
+                  <li>Retention (Day 7 / Day 30)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
+      <!-- ── NEXT STEPS ── -->
       <section
         class="case-section compact dialogue-dark"
         id="next-steps"
@@ -442,50 +669,71 @@
           <div class="next-step-grid" data-reveal>
             <article>
               <strong>1</strong>
-              <h3>Final Designs</h3>
+              <h3>Finalize MVP Design Handoff</h3>
               <p>
-                Deliver all finalized mockups to the engineering team by next
-                month!
+                Refine high-fidelity user flows, complete mobile-responsive
+                designs, address edge cases, and prepare engineering
+                specifications.
               </p>
             </article>
             <article>
               <strong>2</strong>
-              <h3>Expert Consultations</h3>
+              <h3>Expert Validation</h3>
               <p>
-                Meet with professionals across Computer Science, Psychology, and
-                Political Science to gather insights and validate product ideas.
+                Review assumptions with experts in psychology, political
+                science, and computer science.
               </p>
             </article>
             <article>
               <strong>3</strong>
-              <h3>Advertise</h3>
+              <h3>Pilot Launch</h3>
               <p>
-                Design our website and advertise the platform before launching.
+                Beta testing to gather feedback on onboarding, conversation
+                quality, and user trust, then iterate.
               </p>
             </article>
           </div>
         </div>
       </section>
 
+      <!-- ── REFLECTION ── -->
       <section
         class="case-section dialogue-dark"
         id="conclusion"
         aria-labelledby="conclusion-title"
       >
         <div class="shell narrative-block">
-          <p class="section-kicker">Conclusion</p>
-          <p id="conclusion-title">
-            There's still plenty of work ahead, but over the past several months
-            we've spent countless hours brainstorming, iterating, and refining
-            our core features. Through the process, I've learned a great deal
-            about taking ownership of a product, adapting when ideas don't work
-            out as expected, and making thoughtful design decisions under tight
-            deadlines.
+          <p class="section-kicker">Reflection</p>
+          <h2 id="conclusion-title">What I Learned</h2>
+          <p>
+            I came into this project expecting the biggest challenge to be
+            designing individual screens. Instead, it was designing an entirely
+            new conversation experience. Every decision required balancing AI
+            guidance with user autonomy, transparency with simplicity, and
+            skill-building with a natural, engaging experience.
+          </p>
+          <p>
+            The biggest lesson:
+            <strong
+              >users shouldn't have to understand the entire system before
+              experiencing its value.</strong
+            >
+            Replacing multiple onboarding steps with a single AI-guided practice
+            conversation showed that we could preserve every onboarding goal
+            while significantly reducing friction. Instead of telling users how
+            the platform worked, we let them experience it firsthand.
+          </p>
+          <p>
+            This project showed me what design ownership really means: making
+            decisions with incomplete information, balancing user and business
+            needs, and turning a broad vision into something people can actually
+            use and learn from.
           </p>
           <a class="text-arrow back-top" href="#top">back to top ↑</a>
         </div>
       </section>
 
+      <!-- ── OTHER WORK ── -->
       <section
         class="case-section other-work"
         aria-labelledby="other-work-title"
@@ -527,25 +775,5 @@
         sessionStorage.removeItem("dialogue-auth");
       });
     </script>
-
-    <footer class="footer shell">
-      <div>
-        <p>Contact me · ✤</p>
-        <a href="mailto:nikki062604@gmail.com">nikki062604@gmail.com</a>
-      </div>
-      <div>
-        <p>Let’s connect · ✧</p>
-        <a
-          href="https://www.linkedin.com/in/nikkilee26/"
-          target="_blank"
-          rel="noreferrer"
-          >LinkedIn</a
-        >
-      </div>
-      <div>
-        <p>All rights reserved to Nikki Lee © <span data-year></span></p>
-        <strong>Made with ♥</strong>
-      </div>
-    </footer>
   </body>
 </html>
