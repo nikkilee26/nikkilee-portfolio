@@ -2500,6 +2500,14 @@ button {
   grid-template-columns: minmax(220px, 360px) minmax(0, 1fr);
 }
 
+.beli-solution-grid .phone-feature h2 {
+  margin-bottom: 16px;
+}
+
+.beli-solution-grid .phone-feature ul {
+  margin-top: 0;
+}
+
 .beli-solution-grid .phone-feature > img {
   order: -1;
 }
