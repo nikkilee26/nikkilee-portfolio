@@ -1178,7 +1178,8 @@ button {
 .metric-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(18px, 3vw, 30px);
+  column-gap: clamp(18px, 3vw, 30px);
+  row-gap: 6px;
   margin-top: 28px;
 }
 
@@ -1201,12 +1202,18 @@ button {
 
 .insight-card h3,
 .solution-copy h3,
-.split-note h3,
-.metric-card h3 {
-  margin: 0 0 12px;
-  font-size: clamp(1.45rem, 2.4vw, 2rem);
+.split-note h3 {
+  margin: 0 0 8px;
+  font-size: clamp(1.1rem, 1.8vw, 1.4rem);
   line-height: 1.1;
-  letter-spacing: -0.055em;
+  letter-spacing: -0.03em;
+}
+
+.metric-card h3 {
+  margin: 0;
+  font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
 }
 
 .insight-card p {
@@ -1430,20 +1437,25 @@ button {
   max-width: 780px;
   margin-inline: auto;
   margin-top: 38px;
+  align-items: stretch;
 }
 
 .metric-card {
-  min-height: 260px;
-  padding: clamp(24px, 3vw, 34px);
+  min-height: unset;
+  padding: 20px 22px;
   border-radius: var(--radius-lg);
   color: var(--paper-soft);
   box-shadow: 0 16px 34px rgba(20, 31, 25, 0.16);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .metric-card span {
-  display: inline-block;
-  margin-bottom: 14px;
-  font-size: 2rem;
+  display: block;
+  font-size: 1.4rem;
+  line-height: 1;
+  margin: 0;
 }
 
 .metric-card ul {
@@ -1453,7 +1465,12 @@ button {
 
 .metric-card li {
   color: rgba(255, 253, 244, 0.94);
-  line-height: 1.45;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.metric-card li + li {
+  margin-top: 1px;
 }
 
 .labs-metric { background: var(--teal-soft); }
@@ -2402,6 +2419,8 @@ button {
     radial-gradient(circle at 100% 0%, rgba(184, 209, 255, 0.25), transparent 38%),
     linear-gradient(135deg, #2e5aac, #203e73);
   color: #fff;
+  gap: 10px;
+  padding: 24px 26px;
 }
 
 .transit-metric:nth-child(2) {
@@ -2420,6 +2439,10 @@ button {
 .transit-metric li,
 .transit-metric span {
   color: #fff;
+}
+
+.transit-metric li + li {
+  margin-top: 5px;
 }
 
 /* Beli page */
@@ -3333,7 +3356,7 @@ body.dialogue-page {
 }
 
 /* Before / After onboarding comparison */
-.before-after-grid {
+.dialogue-page .before-after-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
@@ -3445,7 +3468,7 @@ body.dialogue-page {
   margin-block: 24px 8px;
 }
 
-.metric-card {
+.dialogue-solution .metric-card {
   padding: clamp(26px, 4vw, 40px);
   border-radius: 30px;
   background:
@@ -3454,14 +3477,14 @@ body.dialogue-page {
   color: var(--ink);
 }
 
-.metric-card h4 {
+.dialogue-solution .metric-card h4 {
   margin: 0 0 14px;
   font-size: 0.9rem;
   font-weight: 700;
   color: #ff3f85;
 }
 
-.metric-card ul {
+.dialogue-solution .metric-card ul {
   padding-left: 16px;
   margin: 0;
   font-size: 0.85rem;
@@ -3469,7 +3492,7 @@ body.dialogue-page {
   line-height: 1.75;
 }
 
-.metric-card li + li {
+.dialogue-solution .metric-card li + li {
   margin-top: 4px;
 }
 
