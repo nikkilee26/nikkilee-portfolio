@@ -115,24 +115,10 @@
   const artTrack = document.querySelector('.art-strip-track');
   if (artTrack) {
     const inner = artTrack.querySelector('.art-strip-inner');
-    if (inner && window.matchMedia('(max-width: 720px)').matches) {
-      const items = Array.from(inner.children);
-      if (items.length) {
-        const group = document.createElement('div');
-        group.className = 'art-strip-group';
+    const isMobile = window.matchMedia('(max-width: 720px)').matches;
 
-        items.forEach((item) => {
-          group.appendChild(item);
-        });
-
-        inner.innerHTML = '';
-        inner.appendChild(group);
-
-        const clone = group.cloneNode(true);
-        clone.setAttribute('aria-hidden', 'true');
-        inner.appendChild(clone);
-        inner.classList.add('is-looping');
-      }
+    if (inner && isMobile) {
+      inner.classList.add('is-mobile-scroll');
     }
   }
 
