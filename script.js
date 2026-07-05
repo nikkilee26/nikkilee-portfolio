@@ -124,11 +124,12 @@
 
       const syncLoopDistance = () => {
         if (!inner) return;
-        const distance = inner.scrollWidth / 2;
+        const gap = parseFloat(getComputedStyle(inner).columnGap || getComputedStyle(inner).gap || 0);
+        const distance = (inner.scrollWidth / 2) + (gap / 2);
         inner.style.setProperty('--scroll-distance', `${Math.ceil(distance)}px`);
       };
 
-      syncLoopDistance();
+      requestAnimationFrame(syncLoopDistance);
       window.addEventListener('load', syncLoopDistance, { once: true });
       window.addEventListener('resize', syncLoopDistance);
     }

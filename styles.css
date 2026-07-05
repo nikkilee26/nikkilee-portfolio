@@ -4307,7 +4307,7 @@ body.dialogue-page {
   }
 
   .art-strip-inner {
-    animation: artScrollMobile 36s linear infinite;
+    animation: artScrollMobile 60s linear infinite;
     transform: none;
     padding-right: 0;
     width: max-content;
