@@ -4107,6 +4107,11 @@ body.dialogue-page {
   to   { transform: translate3d(-100%, 0, 0); }
 }
 
+@keyframes artScrollMobile {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .art-strip-inner { animation: none; }
   .art-strip-track { overflow-x: auto; }
@@ -4288,6 +4293,7 @@ body.dialogue-page {
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x proximity;
     scrollbar-width: none;
+    padding-bottom: 0;
   }
 
   .art-strip-track::-webkit-scrollbar {
@@ -4295,7 +4301,7 @@ body.dialogue-page {
   }
 
   .art-strip-inner {
-    animation: none;
+    animation: artScrollMobile 30s linear infinite;
     transform: none;
     padding-right: 0;
   }
@@ -4307,7 +4313,11 @@ body.dialogue-page {
   }
 
   .art-strip-section {
-    padding: clamp(16px, 3vw, 32px) 0;
+    padding: clamp(8px, 2vw, 20px) 0 16px;
+  }
+
+  .art-strip-header {
+    margin-bottom: 10px;
   }
 }
 /* ═══ END ART STRIP ═══ */

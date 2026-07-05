@@ -114,12 +114,13 @@
   // ═══ ART STRIP — remove this block with the HTML sections to undo ═══
   const artTrack = document.querySelector('.art-strip-track');
   if (artTrack) {
-    // Clone the inner set for seamless infinite loop
     const inner = artTrack.querySelector('.art-strip-inner');
-    if (inner) {
-      const clone = inner.cloneNode(true);
-      clone.setAttribute('aria-hidden', 'true');
-      artTrack.appendChild(clone);
+    if (inner && window.matchMedia('(max-width: 720px)').matches) {
+      const items = Array.from(inner.children);
+      items.forEach((item) => {
+        inner.appendChild(item.cloneNode(true));
+      });
+      inner.classList.add('is-looping');
     }
   }
 
