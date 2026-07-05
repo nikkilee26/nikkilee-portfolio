@@ -932,19 +932,7 @@ button {
   color: var(--forest-dark);
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
   font-size: 0.86rem;
-  cursor: default;
-  transition: background 0.22s ease, color 0.22s ease, border-color 0.22s ease, transform 0.22s ease;
 }
-
-.focus-cloud span:hover { transform: scale(1.06); color: #fff; border-color: transparent; }
-
-.focus-cloud span:nth-child(1):hover { background: #ff3f85; }
-.focus-cloud span:nth-child(2):hover { background: #5b8ee6; }
-.focus-cloud span:nth-child(3):hover { background: #f0a500; }
-.focus-cloud span:nth-child(4):hover { background: #3dbfa8; }
-.focus-cloud span:nth-child(5):hover { background: #a87fd4; }
-.focus-cloud span:nth-child(6):hover { background: #e85d5d; }
-.focus-cloud span:nth-child(7):hover { background: #87a96b; }
 
 /* ── Art Gallery ── */
 .art-gallery-section {
@@ -964,12 +952,6 @@ button {
   overflow: hidden;
   border-radius: 10px;
   cursor: pointer;
-  border: none;
-  padding: 0;
-  background: transparent;
-  display: block;
-  width: 100%;
-  text-align: left;
 }
 
 .art-item img {
@@ -1012,14 +994,6 @@ button {
   color: rgba(255,255,255,0.75);
   font-size: 0.8rem;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-}
-
-.art-story-hint {
-  display: block;
-  margin-top: 6px;
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 0.75rem;
-  font-style: italic;
 }
 
 .contact-section {
@@ -1586,12 +1560,6 @@ button {
   transform: translateY(0);
 }
 
-[data-reveal][data-delay="1"] { transition-delay: 0.12s; }
-[data-reveal][data-delay="2"] { transition-delay: 0.24s; }
-[data-reveal][data-delay="3"] { transition-delay: 0.36s; }
-[data-reveal][data-delay="4"] { transition-delay: 0.48s; }
-[data-reveal][data-delay="5"] { transition-delay: 0.60s; }
-
 .toast {
   position: fixed;
   left: 50%;
@@ -1718,7 +1686,10 @@ button {
   }
 
   .hero-copy h1 {
-    font-size: clamp(1.8rem, 7vw, 3.2rem);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 8.5vw, 3.2rem);
+    font-weight: 600;
+    text-transform: none;
   }
 
   .spark-word::before {
@@ -4157,16 +4128,14 @@ body.dialogue-page {
   height: 100%;
   object-fit: cover;
   display: block;
-  filter: blur(0.3px);
 }
 
 .art-strip-caption {
   position: absolute;
   inset: 0;
-  background: rgba(6, 31, 23, 0.58);
+  background: rgba(6, 31, 23, 0.52);
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  align-items: flex-end;
   padding: 12px 14px;
   opacity: 0;
   transition: opacity 0.2s ease;
@@ -4184,19 +4153,11 @@ body.dialogue-page {
   line-height: 1.2;
 }
 
-.art-strip-caption small {
-  display: block;
-  color: rgba(255, 255, 255, 0.65);
-  font-size: 0.7rem;
-  margin-top: 3px;
-  font-style: italic;
-}
-
 .art-lightbox {
   position: fixed;
   inset: 0;
   z-index: 900;
-  background: rgba(6, 20, 15, 0.92);
+  background: rgba(6, 20, 15, 0.9);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4211,70 +4172,12 @@ body.dialogue-page {
   pointer-events: all;
 }
 
-.art-lightbox-content {
-  display: flex;
-  gap: 40px;
-  align-items: center;
-  max-width: 900px;
-  width: 100%;
-  max-height: 85vh;
-}
-
 .art-lightbox img {
-  flex-shrink: 0;
-  max-height: 80vh;
-  max-width: 52%;
+  max-width: 100%;
+  max-height: 85vh;
   border-radius: 10px;
   object-fit: contain;
   box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
-}
-
-.art-lightbox-info {
-  flex: 1;
-  min-width: 0;
-}
-
-.art-lightbox-kicker {
-  margin: 0 0 8px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #87a96b;
-}
-
-.art-lightbox-title {
-  margin: 0 0 14px;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #fff;
-  line-height: 1.2;
-}
-
-.art-lightbox-insight {
-  margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.75;
-  color: rgba(255, 255, 255, 0.78);
-}
-
-@media (max-width: 640px) {
-  .art-lightbox {
-    padding: 20px 16px;
-    align-items: flex-start;
-    overflow-y: auto;
-  }
-  .art-lightbox-content {
-    flex-direction: column;
-    padding-top: 52px;
-    max-height: none;
-    gap: 20px;
-  }
-  .art-lightbox img {
-    max-width: 100%;
-    max-height: 52vw;
-  }
 }
 
 .art-lightbox-close {
@@ -4296,4 +4199,22 @@ body.dialogue-page {
 }
 
 .art-lightbox-close:hover { background: rgba(255, 255, 255, 0.26); }
+
+/* Touch devices: always show about-page overlay so tap opens lightbox */
+@media (hover: none) {
+  .art-item .art-overlay {
+    opacity: 1;
+  }
+}
+
+/* Smaller art strip items on mobile */
+@media (max-width: 720px) {
+  .art-strip-item {
+    flex: 0 0 160px;
+    height: 160px;
+  }
+  .art-strip-section {
+    padding: clamp(16px, 3vw, 32px) 0;
+  }
+}
 /* ═══ END ART STRIP ═══ */
