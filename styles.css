@@ -961,7 +961,10 @@ button {
   position: relative;
   margin-bottom: 14px;
   overflow: hidden;
+  border: none;
   border-radius: 10px;
+  box-shadow: none;
+  outline: none;
   cursor: pointer;
 }
 
@@ -969,6 +972,9 @@ button {
   width: 100%;
   height: auto;
   display: block;
+  border: none;
+  box-shadow: none;
+  outline: none;
   transition: transform 350ms var(--ease);
 }
 
