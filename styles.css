@@ -4120,12 +4120,17 @@ body.dialogue-page {
 
 .art-strip-inner {
   display: flex;
-  gap: 12px;
-  padding-right: 12px;
+  gap: 0;
   flex: none;
   will-change: transform;
   backface-visibility: hidden;
   animation: artScroll 36s linear infinite;
+}
+
+.art-strip-group {
+  display: flex;
+  gap: 12px;
+  flex: none;
 }
 
 .art-strip-track:hover .art-strip-inner {
@@ -4139,7 +4144,7 @@ body.dialogue-page {
 
 @keyframes artScrollMobile {
   from { transform: translate3d(0, 0, 0); }
-  to   { transform: translate3d(calc(-1 * var(--scroll-distance, 0px)), 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -4323,9 +4328,8 @@ body.dialogue-page {
   }
 
   .art-strip-inner {
-    animation: artScrollMobile 60s linear infinite;
+    animation: artScrollMobile 48s linear infinite;
     transform: none;
-    padding-right: 0;
     width: max-content;
   }
 

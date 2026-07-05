@@ -117,37 +117,21 @@
     const inner = artTrack.querySelector('.art-strip-inner');
     if (inner && window.matchMedia('(max-width: 720px)').matches) {
       const items = Array.from(inner.children);
-      items.forEach((item) => {
-        inner.appendChild(item.cloneNode(true));
-      });
-      inner.classList.add('is-looping');
+      if (items.length) {
+        const group = document.createElement('div');
+        group.className = 'art-strip-group';
 
-      const syncLoopDistance = () => {
-        if (!inner) return;
-        const gap = parseFloat(getComputedStyle(inner).columnGap || getComputedStyle(inner).gap || 0);
-        const distance = (inner.scrollWidth / 2) + (gap / 2);
-        inner.style.setProperty('--scroll-distance', `${Math.ceil(distance)}px`);
-      };
-
-      const refreshLoop = () => {
-        requestAnimationFrame(() => {
-          syncLoopDistance();
-          requestAnimationFrame(syncLoopDistance);
+        items.forEach((item) => {
+          group.appendChild(item);
         });
-      };
 
-      refreshLoop();
-      window.addEventListener('load', refreshLoop, { once: true });
-      window.addEventListener('resize', refreshLoop);
-      window.addEventListener('orientationchange', refreshLoop);
+        inner.innerHTML = '';
+        inner.appendChild(group);
 
-      inner.querySelectorAll('img').forEach((img) => {
-        img.addEventListener('load', refreshLoop, { once: false });
-      });
-
-      if ('ResizeObserver' in window) {
-        const resizeObserver = new ResizeObserver(refreshLoop);
-        resizeObserver.observe(inner);
+        const clone = group.cloneNode(true);
+        clone.setAttribute('aria-hidden', 'true');
+        inner.appendChild(clone);
+        inner.classList.add('is-looping');
       }
     }
   }
