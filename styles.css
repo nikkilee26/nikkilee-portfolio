@@ -4280,12 +4280,32 @@ body.dialogue-page {
   }
 }
 
-/* Smaller art strip items on mobile */
+/* Smaller art strip items and touch-friendly carousel on mobile */
 @media (max-width: 720px) {
+  .art-strip-track {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+  }
+
+  .art-strip-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .art-strip-inner {
+    animation: none;
+    transform: none;
+    padding-right: 0;
+  }
+
   .art-strip-item {
     flex: 0 0 160px;
     height: 160px;
+    scroll-snap-align: start;
   }
+
   .art-strip-section {
     padding: clamp(16px, 3vw, 32px) 0;
   }
