@@ -369,9 +369,7 @@ button {
 
 /* Shared elements */
 .micro-label,
-.section-kicker,
-.case-eyebrow,
-.project-index {
+.section-kicker {
   margin: 0 0 14px;
   color: var(--forest);
   font-weight: 800;
@@ -381,8 +379,15 @@ button {
 }
 
 .case-eyebrow,
-.project-index {
+.project-index,
+.case-subtitle {
+  margin: 0 0 14px;
   color: var(--muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
 }
 
 .button {
@@ -490,10 +495,11 @@ button {
   border-radius: 999px;
   background: var(--sage);
   color: var(--forest-dark);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
   font-size: 0.78rem;
-  font-weight: 850;
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.08em;
 }
 
 .interactive-card {
@@ -822,8 +828,9 @@ button {
 .project-subtitle {
   margin: 8px 0 0;
   color: var(--muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
   font-size: 1.04rem;
-  font-weight: 500;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.12em;
 }
@@ -1097,8 +1104,9 @@ button {
   margin: 14px 0 0;
   color: var(--muted);
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.12em;
   font-size: clamp(0.72rem, 1.1vw, 0.88rem);
 }
 
@@ -3693,6 +3701,8 @@ body.dialogue-page {
 .beli-page .case-tags span {
   background: #0F52B3;
   color: #fff;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-weight: 400;
 }
 
 /* Transit Pal: similar light periwinkle matching hero */
@@ -3710,6 +3720,8 @@ body.dialogue-page {
 .transit-page .case-tags span {
   background: #0A3A80;
   color: #fff;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-weight: 400;
 }
 
 /* Sorcea: dark teal matching hero */
@@ -3727,6 +3739,8 @@ body.dialogue-page {
 .sorcea-page .case-tags span {
   background: #E82C6A;
   color: #fff;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-weight: 400;
 }
 
 /* Serif title font to match Project Dialogue */
@@ -4109,7 +4123,7 @@ body.dialogue-page {
 
 @keyframes artScrollMobile {
   from { transform: translate3d(0, 0, 0); }
-  to   { transform: translate3d(-50%, 0, 0); }
+  to   { transform: translate3d(calc(-1 * var(--scroll-distance, 0px)), 0, 0); }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -4288,28 +4302,20 @@ body.dialogue-page {
 /* Smaller art strip items and touch-friendly carousel on mobile */
 @media (max-width: 720px) {
   .art-strip-track {
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x proximity;
-    scrollbar-width: none;
+    overflow: hidden;
     padding-bottom: 0;
   }
 
-  .art-strip-track::-webkit-scrollbar {
-    display: none;
-  }
-
   .art-strip-inner {
-    animation: artScrollMobile 30s linear infinite;
+    animation: artScrollMobile 36s linear infinite;
     transform: none;
     padding-right: 0;
+    width: max-content;
   }
 
   .art-strip-item {
     flex: 0 0 160px;
     height: 160px;
-    scroll-snap-align: start;
   }
 
   .art-strip-section {

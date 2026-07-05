@@ -121,6 +121,16 @@
         inner.appendChild(item.cloneNode(true));
       });
       inner.classList.add('is-looping');
+
+      const syncLoopDistance = () => {
+        if (!inner) return;
+        const distance = inner.scrollWidth / 2;
+        inner.style.setProperty('--scroll-distance', `${Math.ceil(distance)}px`);
+      };
+
+      syncLoopDistance();
+      window.addEventListener('load', syncLoopDistance, { once: true });
+      window.addEventListener('resize', syncLoopDistance);
     }
   }
 
