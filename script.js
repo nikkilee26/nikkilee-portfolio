@@ -111,6 +111,57 @@
     node.textContent = new Date().getFullYear();
   });
 
+  // ═══ ART STRIP — remove this block with the HTML sections to undo ═══
+  const artTrack = document.querySelector('.art-strip-track');
+  if (artTrack) {
+    // Clone the inner set for seamless infinite loop
+    const inner = artTrack.querySelector('.art-strip-inner');
+    if (inner) {
+      const clone = inner.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      artTrack.appendChild(clone);
+    }
+  }
+
+  const lightbox = document.getElementById('art-lightbox');
+  if (lightbox) {
+    const lightboxImg = lightbox.querySelector('img');
+    // About page art grid
+    document.querySelector('.art-grid')?.addEventListener('click', (e) => {
+      const btn = e.target.closest('.art-item[data-insight]');
+      if (btn) {
+        lightboxImg.src = btn.dataset.src;
+        lightboxImg.alt = btn.dataset.title || '';
+        lightbox.querySelector('.art-lightbox-title').textContent = btn.dataset.title || '';
+        lightbox.querySelector('.art-lightbox-insight').textContent = btn.dataset.insight || '';
+        lightbox.classList.add('is-open');
+        lightbox.querySelector('.art-lightbox-close').focus();
+      }
+    });
+    lightbox.addEventListener('click', () => {
+      lightbox.classList.remove('is-open');
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') lightbox.classList.remove('is-open');
+    });
+  }
+  // ═══ END ART STRIP ═══
+  // ═══ END ART STRIP LIGHTBOX ═══
+
+  const heroRole = document.querySelector('.hero-role');
+  if (heroRole) {
+    const roles = ['ui/ux designer', 'systems thinker', 'startup builder', 'visual artist'];
+    let roleIndex = 0;
+    setInterval(() => {
+      heroRole.style.opacity = '0';
+      setTimeout(() => {
+        roleIndex = (roleIndex + 1) % roles.length;
+        heroRole.textContent = roles[roleIndex];
+        heroRole.style.opacity = '1';
+      }, 300);
+    }, 3000);
+  }
+
   function showToast(message) {
     let toast = document.querySelector('.toast');
     if (!toast) {
