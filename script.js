@@ -159,7 +159,7 @@
         heroRole.textContent = roles[roleIndex];
         heroRole.style.opacity = '1';
       }, 300);
-    }, 3000);
+    }, 2500);
   }
 
   function showToast(message) {
