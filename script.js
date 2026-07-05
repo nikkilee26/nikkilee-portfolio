@@ -129,9 +129,26 @@
         inner.style.setProperty('--scroll-distance', `${Math.ceil(distance)}px`);
       };
 
-      requestAnimationFrame(syncLoopDistance);
-      window.addEventListener('load', syncLoopDistance, { once: true });
-      window.addEventListener('resize', syncLoopDistance);
+      const refreshLoop = () => {
+        requestAnimationFrame(() => {
+          syncLoopDistance();
+          requestAnimationFrame(syncLoopDistance);
+        });
+      };
+
+      refreshLoop();
+      window.addEventListener('load', refreshLoop, { once: true });
+      window.addEventListener('resize', refreshLoop);
+      window.addEventListener('orientationchange', refreshLoop);
+
+      inner.querySelectorAll('img').forEach((img) => {
+        img.addEventListener('load', refreshLoop, { once: false });
+      });
+
+      if ('ResizeObserver' in window) {
+        const resizeObserver = new ResizeObserver(refreshLoop);
+        resizeObserver.observe(inner);
+      }
     }
   }
 
