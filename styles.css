@@ -943,7 +943,23 @@ button {
   color: var(--forest-dark);
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
   font-size: 0.86rem;
+  cursor: default;
+  transition: background 0.22s ease, color 0.22s ease, border-color 0.22s ease, transform 0.22s ease;
 }
+
+.focus-cloud span:hover {
+  transform: scale(1.06);
+  color: #fff;
+  border-color: transparent;
+}
+
+.focus-cloud span:nth-child(1):hover { background: #ff3f85; }
+.focus-cloud span:nth-child(2):hover { background: #5b8ee6; }
+.focus-cloud span:nth-child(3):hover { background: #f0a500; }
+.focus-cloud span:nth-child(4):hover { background: #3dbfa8; }
+.focus-cloud span:nth-child(5):hover { background: #a87fd4; }
+.focus-cloud span:nth-child(6):hover { background: #e85d5d; }
+.focus-cloud span:nth-child(7):hover { background: #87a96b; }
 
 /* ── Art Gallery ── */
 .art-gallery-section {
