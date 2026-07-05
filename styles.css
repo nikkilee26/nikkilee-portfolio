@@ -4083,6 +4083,8 @@ body.dialogue-page {
   width: 100%;
   min-width: 0;
   overflow: hidden;
+  clip-path: inset(0);
+  position: relative;
   padding-bottom: 6px;
 }
 
@@ -4163,7 +4165,7 @@ body.dialogue-page {
   position: fixed;
   inset: 0;
   z-index: 900;
-  background: rgba(6, 20, 15, 0.9);
+  background: rgba(6, 20, 15, 0.92);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4178,12 +4180,52 @@ body.dialogue-page {
   pointer-events: all;
 }
 
-.art-lightbox img {
-  max-width: 100%;
+.art-lightbox-content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  max-width: 900px;
+  width: 100%;
   max-height: 85vh;
+}
+
+.art-lightbox img {
+  flex-shrink: 0;
+  max-height: 80vh;
+  max-width: 52%;
   border-radius: 10px;
   object-fit: contain;
   box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+}
+
+.art-lightbox-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.art-lightbox-kicker {
+  margin: 0 0 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #87a96b;
+}
+
+.art-lightbox-title {
+  margin: 0 0 14px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.art-lightbox-insight {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .art-lightbox-close {
@@ -4202,9 +4244,34 @@ body.dialogue-page {
   align-items: center;
   justify-content: center;
   transition: background 0.15s;
+  z-index: 1;
 }
 
 .art-lightbox-close:hover { background: rgba(255, 255, 255, 0.26); }
+
+@media (max-width: 640px) {
+  .art-lightbox {
+    padding: 0;
+    align-items: flex-start;
+  }
+  .art-lightbox-content {
+    flex-direction: column;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    max-height: 100vh;
+    padding: 64px 20px 40px;
+    gap: 20px;
+    width: 100%;
+  }
+  .art-lightbox img {
+    max-width: 100%;
+    max-height: 55vw;
+    flex-shrink: 0;
+  }
+  .art-lightbox-kicker { color: #87a96b; }
+  .art-lightbox-title { color: #fff; font-size: 1.25rem; }
+  .art-lightbox-insight { color: #fff; font-size: 0.9rem; }
+}
 
 /* Touch devices: always show about-page overlay so tap opens lightbox */
 @media (hover: none) {
