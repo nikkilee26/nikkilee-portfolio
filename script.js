@@ -153,12 +153,12 @@
     const roles = ['ui/ux designer', 'systems thinker', 'startup builder', 'visual artist'];
     let roleIndex = 0;
     setInterval(() => {
-      heroRole.style.opacity = '0';
+      heroRole.classList.add('is-fading');
       setTimeout(() => {
         roleIndex = (roleIndex + 1) % roles.length;
         heroRole.textContent = roles[roleIndex];
-        heroRole.style.opacity = '1';
-      }, 300);
+        heroRole.classList.remove('is-fading');
+      }, 320);
     }, 2500);
   }
 
