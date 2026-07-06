@@ -147,6 +147,111 @@
   // ═══ END ART STRIP ═══
   // ═══ END ART STRIP LIGHTBOX ═══
 
+  // ── Before/after toggle ──
+  document.querySelectorAll('.ba-toggle-wrap').forEach((wrap) => {
+    const btns = wrap.querySelectorAll('.ba-btn');
+    const before = wrap.querySelector('.ba-before');
+    const after = wrap.querySelector('.ba-after');
+    if (!before || !after || !btns.length) return;
+    before.classList.add('is-visible');
+    btns[0].classList.add('is-active');
+    btns.forEach((btn, i) => {
+      btn.addEventListener('click', () => {
+        btns.forEach((b) => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+        before.classList.toggle('is-visible', i === 0);
+        after.classList.toggle('is-visible', i === 1);
+      });
+    });
+  });
+
+  // ── Journey subway map ──
+  document.querySelectorAll('.journey-subway').forEach((map) => {
+    const stops = [...map.querySelectorAll('.subway-stop')];
+    const panels = [...map.querySelectorAll('.subway-panel')];
+    const fill = map.querySelector('.subway-track-fill');
+    const wrap = map.querySelector('.subway-track-wrap');
+    const CIRC = 119.4;
+    const DURATION = 10000;
+    const TICK = 80;
+    let timer = null;
+    let elapsed = 0;
+    let current = 0;
+
+    function setFill(idx) {
+      if (!fill || !wrap) return;
+      const wrapRect = wrap.getBoundingClientRect();
+      const getDotCenter = (stop) => {
+        const r = stop.querySelector('.stop-dot-wrap').getBoundingClientRect();
+        return r.left + r.width / 2 - wrapRect.left;
+      };
+      const startX = getDotCenter(stops[0]);
+      const endX = getDotCenter(stops[idx]);
+      fill.style.left = `${startX}px`;
+      fill.style.width = `${Math.max(0, endX - startX)}px`;
+    }
+
+    function resetRings() {
+      stops.forEach((s) => {
+        const ring = s.querySelector('.ring-prog');
+        if (ring) ring.style.strokeDashoffset = CIRC;
+      });
+    }
+
+    function startTimer(idx) {
+      clearInterval(timer);
+      elapsed = 0;
+      resetRings();
+      const ring = stops[idx].querySelector('.ring-prog');
+      timer = setInterval(() => {
+        elapsed += TICK;
+        const pct = Math.min(elapsed / DURATION, 1);
+        if (ring) ring.style.strokeDashoffset = CIRC * (1 - pct);
+        if (elapsed >= DURATION) {
+          clearInterval(timer);
+          activate((idx + 1) % stops.length);
+        }
+      }, TICK);
+    }
+
+    function activate(idx) {
+      current = idx;
+      stops.forEach((s, i) => s.classList.toggle('is-active', i === idx));
+      panels.forEach((p, i) => p.classList.toggle('is-active', i === idx));
+      setFill(idx);
+      startTimer(idx);
+    }
+
+    stops.forEach((stop, i) => stop.addEventListener('click', () => activate(i)));
+
+    requestAnimationFrame(() => activate(0));
+    window.addEventListener('resize', () => setFill(current), { passive: true });
+  });
+
+  // ── Stat counter animation ──
+  const countEls = document.querySelectorAll('[data-count-to]');
+  if (countEls.length && !prefersReducedMotion && 'IntersectionObserver' in window) {
+    const countObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const target = parseInt(el.dataset.countTo, 10);
+        const suffix = el.dataset.countSuffix || '';
+        const duration = 900;
+        const startTime = performance.now();
+        const tick = (now) => {
+          const progress = Math.min((now - startTime) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          el.textContent = Math.round(eased * target) + suffix;
+          if (progress < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+        countObserver.unobserve(el);
+      });
+    }, { threshold: 0.6 });
+    countEls.forEach((el) => countObserver.observe(el));
+  }
+
   const heroRole = document.querySelector('.hero-role');
   if (heroRole) {
     const roles = ['ui/ux designer', 'systems thinker', 'startup builder', 'visual artist'];
