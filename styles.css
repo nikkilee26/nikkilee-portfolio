@@ -798,6 +798,58 @@ button {
   box-shadow: 0 28px 70px rgba(29, 38, 30, 0.18);
 }
 
+/* ── Featured work card ── */
+.work-card--featured {
+  background:
+    radial-gradient(ellipse at 92% 8%, rgba(255, 63, 133, 0.14) 0%, transparent 42%),
+    linear-gradient(145deg, #061c45 0%, #0b2e60 55%, #0e3a6e 100%);
+  border-color: rgba(255, 255, 255, 0.1);
+  padding: clamp(28px, 3.5vw, 48px);
+}
+
+.work-card--featured:hover,
+.work-card--featured:focus-visible {
+  border-color: rgba(255, 63, 133, 0.3);
+  box-shadow: 0 32px 80px rgba(6, 28, 69, 0.55);
+}
+
+.work-card--featured .project-index {
+  color: rgba(255, 255, 255, 0.38);
+}
+
+.work-card--featured .work-copy h2 {
+  color: #fff;
+}
+
+.work-card--featured .project-subtitle {
+  color: rgba(255, 255, 255, 0.48);
+}
+
+.work-card--featured .work-copy > p:last-of-type {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.work-card--featured .text-arrow {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.featured-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(255, 63, 133, 0.14);
+  border: 1px solid rgba(255, 63, 133, 0.38);
+  color: #ff7eb5;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  margin-bottom: 12px;
+}
+
 .work-image {
   overflow: hidden;
   border-radius: 16px;
