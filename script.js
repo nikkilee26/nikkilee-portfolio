@@ -117,8 +117,14 @@
     const inner = artTrack.querySelector('.art-strip-inner');
     const isMobile = window.matchMedia('(max-width: 720px)').matches;
 
-    if (inner && isMobile) {
-      inner.classList.add('is-mobile-scroll');
+    if (inner && !isMobile && !prefersReducedMotion) {
+      const group = inner.querySelector('.art-strip-group');
+      if (group) {
+        const clone = group.cloneNode(true);
+        clone.setAttribute('aria-hidden', 'true');
+        inner.appendChild(clone);
+        inner.classList.add('is-looping');
+      }
     }
   }
 
