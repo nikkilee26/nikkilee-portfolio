@@ -4221,8 +4221,37 @@ body.dialogue-page {
     grid-template-columns: 1fr;
   }
   .insight-decision-arrow {
-    text-align: center;
+    justify-content: center;
+    height: 24px;
+    font-size: 0;
   }
+  .insight-decision-arrow::after {
+    content: '↓';
+    font-size: 1.3rem;
+    line-height: 1;
+  }
+}
+
+/* ── Insight-decision cards on dark backgrounds ── */
+.dialogue-dark .insight-decision-card.insight-side {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+.dialogue-dark .insight-decision-card.decision-side {
+  background: rgba(255, 138, 183, 0.1);
+  border-color: rgba(255, 138, 183, 0.28);
+}
+.dialogue-dark .id-label {
+  color: rgba(255, 255, 255, 0.45);
+}
+.dialogue-dark .insight-decision-card.decision-side .id-label {
+  color: #ff8ab7;
+}
+.dialogue-dark .insight-decision-card p:not(.id-label) {
+  color: rgba(255, 255, 255, 0.82);
+}
+.dialogue-dark .insight-decision-arrow {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 /* ── Dialogue: dark-background feature cards (ideation section) ── */
@@ -4279,7 +4308,7 @@ body.dialogue-page {
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.7);
   font-style: italic;
-  margin: 0 0 24px;
+  margin: 16px 0 0;
   padding: 14px 18px;
   border-left: 3px solid rgba(255, 255, 255, 0.2);
 }
