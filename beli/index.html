@@ -87,6 +87,28 @@
             <p>Jan – Mar 2025</p>
           </div>
         </div>
+        <div class="shell" data-reveal>
+          <div class="dialogue-shift-callout">
+            <p class="section-kicker">Key Outcome</p>
+            <p>
+              Redesigned the rating page to reduce choice overload and
+              introduced Menu Search with Smart Autofill, giving users a faster,
+              memory-free way to log specific dishes and removing unnecessary
+              steps from the logging flow.
+            </p>
+          </div>
+        </div>
+        <div class="shell what-i-drove-row" data-reveal>
+          <p class="section-kicker">What I Drove</p>
+          <div class="what-i-drove-chips">
+            <span>UX Research</span>
+            <span>User Interviews</span>
+            <span>Feature Redesign</span>
+            <span>Wireframing</span>
+            <span>Prototyping</span>
+            <span>High-Fidelity Mockups</span>
+          </div>
+        </div>
         <div class="shell case-product-grid" data-reveal>
           <div>
             <h2>Product</h2>
@@ -105,11 +127,14 @@
             </p>
           </div>
           <div>
-            <h2>Responsibilities</h2>
-            <p>
-              UX Research • User Interviews • Problem Definition • Sketching •
-              Wireframing • Prototyping
-            </p>
+            <h2>Tools & Skills</h2>
+            <div class="what-i-drove-chips">
+              <span>Figma</span>
+              <span>User Interviews</span>
+              <span>Wireframing</span>
+              <span>High-Fidelity Prototypes</span>
+              <span>Competitive Analysis</span>
+            </div>
           </div>
         </div>
       </section>
@@ -443,84 +468,6 @@
             menu by category. Together, these features make finding dishes easy
             without introducing a new interaction pattern.
           </p>
-
-          <p>
-            These were the key design decisions I made to address the problems I
-            encountered during my research process:
-          </p>
-          <div class="insight-decision-list" data-reveal>
-            <div class="insight-decision-row">
-              <div class="insight-decision-card insight-side">
-                <p class="id-label">Insight</p>
-                <p>
-                  Most users forget menu item names when writing a review after
-                  leaving the restaurant, increasing drop-off rate.
-                </p>
-              </div>
-              <div class="insight-decision-arrow" aria-hidden="true">→</div>
-              <div class="insight-decision-card decision-side">
-                <p class="id-label">Design Decision</p>
-                <p>
-                  Add menu search and autofill so users can browse or type a
-                  keyword to find dishes so no recall is required.
-                </p>
-              </div>
-            </div>
-            <div class="insight-decision-row">
-              <div class="insight-decision-card insight-side">
-                <p class="id-label">Insight</p>
-                <p>
-                  Users already rely on Notes to log dishes, thoughts, and
-                  context, making it the primary way they review restaurants.
-                </p>
-              </div>
-              <div class="insight-decision-arrow" aria-hidden="true">→</div>
-              <div class="insight-decision-card decision-side">
-                <p class="id-label">Design Decision</p>
-                <p>
-                  Made Notes the primary focus of the review flow, giving it
-                  greater visibility while allowing selected menu items to be
-                  added directly.
-                </p>
-              </div>
-            </div>
-            <div class="insight-decision-row">
-              <div class="insight-decision-card insight-side">
-                <p class="id-label">Insight</p>
-                <p>
-                  "Add Photos" is the most-used feature but is buried at the
-                  bottom of the rating page. Users had to scroll past other
-                  options to reach it.
-                </p>
-              </div>
-              <div class="insight-decision-arrow" aria-hidden="true">→</div>
-              <div class="insight-decision-card decision-side">
-                <p class="id-label">Design Decision</p>
-                <p>
-                  Move photo-adding to the top of the rating screen so that we
-                  match placement to actual usage patterns.
-                </p>
-              </div>
-            </div>
-            <div class="insight-decision-row">
-              <div class="insight-decision-card insight-side">
-                <p class="id-label">Insight</p>
-                <p>
-                  The rating page showed too many options at once, adding
-                  cognitive load without adding value, many features (like "Add
-                  Favorite Dish") end up not being used.
-                </p>
-              </div>
-              <div class="insight-decision-arrow" aria-hidden="true">→</div>
-              <div class="insight-decision-card decision-side">
-                <p class="id-label">Design Decision</p>
-                <p>
-                  Remove "Add Favorite Dishes" and use progressive disclosure to
-                  break the review process into manageable steps.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -579,48 +526,109 @@
               </figcaption>
             </figure>
           </div>
-          <p>
-            From these sketches, I created a mid-fidelity mockup that places
-            "Add Photos" prominently at the top, matching the most-used feature
-            to the highest-visibility position.
-          </p>
-          <figure class="artifact-card wide-artifact" data-reveal>
-            <img
-              src="../assets/beli/before-after.webp"
-              alt="Before and after Beli rating page redesign"
-              loading="lazy"
-            />
-            <figcaption>
-              <div>
-                <strong>Before:</strong> Too many features competed for
-                attention, and "Add Photos" was buried at the bottom.
+          <div class="sketch-pair">
+            <figure class="artifact-card wide-artifact" data-reveal>
+              <img
+                src="../assets/beli/before-after.webp"
+                alt="Before and after Beli rating page redesign"
+                loading="lazy"
+              />
+              <figcaption>
+                <div>
+                  <strong>Before:</strong> Too many features competed for
+                  attention, and "Add Photos" was buried at the bottom.
+                </div>
+                <div>
+                  <strong>After:</strong> Distinct Photo and Notes sections lead
+                  the page, "Search menu" provides dish lookup, and removing "Add
+                  Favorite Dishes" reduces the choice set and cognitive load.
+                </div>
+              </figcaption>
+            </figure>
+            <p>
+              From these sketches, I created a mid-fidelity mockup that places
+              "Add Photos" prominently at the top, matching the most-used feature
+              to the highest-visibility position.
+            </p>
+          </div>
+          <div class="sketch-pair">
+            <figure class="artifact-card wide-artifact" data-reveal>
+              <img
+                src="../assets/beli/user-flow.webp"
+                alt="Beli redesigned user flow"
+                loading="lazy"
+              />
+              <figcaption>
+                <strong>Redesigned user flow:</strong> users are first asked how
+                they liked the restaurant overall, then reach the main rating page
+                where autofill and menu search are both available for dish
+                logging.
+              </figcaption>
+            </figure>
+            <p>
+              To avoid feature overload on the rating page, I used
+              <strong>progressive disclosure</strong> to break the review process
+              into sequential steps so each screen asks the user to do one thing
+              at a time.
+            </p>
+          </div>
+          <div class="sketch-callout" data-reveal>
+            <h3 class="sketch-callout-heading">Quick Snapshot of Solutions</h3>
+            <div class="sketch-solve-grid">
+              <div class="sketch-solve-item">
+                <div class="solve-icon">🔍 <span class="tab-label">Recall</span></div>
+                <div class="sketch-solve-card">
+                  <div class="solve-section">
+                    <span class="solve-label solve-label-problem">Problem</span>
+                    <p class="solve-problem">Users forget dish names after leaving the restaurant</p>
+                  </div>
+                  <div class="solve-section">
+                    <span class="solve-label solve-label-fix">Solution</span>
+                    <p class="solve-fix">Menu Search + Smart Autofill so users can browse by keyword instead of relying on memory</p>
+                  </div>
+                </div>
               </div>
-              <div>
-                <strong>After:</strong> Distinct Photo and Notes sections lead
-                the page, "Search menu" provides dish lookup, and removing "Add
-                Favorite Dishes" reduces the choice set and cognitive load.
+              <div class="sketch-solve-item">
+                <div class="solve-icon">📝 <span class="tab-label">Notes</span></div>
+                <div class="sketch-solve-card">
+                  <div class="solve-section">
+                    <span class="solve-label solve-label-problem">Problem</span>
+                    <p class="solve-problem">Notes already used as the primary review tool outside the app</p>
+                  </div>
+                  <div class="solve-section">
+                    <span class="solve-label solve-label-fix">Solution</span>
+                    <p class="solve-fix">Notes elevated to the primary field so the in-app flow matches real behavior</p>
+                  </div>
+                </div>
               </div>
-            </figcaption>
-          </figure>
-          <p>
-            To avoid feature overload on the rating page, I used
-            <strong>progressive disclosure</strong> to break the review process
-            into sequential steps so each screen asks the user to do one thing
-            at a time.
-          </p>
-          <figure class="artifact-card wide-artifact" data-reveal>
-            <img
-              src="../assets/beli/user-flow.webp"
-              alt="Beli redesigned user flow"
-              loading="lazy"
-            />
-            <figcaption>
-              <strong>Redesigned user flow:</strong> users are first asked how
-              they liked the restaurant overall, then reach the main rating page
-              where autofill and menu search are both available for dish
-              logging.
-            </figcaption>
-          </figure>
+              <div class="sketch-solve-item">
+                <div class="solve-icon">📷 <span class="tab-label">Photos</span></div>
+                <div class="sketch-solve-card">
+                  <div class="solve-section">
+                    <span class="solve-label solve-label-problem">Problem</span>
+                    <p class="solve-problem">Add Photos is the most-used feature but buried at the bottom</p>
+                  </div>
+                  <div class="solve-section">
+                    <span class="solve-label solve-label-fix">Solution</span>
+                    <p class="solve-fix">Photos moved to the top of the rating screen to match how people actually use the app</p>
+                  </div>
+                </div>
+              </div>
+              <div class="sketch-solve-item">
+                <div class="solve-icon">✂️ <span class="tab-label">Clutter</span></div>
+                <div class="sketch-solve-card">
+                  <div class="solve-section">
+                    <span class="solve-label solve-label-problem">Problem</span>
+                    <p class="solve-problem">Too many options shown at once causing choice overload</p>
+                  </div>
+                  <div class="solve-section">
+                    <span class="solve-label solve-label-fix">Solution</span>
+                    <p class="solve-fix">Removed low-use features and broke the flow into one focused step at a time</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -737,23 +745,26 @@
       >
         <div class="shell narrative-block reflection-block">
           <p class="section-kicker">07 Reflection</p>
-          <h2 id="reflection-title">What I Learned.</h2>
+          <h2 id="reflection-title">My Takeaways</h2>
           <p>
-            This project taught me how much friction can hide in a seemingly
-            small interaction. The core problem (forgetting a dish name) sounds
-            minor, but it exposed a deeper misunderstanding between how the app
-            was structured and how people actually behave after a meal. Fixing
-            it required translating that behavioral insight into a concrete
-            system change, not just a UI adjustment.
+            <strong>What I learned:</strong> This project taught me how much
+            friction can hide in a seemingly small interaction. The core problem
+            sounds minor, but it exposed a deeper misunderstanding between how
+            the app was structured and how people actually behave after a meal.
           </p>
           <p>
-            As a next step, I would rethink the home page to better separate
-            personal ratings from restaurant discovery. My research showed that
-            users rarely engaged with Beli's Featured Lists, raising a bigger
-            question: why aren't people using Beli for recommendations? Do they
-            trust competitors like Google Maps more, or are they primarily using
-            Beli to see where their friends are eating? Answering this would
-            help clarify Beli's core value and guide future product decisions.
+            <strong>What I contributed:</strong> Fixing it required translating
+            that behavioral insight into a concrete system change, not just a UI
+            tweak. I redesigned the rating page to reduce choice overload and
+            built Menu Search with Smart Autofill so users could log dishes
+            without relying on memory.
+          </p>
+          <p>
+            <strong>What I'm taking forward:</strong> I want to rethink the
+            home page to better separate personal ratings from restaurant
+            discovery. Users rarely engaged with Featured Lists, which raises a
+            bigger question about whether Beli's core value is tracking what
+            you've eaten or seeing where friends are going.
           </p>
           <a class="text-arrow back-top" href="#top">back to top ↑</a>
         </div>

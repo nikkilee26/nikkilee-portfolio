@@ -171,6 +171,23 @@
     });
   });
 
+  // ── Tab groups ──
+  document.querySelectorAll('[data-tabs]').forEach((group) => {
+    const tabs = [...group.querySelectorAll('.tab-btn')];
+    const panels = [...group.querySelectorAll('.tab-panel')];
+    if (!tabs.length || !panels.length) return;
+    tabs[0].classList.add('is-active');
+    panels[0].classList.add('is-active');
+    tabs.forEach((tab, i) => {
+      tab.addEventListener('click', () => {
+        tabs.forEach((t) => t.classList.remove('is-active'));
+        panels.forEach((p) => p.classList.remove('is-active'));
+        tab.classList.add('is-active');
+        if (panels[i]) panels[i].classList.add('is-active');
+      });
+    });
+  });
+
   // ── Journey subway map ──
   document.querySelectorAll('.journey-subway').forEach((map) => {
     const stops = [...map.querySelectorAll('.subway-stop')];
@@ -260,7 +277,7 @@
 
   const heroRole = document.querySelector('.hero-role');
   if (heroRole) {
-    const roles = ['ui/ux designer', 'systems thinker', 'startup builder', 'visual artist'];
+    const roles = ['ui/ux designer.', 'systems thinker.', 'startup builder.', 'visual artist.'];
     let roleIndex = 0;
     setInterval(() => {
       heroRole.classList.add('is-fading');
@@ -271,6 +288,13 @@
       }, 320);
     }, 2500);
   }
+
+  // Floating skill chips — click to pop
+  document.querySelectorAll('.skill-chip-float').forEach((chip) => {
+    chip.addEventListener('click', () => {
+      chip.closest('.chip-anchor').classList.add('chip-popped');
+    });
+  });
 
   function showToast(message) {
     let toast = document.querySelector('.toast');
