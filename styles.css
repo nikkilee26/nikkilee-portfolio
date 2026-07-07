@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap');
+
 :root {
   color-scheme: light;
   --paper: #f7f2df;
@@ -42,12 +44,10 @@ body {
   margin: 0;
   min-height: 100vh;
   color: var(--ink);
-  background:
-    radial-gradient(circle at 6% 4%, rgba(119, 139, 57, 0.18), transparent 32vw),
-    radial-gradient(circle at 96% 12%, rgba(25, 85, 106, 0.13), transparent 28vw),
-    linear-gradient(180deg, var(--paper), #fbf8ee 45%, #f7f8f4 100%);
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  line-height: 1.5;
+  background: #f7f8f4;
+  font-family: "DM Sans", Inter, ui-sans-serif, system-ui, -apple-system, sans-serif;
+  font-size: clamp(0.9rem, 1.4vw, 1rem);
+  line-height: 1.7;
   overflow-x: hidden;
 }
 
@@ -170,7 +170,7 @@ button {
   font-size: clamp(2rem, 4vw, 3.8rem);
   line-height: 1.15;
   letter-spacing: -0.02em;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "DM Serif Display", Georgia, serif;
 }
 
 .case-problem-card {
@@ -399,8 +399,10 @@ button {
   border-radius: var(--radius-pill);
   border: 1px solid transparent;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-  font-weight: 750;
-  letter-spacing: -0.04em;
+  font-weight: 400;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   line-height: 1;
   cursor: pointer;
   transition: transform 200ms var(--ease), box-shadow 200ms var(--ease), background-color 200ms ease, color 200ms ease, border-color 200ms ease;
@@ -443,8 +445,10 @@ button {
   gap: 6px;
   color: var(--forest);
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-  font-weight: 800;
-  letter-spacing: -0.04em;
+  font-weight: 400;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .back-link {
@@ -482,21 +486,21 @@ button {
 .tag-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin: 18px 0 20px;
+  gap: 6px;
+  margin: 8px 0 6px;
 }
 
 .tag-row span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 32px;
-  padding: 7px 16px;
+  min-height: 22px;
+  padding: 3px 10px;
   border-radius: 999px;
   background: var(--sage);
   color: var(--forest-dark);
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-  font-size: 0.78rem;
+  font-size: 0.65rem;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -514,6 +518,10 @@ button {
   display: grid;
   align-items: center;
   padding-block: clamp(58px, 8vw, 118px);
+  background:
+    radial-gradient(circle at 6% 4%, rgba(119, 139, 57, 0.18), transparent 32vw),
+    radial-gradient(circle at 96% 12%, rgba(25, 85, 106, 0.13), transparent 28vw),
+    var(--paper);
 }
 
 .hero-home::before {
@@ -535,9 +543,9 @@ button {
 
 .hero-copy h1 {
   margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "DM Serif Display", Georgia, serif;
   color: var(--forest);
-  font-size: clamp(1.8rem, 4.2vw, 3.2rem);
+  font-size: clamp(2rem, 4.6vw, 3.8rem);
   font-weight: 600;
   line-height: 1.15;
   letter-spacing: -0.02em;
@@ -615,9 +623,8 @@ button {
   max-width: 660px;
   margin: 26px 0 0;
   color: var(--ink);
-  font-size: clamp(1.08rem, 2vw, 1.28rem);
-  line-height: 1.75;
-  font-style: italic;
+  font-size: clamp(0.9rem, 1.4vw, 1rem);
+  line-height: 1.7;
 }
 
 .hero-actions {
@@ -722,7 +729,7 @@ button {
 
 .round-stamp span {
   position: absolute;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "DM Serif Display", Georgia, serif;
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.13em;
@@ -776,125 +783,99 @@ button {
 
 .work-list {
   display: grid;
-  gap: clamp(28px, 4vw, 48px);
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(24px, 3.5vw, 40px) clamp(20px, 2.5vw, 32px);
 }
 
 .work-card {
-  display: grid;
-  grid-template-columns: minmax(260px, 0.95fr) minmax(280px, 1.05fr);
-  gap: clamp(28px, 4vw, 60px);
-  align-items: center;
-  padding: clamp(24px, 3vw, 38px);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-  background: rgba(255, 255, 255, 0.86);
-  box-shadow: var(--shadow-card);
-  transition: transform 220ms var(--ease), box-shadow 220ms var(--ease), border-color 220ms ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
 }
 
-.work-card:hover,
-.work-card:focus-visible {
-  --ty: -5px;
-  border-color: rgba(43, 96, 66, 0.28);
-  box-shadow: 0 28px 70px rgba(29, 38, 30, 0.18);
-}
 
 /* ── Featured work card ── */
-.work-card--featured {
-  background:
-    radial-gradient(ellipse at 92% 8%, rgba(255, 63, 133, 0.14) 0%, transparent 42%),
-    linear-gradient(145deg, #061c45 0%, #0b2e60 55%, #0e3a6e 100%);
-  border-color: rgba(255, 255, 255, 0.1);
-  padding: clamp(28px, 3.5vw, 48px);
-}
-
-.work-card--featured:hover,
-.work-card--featured:focus-visible {
-  border-color: rgba(255, 63, 133, 0.3);
-  box-shadow: 0 32px 80px rgba(6, 28, 69, 0.55);
-}
-
-.work-card--featured .project-index {
-  color: rgba(255, 255, 255, 0.38);
-}
-
-.work-card--featured .work-copy h2 {
-  color: #fff;
-}
-
-.work-card--featured .project-subtitle {
-  color: rgba(255, 255, 255, 0.48);
-}
-
-.work-card--featured .work-copy > p:last-of-type {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.work-card--featured .text-arrow {
-  color: rgba(255, 255, 255, 0.85);
-}
 
 .featured-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  padding: 4px 12px;
+  padding: 4px 11px;
   border-radius: 999px;
-  background: rgba(255, 63, 133, 0.14);
-  border: 1px solid rgba(255, 63, 133, 0.38);
-  color: #ff7eb5;
-  font-size: 0.7rem;
+  background: rgba(0, 0, 0, 0.52);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #fff;
+  font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-  margin-bottom: 12px;
 }
 
 .work-image {
+  position: relative;
   overflow: hidden;
-  border-radius: 16px;
-  background: var(--teal);
-  box-shadow: 0 12px 28px rgba(20, 43, 51, 0.12);
+  border-radius: 10px;
+  background: var(--paper-warm);
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  flex-shrink: 0;
 }
 
 .work-image img {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: 100%;
   object-fit: cover;
-  transition: transform 500ms var(--ease), filter 500ms var(--ease);
+  display: block;
+  transition: transform 500ms var(--ease);
 }
 
-.work-card:hover .work-image img,
-.work-card:focus-visible .work-image img {
-  transform: scale(1.035);
-  filter: saturate(1.04) contrast(1.02);
+.work-card:hover .work-image img {
+  transform: scale(1.04);
+}
+
+
+
+.work-copy {
+  padding: 12px 0 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .work-copy h2 {
-  margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.6rem, 3.2vw, 2.4rem);
-  line-height: 1.15;
-  letter-spacing: -0.02em;
+  margin: 2px 0 0;
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--ink);
 }
 
 .project-subtitle {
-  margin: 8px 0 0;
+  margin: 3px 0 0;
   color: var(--muted);
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-  font-size: 1.04rem;
+  font-size: 0.7rem;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.12em;
 }
 
 .work-copy > p:last-of-type {
-  margin: 0 0 18px;
-  max-width: 520px;
-  color: var(--ink);
-  font-size: clamp(1.04rem, 1.7vw, 1.22rem);
-  line-height: 1.65;
+  margin: 4px 0 0;
+  color: var(--ink-muted);
+  font-size: clamp(0.78rem, 1.2vw, 0.88rem);
+  line-height: 1.5;
 }
 
 /* About / contact / footer */
@@ -947,7 +928,7 @@ button {
 }
 
 .about-hello {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "DM Serif Display", Georgia, serif;
   font-style: italic;
   font-weight: 400;
   letter-spacing: -0.02em;
@@ -966,14 +947,16 @@ button {
 .overview-copy h2,
 .other-work h2 {
   margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "DM Serif Display", Georgia, serif;
   font-size: clamp(1.3rem, 2.4vw, 2rem);
+  font-weight: 400;
   line-height: 1.2;
   letter-spacing: -0.02em;
 }
 
 .narrative-block h3 {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "DM Serif Display", Georgia, serif;
+  font-weight: 400;
   line-height: 1.25;
   letter-spacing: -0.01em;
 }
@@ -1142,15 +1125,18 @@ button {
 .footer p {
   margin: 0 0 8px;
   color: var(--muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 0.65rem;
+  font-weight: 400;
   text-transform: uppercase;
-  font-size: 0.88rem;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.1em;
 }
 
 .footer a,
 .footer strong {
-  font-size: 1.06rem;
-  font-weight: 800;
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 400;
 }
 
 /* Case page */
@@ -1195,7 +1181,7 @@ button {
   margin: 0;
   font-size: clamp(2.45rem, 5vw, 5rem);
   line-height: 1.05;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.01em;
 }
 
 .case-subtitle {
@@ -1265,8 +1251,8 @@ button {
   z-index: 45;
   display: flex;
   justify-content: center;
-  gap: 10px;
-  padding: 12px;
+  gap: 6px;
+  padding: 10px 18px;
   border: 1px solid var(--line);
   border-radius: var(--radius-pill);
   background: rgba(255, 253, 244, 0.82);
@@ -1282,11 +1268,14 @@ button {
 
 .case-jump a {
   flex: 0 0 auto;
-  padding: 9px 16px;
+  padding: 12px 28px;
   border-radius: var(--radius-pill);
   color: var(--forest-dark);
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-  font-weight: 800;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   transition: background-color 180ms ease, color 180ms ease;
 }
 
@@ -1330,7 +1319,7 @@ button {
   display: inline-block;
   margin-bottom: 28px;
   color: var(--ink);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "DM Serif Display", Georgia, serif;
   font-size: 1.05rem;
 }
 
@@ -1339,15 +1328,17 @@ button {
 .split-note h3 {
   margin: 0 0 8px;
   font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+  font-weight: 400;
   line-height: 1.1;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.01em;
 }
 
 .metric-card h3 {
   margin: 0 0 10px;
   font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+  font-weight: 400;
   line-height: 1.1;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.01em;
 }
 
 .insight-card p {
@@ -1424,7 +1415,7 @@ button {
 
 .principle-group > h3 {
   margin: 0 0 16px;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "DM Serif Display", Georgia, serif;
   font-size: clamp(1.3rem, 2.4vw, 2rem);
   font-weight: 400;
   line-height: 1.2;
@@ -1725,7 +1716,7 @@ button {
     margin-top: -20px;
   }
 
-  .work-card {
+  .work-list {
     grid-template-columns: 1fr;
   }
 
@@ -1799,7 +1790,7 @@ button {
   }
 
   .hero-copy h1 {
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: "DM Serif Display", Georgia, serif;
     font-size: clamp(2rem, 8.5vw, 3.2rem);
     font-weight: 600;
     text-transform: none;
@@ -1865,7 +1856,6 @@ button {
   }
 
   .work-card {
-    padding: 18px;
     border-radius: 22px;
   }
 
@@ -1955,10 +1945,11 @@ button {
 
 .iteration-heading h3 {
   margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "DM Serif Display", Georgia, serif;
   font-size: clamp(1.3rem, 2.4vw, 2rem);
+  font-weight: 400;
   line-height: 1.2;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
 }
 
 .iteration-heading p {
@@ -2151,7 +2142,7 @@ button {
 .subsection > h3,
 .color-palette h3 {
   margin: 0 0 14px;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "DM Serif Display", Georgia, serif;
   color: var(--forest-dark);
   font-size: clamp(1.3rem, 2.4vw, 2rem);
   line-height: 1.2;
@@ -2282,7 +2273,7 @@ button {
 
 .hmw-panel h3 {
   margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "DM Serif Display", Georgia, serif;
   color: var(--forest-dark);
   font-size: clamp(1.3rem, 2.4vw, 2rem);
   line-height: 1.2;
@@ -2536,7 +2527,7 @@ button {
 
 .phone-feature h3 {
   margin: 0 0 18px;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "DM Serif Display", Georgia, serif;
   color: var(--forest-dark);
   font-size: clamp(1.3rem, 2.4vw, 2rem);
   line-height: 1.2;
@@ -2766,10 +2757,10 @@ body.dialogue-page {
   margin: 0;
   max-width: 740px;
   color: #fff;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "DM Serif Display", Georgia, serif;
   font-size: clamp(3.6rem, 10vw, 8.6rem);
-  line-height: 0.83;
-  letter-spacing: -0.09em;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
 }
 
 .dialogue-subtitle {
@@ -3105,7 +3096,7 @@ body.dialogue-page {
 .gate-title {
   margin: 0;
   color: #fff;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "DM Serif Display", Georgia, serif;
   font-size: clamp(2rem, 5vw, 3.6rem);
   line-height: 1;
   letter-spacing: -0.06em;
@@ -3284,7 +3275,7 @@ body.dialogue-page {
   border-left: 4px solid #ff3f85;
   border-radius: 0 20px 20px 0;
   background: rgba(255, 63, 133, 0.08);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "DM Serif Display", Georgia, serif;
   font-size: clamp(1.2rem, 2.4vw, 1.75rem);
   font-weight: 400;
   line-height: 1.42;
@@ -3327,6 +3318,7 @@ body.dialogue-page {
 
 .solution-feature-card h3 {
   margin: 0 0 12px;
+  font-family: "DM Sans", Inter, ui-sans-serif, system-ui, sans-serif;
   font-size: 0.95rem;
   font-weight: 700;
   color: #ff3f85;
@@ -3601,7 +3593,7 @@ body.dialogue-page {
 
 .solution-pillars-label {
   margin: clamp(56px, 8vw, 100px) 0 20px;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "DM Serif Display", Georgia, serif;
   font-size: clamp(1.3rem, 2.4vw, 2rem);
   font-weight: 700;
   line-height: 1.2;
@@ -3891,7 +3883,7 @@ body.dialogue-page {
 
 .tradeoff-resolution h4 {
   margin: 0 0 8px;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "DM Serif Display", Georgia, serif;
   font-size: clamp(1.1rem, 2vw, 1.4rem);
   font-weight: 700;
   color: #fff;
@@ -3998,10 +3990,11 @@ body.dialogue-page {
 .tab-btn {
   padding: 6px 16px;
   border-radius: 7px;
-  font-size: 0.78rem;
-  font-weight: 500;
-  font-family: inherit;
-  letter-spacing: 0.01em;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   border: none;
   background: transparent;
   color: rgba(255, 255, 255, 0.42);
@@ -4410,9 +4403,9 @@ body.dialogue-page {
 .beli-page .case-intro h1,
 .transit-page .case-intro h1,
 .sorcea-page .case-intro h1 {
-  font-family: Georgia, "Times New Roman", serif;
-  letter-spacing: -0.05em;
-  line-height: 1;
+  font-family: "DM Serif Display", Georgia, serif;
+  letter-spacing: -0.01em;
+  line-height: 1.05;
 }
 /* Text overrides for sorcea dark sections */
 .sorcea-page .case-intro .back-link,
@@ -5408,12 +5401,14 @@ body.dialogue-page {
   background: none;
   border: none;
   padding: 8px 22px;
-  font-size: 0.78rem;
-  font-weight: 600;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   cursor: pointer;
   color: var(--ink-soft);
   transition: background 0.15s, color 0.15s;
-  font-family: inherit;
 }
 .ba-btn.is-active { background: var(--ink); color: #fff; }
 .ba-before, .ba-after { display: none; }
@@ -5959,10 +5954,11 @@ body.dialogue-page {
 /* ── Per-project tag colors (home page work cards) ── */
 .dialogue-card-tags span,
 .sorcea-card-tags span,
-.transit-card-tags span,
-.beli-card-tags span {
-  background: var(--forest);
-  color: #fff;
+.beli-card-tags span,
+.transit-card-tags span {
+  background: rgba(43, 96, 66, 0.07);
+  border: 1px solid rgba(43, 96, 66, 0.2);
+  color: var(--forest);
 }
 
 /* ═══ ART STRIP — remove this block and matching HTML sections to undo ═══ */
@@ -5971,18 +5967,22 @@ body.dialogue-page {
 }
 
 .art-strip-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 18px;
+  margin-bottom: 8px;
 }
 
 .art-strip-link {
-  font-size: 0.88rem;
+  display: block;
+  text-align: right;
+  margin-bottom: 18px;
+  white-space: nowrap;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--forest);
   text-decoration: none;
-  font-weight: 500;
-  opacity: 0.8;
+  opacity: 0.7;
   transition: opacity 0.15s;
 }
 
@@ -6134,7 +6134,7 @@ body.dialogue-page {
 
 .art-lightbox-title {
   margin: 0 0 14px;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "DM Serif Display", Georgia, serif;
   font-size: 1.5rem;
   font-weight: 700;
   color: #fff;
