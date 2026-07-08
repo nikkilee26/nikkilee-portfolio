@@ -254,6 +254,44 @@ button {
   box-shadow: 0 4px 24px rgba(43, 96, 66, 0.07);
 }
 
+.case-page .site-header {
+  background: #fbfaf4;
+}
+
+.case-page .site-header.is-scrolled {
+  background: rgba(251, 250, 244, 0.82);
+}
+
+.beli-page .site-header {
+  background: #C8DFF8;
+}
+
+.beli-page .site-header.is-scrolled {
+  background: rgba(200, 223, 248, 0.82);
+  border-bottom-color: rgba(15, 82, 179, 0.15);
+  backdrop-filter: blur(18px);
+}
+
+.transit-page .site-header {
+  background: #BED5F2;
+}
+
+.transit-page .site-header.is-scrolled {
+  background: rgba(190, 213, 242, 0.82);
+  border-bottom-color: rgba(10, 58, 128, 0.15);
+  backdrop-filter: blur(18px);
+}
+
+.sorcea-page .site-header {
+  background: #0C2235;
+}
+
+.sorcea-page .site-header.is-scrolled {
+  background: rgba(12, 34, 53, 0.88);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(18px);
+}
+
 .nav {
   min-height: var(--header-height);
   display: flex;
@@ -1899,7 +1937,7 @@ button {
     height: 340px;
     object-fit: cover;
     object-position: top center;
-    border-radius: 16px;
+    border-radius: 0;
   }
 
   .case-jump {
