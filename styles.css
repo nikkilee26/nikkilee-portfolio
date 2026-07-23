@@ -6701,7 +6701,7 @@ body.dialogue-page {
 .art-carousel-arrow:hover,
 .art-carousel-arrow:focus-visible {
   background: var(--paper);
-  border-color: rgba(43, 96, 66, 0.38);
+  border-color: rgba(132, 88, 198, 0.38);
   transform: scale(1.06);
 }
 
