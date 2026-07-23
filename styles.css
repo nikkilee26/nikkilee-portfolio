@@ -1347,6 +1347,10 @@ button {
   background: none;
 }
 
+.about-grid .micro-label {
+  font-size: 1rem;
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
