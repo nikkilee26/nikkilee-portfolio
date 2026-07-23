@@ -1444,6 +1444,10 @@ button {
   line-height: 1.8;
 }
 
+.about-copy p {
+  font-size: 1rem;
+}
+
 .about-copy p:first-child {
   margin-top: 0;
 }
