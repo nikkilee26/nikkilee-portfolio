@@ -19,14 +19,14 @@
     <link rel="stylesheet" href="styles.css" />
     <script defer src="script.js"></script>
   </head>
-  <body>
+  <body class="chic-body">
     <a class="skip-link" href="#main">Skip to content</a>
     <div class="grain" aria-hidden="true"></div>
     <div class="cursor-glow" aria-hidden="true"></div>
 
-    <header class="site-header" data-header>
+    <header class="site-header chic-page" data-header>
       <nav class="nav shell" aria-label="Main navigation">
-        <a class="brand" href="#home" aria-label="Nikki Lee home">nikki lee</a>
+        <a class="brand" href="#home" aria-label="Nikki Lee home">Nikki Lee</a>
 
         <button
           class="nav-toggle"
@@ -40,239 +40,205 @@
         </button>
 
         <div class="nav-pill" id="site-menu" data-nav-menu>
-          <a href="#home">home</a>
-          <a href="about/">about</a>
-          <a href="#footer">contact</a>
+          <a href="#home" class="is-active">Home</a>
+          <a href="play/">Play</a>
+          <a href="about/">About</a>
         </div>
       </nav>
     </header>
 
     <main id="main">
-      <section class="hero-home" id="home" aria-labelledby="hero-title">
-        <div class="shell hero-home-grid">
-          <div class="hero-copy">
-            <p class="micro-label hero-seq-1">Hi there!</p>
-            <h1 id="hero-title" class="hero-seq-2">
-              I'm Nikki, a
-              <span class="hero-role" aria-live="polite">ui/ux designer.</span>
-            </h1>
-            <p class="hero-intro hero-seq-3">
-              With a background in computer science and studio art, I design
-              research-informed products for startups, civic tech, and consumer
-              platforms, turning complex ideas into experiences that feel human,
-              useful, and trustworthy.
-            </p>
-            <div class="hero-actions hero-seq-4" aria-label="Primary actions">
-              <a class="button button-primary" href="#work"
-                >explore my work ↓</a
-              >
-              <a class="button button-quiet" href="about/">about me →</a>
-            </div>
-          </div>
-
-          <div class="hero-visual" data-reveal>
-            <div class="blob blob-one" aria-hidden="true"></div>
-            <div class="blob blob-two" aria-hidden="true"></div>
-            <img
-              class="portrait-cluster"
-              src="assets/portfolio/home-page.png"
-              alt="Nikki Lee surrounded by greenhouse plants"
-            />
-            <span class="chip-anchor chip-anchor-1" aria-hidden="true">
-              <span class="skill-chip-float">Product Strategy</span>
-            </span>
-            <span class="chip-anchor chip-anchor-2" aria-hidden="true">
-              <span class="skill-chip-float">Creative + Technical Systems</span>
-            </span>
-            <span class="chip-anchor chip-anchor-3" aria-hidden="true">
-              <span class="skill-chip-float">Human-Centered Impact</span>
-            </span>
-            <div class="location-tag" aria-label="Based in New York City">
-              ⌖ based in nyc
-            </div>
+      <section class="hero-home hero-home--centered" id="home" aria-labelledby="hero-title">
+        <div class="shell hero-copy">
+          <h1 id="hero-title" class="hero-seq-2">
+            I'm Nikki, a
+            <span class="hero-role" aria-live="polite">UI/UX Designer</span>
+          </h1>
+          <p class="hero-intro hero-seq-3">
+            With a background in computer science and studio art, I design
+            research-informed products for startups, civic tech, and consumer
+            platforms, turning complex ideas into experiences that feel human,
+            useful, and trustworthy.
+          </p>
+          <div class="hero-actions hero-seq-4" aria-label="Primary actions">
+            <a class="button button-primary" href="#work">Explore My Work ↓</a>
+            <a class="button button-quiet" href="about/">About Me →</a>
           </div>
         </div>
       </section>
 
+      <div class="section-divider" aria-hidden="true"></div>
+
       <!-- ═══ ART STRIP START — delete from here to ART STRIP END to undo ═══ -->
-      <section class="art-strip-section" aria-label="Art preview">
+      <section class="art-strip-section chic-page" aria-label="Art preview">
         <div class="shell">
-          <div class="section-bar art-strip-header" data-reveal>
-            <p class="section-kicker">✶ ✧ Art &amp; Illustration</p>
-            <span></span>
-          </div>
-          <a href="about/#art-gallery" class="art-strip-link"
-            >how art shaped my design process →</a
-          >
-          <div class="art-strip-track">
-            <div class="art-strip-inner">
-              <div class="art-strip-group">
-                <button
-                  class="art-strip-item"
-                  data-src="assets/art/Self_Portrait_1.jpg"
-                  data-title="Self Portrait 1"
-                  data-insight="Six hours of stippling, dot by dot. It showed me that small details build the big picture, a principle I carry into every design decision."
-                  aria-label="View Self Portrait 1"
-                >
-                  <img
-                    src="assets/art/Self_Portrait_1.jpg"
-                    alt="Self Portrait 1"
-                    decoding="async"
-                  />
-                  <div class="art-strip-caption">
-                    <span>Self Portrait 1</span>
-                  </div>
-                </button>
-                <button
-                  class="art-strip-item"
-                  data-src="assets/art/Villefranche-sur-mer.jpeg"
-                  data-title="Villefranche-sur-Mer"
-                  data-insight="My final painting class project, where I forced myself experiement with using thick impasto layers, going completely against my typical style. It became my favorite piece, and proof that leaving your comfort zone is where the best work happens."
-                  aria-label="View Villefranche-sur-Mer"
-                >
-                  <img
-                    src="assets/art/Villefranche-sur-mer.jpeg"
-                    alt="Villefranche-sur-Mer"
-                    decoding="async"
-                  />
-                  <div class="art-strip-caption">
-                    <span>Villefranche-sur-Mer</span>
-                  </div>
-                </button>
-                <button
-                  class="art-strip-item"
-                  data-src="assets/art/Kenting.jpeg"
-                  data-title="Kenting, Taiwan"
-                  data-insight="I added layer after layer, uncertain if the next one would ruin the whole piece. I learned that good work takes time, and iteration is never wasted."
-                  aria-label="View Kenting Taiwan"
-                >
-                  <img
-                    src="assets/art/Kenting.jpeg"
-                    alt="Kenting, Taiwan"
-                    decoding="async"
-                  />
-                  <div class="art-strip-caption">
-                    <span>Kenting, Taiwan</span>
-                  </div>
-                </button>
-                <button
-                  class="art-strip-item"
-                  data-src="assets/art/Contagious.jpeg"
-                  data-title="Contagious"
-                  data-insight="My very first oil painting! It taught me to embrace unfamiliar tools and find confidence in the beginner's mindset."
-                  aria-label="View Contagious"
-                >
-                  <img
-                    src="assets/art/Contagious.jpeg"
-                    alt="Contagious"
-                    decoding="async"
-                  />
-                  <div class="art-strip-caption"><span>Contagious</span></div>
-                </button>
-                <button
-                  class="art-strip-item"
-                  data-src="assets/art/Self_Portrait_2.jpeg"
-                  data-title="Self Portrait 2"
-                  data-insight="I attempted this portrait in high school and completely failed. Coming back to it after years taught me that the most rewarding work is often the work you don't give up on."
-                  aria-label="View Self Portrait 2"
-                >
-                  <img
-                    src="assets/art/Self_Portrait_2.jpeg"
-                    alt="Self Portrait 2"
-                    decoding="async"
-                  />
-                  <div class="art-strip-caption">
-                    <span>Self Portrait 2</span>
-                  </div>
-                </button>
-                <button
-                  class="art-strip-item"
-                  data-src="assets/art/Mama_and_Me.jpeg"
-                  data-title="Mama and Me"
-                  data-insight="I'm very particular about choosing subjects I care about for my art pieces, and the same holds for design. I do my best work when I believe in what I'm building."
-                  aria-label="View Mama and Me"
-                >
-                  <img
-                    src="assets/art/Mama_and_Me.jpeg"
-                    alt="Mama and Me"
-                    decoding="async"
-                  />
-                  <div class="art-strip-caption"><span>Mama and Me</span></div>
-                </button>
-                <button
-                  class="art-strip-item"
-                  data-src="assets/art/Jiu_Fen.jpg"
-                  data-title="Jiu Fen"
-                  data-insight="I've always been drawn to architecture from other places. Exploring the unfamiliar and weaving it back into my own work is something I bring to design too."
-                  aria-label="View Jiu Fen"
-                >
-                  <img
-                    src="assets/art/Jiu_Fen.jpg"
-                    alt="Jiu Fen"
-                    decoding="async"
-                  />
-                  <div class="art-strip-caption"><span>Jiu Fen</span></div>
-                </button>
-                <button
-                  class="art-strip-item"
-                  data-src="assets/art/Serah.jpeg"
-                  data-title="Serah"
-                  data-insight="I tried pop art for the first time and hand-painted every single Ben Day dot with no template. It became one of my most loved pieces, and is a reminder that the things you least expect to love are worth trying."
-                  aria-label="View Serah"
-                >
-                  <img
-                    src="assets/art/Serah.jpeg"
-                    alt="Serah"
-                    decoding="async"
-                  />
-                  <div class="art-strip-caption"><span>Serah</span></div>
-                </button>
-                <button
-                  class="art-strip-item"
-                  data-src="assets/art/snowy.jpeg"
-                  data-title="Snowy"
-                  data-insight="This painting works in reverse: instead of building up darks, every stroke is light on black. This taught me that there's never just one way to approach a problem. Changing your process can change everything."
-                  aria-label="View Snowy"
-                >
-                  <img
-                    src="assets/art/snowy.jpeg"
-                    alt="Snowy"
-                    decoding="async"
-                  />
-                  <div class="art-strip-caption"><span>Snowy</span></div>
-                </button>
-              </div>
+          <h2 class="section-title-serif" data-reveal>Art &amp; Illustrations</h2>
+          <div class="art-carousel" data-art-carousel>
+            <button
+              class="art-carousel-arrow art-carousel-prev"
+              type="button"
+              data-art-prev
+              aria-label="Previous artwork"
+            >
+              ‹
+            </button>
+
+            <div class="art-carousel-track" data-art-track>
+              <button
+                class="art-carousel-slide"
+                data-title="Self Portrait 1"
+                data-insight="Six hours of stippling, dot by dot. It showed me that small details build the big picture, a principle I carry into every design decision."
+                aria-label="View Self Portrait 1"
+              >
+                <img
+                  src="assets/art/Self_Portrait_1.jpg"
+                  alt="Self Portrait 1"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </button>
+              <button
+                class="art-carousel-slide"
+                data-title="Villefranche-sur-Mer"
+                data-insight="My final painting class project, where I forced myself to experiment with thick impasto layers, going completely against my typical style. It became my favorite piece, and proof that leaving your comfort zone is where the best work happens."
+                aria-label="View Villefranche-sur-Mer"
+              >
+                <img
+                  src="assets/art/Villefranche-sur-mer.jpeg"
+                  alt="Villefranche-sur-Mer"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </button>
+              <button
+                class="art-carousel-slide"
+                data-title="Kenting, Taiwan"
+                data-insight="I added layer after layer, uncertain if the next one would ruin the whole piece. I learned that good work takes time, and iteration is never wasted."
+                aria-label="View Kenting Taiwan"
+              >
+                <img
+                  src="assets/art/Kenting.jpeg"
+                  alt="Kenting, Taiwan"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </button>
+              <button
+                class="art-carousel-slide"
+                data-title="Contagious"
+                data-insight="My very first oil painting! It taught me to embrace unfamiliar tools and find confidence in the beginner's mindset."
+                aria-label="View Contagious"
+              >
+                <img
+                  src="assets/art/Contagious.jpeg"
+                  alt="Contagious"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </button>
+              <button
+                class="art-carousel-slide"
+                data-title="Self Portrait 2"
+                data-insight="I attempted this portrait in high school and completely failed. Coming back to it after years taught me that the most rewarding work is often the work you don't give up on."
+                aria-label="View Self Portrait 2"
+              >
+                <img
+                  src="assets/art/Self_Portrait_2.jpeg"
+                  alt="Self Portrait 2"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </button>
+              <button
+                class="art-carousel-slide"
+                data-title="Mama and Me"
+                data-insight="I'm very particular about choosing subjects I care about for my art pieces, and the same holds for design. I do my best work when I believe in what I'm building."
+                aria-label="View Mama and Me"
+              >
+                <img
+                  src="assets/art/Mama_and_Me.jpeg"
+                  alt="Mama and Me"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </button>
+              <button
+                class="art-carousel-slide"
+                data-title="Jiu Fen"
+                data-insight="I've always been drawn to architecture from other places. Exploring the unfamiliar and weaving it back into my own work is something I bring to design too."
+                aria-label="View Jiu Fen"
+              >
+                <img
+                  src="assets/art/Jiu_Fen.jpg"
+                  alt="Jiu Fen"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </button>
+              <button
+                class="art-carousel-slide"
+                data-title="Serah"
+                data-insight="I tried pop art for the first time and hand-painted every single Ben Day dot with no template. It became one of my most loved pieces, and is a reminder that the things you least expect to love are worth trying."
+                aria-label="View Serah"
+              >
+                <img
+                  src="assets/art/Serah.jpeg"
+                  alt="Serah"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </button>
+              <button
+                class="art-carousel-slide"
+                data-title="Snowy"
+                data-insight="This painting works in reverse: instead of building up darks, every stroke is light on black. This taught me that there's never just one way to approach a problem. Changing your process can change everything."
+                aria-label="View Snowy"
+              >
+                <img
+                  src="assets/art/snowy.jpeg"
+                  alt="Snowy"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </button>
             </div>
+
+            <button
+              class="art-carousel-arrow art-carousel-next"
+              type="button"
+              data-art-next
+              aria-label="Next artwork"
+            >
+              ›
+            </button>
           </div>
+          <a href="play/" class="art-strip-link">How Art Shaped My Design Process →</a>
         </div>
       </section>
       <!-- ═══ ART STRIP END ═══ -->
 
+      <div class="section-divider" aria-hidden="true"></div>
+
       <section
-        class="section work-section"
+        class="section work-section chic-page"
         id="work"
         aria-labelledby="work-title"
       >
         <div class="shell">
-          <div class="section-bar" data-reveal>
-            <h2 id="work-title" class="sr-only">Featured work</h2>
-            <p class="section-kicker">✶ ✧ Featured Work</p>
-            <span></span>
-          </div>
+          <h2 id="work-title" class="section-title-serif" data-reveal>Featured Work</h2>
 
           <div class="work-list" aria-labelledby="work-title">
             <a
-              class="work-card work-card--featured interactive-card"
+              class="work-card interactive-card"
               href="project-dialogue/"
               data-reveal
             >
-              <div class="work-image work-image-dark">
+              <div class="work-image">
                 <img
                   src="assets/portfolio/thumb-dialogue.png"
                   alt="Project Dialogue early-stage startup case study"
                   loading="lazy"
                 />
-                <span class="featured-badge">★ Featured</span>
               </div>
               <div class="work-copy">
                 <p class="project-index">01 · Current</p>
@@ -389,22 +355,25 @@
     </main>
 
     <footer class="footer shell" id="footer">
-      <div>
-        <p>Contact me · ✤</p>
-        <a href="mailto:nikki062604@gmail.com">nikki062604@gmail.com</a>
-      </div>
-      <div>
-        <p>Let’s connect · ✧</p>
-        <a
-          href="https://www.linkedin.com/in/nikkilee26/"
-          target="_blank"
-          rel="noreferrer"
-          >LinkedIn</a
-        >
-      </div>
-      <div>
-        <p>All rights reserved to Nikki Lee © <span data-year></span></p>
-        <strong>Made with ♥</strong>
+      <h2 class="footer-title">Thanks for stopping by!</h2>
+      <div class="footer-columns">
+        <div>
+          <p>Contact me · ✤</p>
+          <a href="mailto:nikki062604@gmail.com">nikki062604@gmail.com</a>
+        </div>
+        <div>
+          <p>Let's connect · ✧</p>
+          <a
+            href="https://www.linkedin.com/in/nikkilee26/"
+            target="_blank"
+            rel="noreferrer"
+            >LinkedIn</a
+          >
+        </div>
+        <div>
+          <p>All rights reserved to Nikki Lee © <span data-year></span></p>
+          <strong>Made with ♥</strong>
+        </div>
       </div>
     </footer>
   </body>

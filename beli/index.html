@@ -21,7 +21,7 @@
     <header class="site-header" data-header>
       <nav class="nav shell" aria-label="Main navigation">
         <a class="brand" href="../index.html" aria-label="Nikki Lee home"
-          >nikki lee</a
+          >Nikki Lee</a
         >
         <button
           class="nav-toggle"
@@ -34,9 +34,9 @@
           <span class="sr-only">Open menu</span>
         </button>
         <div class="nav-pill" id="site-menu" data-nav-menu>
-          <a href="../index.html#home">home</a>
-          <a href="../index.html#about">about</a>
-          <a href="../index.html#contact">contact</a>
+          <a href="../index.html#home">Home</a>
+          <a href="../play/">Play</a>
+          <a href="../about/">About</a>
         </div>
       </nav>
     </header>
@@ -161,6 +161,12 @@
             Users forget dish names, skip features they don't understand, and
             use notes to fill the gaps.
           </h2>
+          <p>
+            I use Beli to track every restaurant I visit, but rating meals was
+            always a struggle since I could never remember what I ordered. That
+            friction made me want to interview other users to see if they ran
+            into the same problem.
+          </p>
           <p>
             To validate whether this friction was widespread, I surveyed five
             Beli users aged 18–30. Three clear patterns emerged that shaped
@@ -367,18 +373,22 @@
             >
           </p>
           <p>These findings shaped two core objectives:</p>
-          <ul class="body-list">
-            <li>
-              <strong>Enhancing Menu Search</strong> — How can we implement a
-              system that lets users find and log dishes without relying on
-              recall?
-            </li>
-            <li>
-              <strong>Streamlining the Rating Experience</strong> — How can we
-              reorganize the rating screen to reduce cognitive overload and make
-              the review process feel fast, not tedious?
-            </li>
-          </ul>
+          <div class="problem-grid">
+            <article class="insight-card interactive-card" data-reveal>
+              <h3>Enhancing Menu Search</h3>
+              <p>
+                How can we implement a system that lets users find and log
+                dishes without relying on recall?
+              </p>
+            </article>
+            <article class="insight-card interactive-card" data-reveal>
+              <h3>Streamlining the Rating Experience</h3>
+              <p>
+                How can we reorganize the rating screen to reduce cognitive
+                overload and make the review process feel fast, not tedious?
+              </p>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -483,11 +493,12 @@
             Sketching menu search, autofill, and a restructured rating page.
           </h2>
           <p>
-            Before building anything, I sketched out the three changes in
-            parallel to see how they'd interact: menu search needed to fit the
-            existing rating flow, autofill needed to feel native to the notes
-            field, and the rating page itself needed to lose visual weight
-            without losing useful functionality.
+            Before building anything, I sketched my three main three changes in
+            parallel to understand how they would work together: menu search
+            needed to fit seamlessly into the existing rating flow, autofill
+            needed to feel natural to the notes field, and the ratings page
+            needed a stronger visual hierarchy so users could immediately
+            identify the most important fields to complete.
           </p>
           <div class="image-grid three-up" data-reveal>
             <figure class="artifact-card">
@@ -533,18 +544,6 @@
                 alt="Before and after Beli rating page redesign"
                 loading="lazy"
               />
-              <figcaption>
-                <div>
-                  <strong>Before:</strong> Too many features competed for
-                  attention, and "Add Photos" was buried at the bottom.
-                </div>
-                <div>
-                  <strong>After:</strong> Distinct Photo and Notes sections lead
-                  the page, "Search menu" provides dish lookup, and removing
-                  "Add Favorite Dishes" reduces the choice set and cognitive
-                  load.
-                </div>
-              </figcaption>
             </figure>
             <p>
               From these sketches, I created a mid-fidelity mockup that places
@@ -598,6 +597,26 @@
               </div>
               <div class="sketch-solve-item">
                 <div class="solve-icon">
+                  ✂️ <span class="tab-label">Clutter</span>
+                </div>
+                <div class="sketch-solve-card">
+                  <div class="solve-section">
+                    <span class="solve-label solve-label-problem">Problem</span>
+                    <p class="solve-problem">
+                      Too many options shown at once causing choice overload
+                    </p>
+                  </div>
+                  <div class="solve-section">
+                    <span class="solve-label solve-label-fix">Solution</span>
+                    <p class="solve-fix">
+                      Removed low-use features and broke the flow into one
+                      focused step at a time
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="sketch-solve-item">
+                <div class="solve-icon">
                   📝 <span class="tab-label">Notes</span>
                 </div>
                 <div class="sketch-solve-card">
@@ -638,26 +657,6 @@
                   </div>
                 </div>
               </div>
-              <div class="sketch-solve-item">
-                <div class="solve-icon">
-                  ✂️ <span class="tab-label">Clutter</span>
-                </div>
-                <div class="sketch-solve-card">
-                  <div class="solve-section">
-                    <span class="solve-label solve-label-problem">Problem</span>
-                    <p class="solve-problem">
-                      Too many options shown at once causing choice overload
-                    </p>
-                  </div>
-                  <div class="solve-section">
-                    <span class="solve-label solve-label-fix">Solution</span>
-                    <p class="solve-fix">
-                      Removed low-use features and broke the flow into one
-                      focused step at a time
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -675,7 +674,6 @@
             <article class="phone-feature" data-reveal>
               <div>
                 <h2 id="solution-title">Restructured Rating Page</h2>
-                <p>What changed and why it mattered:</p>
                 <ul>
                   <li>
                     <strong>Photos moved to the top</strong> — highest-used
@@ -702,7 +700,6 @@
             <article class="phone-feature" data-reveal>
               <div>
                 <h2>Menu Search</h2>
-                <p>What changed and why it mattered:</p>
                 <ul>
                   <li>
                     <strong>Direct menu access from the rating page</strong>
@@ -838,23 +835,26 @@
       </section>
     </main>
 
-    <footer class="footer shell">
-      <div>
-        <p>Contact me · ✤</p>
-        <a href="mailto:nikki062604@gmail.com">nikki062604@gmail.com</a>
-      </div>
-      <div>
-        <p>Let's connect · ✧</p>
-        <a
-          href="https://www.linkedin.com/in/nikkilee26/"
-          target="_blank"
-          rel="noreferrer"
-          >LinkedIn</a
-        >
-      </div>
-      <div>
-        <p>All rights reserved to Nikki Lee © <span data-year></span></p>
-        <strong>Made with ♥</strong>
+    <footer class="footer shell" id="footer">
+      <h2 class="footer-title">Thanks for stopping by!</h2>
+      <div class="footer-columns">
+        <div>
+          <p>Contact me · ✤</p>
+          <a href="mailto:nikki062604@gmail.com">nikki062604@gmail.com</a>
+        </div>
+        <div>
+          <p>Let's connect · ✧</p>
+          <a
+            href="https://www.linkedin.com/in/nikkilee26/"
+            target="_blank"
+            rel="noreferrer"
+            >LinkedIn</a
+          >
+        </div>
+        <div>
+          <p>All rights reserved to Nikki Lee © <span data-year></span></p>
+          <strong>Made with ♥</strong>
+        </div>
       </div>
     </footer>
   </body>

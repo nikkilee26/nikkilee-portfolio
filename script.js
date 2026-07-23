@@ -44,7 +44,7 @@
   }
 
   const allSections = [...document.querySelectorAll('main section[id], .case-cover[id]')];
-  const activeLinks = [...document.querySelectorAll('.nav-pill a, .case-jump a')]
+  const activeLinks = [...document.querySelectorAll('.case-jump a')]
     .filter((link) => link.hash);
 
   if (allSections.length && activeLinks.length && 'IntersectionObserver' in window) {
@@ -111,21 +111,111 @@
     node.textContent = new Date().getFullYear();
   });
 
-  // ═══ ART STRIP — remove this block with the HTML sections to undo ═══
-  const artTrack = document.querySelector('.art-strip-track');
-  if (artTrack) {
-    const inner = artTrack.querySelector('.art-strip-inner');
-    const isMobile = window.matchMedia('(max-width: 720px)').matches;
+  // ═══ ART CAROUSEL — remove this block with the HTML sections to undo ═══
+  const artCarousel = document.querySelector('[data-art-carousel]');
+  if (artCarousel) {
+    const track = artCarousel.querySelector('[data-art-track]');
+    const slides = [...track.querySelectorAll('.art-carousel-slide')];
+    const prevBtn = artCarousel.querySelector('[data-art-prev]');
+    const nextBtn = artCarousel.querySelector('[data-art-next]');
 
-    if (inner && !isMobile && !prefersReducedMotion) {
-      const group = inner.querySelector('.art-strip-group');
-      if (group) {
-        const clone = group.cloneNode(true);
-        clone.setAttribute('aria-hidden', 'true');
-        inner.appendChild(clone);
-        inner.classList.add('is-looping');
+    let activeIndex = 0;
+    let autoTimer = null;
+    let resumeTimer = null;
+    let scrollRAF = null;
+    let isProgrammaticScroll = false;
+    let programmaticScrollFallback = null;
+
+    function renderActive() {
+      slides.forEach((slide, i) => slide.classList.toggle('is-active', i === activeIndex));
+    }
+
+    function setActive(index, { scroll = true } = {}) {
+      activeIndex = (index + slides.length) % slides.length;
+      renderActive();
+      if (scroll) {
+        // Absolute target, not a relative scrollBy: relative deltas compound when
+        // the auto-advance timer and a user click land close together, which was
+        // producing the "jump then re-center" glitch. Center point is computed via
+        // rect (stable under the slide's scale transform since scaling is center-
+        // origin) translated into the track's own scroll space via its current
+        // scrollLeft, so this is correct even mid-transition.
+        const slide = slides[activeIndex];
+        const trackRect = track.getBoundingClientRect();
+        const slideRect = slide.getBoundingClientRect();
+        const slideCenterInScrollSpace = slideRect.left + slideRect.width / 2 - trackRect.left + track.scrollLeft;
+        const target = slideCenterInScrollSpace - track.clientWidth / 2;
+        // While this scroll animates, ignore the 'scroll' listener's own closest-
+        // slide detection below — otherwise it reads intermediate positions
+        // mid-flight and reassigns activeIndex before the animation finishes,
+        // which is what caused the visible "settle, then re-center" glitch.
+        isProgrammaticScroll = true;
+        clearTimeout(programmaticScrollFallback);
+        programmaticScrollFallback = setTimeout(() => { isProgrammaticScroll = false; }, 1200);
+        track.scrollTo({ left: target, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
       }
     }
+
+    function closestToCenter() {
+      const trackRect = track.getBoundingClientRect();
+      const center = trackRect.left + trackRect.width / 2;
+      let closest = 0;
+      let minDist = Infinity;
+      slides.forEach((slide, i) => {
+        const rect = slide.getBoundingClientRect();
+        const dist = Math.abs((rect.left + rect.width / 2) - center);
+        if (dist < minDist) {
+          minDist = dist;
+          closest = i;
+        }
+      });
+      return closest;
+    }
+
+    track.addEventListener('scrollend', () => {
+      isProgrammaticScroll = false;
+      clearTimeout(programmaticScrollFallback);
+    });
+
+    track.addEventListener('scroll', () => {
+      if (isProgrammaticScroll) return;
+      if (scrollRAF) return;
+      scrollRAF = requestAnimationFrame(() => {
+        scrollRAF = null;
+        const idx = closestToCenter();
+        if (idx !== activeIndex) {
+          activeIndex = idx;
+          renderActive();
+        }
+      });
+    }, { passive: true });
+
+    function startAuto() {
+      if (prefersReducedMotion) return;
+      clearInterval(autoTimer);
+      autoTimer = setInterval(() => setActive(activeIndex + 1), 4200);
+    }
+
+    function pauseAuto() {
+      clearInterval(autoTimer);
+      clearTimeout(resumeTimer);
+      resumeTimer = setTimeout(startAuto, 6000);
+    }
+
+    slides.forEach((slide, i) => {
+      slide.addEventListener('click', () => {
+        setActive(i);
+        pauseAuto();
+      });
+    });
+    prevBtn?.addEventListener('click', () => { setActive(activeIndex - 1); pauseAuto(); });
+    nextBtn?.addEventListener('click', () => { setActive(activeIndex + 1); pauseAuto(); });
+    track.addEventListener('pointerdown', pauseAuto, { passive: true });
+    track.addEventListener('wheel', pauseAuto, { passive: true });
+
+    const initialIndex = Math.floor(slides.length / 2);
+    requestAnimationFrame(() => setActive(initialIndex));
+    startAuto();
   }
 
   const lightbox = document.getElementById('art-lightbox');
@@ -277,7 +367,7 @@
 
   const heroRole = document.querySelector('.hero-role');
   if (heroRole) {
-    const roles = ['ui/ux designer.', 'systems thinker.', 'startup builder.', 'visual artist.'];
+    const roles = ['UI/UX Designer', 'Systems Thinker', 'Startup Builder', 'Visual Artist'];
     let roleIndex = 0;
     setInterval(() => {
       heroRole.classList.add('is-fading');
@@ -285,8 +375,8 @@
         roleIndex = (roleIndex + 1) % roles.length;
         heroRole.textContent = roles[roleIndex];
         heroRole.classList.remove('is-fading');
-      }, 320);
-    }, 2500);
+      }, 300);
+    }, 2000);
   }
 
   // Floating skill chips — click to pop

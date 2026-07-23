@@ -21,7 +21,7 @@
     <header class="site-header" data-header>
       <nav class="nav shell" aria-label="Main navigation">
         <a class="brand" href="../index.html" aria-label="Nikki Lee home"
-          >nikki lee</a
+          >Nikki Lee</a
         >
         <button
           class="nav-toggle"
@@ -34,9 +34,9 @@
           <span class="sr-only">Open menu</span>
         </button>
         <div class="nav-pill" id="site-menu" data-nav-menu>
-          <a href="../index.html#home">home</a>
-          <a href="../index.html#about">about</a>
-          <a href="../index.html#contact">contact</a>
+          <a href="../index.html#home">Home</a>
+          <a href="../play/">Play</a>
+          <a href="../about/">About</a>
         </div>
       </nav>
     </header>
@@ -161,6 +161,16 @@
       >
         <div class="shell narrative-block">
           <p class="section-kicker">01 Research</p>
+          <h2 id="research-title">
+            Tourists face unique challenges when navigating a new city.
+          </h2>
+          <p>
+            Whenever I traveled, I found myself confused by transit signs and
+            directions in unfamiliar cities. Since I'm from New York, where even
+            locals get lost sometimes, I suspected tourists faced unique
+            struggles that existing navigation apps weren't solving, so I
+            decided to look into it.
+          </p>
 
           <div class="subsection" data-reveal>
             <h3>Competitive analysis of existing transit apps.</h3>
@@ -236,120 +246,111 @@
             </p>
           </div>
 
-          <h2 id="research-title">
-            Tourists don't just need directions. They need to understand what
-            they're looking at.
-          </h2>
-          <p>
-            I interviewed four non-native New Yorkers in their 20s who had
-            previously visited NYC, and organized their frustrations into four
-            common categories: navigation and terminology, timing and delays,
-            payment confusion, and lack of relevant recommendations.
-          </p>
-          <div class="transit-research-board" data-reveal>
-            <div class="board-columns">
-              <div class="board-col">
-                <div class="board-col-header">
-                  <span class="route-circle" style="background: #2e5aac"
-                    >N</span
-                  >
-                  Navigation &amp; Terminology
+          <div class="subsection" data-reveal>
+            <h3>Interviewing tourists about their biggest frustrations.</h3>
+            <p>
+              I interviewed four non-native New Yorkers in their 20s who had
+              previously visited NYC, and organized their frustrations into four
+              common categories: navigation and terminology, timing and delays,
+              payment confusion, and lack of relevant recommendations.
+            </p>
+            <div class="transit-research-board" data-reveal>
+              <div class="board-columns">
+                <div class="board-col">
+                  <div class="board-col-header">
+                    <span class="route-circle" style="background: #2e5aac"
+                      >N</span
+                    >
+                    Navigation &amp; Terminology
+                  </div>
+                  <div class="sticky-note sn-blue">
+                    Express vs. local train — users missed stops without
+                    realising the difference
+                  </div>
+                  <div class="sticky-note sn-blue sn-tilt-r">
+                    "Uptown" and "downtown" are meaningless without knowing the
+                    city's geography
+                  </div>
+                  <div class="sticky-note sn-blue sn-tilt-l">
+                    No in-context explanations when confusing terms appear
+                    mid-route
+                  </div>
                 </div>
-                <div class="sticky-note sn-blue">
-                  Express vs. local train — users missed stops without realising
-                  the difference
-                </div>
-                <div class="sticky-note sn-blue sn-tilt-r">
-                  "Uptown" and "downtown" are meaningless without knowing the
-                  city's geography
-                </div>
-                <div class="sticky-note sn-blue sn-tilt-l">
-                  No in-context explanations when confusing terms appear
-                  mid-route
-                </div>
-              </div>
 
-              <div class="board-col">
-                <div class="board-col-header">
-                  <span class="route-circle" style="background: #b84a2a"
-                    >T</span
-                  >
-                  Timing &amp; Delays
+                <div class="board-col">
+                  <div class="board-col-header">
+                    <span class="route-circle" style="background: #b84a2a"
+                      >T</span
+                    >
+                    Timing &amp; Delays
+                  </div>
+                  <div class="sticky-note sn-orange sn-tilt-r">
+                    Delays shown with no buffer time or recovery suggestion
+                  </div>
+                  <div class="sticky-note sn-orange">
+                    Walking time between exits and platforms not included in
+                    directions
+                  </div>
+                  <div class="sticky-note sn-orange sn-tilt-l">
+                    Missed transfers caused late arrivals with no warning
+                  </div>
                 </div>
-                <div class="sticky-note sn-orange sn-tilt-r">
-                  Delays shown with no buffer time or recovery suggestion
-                </div>
-                <div class="sticky-note sn-orange">
-                  Walking time between exits and platforms not included in
-                  directions
-                </div>
-                <div class="sticky-note sn-orange sn-tilt-l">
-                  Missed transfers caused late arrivals with no warning
-                </div>
-              </div>
 
-              <div class="board-col">
-                <div class="board-col-header">
-                  <span class="route-circle" style="background: #2e7a4e"
-                    >P</span
-                  >
-                  Payment
+                <div class="board-col">
+                  <div class="board-col-header">
+                    <span class="route-circle" style="background: #2e7a4e"
+                      >P</span
+                    >
+                    Payment
+                  </div>
+                  <div class="sticky-note sn-green">
+                    MetroCard vs. OMNY — tourists didn't know which to get or
+                    how to reload
+                  </div>
+                  <div class="sticky-note sn-green sn-tilt-r">
+                    No app lets you add funds; requires a kiosk visit or
+                    separate website
+                  </div>
+                  <div class="sticky-note sn-green sn-tilt-l">
+                    First-time card setup was confusing and stressful at the
+                    turnstile
+                  </div>
                 </div>
-                <div class="sticky-note sn-green">
-                  MetroCard vs. OMNY — tourists didn't know which to get or how
-                  to reload
-                </div>
-                <div class="sticky-note sn-green sn-tilt-r">
-                  No app lets you add funds; requires a kiosk visit or separate
-                  website
-                </div>
-                <div class="sticky-note sn-green sn-tilt-l">
-                  First-time card setup was confusing and stressful at the
-                  turnstile
-                </div>
-              </div>
 
-              <div class="board-col">
-                <div class="board-col-header">
-                  <span class="route-circle" style="background: #7b4fa6"
-                    >R</span
-                  >
-                  Recommendations
-                </div>
-                <div class="sticky-note sn-purple sn-tilt-r">
-                  No curated tourist-friendly discovery in any navigation app
-                </div>
-                <div class="sticky-note sn-purple">
-                  Generic "nearby" results feel irrelevant — not made for
-                  first-time visitors
-                </div>
-                <div class="sticky-note sn-purple sn-tilt-l">
-                  No way to ask where to go or get local tips mid-trip
+                <div class="board-col">
+                  <div class="board-col-header">
+                    <span class="route-circle" style="background: #7b4fa6"
+                      >R</span
+                    >
+                    Recommendations
+                  </div>
+                  <div class="sticky-note sn-purple sn-tilt-r">
+                    No curated tourist-friendly discovery in any navigation app
+                  </div>
+                  <div class="sticky-note sn-purple">
+                    Generic "nearby" results feel irrelevant — not made for
+                    first-time visitors
+                  </div>
+                  <div class="sticky-note sn-purple sn-tilt-l">
+                    No way to ask where to go or get local tips mid-trip
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="quote-with-response" data-reveal>
-            <blockquote>
-              "My stop was skipped so many times because I accidentally got on
-              the express train, not knowing it was different from the local."
-            </blockquote>
-            <span class="design-response">
-              → Design response: route warnings and inline terminology
-              explanations built into the directions flow
-            </span>
-          </div>
-          <div class="quote-with-response" data-reveal>
-            <blockquote>
-              "I'm always confused by terms like 'uptown' vs. 'downtown' or
-              'Queens-bound' vs. 'Brooklyn-bound.' I'm not familiar with the
-              city's geography."
-            </blockquote>
-            <span class="design-response">
-              → Design response: pop-up notifications that decode city-specific
-              transit language at the moment it appears
-            </span>
+            <div class="quote-with-response" data-reveal>
+              <blockquote>
+                "My stop was skipped so many times because I accidentally got on
+                the express train, not knowing it was different from the local."
+              </blockquote>
+            </div>
+            <div class="quote-with-response" data-reveal>
+              <blockquote>
+                "I'm always confused by terms like 'uptown' vs. 'downtown' or
+                'Queens-bound' vs. 'Brooklyn-bound.' I'm not familiar with the
+                city's geography."
+              </blockquote>
+            </div>
           </div>
         </div>
       </section>
@@ -877,10 +878,15 @@
           <div class="subsection">
             <h3>Home Screen</h3>
             <p>
-              I started with a map-first home screen for quick transit access —
-              but after reconsidering tourist needs, I redesigned it to combine
-              recommendations with navigation, giving users flexibility based on
-              their immediate goal.
+              My first home screen was built around real-time transit
+              access, showing tourists the train and bus times nearest to
+              them the moment they opened the app. But after digging deeper
+              into what tourists actually needed, I realized departures
+              alone weren't enough — they also needed help figuring out
+              where to go in the first place. I redesigned the home screen
+              to put recommendations and navigation directly on the page
+              alongside transit access, better matching what tourists
+              actually needed.
             </p>
             <div class="image-grid two-up" data-reveal>
               <figure class="artifact-card">
@@ -889,17 +895,20 @@
                   alt="Initial home page sketches Design 1 and Design 2 with annotations"
                   loading="lazy"
                 />
-                <figcaption>Initial Home Page Sketches</figcaption>
+                <figcaption>
+                  Before: shows tourists the train and bus times nearest to
+                  them as soon as they open the app.
+                </figcaption>
               </figure>
-              <figure class="artifact-card">
+              <figure class="artifact-card is-selected">
                 <img
                   src="../assets/transit/sketch-navbot.webp"
                   alt="Revised home screen with Hi Nikki welcome message and recommendations"
                   loading="lazy"
                 />
                 <figcaption>
-                  Revised home screen: recommendations and navigation alongside
-                  each other so both tourist modes are immediately accessible.
+                  After: recommendations and navigation now live directly on
+                  the page too, better suiting what tourists actually need.
                 </figcaption>
               </figure>
             </div>
@@ -922,82 +931,99 @@
               I designed NavBot to feel like a messaging thread: familiar,
               low-pressure, and fast to use under stress. I tested two layouts:
             </p>
-            <figure class="artifact-card wide-artifact" data-reveal>
-              <img
-                src="../assets/transit/sketch-home.webp"
-                alt="NavBot screen sketches showing Design 1 and Design 2"
-                loading="lazy"
-              />
-              <figcaption>
-                ★ Design 2 (right): centering suggested prompts draws attention
-                to what NavBot can help with.
-              </figcaption>
-            </figure>
+            <div class="image-grid two-up" data-reveal>
+              <figure class="artifact-card">
+                <img
+                  src="../assets/transit/navbot-sketch-d1.webp"
+                  alt="NavBot Design 1: suggested prompts listed directly under the greeting message"
+                  loading="lazy"
+                />
+                <figcaption>
+                  Design 1: prompts tucked right under NavBot's message don't
+                  stand out, and stacking in more would start to feel
+                  cluttered.
+                </figcaption>
+              </figure>
+              <figure class="artifact-card is-selected">
+                <img
+                  src="../assets/transit/navbot-sketch-d2.webp"
+                  alt="NavBot Design 2: suggested prompts shown as centered tappable cards"
+                  loading="lazy"
+                />
+                <figcaption>
+                  ★ Design 2: centering suggested prompts as tappable cards
+                  draws attention to what NavBot can help with.
+                </figcaption>
+              </figure>
+            </div>
             <p class="pain-addressed">
               <strong>Pain Points Addressed:</strong> Navigation &amp;
               Accessibility · Recommendations &amp; Discovery
             </p>
           </div>
 
-          <div class="subsection">
-            <h3>Directions Page</h3>
-            <div data-reveal>
-              <p>
-                The directions page needed to do two things at once: show
-                reliable route information and also inform tourists about the
-                unfamiliar parts of that route.
-                <strong>Safe Arrival mode</strong> adds buffer time for delays,
-                walking, and missed transfers.
-                <strong>Pop-up notifications</strong> decode city-specific
-                terminology, delays, and payment cues directly in the flow,
-                removing need for external lookup.
+          <div class="subsection subsection-pair">
+            <div class="subsection-pair-item">
+              <h3>Directions Page</h3>
+              <div data-reveal>
+                <p>
+                  The directions page includes
+                  <strong>Safe Arrival mode</strong>, which adds buffer time for
+                  delays, walking, and missed transfers.
+                  <strong>Pop-up notifications</strong> explain city-specific
+                  terminology, delays, and payment cues directly in the flow.
+                </p>
+                <figure
+                  class="artifact-card"
+                  style="margin-top: 16px; width: 256px; margin-inline: auto"
+                >
+                  <img
+                    src="../assets/transit/wireframe-directions-safe-arrival.webp"
+                    alt="Directions page sketch showing Safe Arrival Mode and pop-up notification stops"
+                    loading="lazy"
+                    style="height: 420px; width: auto; display: block"
+                  />
+                  <figcaption>
+                    Safe Arrival Mode breaks down buffer times. Pop-up
+                    notifications inform tourists throughout the journey.
+                  </figcaption>
+                </figure>
+              </div>
+              <p class="pain-addressed">
+                <strong>Pain Points Addressed:</strong> Navigation &amp;
+                Accessibility · Timing &amp; Scheduling
               </p>
-              <figure
-                class="artifact-card"
-                style="margin-top: 16px; max-width: 380px; margin-inline: auto"
-              >
-                <img
-                  src="../assets/transit/wireframe-directions-safe-arrival.webp"
-                  alt="Directions page sketch showing Safe Arrival Mode and pop-up notification stops"
-                  loading="lazy"
-                />
-                <figcaption>
-                  Safe Arrival Mode breaks down buffer times. Pop-up
-                  notifications inform tourists throughout the journey.
-                </figcaption>
-              </figure>
             </div>
-            <p>
-              I also tested two layouts for displaying multiple route options:
-            </p>
-            <div class="image-grid two-up" data-reveal>
-              <figure class="artifact-card">
-                <img
-                  src="../assets/transit/wireframe-directions-d1.webp"
-                  alt="Commute layout Design 1: vertical single-route view"
-                  loading="lazy"
-                />
-                <figcaption>
-                  Design 1: vertical layout makes it hard to compare multiple
-                  route options at a glance.
-                </figcaption>
-              </figure>
-              <figure class="artifact-card">
-                <img
-                  src="../assets/transit/wireframe-directions-d2.webp"
-                  alt="Commute layout Design 2: horizontal cards showing multiple routes at a glance"
-                  loading="lazy"
-                />
-                <figcaption>
-                  ★ Design 2: horizontal cards let users compare commute options
-                  without scrolling past each one.
-                </figcaption>
-              </figure>
+
+            <div class="subsection-pair-item">
+              <h3>Profile Page &amp; Payment</h3>
+              <div data-reveal>
+                <p>
+                  No app currently lets tourists add money to their OMNY card. I
+                  designed a profile page that links transit cards directly,
+                  allowing users to navigate and pay all in one place, removing
+                  the pre-trip and mid-trip payment anxiety entirely.
+                </p>
+                <figure
+                  class="artifact-card"
+                  style="margin-top: 16px; width: 301px; margin-inline: auto"
+                >
+                  <img
+                    src="../assets/transit/profile-sketch.webp"
+                    alt="Transit Pal profile page sketch"
+                    loading="lazy"
+                    style="height: 420px; width: auto; display: block"
+                  />
+                  <figcaption>
+                    OMNY card and credit cards linked from profile so users can
+                    manage funds and track spending without leaving the app.
+                  </figcaption>
+                </figure>
+              </div>
+              <p class="pain-addressed">
+                <strong>Pain Points Addressed:</strong> Payment
+              </p>
             </div>
-            <p class="pain-addressed">
-              <strong>Pain Points Addressed:</strong> Navigation &amp;
-              Accessibility · Timing &amp; Scheduling
-            </p>
           </div>
 
           <div class="subsection">
@@ -1022,7 +1048,7 @@
                   Locals" need clearer representation.
                 </figcaption>
               </figure>
-              <figure class="artifact-card">
+              <figure class="artifact-card is-selected">
                 <img
                   src="../assets/transit/wireframe-recommendations-d2.webp"
                   alt="Recommendations Design 2: icon list layout with dark navy circles"
@@ -1038,36 +1064,6 @@
             <p class="pain-addressed">
               <strong>Pain Points Addressed:</strong> Recommendations &amp;
               Discovery
-            </p>
-          </div>
-
-          <div class="subsection">
-            <h3>Profile Page &amp; Payment</h3>
-            <div data-reveal>
-              <p>
-                No app currently lets tourists add money to their OMNY card
-                without a kiosk visit. I designed a profile page that links
-                transit cards directly, allowing users to navigate and pay all
-                in one place, removing the pre-trip and mid-trip payment anxiety
-                entirely.
-              </p>
-              <figure
-                class="artifact-card"
-                style="margin-top: 16px; max-width: 380px; margin-inline: auto"
-              >
-                <img
-                  src="../assets/transit/profile-sketch.webp"
-                  alt="Transit Pal profile page sketch"
-                  loading="lazy"
-                />
-                <figcaption>
-                  OMNY card and credit cards linked from profile so users can
-                  manage funds and track spending without leaving the app.
-                </figcaption>
-              </figure>
-            </div>
-            <p class="pain-addressed">
-              <strong>Pain Points Addressed:</strong> Payment
             </p>
           </div>
 
@@ -1427,23 +1423,26 @@
       </section>
     </main>
 
-    <footer class="footer shell">
-      <div>
-        <p>Contact me · ✤</p>
-        <a href="mailto:nikki062604@gmail.com">nikki062604@gmail.com</a>
-      </div>
-      <div>
-        <p>Let's connect · ✧</p>
-        <a
-          href="https://www.linkedin.com/in/nikkilee26/"
-          target="_blank"
-          rel="noreferrer"
-          >LinkedIn</a
-        >
-      </div>
-      <div>
-        <p>All rights reserved to Nikki Lee © <span data-year></span></p>
-        <strong>Made with ♥</strong>
+    <footer class="footer shell" id="footer">
+      <h2 class="footer-title">Thanks for stopping by!</h2>
+      <div class="footer-columns">
+        <div>
+          <p>Contact me · ✤</p>
+          <a href="mailto:nikki062604@gmail.com">nikki062604@gmail.com</a>
+        </div>
+        <div>
+          <p>Let's connect · ✧</p>
+          <a
+            href="https://www.linkedin.com/in/nikkilee26/"
+            target="_blank"
+            rel="noreferrer"
+            >LinkedIn</a
+          >
+        </div>
+        <div>
+          <p>All rights reserved to Nikki Lee © <span data-year></span></p>
+          <strong>Made with ♥</strong>
+        </div>
       </div>
     </footer>
   </body>
