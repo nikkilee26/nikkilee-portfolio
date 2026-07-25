@@ -3611,7 +3611,7 @@ body.dialogue-page {
 
 /* ── Password gate ── */
 .gate-section {
-  min-height: 100vh;
+  min-height: calc(100vh - var(--header-height));
   display: flex;
   align-items: center;
   padding-block: clamp(16px, 3vw, 32px);
@@ -3620,6 +3620,7 @@ body.dialogue-page {
 .gate-wrap {
   max-width: 520px;
   text-align: center;
+  margin-top: -40px;
 }
 
 .gate-back {
