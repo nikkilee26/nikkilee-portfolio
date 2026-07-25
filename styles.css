@@ -4295,6 +4295,8 @@ body.dialogue-page {
 .tradeoff-founder {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  flex-direction: column;
 }
 
 .tradeoff-user {
@@ -4318,7 +4320,9 @@ body.dialogue-page {
 .founder-feature-chips {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
   gap: 8px;
+  flex: 1;
 }
 
 .feature-chip {
@@ -4328,6 +4332,7 @@ body.dialogue-page {
   border: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 3px;
 }
 
@@ -4386,9 +4391,9 @@ body.dialogue-page {
   margin-bottom: 10px;
 }
 
-.tradeoff-expert-callout p {
+.dialogue-page .narrative-block .tradeoff-expert-callout p {
   margin: 0;
-  font-size: 0.92rem;
+  font-size: 0.85rem;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.8);
 }

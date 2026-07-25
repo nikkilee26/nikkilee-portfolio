@@ -31,9 +31,7 @@
 
     <header class="site-header dialogue-header" data-header>
       <nav class="nav shell" aria-label="Main navigation">
-        <a class="brand" href="/" aria-label="Nikki Lee home"
-          >Nikki Lee</a
-        >
+        <a class="brand" href="/" aria-label="Nikki Lee home">Nikki Lee</a>
         <button
           class="nav-toggle"
           type="button"
@@ -303,9 +301,9 @@
           <p class="section-kicker">02 Ideation</p>
           <h2 id="ideation-title">Defining the Experience</h2>
           <p>
-            These patterns weren't just design problems. They were structural
-            failures in how platforms are built. That became the foundation for
-            every decision in the ideation phase.
+            These weren't just design problems. The real challenge was breaking
+            harmful engagement patterns while building something people would
+            actually want to use.
           </p>
 
           <!-- Target users -->
@@ -371,7 +369,7 @@
               </div>
               <div class="flow-step">
                 <span class="flow-num">5</span>
-                <p>Enter main platform feed with matched conversations</p>
+                <p>Enter main platform feed</p>
               </div>
             </div>
           </div>
@@ -418,7 +416,7 @@
                 <div class="shift-flow">
                   <span class="shift-step">Short setup</span>
                   <span class="shift-arrow">→</span>
-                  <span class="shift-step">2-minute AI practice</span>
+                  <span class="shift-step">2 minute AI practice</span>
                   <span class="shift-arrow">→</span>
                   <span class="shift-step">Feedback</span>
                   <span class="shift-arrow">→</span>
@@ -426,7 +424,7 @@
                 </div>
               </div>
               <div class="onboarding-shift-result">
-                Reduced planned onboarding steps by approximately 50%
+                Reduced planned onboarding steps by about 50%
               </div>
             </div>
 
@@ -434,12 +432,12 @@
             <div class="subsection tradeoff-section" data-reveal>
               <h3>When Business Goals Meet User Limits</h3>
               <p>
-                After the onboarding process was set, my focus shifted to what
+                After the onboarding process was set, I shifted my focus to what
                 the AI mock conversation screen would actually look like. The
                 founder had a clear vision for the features she wanted to
                 include, making sure users were aware of how they were engaging.
-                I wanted to keep all of it, but also make sure we were designing
-                for cognitive load.
+                I wanted to preserve her goal, but also make sure we were
+                designing for cognitive load.
               </p>
 
               <div class="tradeoff-tension-row">
@@ -447,15 +445,9 @@
                   <span class="tradeoff-tag">Founder's Vision</span>
                   <div class="founder-feature-chips">
                     <div class="feature-chip">
-                      <span class="feature-chip-name">2-Minute Timer</span>
+                      <span class="feature-chip-name">2 Minute Timer</span>
                       <span class="feature-chip-desc"
-                        >Time-bounded, low-commitment conversation</span
-                      >
-                    </div>
-                    <div class="feature-chip">
-                      <span class="feature-chip-name">Conversation Pulse</span>
-                      <span class="feature-chip-desc"
-                        >Real-time emotional tone of the chat</span
+                        >Short, low commitment conversation</span
                       >
                     </div>
                     <div class="feature-chip">
@@ -471,22 +463,25 @@
                       >
                     </div>
                     <div class="feature-chip chip-new">
-                      <span class="feature-chip-name">Perspective Meter</span>
-                      <span class="feature-chip-desc"
-                        >How different is your overall viewpoint from your
-                        partner's?</span
+                      <span class="feature-chip-name"
+                        >Difference Barometer</span
                       >
-                    </div>
-                    <div class="feature-chip chip-new">
-                      <span class="feature-chip-name">Difference Meter</span>
                       <span class="feature-chip-desc"
                         >How wide is the opinion gap on the current topic?</span
                       >
                     </div>
                     <div class="feature-chip chip-new">
-                      <span class="feature-chip-name">Collaboration Meter</span>
+                      <span class="feature-chip-name"
+                        >Disagreeableness Barometer</span
+                      >
                       <span class="feature-chip-desc"
-                        >How well are you listening and engaging?</span
+                        >How receptive are you to other people's opinions?</span
+                      >
+                    </div>
+                    <div class="feature-chip chip-new">
+                      <span class="feature-chip-name">Dialogue Pulse</span>
+                      <span class="feature-chip-desc"
+                        >How tense vs. understanding is the conversation?</span
                       >
                     </div>
                   </div>
@@ -498,16 +493,17 @@
                     <ul>
                       <li>Users are actively holding a conversation</li>
                       <li>
-                        Too many simultaneous live indicators = cognitive
-                        overload
+                        The meters are measuring the wrong thing. We want to
+                        promote understanding and openness, not change people's
+                        minds
                       </li>
                       <li>
                         Up to 3 suggestions in the side margin pull focus away
                         from the chat
                       </li>
                       <li>
-                        Feedback should support the conversation, not compete
-                        with it
+                        Users shouldn't feel bad about their beliefs or be
+                        pushed into a "me vs. you" mindset
                       </li>
                     </ul>
                   </div>
@@ -515,18 +511,27 @@
                     <span class="tradeoff-expert-label">Expert Validation</span>
                     <p>
                       Psychology and computer science stakeholders reviewed the
-                      design and agreed: presenting this much information in
-                      real-time, mid-conversation, was too much.
+                      design and agreed that labeling users this way could
+                      encourage a "me vs. you" mentality instead of the outcome
+                      we wanted, and there were too many suggestions competing
+                      for attention.
                     </p>
                   </div>
                 </div>
               </div>
 
               <p data-reveal>
-                The founder pushed for an always-visible meter layout. I flagged
-                concerns about cognitive overload mid-conversation, validated
-                them with psychology and computer science stakeholders, and led
-                a full redesign of the interaction model.
+                The founder's goal was to help users reflect on their
+                conversational behavior. I found the disagreeableness and
+                difference meters conflicted with our goal of building
+                understanding and openness, not changing opinions.
+              </p>
+
+              <p data-reveal>
+                I brought in Claude Design to quickly turn the founder's
+                direction into a visual mockup. It let me iterate faster and
+                show her what she was describing so we could visualize it
+                together before collecting feedback and revising it.
               </p>
 
               <!-- Before -->
@@ -536,66 +541,36 @@
                 >
                 <figure class="artifact-card dialogue-artifact">
                   <img
-                    src="../assets/dialogue/fireside-before.png"
-                    alt="First iteration practice screen showing meters always visible with no collapse option"
+                    src="../assets/dialogue/founder-direction-annotated.png"
+                    alt="Annotated wireframe of the founder's direction showing the Disagreeableness, Difference, and Dialogue Pulse meters and three simultaneous suggestions, marked up with my concerns"
                     loading="lazy"
                   />
                   <figcaption>
-                    All meters and suggestions always visible. No way to hide
-                    them mid-conversation, making the screen overwhelming and
-                    competing with the conversation itself.
+                    The Disagreeableness and Difference framing risked making
+                    users feel judged and encouraging a "me vs. you" mindset,
+                    and three simultaneous suggestions competed with the
+                    conversation itself.
                   </figcaption>
                 </figure>
-                <p>
-                  After expert validation confirmed the cognitive load issue, I
-                  brought in Claude Design to turn my revised sketches into
-                  wireframes directly. It cut down the number of iterations
-                  needed to land on something testable and saved significant
-                  time in Figma.
-                </p>
               </div>
 
-              <!-- After: tabbed -->
+              <!-- After -->
               <div class="fireside-block" data-reveal>
                 <span class="iteration-pill iteration-after">My Redesign</span>
-                <div class="tab-group" data-tabs>
-                  <div class="tab-buttons" role="tablist">
-                    <button class="tab-btn" type="button" role="tab">
-                      Meters Collapsed
-                    </button>
-                    <button class="tab-btn" type="button" role="tab">
-                      Meters Expanded
-                    </button>
-                  </div>
-                  <div class="tab-panel">
-                    <figure class="artifact-card dialogue-artifact">
-                      <img
-                        src="../assets/dialogue/fireside-after-collapsed.png"
-                        alt="Revised practice screen with meters collapsed by default"
-                        loading="lazy"
-                      />
-                      <figcaption>
-                        Revised: meters collapsed by default and the suggestion
-                        moved into the message input. Users can focus on the
-                        conversation and check their awareness when they choose.
-                      </figcaption>
-                    </figure>
-                  </div>
-                  <div class="tab-panel">
-                    <figure class="artifact-card dialogue-artifact">
-                      <img
-                        src="../assets/dialogue/fireside-after-expanded.png"
-                        alt="Revised practice screen with meters expanded"
-                        loading="lazy"
-                      />
-                      <figcaption>
-                        Meters expanded on demand — the awareness is there when
-                        users want it, without competing for attention during
-                        the conversation.
-                      </figcaption>
-                    </figure>
-                  </div>
-                </div>
+                <figure class="artifact-card dialogue-artifact">
+                  <img
+                    src="../assets/dialogue/my-redesign-final.png"
+                    alt="Final redesigned practice screen with Curiosity and Collaborativeness meters in the sidebar, Shared Understanding and Emotional Tension below the chat, and a single embedded suggestion"
+                    loading="lazy"
+                  />
+                  <figcaption>
+                    Disagreeableness, Difference, and Dialogue Pulse became
+                    Curiosity, Collaborativeness, and Shared Understanding,
+                    reframing feedback around openness and connection instead of
+                    judgment or persuasion. The three sidebar suggestions became
+                    one prompt embedded directly in the message input.
+                  </figcaption>
+                </figure>
               </div>
 
               <div class="tradeoff-resolution" data-reveal>
@@ -603,10 +578,11 @@
                 <div class="tradeoff-resolution-grid">
                   <div class="tradeoff-resolution-card">
                     <span class="resolution-num">01</span>
-                    <h5>Collapsible Meters</h5>
+                    <h5>Reframed Meters</h5>
                     <p>
-                      Graphs collapsed by default. Users surface them when they
-                      want the awareness.
+                      Disagreeableness and Difference became Curiosity,
+                      Collaborativeness, and Shared Understanding, framing
+                      feedback around growth instead of judgment.
                     </p>
                   </div>
                   <div class="tradeoff-resolution-card">
@@ -632,10 +608,10 @@
               </p>
               <div class="dark-feature-grid">
                 <div class="dark-feature-card">
-                  <h3>Perspective &amp; Collaboration Meters</h3>
+                  <h3>Curiosity &amp; Collaborativeness Meters</h3>
                   <p>
-                    How different is your perspective and how collaboratively
-                    are you engaging?
+                    Update in real time after each new conversation to reflect
+                    how open and collaborative your engagement has been.
                   </p>
                 </div>
                 <div class="dark-feature-card">
@@ -646,24 +622,26 @@
                   </p>
                 </div>
                 <div class="dark-feature-card">
-                  <h3>Matches of the Day</h3>
+                  <h3>Match of the Day</h3>
                   <p>
                     Connecting users with people that other algorithms would've
-                    never paired with them.
+                    never paired with them, based on difference rather than
+                    similarity.
                   </p>
                 </div>
               </div>
               <figure class="artifact-card dialogue-artifact" data-reveal>
                 <img
-                  src="../assets/dialogue/platform-wireframe.png"
-                  alt="Wireframe of Home Page with User Insight Features"
+                  src="../assets/dialogue/platform-home-annotated.png"
+                  alt="Annotated wireframe of the main platform home screen showing Performance Metrics, live Curiosity and Collaborativeness meters, Wellness Controls, and Match of the Day"
                   style="width: 100%; border-radius: 8px; display: block"
                 />
                 <figcaption>
-                  Main platform home screen wireframe showing Performance
-                  Indicators, User Wellness Controls, and Matches of the Day.
-                  These features reinforce healthy, intentional engagement once
-                  users are past onboarding.
+                  Main platform home screen showing Performance Metrics,
+                  real-time Curiosity and Collaborativeness meters, Wellness
+                  Controls, and Match of the Day. These features reinforce
+                  healthy, intentional engagement once users are past
+                  onboarding.
                 </figcaption>
               </figure>
             </div>
