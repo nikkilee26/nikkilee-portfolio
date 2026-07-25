@@ -1738,7 +1738,7 @@ button {
   top: calc(var(--header-height) + 10px);
   z-index: 45;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 6px;
   padding: 10px 18px;
   border: 1px solid var(--line);
@@ -2382,7 +2382,7 @@ button {
     width: calc(100vw - 20px);
     border-radius: 18px;
     top: calc(var(--header-height) + 8px);
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   .insight-card,
