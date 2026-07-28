@@ -5439,7 +5439,7 @@ body.dialogue-page {
   display: flex;
   align-items: baseline;
   gap: 14px;
-  margin: 3rem 0 1.5rem;
+  margin: 5.5rem 0 1.5rem;
   padding-bottom: 14px;
   border-bottom: 1px solid var(--line);
 }
