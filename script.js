@@ -403,4 +403,43 @@
       toast.classList.remove('is-visible');
     }, 2400);
   }
+
+  // ── Card / image sliders ──
+  document.querySelectorAll('[data-slider]').forEach((slider) => {
+    const slides = [...slider.querySelectorAll('[data-slide]')];
+    if (!slides.length) return;
+    const prevBtn = slider.querySelector('[data-prev]');
+    const nextBtn = slider.querySelector('[data-next]');
+    const countEl = slider.querySelector('.iter-count');
+    let current = 0;
+
+    function show(index) {
+      current = (index + slides.length) % slides.length;
+      slides.forEach((s, i) => s.classList.toggle('is-active', i === current));
+      if (countEl) countEl.textContent = `${current + 1} / ${slides.length}`;
+    }
+
+    prevBtn?.addEventListener('click', () => show(current - 1));
+    nextBtn?.addEventListener('click', () => show(current + 1));
+    show(0);
+  });
+
+  // ── Summary / full case study toggle ──
+  const viewToggle = document.querySelector('[data-view-toggle]');
+  if (viewToggle) {
+    const summaryBtn = viewToggle.querySelector('[data-view-summary]');
+    const fullBtn = viewToggle.querySelector('[data-view-full]');
+
+    function setView(condensed) {
+      document.body.classList.toggle('is-condensed', condensed);
+      summaryBtn.classList.toggle('is-active', condensed);
+      fullBtn.classList.toggle('is-active', !condensed);
+      summaryBtn.setAttribute('aria-pressed', String(condensed));
+      fullBtn.setAttribute('aria-pressed', String(!condensed));
+    }
+
+    document.body.classList.add('is-condensed');
+    summaryBtn.addEventListener('click', () => setView(true));
+    fullBtn.addEventListener('click', () => setView(false));
+  }
 })();

@@ -20,9 +20,7 @@
 
     <header class="site-header" data-header>
       <nav class="nav shell" aria-label="Main navigation">
-        <a class="brand" href="/" aria-label="Nikki Lee home"
-          >Nikki Lee</a
-        >
+        <a class="brand" href="/" aria-label="Nikki Lee home">Nikki Lee</a>
 
         <button
           class="nav-toggle"
@@ -140,6 +138,33 @@
             </div>
           </div>
         </div>
+        <div class="view-full-wrap shell" data-reveal>
+          <div class="view-toggle" data-view-toggle>
+            <p class="view-toggle-label">You are now viewing:</p>
+            <div
+              class="view-toggle-pill"
+              role="group"
+              aria-label="Case study detail level"
+            >
+              <button
+                type="button"
+                class="view-toggle-btn is-active"
+                data-view-summary
+                aria-pressed="true"
+              >
+                Summary
+              </button>
+              <button
+                type="button"
+                class="view-toggle-btn"
+                data-view-full
+                aria-pressed="false"
+              >
+                Full Case Study
+              </button>
+            </div>
+          </div>
+        </div>
       </section>
 
       <nav class="case-jump shell" aria-label="Case study sections" data-reveal>
@@ -241,7 +266,7 @@
             to understand what made a site feel "tech-forward" vs.
             "beauty-driven" and what trust signals each context required.
           </p>
-          <div class="artifact-grid two-up">
+          <div class="artifact-grid two-up" data-full-only>
             <figure class="artifact-card" data-reveal>
               <img
                 src="../assets/sorcea/research-tech-swot.jpg"
@@ -262,12 +287,12 @@
             </figure>
           </div>
 
-          <div class="subsection" data-reveal>
+          <div class="research-finding-callout" data-reveal>
+            <p class="section-kicker">Key Research Finding</p>
             <p>
-              The research made it clear that Sorcea needed two related but
-              distinct designs: one that felt credible and data-driven for brand
-              partners, and one that felt calming, personal, and trustworthy for
-              skincare shoppers.
+              Sorcea needed two distinct designs: one that felt credible and
+              data-driven for brand partners, and one that felt calming,
+              personal, and trustworthy for skincare shoppers.
             </p>
           </div>
         </div>
@@ -423,7 +448,7 @@
             brand presence and confidence for the consumer skincare platform.
           </p>
 
-          <div class="design-intent-grid" data-reveal>
+          <div class="design-intent-grid" data-reveal data-full-only>
             <div class="design-intent-card">
               <p class="design-intent-label">Sorcea Labs · B2B</p>
               <ul>
@@ -447,74 +472,113 @@
           </div>
 
           <div class="platform-section-break" data-reveal>
-            <span class="platform-section-label labs-label">Sorcea Labs · B2B</span>
-            <p>Building credibility and a tech-forward brand presence for beauty industry partners.</p>
+            <span class="platform-section-label labs-label"
+              >Sorcea Labs · B2B</span
+            >
+            <p>
+              Building credibility and a tech-forward brand presence for beauty
+              industry partners.
+            </p>
           </div>
 
           <div class="iteration-set" data-reveal>
             <div class="iteration-heading">
               <h3>Sorcea Labs landing page evolution</h3>
               <p>
-                Creating a homepage that captured attention while reflecting the beauty-tech brand identity.
+                Creating a homepage that captured attention while reflecting the
+                beauty-tech brand identity.
               </p>
             </div>
-            <div class="iteration-grid three-up">
-              <article class="iteration-card">
-                <img
-                  src="../assets/portfolio/sorcea-labs-iteration-1.png"
-                  alt="Sorcea Labs landing page iteration 1"
-                  loading="lazy"
-                />
-                <h4>Iteration 1</h4>
-                <ul>
-                  <li>Email capture was direct and clear.</li>
-                  <li>Moving background felt distracting and hard to read.</li>
-                  <li>
-                    Visuals felt busy and did not communicate the brand
-                    difference.
-                  </li>
-                </ul>
-              </article>
-              <article class="iteration-card">
-                <img
-                  src="../assets/portfolio/sorcea-labs-iteration-2.png"
-                  alt="Sorcea Labs landing page iteration 2"
-                  loading="lazy"
-                />
-                <h4>Iteration 2</h4>
-                <ul>
-                  <li>
-                    "Unlock the future of beauty" became a stronger, more
-                    memorable tagline — sets the brand apart immediately.
-                  </li>
-                  <li>Hero image aligned better with the tech direction.</li>
-                  <li>
-                    Additional sections advertised the company more clearly.
-                  </li>
-                </ul>
-              </article>
-              <article class="iteration-card is-selected">
-                <img
-                  src="../assets/portfolio/sorcea-labs-iteration-3.png"
-                  alt="Sorcea Labs landing page iteration 3"
-                  loading="lazy"
-                />
-                <h4>Iteration 3 ★</h4>
-                <ul>
-                  <li>
-                    Background color and type felt more cohesive with the brand
-                    direction.
-                  </li>
-                  <li>
-                    Header made it easier for brands to navigate to the Sorcea
-                    consumer platform.
-                  </li>
-                  <li>
-                    Card-based selling points made the page easier to scan and
-                    understand quickly.
-                  </li>
-                </ul>
-              </article>
+            <div class="iter-slider iter-slider--labs-evolution" data-slider>
+              <button class="iter-arrow" data-prev aria-label="Previous slide">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  height="18"
+                >
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              <div class="iter-track">
+                <article class="iteration-card is-selected" data-slide>
+                  <img
+                    src="../assets/sorcea/sorcealabs-nuanced-animation.gif"
+                    alt="Sorcea Labs landing page iteration 3, hero headline animating through fonts on the word nuanced"
+                    loading="lazy"
+                  />
+                  <h4>
+                    Iteration 3
+                    <span class="selected-direction-chip"
+                      >Selected Direction</span
+                    >
+                  </h4>
+                  <ul>
+                    <li>
+                      Background color and type felt more cohesive with the
+                      brand direction.
+                    </li>
+                    <li>Changing font made the hero look more dynamic.</li>
+                    <li>
+                      "Get in touch" button made it easier to get in contact
+                      with partners.
+                    </li>
+                  </ul>
+                </article>
+                <article class="iteration-card" data-slide>
+                  <img
+                    src="../assets/portfolio/sorcea-labs-iteration-2.jpg"
+                    alt="Sorcea Labs landing page iteration 2"
+                    loading="lazy"
+                  />
+                  <h4>Iteration 2</h4>
+                  <ul>
+                    <li>
+                      "Unlock the future of beauty" became a stronger, more
+                      memorable tagline — sets the brand apart immediately.
+                    </li>
+                    <li>Hero image aligned better with the tech direction.</li>
+                    <li>
+                      Additional sections advertised the company more clearly.
+                    </li>
+                  </ul>
+                </article>
+                <article class="iteration-card" data-slide>
+                  <img
+                    src="../assets/portfolio/sorcea-labs-iteration-1.jpg"
+                    alt="Sorcea Labs landing page iteration 1"
+                    loading="lazy"
+                  />
+                  <h4>Iteration 1</h4>
+                  <ul>
+                    <li>Email capture was direct and clear.</li>
+                    <li>
+                      Moving background felt distracting and hard to read.
+                    </li>
+                    <li>
+                      Visuals felt busy and did not communicate the brand
+                      difference.
+                    </li>
+                  </ul>
+                </article>
+              </div>
+              <button class="iter-arrow" data-next aria-label="Next slide">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  height="18"
+                >
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              </button>
+              <div class="iter-footer">
+                <span class="iter-count">1 / 3</span>
+              </div>
             </div>
           </div>
 
@@ -522,86 +586,162 @@
             <div class="iteration-heading">
               <h3>"Why Us" interaction</h3>
               <p>
-                Captivating possible partners through dynamic visuals and clear answers to what Sorcea Labs can deliver.
+                Captivating possible partners through dynamic visuals and clear
+                answers to what Sorcea Labs can deliver.
               </p>
             </div>
-            <div class="iteration-grid two-up compact-visuals">
-              <article class="iteration-card">
-                <img
-                  src="../assets/sorcea/before.jpg"
-                  alt="Why Us section design 1: large slideshow"
-                  loading="lazy"
-                />
-                <h4>Design 1</h4>
-                <p>
-                  One large slideshow made questions harder to scan when
-                  skimming.
-                </p>
-              </article>
-              <article class="iteration-card is-selected">
-                <img
-                  src="../assets/sorcea/after.gif"
-                  alt="Why Us section design 2: cycling bubbles"
-                  loading="lazy"
-                />
-                <h4>Design 2 ★</h4>
-                <p>
-                  Smaller cycling bubbles are more playful and users can scan
-                  multiple questions at once.
-                </p>
-              </article>
+            <div class="iter-slider iter-slider--why-us" data-slider>
+              <button class="iter-arrow" data-prev aria-label="Previous slide">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  height="18"
+                >
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              <div class="iter-track">
+                <article class="iteration-card is-selected" data-slide>
+                  <img
+                    src="../assets/sorcea/why-us-iteration2.gif"
+                    alt="Why Us section design 2: cycling bubbles"
+                    loading="lazy"
+                  />
+                  <h4>
+                    Design 2
+                    <span class="selected-direction-chip"
+                      >Selected Direction</span
+                    >
+                  </h4>
+                  <p>
+                    Smaller cycling bubbles are more playful and users can scan
+                    multiple questions at once.
+                  </p>
+                </article>
+                <article class="iteration-card" data-slide>
+                  <img
+                    src="../assets/sorcea/why-us-iteration1.png"
+                    alt="Why Us section design 1: large slideshow"
+                    loading="lazy"
+                  />
+                  <h4>Design 1</h4>
+                  <p>
+                    One large slideshow made questions harder to scan when
+                    skimming.
+                  </p>
+                </article>
+              </div>
+              <button class="iter-arrow" data-next aria-label="Next slide">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  height="18"
+                >
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              </button>
+              <div class="iter-footer">
+                <span class="iter-count">1 / 2</span>
+              </div>
             </div>
           </div>
 
           <div class="platform-section-break" data-reveal>
-            <span class="platform-section-label sorcea-label">Sorcea · B2C</span>
-            <p>Creating a clean, transparent, reliable, and personalized experience for users.</p>
+            <span class="platform-section-label sorcea-label"
+              >Sorcea · B2C</span
+            >
+            <p>
+              Creating a clean, transparent, reliable, and personalized
+              experience for users.
+            </p>
           </div>
 
           <div class="iteration-set" data-reveal>
             <div class="iteration-heading">
               <h3>Landing page styles</h3>
               <p>
-                Creating a calm, trustworthy skincare experience where imagery, search, and layout balance beauty aesthetics with the clarity needed to convert shoppers.
+                Creating a calm, trustworthy skincare experience where imagery,
+                search, and layout balance beauty aesthetics with the clarity
+                needed to convert shoppers.
               </p>
             </div>
-            <div class="iteration-grid three-up compact-visuals">
-              <article class="iteration-card">
-                <img
-                  src="../assets/portfolio/sorcea-landing-design-1.png"
-                  alt="Sorcea landing page design 1"
-                  loading="lazy"
-                />
-                <h4>Design 1</h4>
-                <p>
-                  Background was too distracting and competed with product
-                  content.
-                </p>
-              </article>
-              <article class="iteration-card">
-                <img
-                  src="../assets/portfolio/sorcea-landing-design-2.png"
-                  alt="Sorcea landing page design 2"
-                  loading="lazy"
-                />
-                <h4>Design 2</h4>
-                <p>
-                  Moving in the right direction, but needed more visual energy
-                  to match the brand.
-                </p>
-              </article>
-              <article class="iteration-card is-selected">
-                <img
-                  src="../assets/portfolio/sorcea-landing-design-3.png"
-                  alt="Sorcea landing page design 3"
-                  loading="lazy"
-                />
-                <h4>Design 3 ★</h4>
-                <p>
-                  Dynamic, moving images balance product richness with
-                  informational content — feels alive without losing clarity.
-                </p>
-              </article>
+            <div class="iter-slider iter-slider--b2c-landing" data-slider>
+              <button class="iter-arrow" data-prev aria-label="Previous slide">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  height="18"
+                >
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              <div class="iter-track">
+                <article class="iteration-card is-selected" data-slide>
+                  <img
+                    src="../assets/portfolio/sorcea-landing-design-3.jpg"
+                    alt="Sorcea landing page design 3"
+                    loading="lazy"
+                  />
+                  <h4>
+                    Design 3
+                    <span class="selected-direction-chip"
+                      >Selected Direction</span
+                    >
+                  </h4>
+                  <p>
+                    Dynamic, moving images balance product richness with
+                    informational content — feels alive without losing clarity.
+                  </p>
+                </article>
+                <article class="iteration-card" data-slide>
+                  <img
+                    src="../assets/portfolio/sorcea-landing-design-2.jpg"
+                    alt="Sorcea landing page design 2"
+                    loading="lazy"
+                  />
+                  <h4>Design 2</h4>
+                  <p>
+                    Moving in the right direction, but needed more visual energy
+                    to match the brand.
+                  </p>
+                </article>
+                <article class="iteration-card" data-slide>
+                  <img
+                    src="../assets/portfolio/sorcea-landing-design-1.jpg"
+                    alt="Sorcea landing page design 1"
+                    loading="lazy"
+                  />
+                  <h4>Design 1</h4>
+                  <p>
+                    Background was too distracting and competed with product
+                    content.
+                  </p>
+                </article>
+              </div>
+              <button class="iter-arrow" data-next aria-label="Next slide">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  height="18"
+                >
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              </button>
+              <div class="iter-footer">
+                <span class="iter-count">1 / 3</span>
+              </div>
             </div>
           </div>
 
@@ -609,81 +749,154 @@
             <div class="iteration-heading">
               <h3>Search and filter designs</h3>
               <p>
-                Making filters easy to adjust inline, without extra steps or needing to remember previous selections.
+                Making filters easy to adjust inline, without extra steps or
+                needing to remember previous selections.
               </p>
             </div>
-            <div class="iteration-grid three-up compact-visuals">
-              <article class="iteration-card">
-                <img
-                  src="../assets/portfolio/filters-design-1.png"
-                  alt="Search and filter design 1"
-                  loading="lazy"
-                />
-                <h4>Design 1</h4>
-                <p>
-                  Filters locked behind a pop-up, which would be inconvenient
-                  and created unnecessary friction in the search flow.
-                </p>
-              </article>
-              <article class="iteration-card">
-                <img
-                  src="../assets/portfolio/filters-design-2.png"
-                  alt="Search and filter design 2"
-                  loading="lazy"
-                />
-                <h4>Design 2</h4>
-                <p>
-                  Two separate dropdowns added cognitive load, users had to
-                  remember their selections across interactions.
-                </p>
-              </article>
-              <article class="iteration-card is-selected">
-                <img
-                  src="../assets/portfolio/filters-design-3.png"
-                  alt="Search and filter design 3"
-                  loading="lazy"
-                />
-                <h4>Design 3 ★</h4>
-                <p>
-                  Filters integrated directly into the search bar, making them
-                  instantly editable in one place.
-                </p>
-              </article>
+            <div class="iter-slider iter-slider--filters" data-slider>
+              <button class="iter-arrow" data-prev aria-label="Previous slide">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  height="18"
+                >
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              <div class="iter-track">
+                <article class="iteration-card is-selected" data-slide>
+                  <img
+                    src="../assets/portfolio/filters-design-3.png"
+                    alt="Search and filter design 3"
+                    loading="lazy"
+                    class="img-compact"
+                  />
+                  <h4>
+                    Design 3
+                    <span class="selected-direction-chip"
+                      >Selected Direction</span
+                    >
+                  </h4>
+                  <p>
+                    Filters integrated directly into the search bar, making them
+                    instantly editable in one place.
+                  </p>
+                </article>
+                <article class="iteration-card" data-slide>
+                  <img
+                    src="../assets/portfolio/filters-design-2.png"
+                    alt="Search and filter design 2"
+                    loading="lazy"
+                    class="img-compact"
+                  />
+                  <h4>Design 2</h4>
+                  <p>
+                    Two separate dropdowns added cognitive load — users had to
+                    remember their selections across interactions.
+                  </p>
+                </article>
+                <article class="iteration-card" data-slide>
+                  <img
+                    src="../assets/portfolio/filters-design-1.png"
+                    alt="Search and filter design 1"
+                    loading="lazy"
+                    class="img-compact"
+                  />
+                  <h4>Design 1</h4>
+                  <p>
+                    Filters locked behind a pop-up created unnecessary friction
+                    in the search flow.
+                  </p>
+                </article>
+              </div>
+              <button class="iter-arrow" data-next aria-label="Next slide">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  height="18"
+                >
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              </button>
+              <div class="iter-footer">
+                <span class="iter-count">1 / 3</span>
+              </div>
             </div>
           </div>
 
-          <div class="iteration-set" data-reveal>
+          <div class="iteration-set" data-reveal data-full-only>
             <div class="iteration-heading">
               <h3>Favorites page</h3>
               <p>
-                Giving users a clear overview of saved items and making the path to purchase obvious.
+                Giving users a clear overview of saved items and making the path
+                to purchase obvious.
               </p>
             </div>
-            <div class="iteration-grid two-up compact-visuals">
-              <article class="iteration-card">
-                <img
-                  src="../assets/portfolio/favorites-design-1.png"
-                  alt="Favorites page design 1"
-                  loading="lazy"
-                />
-                <h4>Design 1</h4>
-                <p>
-                  Longer list format with more details per product, making it
-                  harder to scan at a glance.
-                </p>
-              </article>
-              <article class="iteration-card is-selected">
-                <img
-                  src="../assets/portfolio/favorites-design-2.png"
-                  alt="Favorites page design 2 with horizontal cards"
-                  loading="lazy"
-                />
-                <h4>Design 2 ★</h4>
-                <p>
-                  Horizontal cards allow users to see more saved items at once
-                  without losing key context.
-                </p>
-              </article>
+            <div class="iter-slider iter-slider--favorites" data-slider>
+              <button class="iter-arrow" data-prev aria-label="Previous slide">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  height="18"
+                >
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              <div class="iter-track">
+                <article class="iteration-card is-selected" data-slide>
+                  <img
+                    src="../assets/portfolio/favorites-design-2.jpg"
+                    alt="Favorites page design 2 with horizontal cards"
+                    loading="lazy"
+                  />
+                  <h4>
+                    Design 2
+                    <span class="selected-direction-chip"
+                      >Selected Direction</span
+                    >
+                  </h4>
+                  <p>
+                    Horizontal cards allow users to see more saved items at once
+                    without losing key context.
+                  </p>
+                </article>
+                <article class="iteration-card" data-slide>
+                  <img
+                    src="../assets/portfolio/favorites-design-1.jpg"
+                    alt="Favorites page design 1"
+                    loading="lazy"
+                  />
+                  <h4>Design 1</h4>
+                  <p>
+                    Longer list format with more details per product, making it
+                    harder to scan at a glance.
+                  </p>
+                </article>
+              </div>
+              <button class="iter-arrow" data-next aria-label="Next slide">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  height="18"
+                >
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              </button>
+              <div class="iter-footer">
+                <span class="iter-count">1 / 2</span>
+              </div>
             </div>
           </div>
         </div>
@@ -699,85 +912,241 @@
           <p class="section-kicker">05 Solution</p>
           <h2 id="solution-title">Final direction.</h2>
 
-          <div class="solution-block" data-reveal>
-            <div class="before-after-grid">
-              <figure>
-                <span>Before</span>
-                <img
-                  src="../assets/sorcea/sorcealabs-before.jpg"
-                  alt="SearchOwl business website before redesign"
-                  loading="lazy"
-                />
-              </figure>
-              <figure>
-                <span>After</span>
-                <img
-                  src="../assets/sorcea/sorcealabs-after.jpg"
-                  alt="Sorcea Labs business website after redesign"
-                  loading="lazy"
-                />
-              </figure>
+          <!-- Sorcea Labs B2B -->
+          <div class="solution-showcase" data-reveal>
+            <p class="case-eyebrow">Sorcea Labs</p>
+
+            <div class="showcase-tier-shipped">
+              <h3 class="showcase-tier-title">The shipped result</h3>
+              <p class="showcase-collab-note">
+                A collaborative redesign — combined with proposals from two
+                other designers.
+              </p>
+              <div class="showcase-before-after">
+                <div>
+                  <p class="showcase-label">Before</p>
+                  <img
+                    src="../assets/sorcea/sorcealabs-before.jpg"
+                    alt="SearchOwl B2B site before redesign"
+                    loading="lazy"
+                  />
+                </div>
+                <div>
+                  <p class="showcase-label">After</p>
+                  <img
+                    src="../assets/sorcea/sorcealabs-final-1.jpg"
+                    alt="Sorcea Labs shipped hero section"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
             </div>
-            <div class="solution-copy">
-              <p class="case-eyebrow">Sorcea Labs</p>
-              <h3>Reintroducing SearchOwl as a credible tech partner.</h3>
-              <ul class="body-list compact-list">
+
+            <div class="showcase-tier-mydesigns" data-full-only>
+              <h4 class="showcase-tier-subtitle">My contributions</h4>
+              <p class="showcase-tier-intro">
+                Additional screens from my full proposal.
+              </p>
+              <div class="iter-slider iter-slider--labs-contrib" data-slider>
+                <button
+                  class="iter-arrow"
+                  data-prev
+                  aria-label="Previous slide"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    width="18"
+                    height="18"
+                  >
+                    <path d="M15 18l-6-6 6-6" />
+                  </svg>
+                </button>
+                <div class="iter-track">
+                  <div class="slider-slide" data-slide>
+                    <img
+                      src="../assets/sorcea/sorcealabs-nuanced-animation.gif"
+                      alt="Animated hero headline, cycling fonts on the word nuanced"
+                      loading="lazy"
+                    />
+                    <p class="slide-caption">Hero headline animation</p>
+                  </div>
+                  <div class="slider-slide" data-slide>
+                    <img
+                      src="../assets/sorcea/sorcealabs-final-2.jpg"
+                      alt="Real Consumer Intent section"
+                      loading="lazy"
+                    />
+                    <p class="slide-caption">Real Consumer Intent section</p>
+                  </div>
+                  <div class="slider-slide" data-slide>
+                    <img
+                      src="../assets/sorcea/sorcealabs-final-3.jpg"
+                      alt="Who are we section"
+                      loading="lazy"
+                    />
+                    <p class="slide-caption">Who are we section</p>
+                  </div>
+                </div>
+                <button class="iter-arrow" data-next aria-label="Next slide">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    width="18"
+                    height="18"
+                  >
+                    <path d="M9 18l6-6-6-6" />
+                  </svg>
+                </button>
+                <div class="iter-footer">
+                  <span class="iter-count">1 / 3</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="showcase-tier-integrated">
+              <h4 class="showcase-tier-subtitle">
+                Reintroducing SearchOwl as a credible tech partner.
+              </h4>
+              <ul class="showcase-integrated-list">
                 <li>
-                  <strong>Sophisticated, tech-forward aesthetic</strong> to
-                  signal expertise to brand partners
+                  Sophisticated, tech-forward aesthetic to signal expertise to
+                  brand partners
                 </li>
                 <li>
-                  <strong>Scannable selling points</strong> structured so
-                  partners can understand the value in seconds
+                  Scannable selling points structured so partners can understand
+                  the value in seconds
                 </li>
                 <li>
-                  <strong>Compelling hero section</strong> with a bold tagline
-                  and visuals that communicate the brand difference immediately
+                  Compelling hero section with a bold tagline and visuals that
+                  communicate the brand difference immediately
                 </li>
                 <li>
-                  <strong>Dynamic, interactive interface</strong> that signals
-                  innovation and builds confidence in the product
+                  Dynamic, interactive interface that signals innovation and
+                  builds confidence in the product
                 </li>
               </ul>
             </div>
           </div>
 
-          <div class="solution-block reverse" data-reveal>
-            <div class="solution-copy">
-              <p class="case-eyebrow">Sorcea</p>
-              <h3>Crafting Sorcea's bold, personalized experience.</h3>
-              <ul class="body-list compact-list">
+          <!-- Sorcea B2C -->
+          <div class="solution-showcase" data-reveal>
+            <p class="case-eyebrow">Sorcea</p>
+
+            <div class="showcase-tier-shipped">
+              <h3 class="showcase-tier-title">The shipped result</h3>
+              <p class="showcase-collab-note">
+                A collaborative redesign — combined with proposals from two
+                other designers.
+              </p>
+              <div class="showcase-before-after">
+                <div>
+                  <p class="showcase-label">Before</p>
+                  <img
+                    src="../assets/sorcea/sorcea-final-before.jpg"
+                    alt="Sorcea B2C site before redesign"
+                    loading="lazy"
+                  />
+                </div>
+                <div>
+                  <p class="showcase-label">After</p>
+                  <img
+                    src="../assets/sorcea/sorcea-after.jpg"
+                    alt="Sorcea shipped hero section"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="showcase-tier-mydesigns" data-full-only>
+              <h4 class="showcase-tier-subtitle">My contributions</h4>
+              <p class="showcase-tier-intro">
+                Additional screens from my full proposal.
+              </p>
+              <div class="iter-slider iter-slider--b2c-contrib" data-slider>
+                <button
+                  class="iter-arrow"
+                  data-prev
+                  aria-label="Previous slide"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    width="18"
+                    height="18"
+                  >
+                    <path d="M15 18l-6-6 6-6" />
+                  </svg>
+                </button>
+                <div class="iter-track">
+                  <div class="slider-slide" data-slide>
+                    <img
+                      src="../assets/sorcea/sorcea-hero-proposal.jpg"
+                      alt="Sorcea hero design proposal"
+                      loading="lazy"
+                    />
+                    <p class="slide-caption">Hero section proposal</p>
+                  </div>
+                  <div class="slider-slide" data-slide>
+                    <img
+                      src="../assets/sorcea/sorcea-final-favorites.jpg"
+                      alt="Sorcea final favorites page"
+                      loading="lazy"
+                    />
+                    <p class="slide-caption">Favorites page</p>
+                  </div>
+                  <div class="slider-slide" data-slide>
+                    <img
+                      src="../assets/sorcea/sorcea-final-favempty.jpg"
+                      alt="Sorcea final favorites page, empty state"
+                      loading="lazy"
+                    />
+                    <p class="slide-caption">Favorites — empty state</p>
+                  </div>
+                </div>
+                <button class="iter-arrow" data-next aria-label="Next slide">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    width="18"
+                    height="18"
+                  >
+                    <path d="M9 18l6-6-6-6" />
+                  </svg>
+                </button>
+                <div class="iter-footer">
+                  <span class="iter-count">1 / 3</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="showcase-tier-integrated">
+              <h4 class="showcase-tier-subtitle">
+                Crafting Sorcea's bold, personalized experience.
+              </h4>
+              <ul class="showcase-integrated-list">
                 <li>
-                  <strong>Eye-catching, dynamic front cover</strong> that draws
-                  shoppers in before they even start searching
+                  Eye-catching, dynamic front cover that draws shoppers in
+                  before they even start searching
                 </li>
                 <li>
-                  <strong>Memorable tagline</strong> that communicates the
-                  platform's core promise
+                  Memorable tagline that communicates the platform's core
+                  promise
                 </li>
                 <li>
-                  <strong>Personalized, user-centered discovery</strong> with
-                  inline filters that adapt to each shopper's needs
+                  Personalized, user-centered discovery with inline filters that
+                  adapt to each shopper's needs
                 </li>
               </ul>
-            </div>
-            <div class="before-after-grid">
-              <figure>
-                <span>Before</span>
-                <img
-                  src="../assets/sorcea/sorcea-before.jpg"
-                  alt="Sorcea skincare platform before redesign"
-                  loading="lazy"
-                />
-              </figure>
-              <figure>
-                <span>After</span>
-                <img
-                  src="../assets/sorcea/sorcea-after.jpg"
-                  alt="Sorcea skincare platform after redesign"
-                  loading="lazy"
-                />
-              </figure>
             </div>
           </div>
         </div>

@@ -20,9 +20,7 @@
 
     <header class="site-header" data-header>
       <nav class="nav shell" aria-label="Main navigation">
-        <a class="brand" href="/" aria-label="Nikki Lee home"
-          >Nikki Lee</a
-        >
+        <a class="brand" href="/" aria-label="Nikki Lee home">Nikki Lee</a>
         <button
           class="nav-toggle"
           type="button"
@@ -140,6 +138,33 @@
             </div>
           </div>
         </div>
+        <div class="view-full-wrap shell" data-reveal>
+          <div class="view-toggle" data-view-toggle>
+            <p class="view-toggle-label">You are now viewing:</p>
+            <div
+              class="view-toggle-pill"
+              role="group"
+              aria-label="Case study detail level"
+            >
+              <button
+                type="button"
+                class="view-toggle-btn is-active"
+                data-view-summary
+                aria-pressed="true"
+              >
+                Summary
+              </button>
+              <button
+                type="button"
+                class="view-toggle-btn"
+                data-view-full
+                aria-pressed="false"
+              >
+                Full Case Study
+              </button>
+            </div>
+          </div>
+        </div>
       </section>
 
       <nav class="case-jump shell" aria-label="Case study sections" data-reveal>
@@ -178,71 +203,93 @@
               identify what they got right and where they systematically failed
               tourists.
             </p>
-            <div class="transit-swot" data-reveal>
-              <div class="swot-grid">
-                <div class="swot-head-blank"></div>
-                <div class="swot-app-head">
-                  <span class="swot-app-dot" style="background: #34a853"></span
-                  >Google Maps
-                </div>
-                <div class="swot-app-head">
-                  <span class="swot-app-dot" style="background: #ff6b35"></span
-                  >Apple Maps
-                </div>
-                <div class="swot-app-head">
-                  <span class="swot-app-dot" style="background: #2e5aac"></span
-                  >Transit App
+            <div class="dialogue-shift-callout">
+              <p class="section-kicker">Key Finding</p>
+              <p>
+                The finding was consistent across all apps:
+                <strong
+                  >existing transit apps are designed for locals, not
+                  visitors.</strong
+                >
+                They give directions without context, show delays without
+                explanation, and offer no curated path for someone exploring the
+                city for the first time.
+              </p>
+            </div>
+
+            <div class="compare-table-wrap" data-reveal data-full-only>
+              <div class="compare-table">
+                <div class="compare-table-head">
+                  <span class="compare-head-spacer"></span>
+                  <span class="compare-app">
+                    <span class="compare-dot" style="background: #3ecf72"></span>
+                    Google Maps
+                  </span>
+                  <span class="compare-app">
+                    <span class="compare-dot" style="background: #f2884b"></span>
+                    Apple Maps
+                  </span>
+                  <span class="compare-app">
+                    <span class="compare-dot" style="background: #5b6fd6"></span>
+                    Transit App
+                  </span>
                 </div>
 
-                <div class="swot-criteria">
-                  Transit terminology explained<span
-                    >(express/local, uptown/downtown)</span
-                  >
+                <div class="compare-table-row">
+                  <div class="compare-feature">
+                    Transit terminology explained
+                    <span class="compare-feature-sub"
+                      >(express/local, uptown/downtown)</span
+                    >
+                  </div>
+                  <div class="compare-value compare-none">✕ Not addressed</div>
+                  <div class="compare-value compare-none">✕ Not addressed</div>
+                  <div class="compare-value compare-none">✕ Not addressed</div>
                 </div>
-                <div class="swot-cell swot-no">✗ Not addressed</div>
-                <div class="swot-cell swot-no">✗ Not addressed</div>
-                <div class="swot-cell swot-no">✗ Not addressed</div>
 
-                <div class="swot-criteria">Real-time delay tracking</div>
-                <div class="swot-cell swot-partial">~ Basic alerts</div>
-                <div class="swot-cell swot-partial">~ Basic alerts</div>
-                <div class="swot-cell swot-yes">✓ Strong</div>
-
-                <div class="swot-criteria">
-                  Buffer time for delays &amp; transfers
+                <div class="compare-table-row">
+                  <div class="compare-feature">Real-time delay tracking</div>
+                  <div class="compare-value compare-partial">~ Basic alerts</div>
+                  <div class="compare-value compare-partial">~ Basic alerts</div>
+                  <div class="compare-value compare-strong">✓ Strong</div>
                 </div>
-                <div class="swot-cell swot-no">✗ Not included</div>
-                <div class="swot-cell swot-no">✗ Not included</div>
-                <div class="swot-cell swot-no">✗ Not included</div>
 
-                <div class="swot-criteria">Tourist-curated recommendations</div>
-                <div class="swot-cell swot-partial">~ Generic nearby</div>
-                <div class="swot-cell swot-partial">~ Generic nearby</div>
-                <div class="swot-cell swot-no">✗ None</div>
-
-                <div class="swot-criteria">
-                  In-app payment management<span>(OMNY / MetroCard)</span>
+                <div class="compare-table-row">
+                  <div class="compare-feature">
+                    Buffer time for delays &amp; transfers
+                  </div>
+                  <div class="compare-value compare-none">✕ Not included</div>
+                  <div class="compare-value compare-none">✕ Not included</div>
+                  <div class="compare-value compare-none">✕ Not included</div>
                 </div>
-                <div class="swot-cell swot-no">✗ Not available</div>
-                <div class="swot-cell swot-no">✗ Not available</div>
-                <div class="swot-cell swot-no">✗ Not available</div>
 
-                <div class="swot-criteria">AI assistance mid-trip</div>
-                <div class="swot-cell swot-partial">~ Limited</div>
-                <div class="swot-cell swot-partial">~ Siri only</div>
-                <div class="swot-cell swot-no">✗ None</div>
+                <div class="compare-table-row">
+                  <div class="compare-feature">
+                    Tourist-curated recommendations
+                  </div>
+                  <div class="compare-value compare-partial">~ Generic nearby</div>
+                  <div class="compare-value compare-partial">~ Generic nearby</div>
+                  <div class="compare-value compare-none">✕ None</div>
+                </div>
+
+                <div class="compare-table-row">
+                  <div class="compare-feature">
+                    In-app payment management
+                    <span class="compare-feature-sub">(OMNY / MetroCard)</span>
+                  </div>
+                  <div class="compare-value compare-none">✕ Not available</div>
+                  <div class="compare-value compare-none">✕ Not available</div>
+                  <div class="compare-value compare-none">✕ Not available</div>
+                </div>
+
+                <div class="compare-table-row">
+                  <div class="compare-feature">AI assistance mid-trip</div>
+                  <div class="compare-value compare-partial">~ Limited</div>
+                  <div class="compare-value compare-partial">~ Siri only</div>
+                  <div class="compare-value compare-none">✕ None</div>
+                </div>
               </div>
             </div>
-            <p>
-              The finding was consistent across all apps:
-              <strong
-                >existing transit apps are designed for locals, not
-                visitors.</strong
-              >
-              They give directions without context, show delays without
-              explanation, and offer no curated path for someone exploring the
-              city for the first time.
-            </p>
           </div>
 
           <div class="subsection" data-reveal>
@@ -250,8 +297,7 @@
             <p>
               I interviewed four non-native New Yorkers in their 20s who had
               previously visited NYC, and organized their frustrations into four
-              common categories: navigation and terminology, timing and delays,
-              payment confusion, and lack of relevant recommendations.
+              common categories:
             </p>
             <div class="transit-research-board" data-reveal>
               <div class="board-columns">
@@ -337,13 +383,13 @@
               </div>
             </div>
 
-            <div class="quote-with-response" data-reveal>
+            <div class="quote-with-response" data-reveal data-full-only>
               <blockquote>
                 "My stop was skipped so many times because I accidentally got on
                 the express train, not knowing it was different from the local."
               </blockquote>
             </div>
-            <div class="quote-with-response" data-reveal>
+            <div class="quote-with-response" data-reveal data-full-only>
               <blockquote>
                 "I'm always confused by terms like 'uptown' vs. 'downtown' or
                 'Queens-bound' vs. 'Brooklyn-bound.' I'm not familiar with the
@@ -475,397 +521,6 @@
               </ul>
             </article>
           </div>
-
-          <div class="subsection" data-reveal>
-            <h3>
-              Walking through the user journey and Transit Pal's solutions.
-            </h3>
-            <p>
-              Mapping a tourist's trip from planning to arrival made it clear
-              which moments created the most friction. Tap a stop to explore
-              each stage.
-            </p>
-            <div class="journey-subway">
-              <div class="subway-track-wrap">
-                <div class="subway-track-bg"></div>
-                <div class="subway-track-fill"></div>
-                <div class="subway-stops">
-                  <button
-                    class="subway-stop is-active"
-                    data-stop="0"
-                    aria-label="Stage 1: Planning"
-                  >
-                    <span class="stop-dot-wrap">
-                      <svg
-                        class="stop-ring"
-                        viewBox="0 0 44 44"
-                        aria-hidden="true"
-                      >
-                        <circle cx="22" cy="22" r="19" class="ring-bg" />
-                        <circle cx="22" cy="22" r="19" class="ring-prog" />
-                      </svg>
-                      <span class="stop-dot">01</span>
-                    </span>
-                    <span class="stop-label">Planning</span>
-                  </button>
-
-                  <button
-                    class="subway-stop"
-                    data-stop="1"
-                    aria-label="Stage 2: Choosing a Route"
-                  >
-                    <span class="stop-dot-wrap">
-                      <svg
-                        class="stop-ring"
-                        viewBox="0 0 44 44"
-                        aria-hidden="true"
-                      >
-                        <circle cx="22" cy="22" r="19" class="ring-bg" />
-                        <circle cx="22" cy="22" r="19" class="ring-prog" />
-                      </svg>
-                      <span class="stop-dot">02</span>
-                    </span>
-                    <span class="stop-label">Route</span>
-                  </button>
-
-                  <button
-                    class="subway-stop"
-                    data-stop="2"
-                    aria-label="Stage 3: Entering the Station"
-                  >
-                    <span class="stop-dot-wrap">
-                      <svg
-                        class="stop-ring"
-                        viewBox="0 0 44 44"
-                        aria-hidden="true"
-                      >
-                        <circle cx="22" cy="22" r="19" class="ring-bg" />
-                        <circle cx="22" cy="22" r="19" class="ring-prog" />
-                      </svg>
-                      <span class="stop-dot">03</span>
-                    </span>
-                    <span class="stop-label">Station</span>
-                  </button>
-
-                  <button
-                    class="subway-stop"
-                    data-stop="3"
-                    aria-label="Stage 4: Handling Delays"
-                  >
-                    <span class="stop-dot-wrap">
-                      <svg
-                        class="stop-ring"
-                        viewBox="0 0 44 44"
-                        aria-hidden="true"
-                      >
-                        <circle cx="22" cy="22" r="19" class="ring-bg" />
-                        <circle cx="22" cy="22" r="19" class="ring-prog" />
-                      </svg>
-                      <span class="stop-dot">04</span>
-                    </span>
-                    <span class="stop-label">Delays</span>
-                  </button>
-
-                  <button
-                    class="subway-stop"
-                    data-stop="4"
-                    aria-label="Stage 5: Arriving Safely"
-                  >
-                    <span class="stop-dot-wrap">
-                      <svg
-                        class="stop-ring"
-                        viewBox="0 0 44 44"
-                        aria-hidden="true"
-                      >
-                        <circle cx="22" cy="22" r="19" class="ring-bg" />
-                        <circle cx="22" cy="22" r="19" class="ring-prog" />
-                      </svg>
-                      <span class="stop-dot">05</span>
-                    </span>
-                    <span class="stop-label">Arrival</span>
-                  </button>
-
-                  <button
-                    class="subway-stop"
-                    data-stop="5"
-                    aria-label="Stage 6: Exploring Nearby"
-                  >
-                    <span class="stop-dot-wrap">
-                      <svg
-                        class="stop-ring"
-                        viewBox="0 0 44 44"
-                        aria-hidden="true"
-                      >
-                        <circle cx="22" cy="22" r="19" class="ring-bg" />
-                        <circle cx="22" cy="22" r="19" class="ring-prog" />
-                      </svg>
-                      <span class="stop-dot">06</span>
-                    </span>
-                    <span class="stop-label">Explore</span>
-                  </button>
-                </div>
-              </div>
-
-              <div class="subway-panels">
-                <div class="subway-panel is-active">
-                  <div class="subway-panel-head">
-                    <span class="panel-num">01</span>
-                    <h4 class="panel-stage-name">Planning the Trip</h4>
-                  </div>
-                  <div class="subway-panel-body">
-                    <div class="panel-col panel-struggle">
-                      <span class="panel-label">The Struggle</span>
-                      <blockquote>
-                        "I had no idea where to even start exploring. Every
-                        travel site recommended something different and I ended
-                        up just wandering aimlessly on my first day."
-                      </blockquote>
-                    </div>
-                    <div class="panel-col panel-response">
-                      <span class="panel-label">Transit Pal</span>
-                      <ul>
-                        <li>
-                          Curated Recommendations page with 6 local categories
-                        </li>
-                        <li>
-                          Landmark must-sees, neighborhood favorites, hidden
-                          gems
-                        </li>
-                        <li>Ranked by locals — no ads or generic results</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="subway-panel">
-                  <div class="subway-panel-head">
-                    <span class="panel-num">02</span>
-                    <h4 class="panel-stage-name">Choosing a Route</h4>
-                  </div>
-                  <div class="subway-panel-body">
-                    <div class="panel-col panel-struggle">
-                      <span class="panel-label">The Struggle</span>
-                      <blockquote>
-                        "I got on the express by accident thinking it was the
-                        local and missed my stop completely."
-                      </blockquote>
-                    </div>
-                    <div class="panel-col panel-response">
-                      <span class="panel-label">Transit Pal</span>
-                      <ul>
-                        <li>
-                          Route warnings flag local/express splits before
-                          boarding
-                        </li>
-                        <li>
-                          Inline tips decode "uptown," "downtown,"
-                          "Queens-bound"
-                        </li>
-                        <li>Terminology explained exactly when it appears</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="subway-panel">
-                  <div class="subway-panel-head">
-                    <span class="panel-num">03</span>
-                    <h4 class="panel-stage-name">Entering the Station</h4>
-                  </div>
-                  <div class="subway-panel-body">
-                    <div class="panel-col panel-struggle">
-                      <span class="panel-label">The Struggle</span>
-                      <blockquote>
-                        "I stood at the turnstile for three minutes trying to
-                        figure out MetroCard vs. OMNY. A huge line grew behind
-                        me, it was mortifying."
-                      </blockquote>
-                    </div>
-                    <div class="panel-col panel-response">
-                      <span class="panel-label">Transit Pal</span>
-                      <ul>
-                        <li>
-                          Link OMNY card and add funds in-app, no kiosk needed
-                        </li>
-                        <li>
-                          Payment tips surface automatically near stations
-                        </li>
-                        <li>
-                          First-time setup guide before you reach the gate
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="subway-panel">
-                  <div class="subway-panel-head">
-                    <span class="panel-num">04</span>
-                    <h4 class="panel-stage-name">Handling Delays</h4>
-                  </div>
-                  <div class="subway-panel-body">
-                    <div class="panel-col panel-struggle">
-                      <span class="panel-label">The Struggle</span>
-                      <blockquote>
-                        "The app said the train was delayed and was stuck at "10
-                        minutes" for forever. I didn't know if I should wait,
-                        walk, or take a different train. I just stood there."
-                      </blockquote>
-                    </div>
-                    <div class="panel-col panel-response">
-                      <span class="panel-label">Transit Pal</span>
-                      <ul>
-                        <li>
-                          Safe Arrival Mode adds buffer time for delays and
-                          transfers
-                        </li>
-                        <li>NavBot explains disruptions in plain language</li>
-                        <li>One-tap reroute when you need a new plan</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="subway-panel">
-                  <div class="subway-panel-head">
-                    <span class="panel-num">05</span>
-                    <h4 class="panel-stage-name">Arriving Safely</h4>
-                  </div>
-                  <div class="subway-panel-body">
-                    <div class="panel-col panel-struggle">
-                      <span class="panel-label">The Struggle</span>
-                      <blockquote>
-                        "I left from the wrong exit and ended up on the wrong
-                        side of the block. By then I was already 10 minutes late
-                        and had no idea which way to walk."
-                      </blockquote>
-                    </div>
-                    <div class="panel-col panel-response">
-                      <span class="panel-label">Transit Pal</span>
-                      <ul>
-                        <li>
-                          Pop-up tells you which exit to take before leaving the
-                          train
-                        </li>
-                        <li>
-                          Orientation uses landmarks, not compass directions
-                        </li>
-                        <li>Station-specific context appears in real time</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="subway-panel">
-                  <div class="subway-panel-head">
-                    <span class="panel-num">06</span>
-                    <h4 class="panel-stage-name">Exploring Nearby</h4>
-                  </div>
-                  <div class="subway-panel-body">
-                    <div class="panel-col panel-struggle">
-                      <span class="panel-label">The Struggle</span>
-                      <blockquote>
-                        "I searched 'things to do near me' and got a sponsored
-                        list of tourist traps. I just wanted to know where
-                        locals actually go."
-                      </blockquote>
-                    </div>
-                    <div class="panel-col panel-response">
-                      <span class="panel-label">Transit Pal</span>
-                      <ul>
-                        <li>
-                          NavBot suggests spots based on your location and vibe
-                        </li>
-                        <li>
-                          Ask "what should I do next?" for a specific ranked
-                          answer
-                        </li>
-                        <li>Build a full afternoon itinerary mid-trip</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="subsection" data-reveal>
-            <h3>What to features to prioritize first.</h3>
-            <p>
-              I had a lot of ideas in my head for this platform, but not every
-              feature belongs in the first version. I separated feature that
-              directly addressing the most pressing moments in a tourist's trip
-              from future feature ideas that would expand the product's value
-              over time.
-            </p>
-            <div class="prioritization-grid">
-              <div class="prioritization-col mvp-col">
-                <h4>MVP Features</h4>
-                <ul>
-                  <li>
-                    <strong>Safe Arrival Mode</strong>
-                    <span
-                      >Addresses the highest-stakes pain point: arriving late
-                      due to unaccounted delays</span
-                    >
-                  </li>
-                  <li>
-                    <strong>Route Warnings &amp; Terminology Tips</strong>
-                    <span
-                      >Decodes local/express confusion and directional language
-                      inline</span
-                    >
-                  </li>
-                  <li>
-                    <strong>Curated Recommendations</strong>
-                    <span
-                      >Six tourist-relevant categories with local
-                      recommendations</span
-                    >
-                  </li>
-                  <li>
-                    <strong>NavBot</strong>
-                    <span
-                      >Real-time AI assistant for emergencies, mid-trip
-                      questions, and discovery</span
-                    >
-                  </li>
-                  <li>
-                    <strong>OMNY Card Management</strong>
-                    <span
-                      >Removes the kiosk dependency for payment top-ups</span
-                    >
-                  </li>
-                </ul>
-              </div>
-              <div class="prioritization-col future-col">
-                <h4>Future Features</h4>
-                <ul>
-                  <li>
-                    <strong>Personalized Onboarding</strong>
-                    <span
-                      >Record trip goals and interests to tailor recommendations
-                      from day one</span
-                    >
-                  </li>
-                  <li>
-                    <strong>Automatic Schedule Adjustment</strong>
-                    <span
-                      >Proactive notifications if users haven't left in time for
-                      their next event</span
-                    >
-                  </li>
-                  <li>
-                    <strong>Itinerary Builder</strong>
-                    <span
-                      >Multi-day trip planning with transit routes between each
-                      stop</span
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -873,41 +528,40 @@
       <section class="case-section" id="design" aria-labelledby="design-title">
         <div class="shell narrative-block">
           <p class="section-kicker">04 Design</p>
-          <h2 id="design-title">Sketches and wireframes.</h2>
+          <h2 id="design-title">Wireframes and mockups.</h2>
           <div class="subsection">
             <h3>Home Screen</h3>
             <p>
-              My first home screen was built around real-time transit
-              access, showing tourists the train and bus times nearest to
-              them the moment they opened the app. But after digging deeper
-              into what tourists actually needed, I realized departures
-              alone weren't enough — they also needed help figuring out
-              where to go in the first place. I redesigned the home screen
-              to put recommendations and navigation directly on the page
-              alongside transit access, better matching what tourists
-              actually needed.
+              My first home screen showed tourists the train and bus times
+              nearest to them the moment they opened the app. But after thinking
+              deeper into what tourists actually needed, I realized they also
+              needed help figuring out where to go in the first place. I
+              redesigned the home screen to put recommendations and navigation
+              directly on the page alongside transit access to better match what
+              tourists actually needed.
             </p>
             <div class="image-grid two-up" data-reveal>
               <figure class="artifact-card">
                 <img
-                  src="../assets/transit/recommendations-designs.webp"
-                  alt="Initial home page sketches Design 1 and Design 2 with annotations"
+                  src="../assets/transit/home-screen-before.webp"
+                  alt="Original home screen showing nearby train and bus departures"
                   loading="lazy"
                 />
                 <figcaption>
-                  Before: shows tourists the train and bus times nearest to
-                  them as soon as they open the app.
+                  <strong>Before:</strong> shows tourists the train and bus
+                  times nearest to them as soon as they open the app.
                 </figcaption>
               </figure>
               <figure class="artifact-card is-selected">
                 <img
-                  src="../assets/transit/sketch-navbot.webp"
-                  alt="Revised home screen with Hi Nikki welcome message and recommendations"
+                  src="../assets/transit/home-screen-after.webp"
+                  alt="Redesigned home screen with Hi Nikki welcome message, search, and recommendations"
                   loading="lazy"
                 />
                 <figcaption>
-                  After: recommendations and navigation now live directly on
-                  the page too, better suiting what tourists actually need.
+                  <strong>After:</strong> recommendations and navigation now
+                  live directly on the page too, better suiting what tourists
+                  actually need.
                 </figcaption>
               </figure>
             </div>
@@ -921,37 +575,37 @@
             <h3>NavBot Screen</h3>
             <p>
               I integrated an <strong>AI chatbot</strong> to support tourists
-              encountering unpredictable mid-trip situations — delays, missed
-              trains, construction — where quick human help isn't available.
+              encountering unpredictable mid-trip situations (delays, missed
+              trains, construction) where quick in-person help isn't available.
               NavBot lets users ask real-time questions in natural language and
               get instant, specific responses.
             </p>
             <p>
-              I designed NavBot to feel like a messaging thread: familiar,
-              low-pressure, and fast to use under stress. I tested two layouts:
+              I designed NavBot to feel like a chat room: familiar,
+              low-pressure, and fast. I tested two layouts:
             </p>
             <div class="image-grid two-up" data-reveal>
               <figure class="artifact-card">
                 <img
-                  src="../assets/transit/navbot-sketch-d1.webp"
+                  src="../assets/transit/navbot-design-1.webp"
                   alt="NavBot Design 1: suggested prompts listed directly under the greeting message"
                   loading="lazy"
                 />
                 <figcaption>
-                  Design 1: prompts tucked right under NavBot's message don't
-                  stand out, and stacking in more would start to feel
+                  <strong>Design 1:</strong> prompts tucked right under NavBot's
+                  message don't stand out, and stacking text makes it feel
                   cluttered.
                 </figcaption>
               </figure>
               <figure class="artifact-card is-selected">
                 <img
-                  src="../assets/transit/navbot-sketch-d2.webp"
+                  src="../assets/transit/navbot-design-2.webp"
                   alt="NavBot Design 2: suggested prompts shown as centered tappable cards"
                   loading="lazy"
                 />
                 <figcaption>
-                  ★ Design 2: centering suggested prompts as tappable cards
-                  draws attention to what NavBot can help with.
+                  <strong>★ Design 2:</strong> centering suggested prompts as
+                  tappable cards draws attention to what NavBot can help with.
                 </figcaption>
               </figure>
             </div>
@@ -961,7 +615,7 @@
             </p>
           </div>
 
-          <div class="subsection subsection-pair">
+          <div class="subsection subsection-pair" data-full-only>
             <div class="subsection-pair-item">
               <h3>Directions Page</h3>
               <div data-reveal>
@@ -972,15 +626,11 @@
                   <strong>Pop-up notifications</strong> explain city-specific
                   terminology, delays, and payment cues directly in the flow.
                 </p>
-                <figure
-                  class="artifact-card"
-                  style="margin-top: 16px; width: 256px; margin-inline: auto"
-                >
+                <figure class="artifact-card" style="margin-top: 16px">
                   <img
-                    src="../assets/transit/wireframe-directions-safe-arrival.webp"
-                    alt="Directions page sketch showing Safe Arrival Mode and pop-up notification stops"
+                    src="../assets/transit/directions-wireframe.webp"
+                    alt="Directions page wireframe showing Safe Arrival Mode buffer breakdown and pop-up notification stops"
                     loading="lazy"
-                    style="height: 420px; width: auto; display: block"
                   />
                   <figcaption>
                     Safe Arrival Mode breaks down buffer times. Pop-up
@@ -998,20 +648,16 @@
               <h3>Profile Page &amp; Payment</h3>
               <div data-reveal>
                 <p>
-                  No app currently lets tourists add money to their OMNY card. I
-                  designed a profile page that links transit cards directly,
+                  No app currently allows tourists add money to their OMNY card.
+                  I designed a profile page that links transit cards directly,
                   allowing users to navigate and pay all in one place, removing
-                  the pre-trip and mid-trip payment anxiety entirely.
+                  payment anxiety entirely.
                 </p>
-                <figure
-                  class="artifact-card"
-                  style="margin-top: 16px; width: 301px; margin-inline: auto"
-                >
+                <figure class="artifact-card" style="margin-top: 16px">
                   <img
-                    src="../assets/transit/profile-sketch.webp"
-                    alt="Transit Pal profile page sketch"
+                    src="../assets/transit/profile-wireframe.webp"
+                    alt="Transit Pal profile page wireframe with travel cards, balance, and settings"
                     loading="lazy"
-                    style="height: 420px; width: auto; display: block"
                   />
                   <figcaption>
                     OMNY card and credit cards linked from profile so users can
@@ -1042,9 +688,9 @@
                   loading="lazy"
                 />
                 <figcaption>
-                  Design 1: photo grids for each category — works well for
-                  visual items, but abstract categories like "Top Picks from
-                  Locals" need clearer representation.
+                  <strong>Design 1:</strong> photo grids for each category —
+                  works well for visual items, but abstract categories like "Top
+                  Picks from Locals" need clearer representation.
                 </figcaption>
               </figure>
               <figure class="artifact-card is-selected">
@@ -1054,9 +700,9 @@
                   loading="lazy"
                 />
                 <figcaption>
-                  ★ Design 2: simple icons communicate category intent
-                  immediately — reserving photos for actual location pages where
-                  imagery adds real context.
+                  <strong>★ Design 2:</strong> simple icons communicate category
+                  intent immediately and reserving photos for actual location
+                  pages where imagery adds real context.
                 </figcaption>
               </figure>
             </div>
@@ -1111,46 +757,50 @@
       >
         <div class="shell narrative-block">
           <p class="section-kicker">05 Solution</p>
-          <h2 id="solution-title">Transit Pal — Main Screens</h2>
-          <div class="solution-block phone-solution" data-reveal>
-            <div class="phone-stage">
+          <h2 id="solution-title">Our Tourist-Friendly App: Transit Pal</h2>
+
+          <div class="phone-feature-grid">
+            <article class="phone-feature" data-reveal>
               <img
                 src="../assets/transit/main-flow.gif"
                 alt="Transit Pal main screens animation"
                 loading="lazy"
               />
-            </div>
-            <div class="solution-copy">
-              <ul class="body-list large-list">
-                <li>
-                  <strong>Homepage:</strong> Search bar alongside curated local
-                  discovery
-                </li>
-                <li>
-                  <strong>Saved:</strong> Upcoming and past journeys, plus saved
-                  locations
-                </li>
-                <li>
-                  <strong>Departures:</strong> Real-time schedules for nearby
-                  transportation
-                </li>
-                <li>
-                  <strong>Profile:</strong> Travel cards to manage funds and
-                  track transit spending
-                </li>
-              </ul>
-              <a
-                class="button button-primary"
-                href="https://www.figma.com/proto/2vDDAxQ1nMdrb86BqnSd2e/NY-Tourist-Transit-App?node-id=2142-12729&p=f&t=dwxX9uehJjtiSE8g-1&scaling=scale-down&content-scaling=fixed&page-id=84%3A816&starting-point-node-id=2142%3A12729&show-proto-sidebar=1"
-                target="_blank"
-                rel="noreferrer"
-                >View Prototype →</a
-              >
-            </div>
-          </div>
-
-          <div class="phone-feature-grid">
+              <div>
+                <h3>Main Screens</h3>
+                <ul>
+                  <li>
+                    <strong>Homepage:</strong> Search bar alongside curated
+                    local discovery
+                  </li>
+                  <li>
+                    <strong>Saved:</strong> Upcoming and past journeys, plus
+                    saved locations
+                  </li>
+                  <li>
+                    <strong>Departures:</strong> Real-time schedules for nearby
+                    transportation
+                  </li>
+                  <li>
+                    <strong>Profile:</strong> Travel cards to manage funds and
+                    track transit spending
+                  </li>
+                </ul>
+                <a
+                  class="button button-primary"
+                  href="https://www.figma.com/proto/2vDDAxQ1nMdrb86BqnSd2e/NY-Tourist-Transit-App?node-id=2142-12729&p=f&t=dwxX9uehJjtiSE8g-1&scaling=scale-down&content-scaling=fixed&page-id=84%3A816&starting-point-node-id=2142%3A12729&show-proto-sidebar=1"
+                  target="_blank"
+                  rel="noreferrer"
+                  >View Prototype →</a
+                >
+              </div>
+            </article>
             <article class="phone-feature" data-reveal>
+              <img
+                src="../assets/transit/directions.gif"
+                alt="Transit Pal directions screen"
+                loading="lazy"
+              />
               <div>
                 <h3>Directions Made Easy</h3>
                 <ul>
@@ -1168,13 +818,13 @@
                   </li>
                 </ul>
               </div>
+            </article>
+            <article class="phone-feature" data-reveal data-full-only>
               <img
-                src="../assets/transit/directions.gif"
-                alt="Transit Pal directions screen"
+                src="../assets/transit/departures.gif"
+                alt="Transit Pal departures screens"
                 loading="lazy"
               />
-            </article>
-            <article class="phone-feature" data-reveal>
               <div>
                 <h3>Departures Near You</h3>
                 <ul>
@@ -1192,13 +842,13 @@
                   </li>
                 </ul>
               </div>
-              <img
-                src="../assets/transit/departures.gif"
-                alt="Transit Pal departures screens"
-                loading="lazy"
-              />
             </article>
             <article class="phone-feature" data-reveal>
+              <img
+                src="../assets/transit/navbot.gif"
+                alt="Transit Pal NavBot screen"
+                loading="lazy"
+              />
               <div>
                 <h3>NavBot</h3>
                 <ul>
@@ -1216,13 +866,13 @@
                   </li>
                 </ul>
               </div>
+            </article>
+            <article class="phone-feature" data-reveal data-full-only>
               <img
-                src="../assets/transit/navbot.gif"
-                alt="Transit Pal NavBot screen"
+                src="../assets/transit/recommendations.gif"
+                alt="Transit Pal recommendations screen"
                 loading="lazy"
               />
-            </article>
-            <article class="phone-feature" data-reveal>
               <div>
                 <h3>Recommendations</h3>
                 <ul>
@@ -1240,11 +890,6 @@
                   </li>
                 </ul>
               </div>
-              <img
-                src="../assets/transit/recommendations.gif"
-                alt="Transit Pal recommendations screen"
-                loading="lazy"
-              />
             </article>
           </div>
         </div>
@@ -1369,18 +1014,16 @@
           </p>
           <p>
             <strong>What I contributed:</strong> I designed Safe Arrival mode
-            for real-time delay recovery, in-app fare payment, curated local
+            for real-time delay updates, in-app fare payment, personalized local
             recommendations, step-by-step transit explanations that decode
-            NYC-specific language, and a NavBot AI assistant for on-demand
-            guidance. Each feature targeted a specific failure point from
-            research rather than adding generic functionality.
+            NYC-specific language, and a NavBot AI assistant for immediate help.
           </p>
           <p>
             <strong>What I'm taking forward:</strong> I want to explore
             personalized onboarding that adapts to different trip goals, like a
-            day visit versus a week-long stay. There's also an opportunity to
-            make the itinerary smarter by automatically adjusting if someone
-            falls behind schedule.
+            day visit versus a longer stay. There's also an opportunity to make
+            the itinerary smarter by automatically adjusting if someone falls
+            behind schedule.
           </p>
           <a class="text-arrow back-top" href="#top">back to top ↑</a>
         </div>
