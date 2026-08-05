@@ -3975,6 +3975,25 @@ body.dialogue-page {
   margin: 0;
 }
 
+.research-finding-callout .finding-arrows {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 14px;
+  color: var(--ink);
+  font-size: clamp(0.95rem, 1.6vw, 1.05rem);
+  line-height: 1.7;
+}
+.research-finding-callout .finding-arrows li + li {
+  margin-top: 4px;
+}
+.research-finding-callout .finding-arrows li::before {
+  content: '→ ';
+  opacity: 0.5;
+}
+.research-finding-callout .finding-conclusion {
+  margin-top: 14px;
+}
+
 .sorcea-page .research-finding-callout {
   border-left-color: #6DA98C;
   background: rgba(109, 169, 140, 0.06);
