@@ -4769,6 +4769,7 @@ body.dialogue-page {
   .beli-solution-grid .phone-feature:nth-child(even) > img,
   .beli-solution-grid .phone-feature:nth-child(even) > div {
     grid-column: auto;
+    grid-row: auto;
   }
 
   .phone-stage {
@@ -7828,5 +7829,14 @@ body.dialogue-page {
 @media (max-width: 720px) {
   .compare-table-wrap {
     overflow-x: auto;
+  }
+}
+
+/* Transit phone-feature mobile fix — must come after .transit-page .phone-feature
+   desktop rule (line ~5270) to win the cascade on narrow viewports */
+@media (max-width: 960px) {
+  .transit-page .phone-feature,
+  .transit-page .phone-feature:nth-child(even) {
+    grid-template-columns: 1fr;
   }
 }
