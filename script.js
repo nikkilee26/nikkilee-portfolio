@@ -50,10 +50,8 @@
   if (allSections.length && activeLinks.length && 'IntersectionObserver' in window) {
     const activeObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        activeLinks.forEach((link) => {
-          const samePage = !link.pathname || link.pathname === window.location.pathname || link.pathname.endsWith(window.location.pathname.split('/').filter(Boolean).pop() || '');
-          link.classList.toggle('is-active', entry.isIntersecting && samePage && link.hash === `#${entry.target.id}`);
-        });
+        const match = activeLinks.find((link) => link.hash === `#${entry.target.id}`);
+        if (match) match.classList.toggle('is-active', entry.isIntersecting);
       });
     }, { threshold: 0.28, rootMargin: '-18% 0px -62% 0px' });
 
