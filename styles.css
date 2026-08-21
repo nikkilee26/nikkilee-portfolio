@@ -2848,6 +2848,7 @@ button {
 .mockup-trio img {
   width: 240px;
   border-radius: 0;
+  border: 1px solid var(--line);
 }
 
 /* Masonry, not a strict grid: the mood board references have wildly
