@@ -432,15 +432,55 @@
   const heroRole = document.querySelector('.hero-role');
   if (heroRole) {
     const roles = ['UI/UX Designer', 'Systems Thinker', 'Startup Builder', 'Visual Artist'];
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let roleIndex = 0;
-    setInterval(() => {
-      heroRole.classList.add('is-fading');
-      setTimeout(() => {
+
+    if (prefersReducedMotion) {
+      heroRole.textContent = roles[0];
+      setInterval(() => {
         roleIndex = (roleIndex + 1) % roles.length;
         heroRole.textContent = roles[roleIndex];
-        heroRole.classList.remove('is-fading');
-      }, 300);
-    }, 2000);
+      }, 2000);
+    } else {
+      const typeSpeed = 55;
+      const deleteSpeed = 32;
+      const holdTime = 1300;
+      const pauseBeforeType = 300;
+
+      const typeRole = () => {
+        const role = roles[roleIndex];
+        let charIndex = 0;
+        const typeChar = () => {
+          charIndex++;
+          heroRole.textContent = role.slice(0, charIndex);
+          if (charIndex < role.length) {
+            setTimeout(typeChar, typeSpeed);
+          } else {
+            setTimeout(deleteRole, holdTime);
+          }
+        };
+        typeChar();
+      };
+
+      const deleteRole = () => {
+        const role = roles[roleIndex];
+        let charIndex = role.length;
+        const deleteChar = () => {
+          charIndex--;
+          heroRole.textContent = role.slice(0, charIndex);
+          if (charIndex > 0) {
+            setTimeout(deleteChar, deleteSpeed);
+          } else {
+            roleIndex = (roleIndex + 1) % roles.length;
+            setTimeout(typeRole, pauseBeforeType);
+          }
+        };
+        deleteChar();
+      };
+
+      heroRole.textContent = '';
+      typeRole();
+    }
   }
 
   // Floating skill chips — click to pop

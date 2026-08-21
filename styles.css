@@ -1018,12 +1018,9 @@ button {
 
 .hero-role {
   display: inline-block;
-  min-width: 12.7ch;
-  text-align: left;
   font-style: italic;
   color: var(--teal);
   letter-spacing: -0.01em;
-  transition: opacity 0.3s ease;
 }
 
 .hero-home--centered .hero-role {
@@ -1033,8 +1030,26 @@ button {
   color: transparent;
 }
 
-.hero-role.is-fading {
-  opacity: 0;
+.hero-role-cursor {
+  display: inline-block;
+  margin-left: 2px;
+  color: var(--teal);
+  animation: heroCursorBlink 0.9s step-end infinite;
+}
+
+.hero-home--centered .hero-role-cursor {
+  color: var(--lilac-deep);
+}
+
+@keyframes heroCursorBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-role-cursor {
+    animation: none;
+  }
 }
 
 @keyframes heroFadeIn {
