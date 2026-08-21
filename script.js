@@ -10,6 +10,19 @@
   updateHeader();
   window.addEventListener('scroll', updateHeader, { passive: true });
 
+  // Case-study jump nav: centered when every pill fits, but once the
+  // window narrows enough that it overflows, switch to left-aligned so the
+  // scrollable list starts at the first item instead of opening already
+  // scrolled to a centered midpoint with both ends cut off.
+  const caseJump = document.querySelector('.case-jump');
+  if (caseJump) {
+    const syncCaseJumpOverflow = () => {
+      caseJump.classList.toggle('is-overflowing', caseJump.scrollWidth > caseJump.clientWidth + 1);
+    };
+    syncCaseJumpOverflow();
+    window.addEventListener('resize', syncCaseJumpOverflow, { passive: true });
+  }
+
   const navToggle = document.querySelector('[data-nav-toggle]');
   const navMenu = document.querySelector('[data-nav-menu]');
 
@@ -32,13 +45,17 @@
   if (prefersReducedMotion || !('IntersectionObserver' in window)) {
     revealItems.forEach((item) => item.classList.add('is-visible'));
   } else {
+    // threshold: 0 (not a specific ratio like 0.12) so this can't miss the
+    // crossing on a fast scroll the way the nav highlighter used to: any
+    // intersection at all is enough to reveal, instead of requiring the
+    // browser to sample a frame at exactly that ratio.
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
         entry.target.classList.add('is-visible');
         revealObserver.unobserve(entry.target);
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -56px 0px' });
+    }, { threshold: 0, rootMargin: '0px 0px -56px 0px' });
 
     revealItems.forEach((item) => revealObserver.observe(item));
   }
@@ -48,14 +65,63 @@
     .filter((link) => link.hash);
 
   if (allSections.length && activeLinks.length && 'IntersectionObserver' in window) {
+    // The last tracked section (reflection) can get stuck "active" once the
+    // page is scrolled to its max, if the content below it (footer, etc.)
+    // isn't tall enough to clear the section out of the observer's band
+    // first. Once there's nowhere left to scroll, no section is really
+    // "current" anymore, so treat that as nothing being active.
+    const isAtPageBottom = () =>
+      window.innerHeight + window.scrollY >= document.body.scrollHeight - 4;
+
+    // A specific ratio threshold (e.g. 0.28) only fires the callback when
+    // intersection crosses that exact ratio. On a fast scroll the browser
+    // can sample before and after a section's whole visible window without
+    // ever landing a frame inside it, skipping the crossing entirely and
+    // leaving the link stuck in its last reported state — worse for short
+    // sections, which have a narrower window to get sampled inside of.
+    // threshold: 0 fires on any enter/exit of the band instead, which is
+    // the boundary browsers reliably report regardless of scroll speed.
+    //
+    // Two adjacent sections can both be short enough to sit inside the
+    // band at once (e.g. a compact Define next to a compact Ideation), so
+    // track everyone currently intersecting and only ever light up the
+    // bottom-most of them, instead of toggling each link independently.
+    const intersectingIds = new Set();
     const activeObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        const match = activeLinks.find((link) => link.hash === `#${entry.target.id}`);
-        if (match) match.classList.toggle('is-active', entry.isIntersecting);
+        if (entry.isIntersecting) {
+          intersectingIds.add(entry.target.id);
+        } else {
+          intersectingIds.delete(entry.target.id);
+        }
       });
-    }, { threshold: 0.28, rootMargin: '-18% 0px -62% 0px' });
+
+      const atBottom = isAtPageBottom();
+      let currentId = null;
+      if (!atBottom) {
+        for (let i = allSections.length - 1; i >= 0; i--) {
+          if (intersectingIds.has(allSections[i].id)) {
+            currentId = allSections[i].id;
+            break;
+          }
+        }
+      }
+
+      activeLinks.forEach((link) => {
+        link.classList.toggle('is-active', link.hash === `#${currentId}`);
+      });
+    }, { threshold: 0, rootMargin: '-18% 0px -62% 0px' });
 
     allSections.forEach((section) => activeObserver.observe(section));
+
+    // The observer only re-fires when a ratio crosses the threshold, which
+    // may not happen on the exact scroll tick that reaches the bottom, so
+    // also clear on scroll as a direct backstop.
+    window.addEventListener('scroll', () => {
+      if (isAtPageBottom()) {
+        activeLinks.forEach((link) => link.classList.remove('is-active'));
+      }
+    }, { passive: true });
   }
 
   if (finePointer && !prefersReducedMotion) {
@@ -437,7 +503,13 @@
     }
 
     document.body.classList.add('is-condensed');
-    summaryBtn.addEventListener('click', () => setView(true));
-    fullBtn.addEventListener('click', () => setView(false));
+    summaryBtn.addEventListener('click', () => {
+      setView(true);
+      showToast('Showing summary');
+    });
+    fullBtn.addEventListener('click', () => {
+      setView(false);
+      showToast('Showing full case study');
+    });
   }
 })();

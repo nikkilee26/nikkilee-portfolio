@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Plana — Nikki Lee</title>
+    <meta
+      name="description"
+      content="Plana case study by Nikki Lee, UI/UX Designer."
+    />
+    <meta name="theme-color" content="#f7f2df" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script defer src="../script.js"></script>
+  </head>
+  <body class="case-page plana-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <header class="site-header" data-header>
+      <nav class="nav shell" aria-label="Main navigation">
+        <a class="brand" href="/" aria-label="Nikki Lee home">Nikki Lee</a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-menu"
+          data-nav-toggle
+        >
+          <span class="nav-toggle-line" aria-hidden="true"></span>
+          <span class="sr-only">Open menu</span>
+        </button>
+        <div class="nav-pill" id="site-menu" data-nav-menu>
+          <a href="/">Home</a>
+          <a href="../play/">Play</a>
+          <a href="../about/">About</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="case-cover" id="top">
+        <div class="case-cover-art plana-hero-art" data-reveal>
+          <img
+            src="../assets/plana/hero.png"
+            alt="Plana app screens: a Sunday Brunch invite card and the home screen with Waiting on You and Your Plans"
+          />
+        </div>
+      </section>
+
+      <section class="case-hero-intro" aria-labelledby="case-title">
+        <div class="shell case-hero-grid" data-reveal>
+          <div>
+            <h1 id="case-title">Plana</h1>
+            <p class="case-subtitle">Event Planning App</p>
+            <div class="tag-row case-tags" aria-label="Project tags">
+              <span>Consumer App</span>
+              <span>Vibe-Coded Prototype</span>
+              <span>0→1 Product Design</span>
+            </div>
+          </div>
+          <div class="case-problem-card">
+            <p class="section-kicker">Problem</p>
+            <p>
+              There are apps that help people find a time that works for
+              everyone, and apps that send out invites once everything's
+              decided, but nothing that streamlines the whole process in
+              between.
+            </p>
+          </div>
+        </div>
+        <div class="shell case-hero-facts" data-reveal>
+          <div>
+            <h2>Team</h2>
+            <p>Solo</p>
+          </div>
+          <div>
+            <h2>Role</h2>
+            <p>UX/UI Designer</p>
+          </div>
+          <div>
+            <h2>Duration</h2>
+            <p>1 week</p>
+          </div>
+        </div>
+        <div class="shell" data-reveal>
+          <div class="dialogue-shift-callout">
+            <p class="section-kicker">Key Outcome</p>
+            <p>
+              Designed a single flow that closes the gap between
+              scheduling tools and invite tools, so a group can go from a
+              loose "we should hang out sometime" to a locked-in event
+              without ever leaving the app.
+            </p>
+          </div>
+        </div>
+        <div class="shell what-i-drove-row" data-reveal>
+          <p class="section-kicker">What I Drove</p>
+          <div class="what-i-drove-chips">
+            <span>Research</span>
+            <span>User Interviews</span>
+            <span>Design</span>
+            <span>Prototyping</span>
+            <span>Vibe Coding with Claude</span>
+          </div>
+        </div>
+        <div class="shell case-product-grid" data-reveal>
+          <div>
+            <h2>Product</h2>
+            <p>
+              Plana is a mobile app that helps friends actually lock in
+              plans. It polls everyone on times and locations, organizes
+              who's bringing what, and sends out cute, shareable invites,
+              replacing the scattered group chat thread with one
+              streamlined flow.
+            </p>
+          </div>
+          <div>
+            <h2>Tools & Skills</h2>
+            <div class="what-i-drove-chips">
+              <span>Figma</span>
+              <span>Claude</span>
+              <span>HTML/CSS/JS</span>
+            </div>
+          </div>
+        </div>
+        <div class="view-full-wrap shell" data-reveal>
+          <div class="view-toggle" data-view-toggle>
+            <p class="view-toggle-label">You are now viewing:</p>
+            <div
+              class="view-toggle-pill"
+              role="group"
+              aria-label="Case study detail level"
+            >
+              <button
+                type="button"
+                class="view-toggle-btn is-active"
+                data-view-summary
+                aria-pressed="true"
+              >
+                Summary
+              </button>
+              <button
+                type="button"
+                class="view-toggle-btn"
+                data-view-full
+                aria-pressed="false"
+              >
+                Full Case Study
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <nav class="case-jump shell" aria-label="Case study sections" data-reveal>
+        <a href="#solution">solution</a>
+        <a href="#research">research</a>
+        <a href="#define">define</a>
+        <a href="#design">design</a>
+        <a href="#impact">impact</a>
+        <a href="#reflection">reflection</a>
+      </nav>
+
+      <!-- ── SOLUTION ── -->
+      <section
+        class="case-section"
+        id="solution"
+        aria-labelledby="solution-title"
+      >
+        <div class="shell narrative-block">
+          <p class="section-kicker">01 Solution</p>
+          <h2 id="solution-title">For the plans that still need figuring out.</h2>
+
+          <div class="phone-feature-grid plana-solution-grid">
+            <article class="phone-feature" data-reveal>
+              <img
+                src="../assets/plana/create-plan-multiple-times.gif"
+                alt="Creating a plan in Plana, choosing Let's figure it out, and adding multiple time options"
+                loading="lazy"
+                style="aspect-ratio: 744 / 1586;"
+              />
+              <div>
+                <h3>Turning an Idea into a Plan</h3>
+                <ul>
+                  <li>Add multiple times and locations for polling</li>
+                  <li>Create an invite without knowing all the details yet</li>
+                  <li>Get an automatic, ready-to-send invite card</li>
+                </ul>
+                <a
+                  class="button button-primary"
+                  href="https://claude.ai/code/artifact/fb28b90e-d4ea-4e14-b354-7c7911d23f0a?org=0f9da6fb-c1f0-433f-819f-e404a12c2cd3"
+                  target="_blank"
+                  rel="noreferrer"
+                  >View Prototype →</a
+                >
+              </div>
+            </article>
+            <article class="phone-feature" data-reveal>
+              <img
+                src="../assets/plana/home-waiting-on-you-poll.gif"
+                alt="Opening a plan from Waiting on You on the Plana home screen and completing the poll"
+                loading="lazy"
+                style="aspect-ratio: 692 / 1584;"
+              />
+              <div>
+                <h3>Full Look at the Plans</h3>
+                <ul>
+                  <li>Immediately see what plans need your input</li>
+                  <li>Choose what works for you with just a tap</li>
+                  <li>No need for endless group chat planning</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── RESEARCH ── -->
+      <section
+        class="case-section"
+        id="research"
+        aria-labelledby="research-title"
+      >
+        <div class="shell narrative-block">
+          <p class="section-kicker">02 Research</p>
+          <h2 id="research-title">Scheduling isn't the hard part. Landing on a plan is.</h2>
+          <p>
+            During the summer, I kept noticing my friends struggle to lock
+            down plans. Texts got buried in the group chat, and half the
+            time nobody agreed on where or when.
+          </p>
+
+          <div class="problem-grid" data-reveal>
+            <article class="insight-card">
+              <h3>User Interviews</h3>
+              <ul>
+                <li>Talked to 10 people in their 20s about scheduling pain points</li>
+                <li>No one tracked the overlap between everyone's free times</li>
+                <li>Plans kept changing, so nobody remembered who was actually coming</li>
+              </ul>
+            </article>
+            <article class="insight-card">
+              <h3>Competitive Research</h3>
+              <ul>
+                <li>Compared apps like When2Meet and Partiful</li>
+                <li>Some nail availability polling, others nail invites, none do both</li>
+                <li>People love Partiful specifically for how fun and polished its invites feel</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="dialogue-shift-callout" data-reveal>
+            <p class="section-kicker">Key Finding</p>
+            <p>
+              There's no app for scheduling half-baked plans. It needs to
+              cut the back-and-forth, but still feel fun enough that people
+              actually want to use it.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── DEFINE ── -->
+      <section class="case-section" id="define" aria-labelledby="define-title">
+        <div class="shell narrative-block">
+          <p class="section-kicker">03 Define</p>
+          <div class="hmw-panel" data-reveal>
+            <p>These pain points pointed to a single design challenge:</p>
+            <h3>
+              How might I take event planning from gathering input on times
+              and locations to a confirmed invite, all in one app?
+            </h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── DESIGN ── -->
+      <section class="case-section" id="design" aria-labelledby="design-title">
+        <div class="shell narrative-block">
+          <p class="section-kicker">04 Design</p>
+          <h2 id="design-title">Solving "let's figure it out"</h2>
+          <p>
+            The hardest part was keeping the flow fast and flexible enough
+            to fit any kind of plan, in person or online, formal or
+            casual. Since nobody tracks everyone's availability upfront, I
+            decided to incorporate a "Let's figure it out" option: hosts
+            propose a few tentative times and locations, friends can add
+            their own, and everyone polls on what actually works.
+          </p>
+          <div class="wireframe-trio" data-full-only>
+            <img
+              src="../assets/plana/design-wireframe-create.png"
+              alt="Wireframe of the Make a Plan screen with tentative time options"
+              loading="lazy"
+            />
+            <img
+              src="../assets/plana/design-wireframe-poll.png"
+              alt="Wireframe of a guest polling on availability with a notification of what's left to answer"
+              loading="lazy"
+            />
+            <img
+              src="../assets/plana/design-wireframe-home.png"
+              alt="Wireframe of the home screen showing plans that need a response, with Respond buttons"
+              loading="lazy"
+            />
+          </div>
+          <p>
+            I also wanted every plan to generate a shareable invite card
+            automatically, and for anyone with something left to answer to
+            get notified, so plans keep moving instead of stalling out.
+          </p>
+
+          <div class="subsection" data-reveal data-full-only>
+            <h3>Setting the mood.</h3>
+            <p>
+              I started with a mood board to find the right feel: sketched
+              icons, cute card invitations, and a personal touch, built for
+              a young audience in their 20s.
+            </p>
+            <div class="image-grid gallery">
+              <img
+                src="../assets/plana/ideation-moodboard-1.png"
+                alt="Mood board reference: polaroid photo collage with a handwritten, personal feel"
+                loading="lazy"
+              />
+              <img
+                src="../assets/plana/ideation-moodboard-2.png"
+                alt="Mood board reference: a formal card invite with a wax-seal envelope motif"
+                loading="lazy"
+              />
+              <img
+                src="../assets/plana/ideation-moodboard-3.png"
+                alt="Mood board reference: a playful illustrated site with a countdown and mini-game"
+                loading="lazy"
+              />
+              <img
+                src="../assets/plana/ideation-moodboard-4.png"
+                alt="Mood board reference: a black and white invite with hand-drawn illustration"
+                loading="lazy"
+              />
+              <img
+                src="../assets/plana/ideation-moodboard-5.png"
+                alt="Mood board reference: a vintage dinner party invite with a wax seal"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <div class="subsection" data-reveal>
+            <h3>Mocking up the first screens.</h3>
+            <p>
+              From there, I built three mockup screens to get a feel for
+              the overall vibe before going any further.
+            </p>
+            <div class="mockup-trio">
+              <img
+                src="../assets/plana/design-mockup-login.png"
+                alt="Early mockup of the login screen"
+                loading="lazy"
+              />
+              <img
+                src="../assets/plana/design-mockup-home.png"
+                alt="Early mockup of the home screen"
+                loading="lazy"
+              />
+              <img
+                src="../assets/plana/design-mockup-create.png"
+                alt="Early mockup of the create event screen"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <div class="subsection" data-reveal>
+            <h3>Bringing it to life with Claude.</h3>
+            <p>
+              I brought that same mood into Claude to build out the rest of
+              the screens and a working prototype, carrying the sketched
+              icons through to the most important ones. The location step
+              alone covers in-person, online, and undecided plans, with
+              bring-list and link fields built right in. Past plans
+              automatically become memories, where friends can add their
+              own photos to hold onto them.
+            </p>
+            <div class="image-grid four-up">
+              <img
+                src="../assets/plana/ideation-final-location.png"
+                alt="Final Where's the event screen with location search, online option, what to bring, and add links"
+                loading="lazy"
+                style="aspect-ratio: 613 / 1304;"
+              />
+              <img
+                src="../assets/plana/ideation-final-invite.png"
+                alt="Final invite card for Erica's Birthday"
+                loading="lazy"
+                style="aspect-ratio: 613 / 1304;"
+              />
+              <img
+                src="../assets/plana/ideation-final-guestname.png"
+                alt="Final guest What's your name screen"
+                loading="lazy"
+                style="aspect-ratio: 613 / 1304;"
+              />
+              <img
+                src="../assets/plana/ideation-final-memories.png"
+                alt="Final Memories screen with a photo grid"
+                loading="lazy"
+                style="aspect-ratio: 613 / 1304;"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── IMPACT ── -->
+      <section class="case-section" id="impact" aria-labelledby="impact-title">
+        <div class="shell narrative-block">
+          <p class="section-kicker">05 Impact</p>
+          <h2 id="impact-title">Metrics that would tell me the app is actually working.</h2>
+          <p>
+            If I shipped this, these are the numbers I'd watch to know
+            Plana is solving the problem, not just getting downloads.
+          </p>
+          <div class="metric-grid">
+            <article class="metric-card plana-metric" data-reveal>
+              <h3>Percent of Events Finalized</h3>
+              <p>The core promise: how often a loose idea actually becomes a locked-in plan</p>
+            </article>
+            <article class="metric-card plana-metric" data-reveal>
+              <h3>Event Creation Completion Rate</h3>
+              <p>Whether the creation flow is smooth enough to finish in one sitting</p>
+            </article>
+            <article class="metric-card plana-metric" data-reveal>
+              <h3>Invite Completion Rate</h3>
+              <p>How much friction is left once it's a guest filling out the form</p>
+            </article>
+            <article class="metric-card plana-metric" data-reveal>
+              <h3>Total Events Created</h3>
+              <p>Overall adoption and whether people come back to plan again</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── REFLECTION ── -->
+      <section
+        class="case-section"
+        id="reflection"
+        aria-labelledby="reflection-title"
+      >
+        <div class="shell narrative-block reflection-block">
+          <p class="section-kicker">06 Reflection</p>
+          <h2 id="reflection-title">My Takeaways</h2>
+          <p>
+            The real bottleneck in group planning isn't finding a time,
+            it's that no one owns getting the plan across the finish line.
+            Building in visible reminders for exactly what's still
+            unanswered ended up mattering more than any scheduling logic.
+            It also pushed me to think harder about designing for messy,
+            half-formed decisions instead of clean, finished ones.
+          </p>
+          <p>
+            I also learned how much faster I can move by using Claude as
+            part of my process, both for building a working prototype and
+            for catching edge cases and logic gaps I'd missed. Getting
+            quick, direct feedback helped me iterate faster while staying
+            close to my own ideas, and it's a workflow I want to keep
+            using going forward.
+          </p>
+          <a class="text-arrow back-top" href="#top">back to top ↑</a>
+        </div>
+      </section>
+
+      <section
+        class="case-section other-work"
+        aria-labelledby="other-work-title"
+      >
+        <div class="shell">
+          <h2 id="other-work-title">View Other Work</h2>
+          <div class="other-work-grid three-cards">
+            <a class="small-work-card" href="../sorcea-labs/" data-reveal>
+              <img
+                src="../assets/portfolio/thumb-sorcea.png"
+                alt="Sorcea Labs case study"
+                loading="lazy"
+              />
+              <h3>Sorcea Labs | Skincare Market Insights Platform</h3>
+            </a>
+            <a class="small-work-card" href="../beli/" data-reveal>
+              <img
+                src="../assets/portfolio/thumb-beli.png"
+                alt="Beli case study"
+                loading="lazy"
+              />
+              <h3>Beli | Food Rating App</h3>
+            </a>
+            <a class="small-work-card" href="../project-dialogue/" data-reveal>
+              <img
+                src="../assets/portfolio/thumb-dialogue.png"
+                alt="Project Dialogue case study"
+                loading="lazy"
+              />
+              <h3>Project Dialogue | Social Media Platform</h3>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer shell" id="footer">
+      <h2 class="footer-title">Thanks for stopping by!</h2>
+      <div class="footer-columns">
+        <div>
+          <p>Contact me · ✤</p>
+          <a href="mailto:nikki062604@gmail.com">nikki062604@gmail.com</a>
+        </div>
+        <div>
+          <p>Let's connect · ✧</p>
+          <a
+            href="https://www.linkedin.com/in/nikkilee26/"
+            target="_blank"
+            rel="noreferrer"
+            >LinkedIn</a
+          >
+        </div>
+        <div>
+          <p>All rights reserved to Nikki Lee © <span data-year></span></p>
+          <strong>Made with ♥</strong>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Project Dialogue — Nikki Lee</title>
+    <title>Project Dialogue (Full Case Study) — Nikki Lee</title>
     <meta
       name="description"
-      content="Project Dialogue case study by Nikki Lee, UI/UX Designer."
+      content="Project Dialogue full case study by Nikki Lee, UI/UX Designer."
     />
+    <meta name="robots" content="noindex" />
     <meta name="theme-color" content="#061f49" />
     <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -72,13 +73,24 @@
               <span>Responsible AI</span>
             </div>
           </div>
-          <div class="case-problem-card" data-reveal>
-            <p class="section-kicker">Problem</p>
-            <p>
-              Social platforms optimize for engagement over understanding, so
-              users needed to trust a fundamentally different interaction
-              model built around constructive disagreement.
-            </p>
+          <div class="dialogue-hero-cards" data-reveal>
+            <div class="dialogue-hero-card">
+              <p class="section-kicker">Societal Problem</p>
+              <p>
+                Social platforms optimize for engagement over understanding,
+                leaving little room for people with different viewpoints to
+                connect meaningfully.
+              </p>
+            </div>
+            <div class="dialogue-hero-card">
+              <p class="section-kicker">Product Challenge</p>
+              <p>
+                We need to help users understand and trust a
+                <strong>fundamentally different interaction model</strong>, one
+                built around constructive disagreement rather than endless
+                engagement.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -155,33 +167,6 @@
               <span>User Flows</span>
               <span>Wireframes</span>
               <span>High-Fidelity Prototypes</span>
-            </div>
-          </div>
-        </div>
-        <div class="view-full-wrap shell" data-reveal>
-          <div class="view-toggle" data-view-toggle>
-            <p class="view-toggle-label">You are now viewing:</p>
-            <div
-              class="view-toggle-pill"
-              role="group"
-              aria-label="Case study detail level"
-            >
-              <button
-                type="button"
-                class="view-toggle-btn is-active"
-                data-view-summary
-                aria-pressed="true"
-              >
-                Summary
-              </button>
-              <button
-                type="button"
-                class="view-toggle-btn"
-                data-view-full
-                aria-pressed="false"
-              >
-                Full Case Study
-              </button>
             </div>
           </div>
         </div>
@@ -367,7 +352,7 @@
             I analyzed social media and match-making apps to find gaps in how
             platforms support cross-perspective connection.
           </p>
-          <div class="research-columns" data-reveal data-full-only>
+          <div class="research-columns" data-reveal>
             <article>
               <h3>Common Strengths</h3>
               <ul>
@@ -396,7 +381,8 @@
             </article>
           </div>
 
-          <div class="subsection" data-reveal>
+          <!-- Stats -->
+          <div class="subsection" data-reveal data-full-only>
             <h3>How Are People Engaging Right Now?</h3>
             <div class="stat-grid dialogue-stats">
               <article>
@@ -437,7 +423,7 @@
 
       <!-- ── IDEATION ── -->
       <section
-        class="case-section dialogue-pink-panel"
+        class="case-section dialogue-dark"
         id="ideation"
         aria-labelledby="ideation-title"
       >
@@ -471,7 +457,7 @@
             </ul>
           </div>
 
-          <div class="subsection" data-reveal data-full-only>
+          <div class="subsection" data-reveal>
             <h3>Original Flow Overview</h3>
             <div class="flow-steps">
               <div class="flow-step">
@@ -539,7 +525,7 @@
             </div>
 
             <!-- When Business Goals Meet User Limits -->
-            <div class="subsection tradeoff-section" data-reveal data-full-only>
+            <div class="subsection tradeoff-section" data-reveal>
               <h3>When Business Goals Meet User Limits</h3>
               <p>
                 The founder wanted rich, real-time engagement feedback with
@@ -548,7 +534,7 @@
                 judgment and cutting three competing suggestions down to one.
               </p>
 
-              <p>
+              <p data-full-only>
                 After the onboarding process was set, I shifted my focus to what
                 the AI mock conversation screen would actually look like. The
                 founder had a clear vision for the features she wanted to
@@ -557,7 +543,7 @@
                 designing for cognitive load.
               </p>
 
-              <p data-reveal>
+              <p data-reveal data-full-only>
                 I brought in Claude Design to quickly turn the founder's
                 direction into a visual mockup. It let me iterate faster and
                 show her what she was describing so we could visualize it
@@ -576,8 +562,8 @@
                     loading="lazy"
                   />
                 </figure>
-                <span class="fireside-arrow" aria-hidden="true">↓</span>
-                <div class="what-i-drove-chips">
+                <span class="fireside-arrow" aria-hidden="true" data-full-only>↓</span>
+                <div class="what-i-drove-chips" data-full-only>
                   <span>Guided Suggestions</span>
                   <span>AI Practice Partner</span>
                   <span>Difference Barometer</span>
@@ -586,7 +572,7 @@
                 </div>
               </div>
 
-              <div class="tradeoff-side tradeoff-user" data-reveal>
+              <div class="tradeoff-side tradeoff-user" data-reveal data-full-only>
                 <span class="tradeoff-tag">My Concern</span>
                 <p>
                   The barometers risked shifting focus from understanding to
@@ -595,7 +581,7 @@
                 </p>
               </div>
 
-              <div class="tradeoff-expert-callout" data-reveal>
+              <div class="tradeoff-expert-callout" data-reveal data-full-only>
                 <span class="tradeoff-expert-label">Expert Validation</span>
                 <p>
                   Psychology and CS experts agreed: reframe the meters around
@@ -726,7 +712,7 @@
 
       <!-- ── IMPACT ── -->
       <section
-        class="case-section dialogue-light-panel"
+        class="case-section dialogue-dark"
         id="impact"
         aria-labelledby="impact-title"
       >
@@ -790,13 +776,12 @@
               </div>
             </div>
           </div>
-
         </div>
       </section>
 
       <!-- ── NEXT STEPS ── -->
       <section
-        class="case-section compact dialogue-light-panel"
+        class="case-section compact dialogue-dark"
         id="next-steps"
         data-full-only
         aria-labelledby="next-title"
@@ -852,7 +837,7 @@
 
       <!-- ── REFLECTION ── -->
       <section
-        class="case-section dialogue-light-panel"
+        class="case-section dialogue-dark"
         id="conclusion"
         aria-labelledby="conclusion-title"
       >
@@ -869,6 +854,12 @@
             protect retention. It taught me how to make product decisions
             with incomplete information, and how much faster iteration gets
             when AI tools like Claude Design enter the workflow early.
+          </p>
+          <p data-full-only>
+            <strong>What I contributed:</strong> I shifted onboarding from
+            explanation to participation, replacing a high-friction flow with a
+            single AI-guided practice conversation that let users experience the
+            platform’s value sooner.
           </p>
           <a class="text-arrow back-top" href="#top">back to top ↑</a>
         </div>

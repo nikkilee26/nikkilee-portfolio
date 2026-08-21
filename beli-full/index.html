@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Beli — Nikki Lee</title>
+    <title>Beli (Full Case Study) — Nikki Lee</title>
     <meta
       name="description"
-      content="Beli case study by Nikki Lee, UI/UX Designer."
+      content="Beli full case study by Nikki Lee, UI/UX Designer."
     />
+    <meta name="robots" content="noindex" />
     <meta name="theme-color" content="#f7f2df" />
     <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="../styles.css" />
@@ -129,33 +130,6 @@
             </div>
           </div>
         </div>
-        <div class="view-full-wrap shell" data-reveal>
-          <div class="view-toggle" data-view-toggle>
-            <p class="view-toggle-label">You are now viewing:</p>
-            <div
-              class="view-toggle-pill"
-              role="group"
-              aria-label="Case study detail level"
-            >
-              <button
-                type="button"
-                class="view-toggle-btn is-active"
-                data-view-summary
-                aria-pressed="true"
-              >
-                Summary
-              </button>
-              <button
-                type="button"
-                class="view-toggle-btn"
-                data-view-full
-                aria-pressed="false"
-              >
-                Full Case Study
-              </button>
-            </div>
-          </div>
-        </div>
       </section>
 
       <nav class="case-jump shell" aria-label="Case study sections" data-reveal>
@@ -201,13 +175,6 @@
                     notes field
                   </li>
                 </ul>
-                <a
-                  class="button button-primary"
-                  href="https://www.figma.com/proto/KJ3ccTFLI8mWE9jBcv8QtF/beli?node-id=183-1856&p=f&t=S7qaT5VpTh1s24A3-0&scaling=scale-down&content-scaling=fixed&page-id=183%3A1855&starting-point-node-id=183%3A1856&show-proto-sidebar=1"
-                  target="_blank"
-                  rel="noreferrer"
-                  >View Prototype →</a
-                >
               </div>
             </article>
             <article class="phone-feature" data-reveal>
@@ -232,13 +199,6 @@
                     — selected items populate instantly, no typing required
                   </li>
                 </ul>
-                <a
-                  class="button button-primary"
-                  href="https://www.figma.com/proto/KJ3ccTFLI8mWE9jBcv8QtF/beli?node-id=228-2743&p=f&t=S7qaT5VpTh1s24A3-0&scaling=scale-down&content-scaling=fixed&page-id=183%3A1855&starting-point-node-id=228%3A2743&show-proto-sidebar=1"
-                  target="_blank"
-                  rel="noreferrer"
-                  >View Prototype →</a
-                >
               </div>
             </article>
           </div>
@@ -434,7 +394,7 @@
             </div>
           </div>
 
-          <div class="quote-grid" data-reveal data-full-only>
+          <div class="quote-grid" data-reveal>
             <blockquote>
               "I never understood why Beli put the 'Add Photos' option at the
               bottom of the screen. It's the feature I use the most, and it's
@@ -496,7 +456,7 @@
         <div class="shell narrative-block">
           <p class="section-kicker">04 Ideation</p>
           <h2 id="ideation-title">
-            Weighing three approaches to menu discovery.
+            Decision matrix: finding the right approach to menu discovery.
           </h2>
           <p>
             I narrowed the menu search problem to three possible approaches,
@@ -633,11 +593,6 @@
             </figure>
           </div>
           <div class="sketch-pair">
-            <p>
-              From these sketches, I created a mid-fidelity mockup that places
-              "Add Photos" prominently at the top, matching the most-used
-              feature to the highest-visibility position.
-            </p>
             <figure class="artifact-card wide-artifact" data-reveal>
               <img
                 src="../assets/beli/before-after.webp"
@@ -645,14 +600,13 @@
                 loading="lazy"
               />
             </figure>
-          </div>
-          <div class="sketch-pair" data-full-only>
             <p>
-              To avoid feature overload on the rating page, I used
-              <strong>progressive disclosure</strong> to break the review
-              process into sequential steps so each screen asks the user to do
-              one thing at a time.
+              From these sketches, I created a mid-fidelity mockup that places
+              "Add Photos" prominently at the top, matching the most-used
+              feature to the highest-visibility position.
             </p>
+          </div>
+          <div class="sketch-pair">
             <figure class="artifact-card wide-artifact" data-reveal>
               <img
                 src="../assets/beli/user-flow.webp"
@@ -666,6 +620,12 @@
                 logging.
               </figcaption>
             </figure>
+            <p>
+              To avoid feature overload on the rating page, I used
+              <strong>progressive disclosure</strong> to break the review
+              process into sequential steps so each screen asks the user to do
+              one thing at a time.
+            </p>
           </div>
         </div>
       </section>
@@ -721,15 +681,31 @@
           <p class="section-kicker">07 Reflection</p>
           <h2 id="reflection-title">My Takeaways</h2>
           <p>
-            This project taught me how much friction can hide in a seemingly
-            small interaction. The core problem sounds minor, but it exposed
-            a deeper misunderstanding between how the app was structured and
-            how people actually behave after a meal.
+            <strong data-full-only>What I learned: </strong>This project taught me how much
+            friction can hide in a seemingly small interaction. The core problem
+            sounds minor, but it exposed a deeper misunderstanding between how
+            the app was structured and how people actually behave after a meal.
           </p>
           <p>
             It also showed me how simple features integrated directly into
             the existing flow, paired with minor visual changes that
             emphasize hierarchy, can change the whole experience.
+          </p>
+          <p data-full-only>
+            <strong>What I contributed:</strong> Fixing it required translating
+            that behavioral insight into a concrete system change, not just a UI
+            tweak. I redesigned the rating page to reduce choice overload and
+            built Menu Search with Smart Autofill so users could log dishes
+            without relying on memory.
+          </p>
+          <p data-full-only>
+            <strong>What I'm taking forward:</strong> I want to rethink the home
+            page to better separate personal ratings from restaurant discovery.
+            Users rarely engaged with Featured Lists, which raises a bigger
+            question about whether Beli's core value is tracking what you've
+            eaten or seeing where friends are going. It's a reminder that even
+            a retention feature can lose its purpose if it doesn't map clearly
+            onto the app's core habit loop.
           </p>
           <a class="text-arrow back-top" href="#top">back to top ↑</a>
         </div>
