@@ -2853,18 +2853,22 @@ button {
 
 /* Four final Claude-built screens, sized to match the solution mockups
    above rather than stretching full-width the way .image-grid.four-up
-   does once it collapses to one column under 960px. */
+   does once it collapses to one column under 960px. Capped to two
+   screens' width so it wraps as a deliberate 2x2 grid instead of an
+   accidental 3-then-1 once the container is wide enough for three. */
 .mockup-quad {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 20px;
+  max-width: 500px;
+  margin-inline: auto;
   margin-block: 30px;
 }
 .mockup-quad img {
   width: 240px;
-  border-radius: 9%;
+  border-radius: 29.6px;
 }
 
 /* Masonry, not a strict grid: the mood board references have wildly
@@ -3273,7 +3277,7 @@ button {
   background: #fbf5f1;
 }
 .plana-page .phone-feature img {
-  border-radius: 6%;
+  border-radius: 29.6px;
   /* Each image sets its own aspect-ratio inline (matching its real pixel
      dimensions), so this max-height doesn't cause the old letterbox bug:
      the browser solves width down along with it to keep that ratio,
