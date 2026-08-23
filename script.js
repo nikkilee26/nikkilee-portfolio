@@ -175,6 +175,22 @@
     node.textContent = new Date().getFullYear();
   });
 
+  const localTimeNode = document.querySelector('[data-local-time]');
+  if (localTimeNode) {
+    const formatter = new Intl.DateTimeFormat('en-US', {
+      timeZone: 'America/New_York',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: false,
+    });
+    const updateLocalTime = () => {
+      localTimeNode.textContent = formatter.format(new Date());
+    };
+    updateLocalTime();
+    setInterval(updateLocalTime, 1000);
+  }
+
   // ═══ ART CAROUSEL — remove this block with the HTML sections to undo ═══
   const artCarousel = document.querySelector('[data-art-carousel]');
   if (artCarousel) {
