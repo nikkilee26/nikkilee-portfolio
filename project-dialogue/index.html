@@ -367,7 +367,7 @@
             I analyzed social media and match-making apps to find gaps in how
             platforms support cross-perspective connection.
           </p>
-          <div class="research-columns" data-reveal data-full-only>
+          <div class="research-columns" data-reveal>
             <article>
               <h3>Common Strengths</h3>
               <ul>
@@ -539,16 +539,16 @@
             </div>
 
             <!-- When Business Goals Meet User Limits -->
-            <div class="subsection tradeoff-section" data-reveal data-full-only>
+            <div class="subsection tradeoff-section" data-reveal>
               <h3>When Business Goals Meet User Limits</h3>
-              <p>
+              <p data-condensed-only>
                 The founder wanted rich, real-time engagement feedback with
                 multiple suggestions. I preserved that goal but simplified the
                 execution, reframing the metrics around growth instead of
                 judgment and cutting three competing suggestions down to one.
               </p>
 
-              <p>
+              <p data-full-only>
                 After the onboarding process was set, I shifted my focus to what
                 the AI mock conversation screen would actually look like. The
                 founder had a clear vision for the features she wanted to
@@ -557,7 +557,7 @@
                 designing for cognitive load.
               </p>
 
-              <p data-reveal>
+              <p data-reveal data-full-only>
                 I brought in Claude Design to quickly turn the founder's
                 direction into a visual mockup. It let me iterate faster and
                 show her what she was describing so we could visualize it
@@ -565,42 +565,24 @@
               </p>
 
               <!-- Before -->
-              <div class="fireside-block" data-reveal>
+              <div class="fireside-block" data-reveal data-full-only>
                 <span class="iteration-pill iteration-before"
                   >Founder's Direction</span
                 >
                 <figure class="artifact-card dialogue-artifact">
                   <img
                     src="../assets/dialogue/founder-direction-annotated.png"
-                    alt="Annotated wireframe of the founder's direction showing the Disagreeableness, Difference, and Dialogue Pulse meters and three simultaneous suggestions, marked up with my concerns"
+                    alt="Wireframe of the founder's direction showing Disagreeableness and Difference barometers and a panel of three simultaneous AI-suggested prompts"
                     loading="lazy"
                   />
+                  <figcaption>
+                    Paired guided AI suggestions with Disagreeableness and
+                    Difference barometers, which risked overwhelming users
+                    with too much at once and framing differences in a way
+                    that could deepen divide instead of bridging it.
+                  </figcaption>
                 </figure>
                 <span class="fireside-arrow" aria-hidden="true">↓</span>
-                <div class="what-i-drove-chips">
-                  <span>Guided Suggestions</span>
-                  <span>AI Practice Partner</span>
-                  <span>Difference Barometer</span>
-                  <span>Disagreeableness Barometer</span>
-                  <span>Dialogue Pulse</span>
-                </div>
-              </div>
-
-              <div class="tradeoff-side tradeoff-user" data-reveal>
-                <span class="tradeoff-tag">My Concern</span>
-                <p>
-                  The barometers risked shifting focus from understanding to
-                  changing minds, and three competing suggestions pulled focus
-                  from the conversation itself.
-                </p>
-              </div>
-
-              <div class="tradeoff-expert-callout" data-reveal>
-                <span class="tradeoff-expert-label">Expert Validation</span>
-                <p>
-                  Psychology and CS experts agreed: reframe the meters around
-                  growth, not judgment, and cut to one suggestion.
-                </p>
               </div>
 
               <!-- After -->
@@ -612,12 +594,12 @@
                     alt="Final redesigned practice screen with Curiosity and Collaborativeness meters in the sidebar, Shared Understanding and Emotional Tension below the chat, and a single embedded suggestion"
                     loading="lazy"
                   />
+                  <figcaption>
+                    Shifted metrics to emphasize Curiosity, Collaborativeness,
+                    and Shared Understanding, and simplified guidance into a
+                    single in-line prompt.
+                  </figcaption>
                 </figure>
-                <p class="fireside-caption">
-                  Shifted metrics to emphasize Curiosity, Collaborativeness,
-                  and Shared Understanding, and simplified guidance into a
-                  single in-line prompt.
-                </p>
               </div>
             </div>
 
@@ -634,30 +616,26 @@
                 <div class="dark-feature-card">
                   <h3>Curiosity &amp; Collaborativeness Meters</h3>
                   <p>
-                    Update in real time after each new conversation to reflect
-                    how open and collaborative your engagement has been.
+                    Update in real time to reflect how open and collaborative
+                    you've been.
                   </p>
                 </div>
                 <div class="dark-feature-card">
                   <h3>User Wellness Controls</h3>
-                  <p>
-                    How long have users been on the platform and are they
-                    healthily engaging?
-                  </p>
+                  <p>Track time on platform and flag unhealthy engagement.</p>
                 </div>
                 <div class="dark-feature-card">
                   <h3>Match of the Day</h3>
                   <p>
-                    Connecting users with people that other algorithms would've
-                    never paired with them, based on difference rather than
-                    similarity.
+                    Pairs users based on difference, not similarity, that
+                    other algorithms would've missed.
                   </p>
                 </div>
               </div>
               <figure class="artifact-card dialogue-artifact" data-reveal>
                 <img
                   src="../assets/dialogue/platform-home-annotated.png"
-                  alt="Annotated wireframe of the main platform home screen showing Performance Metrics, live Curiosity and Collaborativeness meters, Wellness Controls, and Match of the Day"
+                  alt="Wireframe of the main platform home screen showing performance stats, live Curiosity and Collaborativeness meters, wellness controls, and the Match of the Day card"
                   style="width: 100%; border-radius: 8px; display: block"
                 />
                 <figcaption>
@@ -798,26 +776,11 @@
       <section
         class="case-section compact dialogue-light-panel"
         id="next-steps"
-        data-full-only
         aria-labelledby="next-title"
       >
         <div class="shell narrative-block">
           <p class="section-kicker">05 Next Steps</p>
           <h2 id="next-title">What's Upcoming?</h2>
-          <div
-            class="project-status-card complete"
-            style="margin-bottom: 2rem"
-            data-reveal
-          >
-            <h4>Completed</h4>
-            <ul>
-              <li>MVP user journey and onboarding strategy</li>
-              <li>Practice-first onboarding model</li>
-              <li>High-fidelity AI practice mockup</li>
-              <li>Brand identity and design system</li>
-              <li>Success metrics and beta validation plan</li>
-            </ul>
-          </div>
           <p class="next-steps-inprogress-label" data-reveal>In Progress</p>
           <div class="next-step-grid" data-reveal>
             <article>
