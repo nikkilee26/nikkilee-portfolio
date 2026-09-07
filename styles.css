@@ -1815,6 +1815,10 @@ button {
   box-shadow: none;
 }
 
+.dialogue-hero-art img {
+  transform: scale(1.18);
+}
+
 .case-intro {
   padding-top: clamp(42px, 6vw, 72px);
 }
@@ -3781,6 +3785,10 @@ body.dialogue-page {
 .dialogue-product-grid > div:first-child {
   grid-column: 1 / -1;
   max-width: 780px;
+}
+
+.dialogue-product-grid > div:last-child {
+  grid-column: 1 / -1;
 }
 
 .light-link {
