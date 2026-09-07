@@ -20,9 +20,7 @@
 
     <header class="site-header" data-header>
       <nav class="nav shell" aria-label="Main navigation">
-        <a class="brand" href="/" aria-label="Nikki Lee home"
-          >Nikki Lee</a
-        >
+        <a class="brand" href="/" aria-label="Nikki Lee home">Nikki Lee</a>
         <button
           class="nav-toggle"
           type="button"
@@ -407,8 +405,8 @@
               </div>
               <p class="beli-least-used-desc">
                 with <strong>80%</strong> of users saying they rarely or never
-                use it, often because they don't have one single favorite
-                dish to add.
+                use it, often because they don't have one single favorite dish
+                to add.
               </p>
             </div>
           </div>
@@ -479,10 +477,10 @@
           </h2>
           <p>
             I narrowed the menu search problem to three possible approaches,
-            drawing from features on everyday platforms that unconsciously
-            made recall easier and integrated smoothly into the flow: an
-            autofill suggestion bar, a searchable menu, and an @ symbol
-            shortcut to trigger search.
+            drawing from features on everyday platforms that unconsciously made
+            recall easier and integrated smoothly into the flow: an autofill
+            suggestion bar, a searchable menu, and an @ symbol shortcut to
+            trigger search.
           </p>
           <div class="pros-cons-table" data-reveal data-full-only>
             <table>
@@ -558,64 +556,49 @@
       </section>
 
       <!-- ── DESIGN ── -->
-      <section
-        class="case-section"
-        id="design"
-        aria-labelledby="design-title"
-      >
+      <section class="case-section" id="design" aria-labelledby="design-title">
         <div class="shell narrative-block">
           <p class="section-kicker">05 Design</p>
-          <h2 id="design-title">
-            Sketching menu search, autofill, and a restructured rating page.
-          </h2>
+          <h2 id="design-title">Creating a Streamlined Experience</h2>
           <p>
-            Before building anything, I sketched all three changes in
-            parallel to see how they'd work together as one cohesive flow,
-            not three separate features bolted on.
+            Autofill happens directly in line as users type their notes, so
+            logging a dish never breaks their flow. If they'd rather browse,
+            people can also jump straight into menu search and find the exact
+            dish without ever leaving the app.
           </p>
-          <div class="image-grid three-up" data-reveal>
-            <figure class="artifact-card">
+          <div class="image-grid two-up" data-reveal>
+            <figure class="mockup-figure">
               <img
-                src="../assets/beli/menu-search-wireframe.webp"
-                alt="Wireframe of menu search screen"
+                src="../assets/beli/autofill-mockup.png"
+                alt="Notes field with autofill suggesting a menu item inline as the user types, plus a Search Menu button"
                 loading="lazy"
               />
               <figcaption>
-                Wireframe of menu search, where users can scroll and search
-                through the entire restaurant menu.
+                Autofill suggests the matching menu item inline as the user
+                types in the notes field, with a "Search Menu" shortcut right
+                there if they want more options.
               </figcaption>
             </figure>
-            <figure class="artifact-card">
+            <figure class="mockup-figure">
               <img
-                src="../assets/beli/autofill-wireframe.webp"
-                alt="Wireframe of autofill in the notes field"
+                src="../assets/beli/menu-search-mockup.png"
+                alt="Menu search screen listing dishes from Sup Noodle Bar, searchable and filterable by category"
                 loading="lazy"
               />
               <figcaption>
-                Autofill suggests menu items as the user types in the notes
-                field which speeds up the review process without adding a new
-                step.
-              </figcaption>
-            </figure>
-            <figure class="artifact-card">
-              <img
-                src="../assets/beli/rating-page-wireframe.webp"
-                alt="Wireframe of updated rating page visual hierarchy"
-                loading="lazy"
-              />
-              <figcaption>
-                Updated visual hierarchy groups related features to reduce
-                visual clutter and create the impression of fewer decisions to
-                make, and adds the "Search Menu" button directly to the notes
-                section.
+                A dedicated menu search screen lets users scroll or search the
+                full restaurant menu to find their dish, without ever leaving
+                the app.
               </figcaption>
             </figure>
           </div>
           <div class="sketch-pair">
             <p>
-              From these sketches, I created a mid-fidelity mockup that places
-              "Add Photos" prominently at the top, matching the most-used
-              feature to the highest-visibility position.
+              The original rating page gave every field, photos, tags, notes,
+              equal visual weight, so users had to hunt for what they were
+              looking for. I restructured the information architecture around
+              usage, bringing "Add Photos" to the top and grouping related
+              fields together.
             </p>
             <figure class="artifact-card wide-artifact" data-reveal>
               <img
@@ -634,15 +617,15 @@
             </p>
             <figure class="artifact-card wide-artifact" data-reveal>
               <img
-                src="../assets/beli/user-flow.webp"
-                alt="Beli redesigned user flow"
+                src="../assets/beli/progressive-disclosure-flow.png"
+                alt="Redesigned Beli rating flow shown step by step: a quick overall reaction, notes and photos with inline autofill, and a head-to-head comparison ranking before the final score"
                 loading="lazy"
               />
               <figcaption>
-                <strong>Redesigned user flow:</strong> users are first asked how
-                they liked the restaurant overall, then reach the main rating
-                page where autofill and menu search are both available for dish
-                logging.
+                <strong>Redesigned rating flow:</strong> users first give a
+                quick overall reaction, then land on notes and photos, where
+                autofill suggests the dish inline as they type. From there, a
+                comparison against another restaurant sets their final ranking.
               </figcaption>
             </figure>
           </div>
@@ -665,10 +648,6 @@
               <p>Average time to complete a review from open to submit</p>
             </div>
             <div class="possible-impact-card">
-              <span class="impact-metric-label">Dish logging</span>
-              <p>Average taps required to add a specific dish to a review</p>
-            </div>
-            <div class="possible-impact-card">
               <span class="impact-metric-label">Autofill adoption</span>
               <p>
                 Rate at which users accept autofill suggestions when they appear
@@ -681,9 +660,9 @@
               </p>
             </div>
             <div class="possible-impact-card">
-              <span class="impact-metric-label">Perceived ease</span>
+              <span class="impact-metric-label">Ease rating</span>
               <p>
-                User-rated difficulty of completing a review (post-task survey)
+                Self-reported difficulty survey after completing a review
               </p>
             </div>
           </div>
@@ -701,14 +680,14 @@
           <h2 id="reflection-title">My Takeaways</h2>
           <p>
             This project taught me how much friction can hide in a seemingly
-            small interaction. The core problem sounds minor, but it exposed
-            a deeper misunderstanding between how the app was structured and
-            how people actually behave after a meal.
+            small interaction. The core problem sounds minor, but it exposed a
+            deeper misunderstanding between how the app was structured and how
+            people actually behave after a meal.
           </p>
           <p>
-            It also showed me how simple features integrated directly into
-            the existing flow, paired with minor visual changes that
-            emphasize hierarchy, can change the whole experience.
+            It also showed me how simple features integrated directly into the
+            existing flow, paired with minor visual changes that emphasize
+            hierarchy, can change the whole experience.
           </p>
           <a class="text-arrow back-top" href="#top">back to top ↑</a>
         </div>

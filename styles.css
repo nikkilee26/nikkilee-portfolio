@@ -2068,6 +2068,31 @@ button {
   line-height: 1.45;
 }
 
+/* Plain figure, no card box, for images that already read as finished
+   artifacts on their own (e.g. phone mockups) and don't need a bordered
+   white container around them. Height-capped and centered so a tall
+   portrait phone screenshot fits on screen without scrolling. */
+.mockup-figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.image-grid .mockup-figure img {
+  width: auto;
+  max-width: 100%;
+  height: clamp(380px, 38vw, 460px);
+  object-fit: contain;
+  border-radius: 18px;
+}
+.mockup-figure figcaption {
+  margin-top: 14px;
+  max-width: 320px;
+  color: var(--ink-soft);
+  font-size: 0.96rem;
+  line-height: 1.45;
+}
+
 .principle-group {
   margin-top: 44px;
 }
@@ -7103,7 +7128,7 @@ body.dialogue-page {
 /* ── Possible impact grid (Beli) — 3 top + 2 centered below ── */
 .possible-impact-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
   margin-top: 24px;
 }
@@ -7113,9 +7138,6 @@ body.dialogue-page {
   border-radius: 12px;
   padding: 22px 20px;
 }
-.possible-impact-card:nth-child(-n+3) { grid-column: span 2; }
-.possible-impact-card:nth-child(4)    { grid-column: 2 / span 2; }
-.possible-impact-card:nth-child(5)    { grid-column: 4 / span 2; }
 .possible-impact-card .impact-metric-label {
   font-size: 0.68rem;
   font-weight: 700;
@@ -7132,16 +7154,12 @@ body.dialogue-page {
 .beli-page .possible-impact-card:nth-child(2) { background: rgba(77, 144, 254, 0.17); }
 .beli-page .possible-impact-card:nth-child(3) { background: rgba(77, 144, 254, 0.13); }
 .beli-page .possible-impact-card:nth-child(4) { background: rgba(77, 144, 254, 0.09); }
-.beli-page .possible-impact-card:nth-child(5) { background: rgba(77, 144, 254, 0.06); }
 .beli-page .possible-impact-card .impact-metric-label {
   color: var(--case-blue-deep);
 }
 .possible-impact-card p { font-size: 0.88rem; line-height: 1.5; margin: 0; color: var(--ink); }
 @media (max-width: 720px) {
   .possible-impact-grid { grid-template-columns: 1fr; }
-  .possible-impact-card:nth-child(-n+3),
-  .possible-impact-card:nth-child(4),
-  .possible-impact-card:nth-child(5) { grid-column: span 1; }
 }
 
 /* ── Transit research board ── */
