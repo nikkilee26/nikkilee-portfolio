@@ -1520,11 +1520,13 @@ button {
   overflow: visible;
 }
 
-/* Photo cluster for about page */
+/* Photo cluster for about page — height scales with width so the two
+   absolutely-positioned photos stay fully contained (and overlapped) at
+   every width, and the intro text below never rides up under them. */
 .about-photo-cluster {
   position: relative;
   width: 100%;
-  min-height: 540px;
+  aspect-ratio: 1 / 1.32;
 }
 
 .about-photo {
@@ -1780,6 +1782,44 @@ button {
 .footer a:hover,
 .footer a:focus-visible {
   color: var(--plum);
+}
+
+.contact-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.copy-email {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+  padding: 3px;
+  color: var(--muted);
+  background: transparent;
+  border: 0;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: color 160ms ease, transform 160ms ease;
+}
+
+.copy-email svg {
+  display: block;
+}
+
+.copy-email:hover {
+  color: var(--plum);
+  transform: translateY(-1px);
+}
+
+.copy-email:active {
+  transform: translateY(0);
+}
+
+.copy-email:focus-visible {
+  outline: 2px solid var(--plum);
+  outline-offset: 2px;
 }
 
 /* Case page */
