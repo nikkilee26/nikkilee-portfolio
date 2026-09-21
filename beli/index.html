@@ -40,654 +40,287 @@
     </header>
 
     <main id="main">
-      <section class="case-cover" id="top">
-        <div class="case-cover-art beli-hero-art" data-reveal>
-          <img
-            src="../assets/beli/hero.webp"
-            alt="Beli menu search and rating flow mockups"
-          />
+      <!-- ── HERO ── -->
+      <section class="beli-hero" id="top" aria-label="Beli redesign preview">
+        <div class="plana-hero-devices">
+          <img class="device device-a" src="../assets/beli/menu-search-mockup.png" alt="Beli menu search screen listing dishes from Sup Noodle Bar" />
+          <img class="device device-b" src="../assets/beli/autofill-mockup.png" alt="Beli notes field with an inline autofill suggestion and a Search Menu button" />
         </div>
       </section>
 
-      <section class="case-hero-intro" aria-labelledby="case-title">
-        <div class="shell case-hero-grid" data-reveal>
-          <div>
-            <h1 id="case-title">Beli</h1>
-            <p class="case-subtitle">Food Rating App</p>
-            <div class="tag-row case-tags" aria-label="Project tags">
-              <span>Consumer App</span>
-              <span>Feature Redesign</span>
-              <span>UX Research</span>
+      <!-- ── OVERVIEW ── -->
+      <section class="sc-section sc-overview" id="overview" aria-labelledby="case-title">
+        <div class="shell">
+          <p class="sc-kicker">Overview</p>
+          <h1 id="case-title" class="sc-title">Beli</h1>
+          <p class="sc-desc">
+            A feature redesign for a food rating app, focused on making it
+            faster to log what you ate.
+          </p>
+          <dl class="sc-meta" data-reveal>
+            <div><dt>Role</dt><dd>UX/UI Designer</dd></div>
+            <div><dt>Team</dt><dd>Solo</dd></div>
+            <div><dt>Timeline</dt><dd>Jan to Mar 2025</dd></div>
+            <div><dt>Tools</dt><dd>Figma</dd></div>
+          </dl>
+          <dl class="sc-meta sc-meta-drove" data-reveal>
+            <div><dt>What I drove</dt><dd>UX research, user interviews, feature redesign, wireframing, high-fidelity mockups</dd></div>
+          </dl>
+          <dl class="sc-rows" data-reveal>
+            <div>
+              <dt>Product</dt>
+              <dd>
+                Beli is a food rating and restaurant tracking app. I redesigned
+                the rating page and introduced menu search with autofill, so
+                logging a review takes less memory and fewer unnecessary
+                choices.
+              </dd>
             </div>
-          </div>
-          <div class="case-problem-card">
-            <p class="section-kicker">Problem</p>
-            <p>
-              Beli's rating page overwhelmed users with too many choices at
-              once, and the absence of menu search forced them to recall dish
-              names from memory, turning a simple task into a frustrating,
-              high-effort experience.
-            </p>
-          </div>
-        </div>
-        <div class="shell case-hero-facts" data-reveal>
-          <div>
-            <h2>Team</h2>
-            <p>Solo</p>
-          </div>
-          <div>
-            <h2>Role</h2>
-            <p>UX/UI Designer</p>
-          </div>
-          <div>
-            <h2>Duration</h2>
-            <p>Jan – Mar 2025</p>
-          </div>
-        </div>
-        <div class="shell" data-reveal>
-          <div class="dialogue-shift-callout">
-            <p class="section-kicker">Key Outcome</p>
-            <p>
-              Redesigned the rating page to reduce choice overload and
-              introduced Menu Search with Smart Autofill, giving users a faster,
-              memory-free way to log specific dishes and removing unnecessary
-              steps from the logging flow.
-            </p>
-          </div>
-        </div>
-        <div class="shell what-i-drove-row" data-reveal>
-          <p class="section-kicker">What I Drove</p>
-          <div class="what-i-drove-chips">
-            <span>UX Research</span>
-            <span>User Interviews</span>
-            <span>Feature Redesign</span>
-            <span>Wireframing</span>
-            <span>High-Fidelity Mockups</span>
-          </div>
-        </div>
-        <div class="shell case-product-grid" data-reveal>
-          <div>
-            <h2>Product</h2>
-            <p>
-              Beli is a food rating and restaurant tracking app. I redesigned
-              the rating page and introduced menu search with autofill to make
-              logging reviews faster, with less memory burden and fewer
-              unnecessary choices.
-            </p>
-          </div>
-          <div>
-            <h2>Tools & Skills</h2>
-            <div class="what-i-drove-chips">
-              <span>Figma</span>
-              <span>User Interviews</span>
-              <span>Wireframing</span>
-              <span>High-Fidelity Prototypes</span>
-              <span>Competitive Analysis</span>
+            <div>
+              <dt>Challenge</dt>
+              <dd>
+                The rating page overwhelmed users with too many choices at once,
+                and with no menu search they had to recall dish names from
+                memory. A simple task became a frustrating, high-effort one.
+              </dd>
             </div>
-          </div>
+          </dl>
         </div>
-        <div class="view-full-wrap shell" data-reveal>
-          <div class="view-toggle" data-view-toggle>
-            <p class="view-toggle-label">You are now viewing:</p>
-            <div
-              class="view-toggle-pill"
-              role="group"
-              aria-label="Case study detail level"
-            >
-              <button
-                type="button"
-                class="view-toggle-btn is-active"
-                data-view-summary
-                aria-pressed="true"
-              >
-                Summary
-              </button>
-              <button
-                type="button"
-                class="view-toggle-btn"
-                data-view-full
-                aria-pressed="false"
-              >
-                Full Case Study
-              </button>
-            </div>
+      </section>
+
+      <!-- ── PROTOTYPE PREVIEW ── -->
+      <section class="sc-preview plana-preview" aria-label="The redesign in action">
+        <div class="shell">
+          <div class="plana-gifs">
+            <figure data-reveal>
+              <img src="../assets/beli/rating-page.gif" alt="Beli restructured rating page" style="aspect-ratio: 526 / 970;" />
+              <figcaption><strong>Restructured rating page.</strong> Photos move to the top and the review unfolds in short steps.</figcaption>
+              <a class="button prototype-button sc-proto sc-proto-inline" href="https://www.figma.com/proto/KJ3ccTFLI8mWE9jBcv8QtF/beli?node-id=183-1856&p=f&t=S7qaT5VpTh1s24A3-0&scaling=scale-down&content-scaling=fixed&page-id=183%3A1855&starting-point-node-id=183%3A1856&show-proto-sidebar=1" target="_blank" rel="noreferrer">View rating flow →</a>
+            </figure>
+            <figure data-reveal>
+              <img src="../assets/beli/menu-page.gif" alt="Beli menu search page" style="aspect-ratio: 544 / 982;" loading="lazy" />
+              <figcaption><strong>Menu search.</strong> Browse the full menu without leaving the review, then tap a dish to add it.</figcaption>
+              <a class="button prototype-button sc-proto sc-proto-inline" href="https://www.figma.com/proto/KJ3ccTFLI8mWE9jBcv8QtF/beli?node-id=228-2743&p=f&t=S7qaT5VpTh1s24A3-0&scaling=scale-down&content-scaling=fixed&page-id=183%3A1855&starting-point-node-id=228%3A2743&show-proto-sidebar=1" target="_blank" rel="noreferrer">View menu flow →</a>
+            </figure>
           </div>
         </div>
       </section>
 
-      <nav class="case-jump shell" aria-label="Case study sections" data-reveal>
-        <a href="#solution">solution</a>
-        <a href="#research">research</a>
-        <a href="#define">define</a>
-        <a href="#ideation">ideation</a>
-        <a href="#design">design</a>
-        <a href="#impact">impact</a>
-        <a href="#reflection">reflection</a>
+      <nav class="sc-rail" id="sc-rail" aria-label="Jump to section">
+        <ol>
+          <li><a href="#context" data-sec="context"><span class="num">01</span><span class="lbl">Context</span></a></li>
+          <li><a href="#research" data-sec="research"><span class="num">02</span><span class="lbl">Research</span></a></li>
+          <li><a href="#define" data-sec="define"><span class="num">03</span><span class="lbl">Define</span></a></li>
+          <li><a href="#ideation" data-sec="ideation"><span class="num">04</span><span class="lbl">Ideation</span></a></li>
+          <li><a href="#design" data-sec="design"><span class="num">05</span><span class="lbl">Design</span></a></li>
+          <li><a href="#metrics" data-sec="metrics"><span class="num">06</span><span class="lbl">Metrics</span></a></li>
+          <li><a href="#reflection" data-sec="reflection"><span class="num">07</span><span class="lbl">Reflection</span></a></li>
+        </ol>
       </nav>
 
-      <!-- ── SOLUTION ── -->
-      <section
-        class="case-section"
-        id="solution"
-        aria-labelledby="solution-title"
-      >
-        <div class="shell narrative-block">
-          <p class="section-kicker">01 Solution</p>
-          <div class="phone-feature-grid beli-solution-grid">
-            <article class="phone-feature" data-reveal>
-              <img
-                src="../assets/beli/rating-page.gif"
-                alt="Beli restructured ratings page"
-                loading="lazy"
-              />
-              <div>
-                <h2 id="solution-title">Restructured Rating Page</h2>
-                <ul>
-                  <li>Photos moved to the top for max visibility</li>
-                  <li>Progressive disclosure breaks the review into steps</li>
-                  <li>Autofill suggestions speed up dish logging</li>
-                </ul>
-                <a
-                  class="button button-primary"
-                  href="https://www.figma.com/proto/KJ3ccTFLI8mWE9jBcv8QtF/beli?node-id=183-1856&p=f&t=S7qaT5VpTh1s24A3-0&scaling=scale-down&content-scaling=fixed&page-id=183%3A1855&starting-point-node-id=183%3A1856&show-proto-sidebar=1"
-                  target="_blank"
-                  rel="noreferrer"
-                  >View Prototype →</a
-                >
-              </div>
-            </article>
-            <article class="phone-feature" data-reveal>
-              <img
-                src="../assets/beli/menu-page.gif"
-                alt="Beli menu search page"
-                loading="lazy"
-              />
-              <div>
-                <h2>Menu Search</h2>
-                <ul>
-                  <li>Direct menu access without leaving the review</li>
-                  <li>Full menu browse when you forget a name</li>
-                  <li>Tap to add a dish straight to your notes</li>
-                </ul>
-                <a
-                  class="button button-primary"
-                  href="https://www.figma.com/proto/KJ3ccTFLI8mWE9jBcv8QtF/beli?node-id=228-2743&p=f&t=S7qaT5VpTh1s24A3-0&scaling=scale-down&content-scaling=fixed&page-id=183%3A1855&starting-point-node-id=228%3A2743&show-proto-sidebar=1"
-                  target="_blank"
-                  rel="noreferrer"
-                  >View Prototype →</a
-                >
-              </div>
-            </article>
-          </div>
+      <!-- ── CONTEXT ── -->
+      <section class="sc-section" id="context" aria-labelledby="context-title">
+        <div class="shell">
+          <p class="sc-kicker">01 Context</p>
+          <h2 id="context-title" data-reveal>Rating a meal shouldn't depend on remembering it.</h2>
+          <p class="sc-text" data-reveal>
+            I use Beli to track every restaurant I visit, but rating meals was
+            always a struggle since I could never remember what I ordered. That
+            friction made me want to find out whether other users ran into the
+            same problem.
+          </p>
         </div>
       </section>
 
       <!-- ── RESEARCH ── -->
-      <section
-        class="case-section"
-        id="research"
-        aria-labelledby="research-title"
-      >
-        <div class="shell narrative-block">
-          <p class="section-kicker">02 Research: User Interviews</p>
-          <h2 id="research-title">
-            Users forget dish names, skip features they don't understand, and
-            use notes to fill the gaps.
-          </h2>
-          <p>
-            I use Beli to track every restaurant I visit, but rating meals was
-            always a struggle since I could never remember what I ordered. That
-            friction made me want to interview other users to see if they ran
-            into the same problem.
+      <section class="sc-section" id="research" aria-labelledby="research-title">
+        <div class="shell">
+          <p class="sc-kicker">02 Research</p>
+          <h2 id="research-title" data-reveal>Users forget dish names, skip features they don't understand, and use notes to fill the gaps.</h2>
+          <p class="sc-text" data-reveal>
+            I surveyed five Beli users aged 18 to 30. Three patterns emerged
+            that shaped every design decision that followed.
           </p>
-          <p>
-            To validate whether this friction was widespread, I surveyed five
-            Beli users aged 18–30. Three clear patterns emerged that shaped
-            every design decision that followed.
-          </p>
-          <div class="beli-new-stats" data-reveal>
-            <div class="beli-stat-card">
-              <p class="beli-card-label">User Finding</p>
-              <div class="beli-person-icons" aria-hidden="true">
-                <span
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    width="28"
-                    height="28"
-                  >
-                    <circle cx="12" cy="7" r="4" />
-                    <path
-                      d="M12 13c-5 0-8 2.24-8 5v1h16v-1c0-2.76-3-5-8-5z"
-                    /></svg></span
-                ><span
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    width="28"
-                    height="28"
-                  >
-                    <circle cx="12" cy="7" r="4" />
-                    <path
-                      d="M12 13c-5 0-8 2.24-8 5v1h16v-1c0-2.76-3-5-8-5z"
-                    /></svg></span
-                ><span
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    width="28"
-                    height="28"
-                  >
-                    <circle cx="12" cy="7" r="4" />
-                    <path
-                      d="M12 13c-5 0-8 2.24-8 5v1h16v-1c0-2.76-3-5-8-5z"
-                    /></svg></span
-                ><span
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    width="28"
-                    height="28"
-                  >
-                    <circle cx="12" cy="7" r="4" />
-                    <path
-                      d="M12 13c-5 0-8 2.24-8 5v1h16v-1c0-2.76-3-5-8-5z"
-                    /></svg></span
-                ><span class="icon-person-empty"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    width="28"
-                    height="28"
-                  >
-                    <circle cx="12" cy="7" r="4" />
-                    <path
-                      d="M12 13c-5 0-8 2.24-8 5v1h16v-1c0-2.76-3-5-8-5z"
-                    /></svg
-                ></span>
-              </div>
-              <div class="beli-big-stat">4 out of 5 <em>users</em></div>
-              <p>
-                forget the name of their menu item
-                <strong>at least 50%</strong> of the time when rating a
-                restaurant.
-              </p>
+          <div class="beli-stats" data-reveal>
+            <div>
+              <div class="beli-ico beli-people" aria-hidden="true"><span><svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M12 13c-5 0-8 2.24-8 5v1h16v-1c0-2.76-3-5-8-5z"/></svg></span><span><svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M12 13c-5 0-8 2.24-8 5v1h16v-1c0-2.76-3-5-8-5z"/></svg></span><span><svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M12 13c-5 0-8 2.24-8 5v1h16v-1c0-2.76-3-5-8-5z"/></svg></span><span><svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M12 13c-5 0-8 2.24-8 5v1h16v-1c0-2.76-3-5-8-5z"/></svg></span><span class="off"><svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M12 13c-5 0-8 2.24-8 5v1h16v-1c0-2.76-3-5-8-5z"/></svg></span></div>
+              <p class="beli-label">Recall</p>
+              <p class="beli-figure">4 of 5</p>
+              <p>users forget the name of their menu item at least 50% of the time when rating a restaurant.</p>
             </div>
-            <div class="beli-stat-card">
-              <p class="beli-card-label">Most Commonly Used Features</p>
-              <div class="beli-feature-icon" aria-hidden="true">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  width="36"
-                  height="36"
-                >
-                  <path
-                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
-                    stroke="currentColor"
-                    stroke-width="0"
-                    fill="none"
-                  />
-                  <rect
-                    x="5"
-                    y="5"
-                    width="14"
-                    height="16"
-                    rx="2"
-                    fill="currentColor"
-                    opacity="0.15"
-                  />
-                  <path d="M9 3h6a1 1 0 011 1v1H8V4a1 1 0 011-1z" />
-                  <rect
-                    x="7"
-                    y="8"
-                    width="10"
-                    height="1.5"
-                    rx="0.75"
-                    fill="currentColor"
-                  />
-                  <rect
-                    x="7"
-                    y="11"
-                    width="10"
-                    height="1.5"
-                    rx="0.75"
-                    fill="currentColor"
-                  />
-                  <rect
-                    x="7"
-                    y="14"
-                    width="7"
-                    height="1.5"
-                    rx="0.75"
-                    fill="currentColor"
-                  />
-                  <rect
-                    x="5"
-                    y="5"
-                    width="14"
-                    height="16"
-                    rx="2"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    fill="none"
-                  />
-                </svg>
-              </div>
-              <ol class="beli-feature-list">
-                <li>Add photos</li>
-                <li>Add notes</li>
-                <li>Who did you go with?</li>
-              </ol>
+            <div>
+              <div class="beli-ico beli-circle" aria-hidden="true"><svg viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11h4l2-3h10l2 3h4v15H5z"/><circle cx="16" cy="18" r="4.5"/></svg></div>
+              <p class="beli-label">Most used</p>
+              <p class="beli-figure">Photos</p>
+              <p>Add photos, add notes, and who did you go with? are the features people reach for most.</p>
             </div>
-            <div class="beli-stat-card beli-span-two">
-              <p class="beli-card-label">Least Commonly Used Feature</p>
-              <div class="beli-least-used">
-                <span aria-hidden="true"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    width="32"
-                    height="32"
-                  >
-                    <path
-                      d="M8.1 13.34l2.83-2.83L3.91 3.5a4.01 4.01 0 000 5.66l4.19 4.18zm6.78-1.81c1.53.71 3.68.21 5.27-1.38 1.91-1.91 2.28-4.65.81-6.12-1.46-1.46-4.2-1.1-6.12.81-1.59 1.59-2.09 3.74-1.38 5.27L3.7 19.87l1.41 1.41L12 14.41l6.88 6.88 1.41-1.41L13.41 13l1.47-1.47z"
-                    /></svg
-                ></span>
-                <strong>Add favorite dishes</strong>
-              </div>
-              <p class="beli-least-used-desc">
-                with <strong>80%</strong> of users saying they rarely or never
-                use it, often because they don't have one single favorite dish
-                to add.
-              </p>
+            <div>
+              <div class="beli-ico beli-circle beli-faded" aria-hidden="true"><svg viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 26s-9-5.6-9-12a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.4-9 12-9 12z"/></svg></div>
+              <p class="beli-label">Least used</p>
+              <p class="beli-figure">80%</p>
+              <p>rarely or never add favorite dishes, often because they don't have one single favorite.</p>
             </div>
           </div>
-
-          <div class="quote-grid" data-reveal data-full-only>
+          <div class="beli-quotes" data-reveal>
             <blockquote>
-              "I never understood why Beli put the 'Add Photos' option at the
-              bottom of the screen. It's the feature I use the most, and it's
-              hard to find."<cite>— Beli User</cite>
+              "I never understood why Beli put the 'Add Photos' option at the bottom of the screen. It's the feature I use the most, and it's hard to find."
+              <cite>Beli user</cite>
             </blockquote>
             <blockquote>
-              "Sometimes you just don't have one favorite dish, and other times
-              you may have many, so I usually just include all of my options in
-              the notes section."<cite>— Beli User</cite>
+              "Sometimes you just don't have one favorite dish, and other times you may have many, so I usually just include all of my options in the notes section."
+              <cite>Beli user</cite>
             </blockquote>
           </div>
         </div>
       </section>
 
       <!-- ── DEFINE ── -->
-      <section class="case-section" id="define" aria-labelledby="define-title">
-        <div class="shell narrative-block">
-          <p class="section-kicker">03 Define</p>
-          <h2 id="define-title">
-            The real problem: a disconnect between how users think and how the
-            app works.
-          </h2>
-          <p>
+      <section class="sc-section" id="define" aria-labelledby="define-title">
+        <div class="shell">
+          <p class="sc-kicker">03 Define</p>
+          <h2 id="define-title" data-reveal>The real problem: a disconnect between how users think and how the app works.</h2>
+          <p class="sc-text" data-reveal>
             Users didn't log reviews the way the app expected. They forgot dish
-            names, skipped features like Favorite Dishes and Tags, and instead
-            wrote everything in Notes to avoid extra steps. This wasn't a
-            feature gap, it was a
-            <strong
-              >mismatch between the app's mental model and the user's actual
-              post-meal behavior.</strong
-            >
+            names, skipped features like Favorite Dishes and Tags, and wrote
+            everything in Notes to avoid extra steps. This wasn't a feature gap.
+            It was a <mark class="sc-hl">mismatch between the app's mental model and the user's actual post-meal behavior</mark>.
           </p>
-          <p>These findings shaped two core objectives:</p>
-          <div class="problem-grid">
-            <article class="insight-card interactive-card" data-reveal>
-              <h3>Enhancing Menu Search</h3>
-              <p>
-                How can we implement a system that lets users find and log
-                dishes without relying on recall?
-              </p>
-            </article>
-            <article class="insight-card interactive-card" data-reveal>
-              <h3>Streamlining the Rating Experience</h3>
-              <p>
-                How can we reorganize the rating screen to reduce cognitive
-                overload and make the review process feel fast, not tedious?
-              </p>
-            </article>
-          </div>
+          <p class="sc-text" data-reveal>These findings shaped two objectives:</p>
+          <ol class="plana-metrics" data-reveal>
+            <li>
+              <span class="pn" aria-hidden="true">01</span>
+              <div><strong>Enhancing menu search</strong><span>How can users find and log dishes without relying on recall?</span></div>
+            </li>
+            <li>
+              <span class="pn" aria-hidden="true">02</span>
+              <div><strong>Streamlining the rating experience</strong><span>How can the rating screen reduce cognitive overload so a review feels fast, not tedious?</span></div>
+            </li>
+          </ol>
         </div>
       </section>
 
       <!-- ── IDEATION ── -->
-      <section
-        class="case-section"
-        id="ideation"
-        aria-labelledby="ideation-title"
-      >
-        <div class="shell narrative-block">
-          <p class="section-kicker">04 Ideation</p>
-          <h2 id="ideation-title">
-            Weighing three approaches to menu discovery.
-          </h2>
-          <p>
-            I narrowed the menu search problem to three possible approaches,
-            drawing from features on everyday platforms that unconsciously made
-            recall easier and integrated smoothly into the flow: an autofill
-            suggestion bar, a searchable menu, and an @ symbol shortcut to
-            trigger search.
+      <section class="sc-section" id="ideation" aria-labelledby="ideation-title">
+        <div class="shell">
+          <p class="sc-kicker">04 Ideation</p>
+          <h2 id="ideation-title" data-reveal>Weighing three approaches to menu discovery.</h2>
+          <p class="sc-text" data-reveal>
+            I narrowed the menu search problem to three approaches, drawing from
+            everyday platforms that make recall easier without breaking the
+            flow: an autofill suggestion bar, a searchable menu, and an @ symbol
+            shortcut to trigger search.
           </p>
-          <div class="pros-cons-table" data-reveal data-full-only>
-            <table>
-              <thead>
-                <tr>
-                  <th>Approach</th>
-                  <th>✓ Strengths</th>
-                  <th>✗ Weaknesses</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="feature-name">Autofill /<br />Suggestion Bar</td>
-                  <td>
-                    <ul>
-                      <li>Helps find menu items given a small keyword</li>
-                      <li>Seamlessly adds items into the notes field</li>
-                      <li>Familiar from iMessage and other apps</li>
-                    </ul>
-                  </td>
-                  <td>
-                    <ul>
-                      <li>Multiple items may start with the same word</li>
-                      <li>Won't help if user can't remember any keywords</li>
-                      <li>May autofill words unrelated to the menu item</li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="feature-name">Menu Search</td>
-                  <td>
-                    <ul>
-                      <li>Browse the full menu without remembering names</li>
-                      <li>Keyword search also available</li>
-                      <li>Categories make items easy to find</li>
-                    </ul>
-                  </td>
-                  <td>
-                    <ul>
-                      <li>More taps: search → scroll → click on item</li>
-                      <li>Must repeat the process for each item added</li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="feature-name">@ Symbol to<br />Trigger Search</td>
-                  <td>
-                    <ul>
-                      <li>Signals intent to autofill a menu item</li>
-                      <li>Familiar from @-mentioning on other platforms</li>
-                    </ul>
-                  </td>
-                  <td>
-                    <ul>
-                      <li>
-                        May confuse users who want to type the symbol literally
-                      </li>
-                      <li>Users may not discover it activates search</li>
-                    </ul>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <p>
-            I decided to <strong>combine autofill and menu search.</strong>
-            If users remember part of a dish, autofill helps them find it
-            instantly. If they don't remember anything, they can browse the full
-            menu by category. Together, these features make finding dishes easy
-            without introducing a new interaction pattern.
+          <div class="beli-approaches" data-reveal>
+            <div class="beli-approach">
+              <div class="beli-approach-head"><span class="beli-approach-ico" aria-hidden="true"><svg viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="9" width="24" height="14" rx="3"/><path d="M9 14h2M13 14h2M17 14h2M21 14h2M10 18h12"/></svg></span><h3>Autofill suggestion bar</h3></div>
+              <p class="beli-sub">Strengths</p>
+              <ul><li>Finds items from a small keyword</li><li>Adds items to notes seamlessly</li><li>Familiar from iMessage</li></ul>
+              <p class="beli-sub">Weaknesses</p>
+              <ul><li>Items may share a first word</li><li>No help if no keywords are remembered</li></ul>
+            </div>
+            <div class="beli-approach">
+              <div class="beli-approach-head"><span class="beli-approach-ico" aria-hidden="true"><svg viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="14" cy="14" r="7"/><path d="M19.5 19.5L27 27"/></svg></span><h3>Menu search</h3></div>
+              <p class="beli-sub">Strengths</p>
+              <ul><li>Browse the menu without knowing names</li><li>Keyword search is also available</li><li>Categories make items easy to find</li></ul>
+              <p class="beli-sub">Weaknesses</p>
+              <ul><li>More taps for each item</li><li>The process repeats for every item</li></ul>
+            </div>
+            <div class="beli-approach">
+              <div class="beli-approach-head"><span class="beli-approach-ico" aria-hidden="true"><svg viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="4"/><path d="M20 16v2a3 3 0 0 0 6 0v-2a10 10 0 1 0-4 8"/></svg></span><h3>@ symbol shortcut</h3></div>
+              <p class="beli-sub">Strengths</p>
+              <ul><li>Signals intent to autofill</li><li>Familiar from @-mentions</li></ul>
+              <p class="beli-sub">Weaknesses</p>
+              <ul><li>May confuse users typing @</li><li>Hard to discover as a search trigger</li></ul>
+            </div>
+            </div>
+          <p class="sc-text" data-reveal>
+            <strong>I combined autofill and menu search.</strong> If users
+            remember part of a dish, autofill finds it instantly. If they
+            remember nothing, they can browse the full menu by category.
+            Together they make finding dishes easy without introducing a new
+            interaction pattern.
           </p>
         </div>
       </section>
 
       <!-- ── DESIGN ── -->
-      <section class="case-section" id="design" aria-labelledby="design-title">
-        <div class="shell narrative-block">
-          <p class="section-kicker">05 Design</p>
-          <h2 id="design-title">Creating a Streamlined Experience</h2>
-          <p>
-            Autofill happens directly in line as users type their notes, so
-            logging a dish never breaks their flow. If they'd rather browse,
-            people can also jump straight into menu search and find the exact
-            dish without ever leaving the app.
-          </p>
-          <div class="image-grid two-up" data-reveal>
-            <figure class="mockup-figure">
-              <img
-                src="../assets/beli/autofill-mockup.png"
-                alt="Notes field with autofill suggesting a menu item inline as the user types, plus a Search Menu button"
-                loading="lazy"
-              />
-              <figcaption>
-                Autofill suggests the matching menu item inline as the user
-                types in the notes field, with a "Search Menu" shortcut right
-                there if they want more options.
-              </figcaption>
+      <section class="sc-section" id="design" aria-labelledby="design-title">
+        <div class="shell">
+          <p class="sc-kicker">05 Design</p>
+          <h2 id="design-title" data-reveal>Creating a streamlined experience.</h2>
+          <dl class="sc-rows" data-reveal>
+            <div>
+              <dt>Autofill and menu search</dt>
+              <dd>Autofill happens in line as users type their notes, so logging a dish never breaks their flow. If they'd rather browse, they can jump straight into menu search and find the exact dish without leaving the app.</dd>
+            </div>
+          </dl>
+          <div class="plana-gifs beli-duo" data-reveal>
+            <figure>
+              <img src="../assets/beli/autofill-mockup.png" alt="Notes field with autofill suggesting a menu item inline as the user types, plus a Search Menu button" loading="lazy" />
+              <figcaption>Autofill suggests the matching dish inline, with a Search Menu shortcut right there.</figcaption>
             </figure>
-            <figure class="mockup-figure">
-              <img
-                src="../assets/beli/menu-search-mockup.png"
-                alt="Menu search screen listing dishes from Sup Noodle Bar, searchable and filterable by category"
-                loading="lazy"
-              />
-              <figcaption>
-                A dedicated menu search screen lets users scroll or search the
-                full restaurant menu to find their dish, without ever leaving
-                the app.
-              </figcaption>
+            <figure>
+              <img src="../assets/beli/menu-search-mockup.png" alt="Menu search screen listing dishes from Sup Noodle Bar, searchable and filterable by category" loading="lazy" />
+              <figcaption>A dedicated screen lets users scroll or search the full menu by category.</figcaption>
             </figure>
           </div>
-          <div class="sketch-pair">
-            <p>
-              The original rating page gave every field, photos, tags, notes,
-              equal visual weight, so users had to hunt for what they were
-              looking for. I restructured the information architecture around
-              usage, bringing "Add Photos" to the top and grouping related
-              fields together.
-            </p>
-            <figure class="artifact-card wide-artifact" data-reveal>
-              <img
-                src="../assets/beli/before-after.webp"
-                alt="Before and after Beli rating page redesign"
-                loading="lazy"
-              />
-            </figure>
-          </div>
-          <div class="sketch-pair" data-full-only>
-            <p>
-              To avoid feature overload on the rating page, I used
-              <strong>progressive disclosure</strong> to break the review
-              process into sequential steps so each screen asks the user to do
-              one thing at a time.
-            </p>
-            <figure class="artifact-card wide-artifact" data-reveal>
-              <img
-                src="../assets/beli/progressive-disclosure-flow.png"
-                alt="Redesigned Beli rating flow shown step by step: a quick overall reaction, notes and photos with inline autofill, and a head-to-head comparison ranking before the final score"
-                loading="lazy"
-              />
-              <figcaption>
-                <strong>Redesigned rating flow:</strong> users first give a
-                quick overall reaction, then land on notes and photos, where
-                autofill suggests the dish inline as they type. From there, a
-                comparison against another restaurant sets their final ranking.
-              </figcaption>
-            </figure>
-          </div>
+
+          <dl class="sc-rows plana-step" data-reveal>
+            <div>
+              <dt>Restructured rating page</dt>
+              <dd>The original page gave every field, photos, tags and notes, equal visual weight, so users had to hunt for what they wanted. I restructured it around usage, bringing "Add Photos" to the top and grouping related fields together.</dd>
+            </div>
+          </dl>
+          <figure class="sc-figure beli-wide" data-reveal>
+            <img src="../assets/beli/before-after.webp" alt="Before and after Beli rating page redesign" loading="lazy" />
+            <figcaption>The rating page, before and after.</figcaption>
+          </figure>
+
+          <dl class="sc-rows plana-step" data-reveal>
+            <div>
+              <dt>Progressive disclosure</dt>
+              <dd>To avoid feature overload, I broke the review into sequential steps so each screen asks for one thing at a time: a quick overall reaction, then notes and photos with inline autofill, then a comparison against another restaurant that sets the final ranking.</dd>
+            </div>
+          </dl>
+          <figure class="sc-figure beli-wide" data-reveal>
+            <img src="../assets/beli/progressive-disclosure-flow.png" alt="Redesigned Beli rating flow shown step by step: a quick overall reaction, notes and photos with inline autofill, and a head-to-head comparison ranking before the final score" loading="lazy" />
+            <figcaption>The redesigned rating flow, one step at a time.</figcaption>
+          </figure>
         </div>
       </section>
 
-      <!-- ── POSSIBLE IMPACT ── -->
-      <section class="case-section" id="impact" aria-labelledby="impact-title">
-        <div class="shell narrative-block">
-          <p class="section-kicker">06 Possible Impact</p>
-          <h2 id="impact-title">Metrics I would test to measure success.</h2>
-          <p>
-            If these features shipped, the questions I'd want to answer are
-            whether the changes actually reduced the friction users reported and
-            whether the new features got used.
+      <!-- ── METRICS ── -->
+      <section class="sc-section" id="metrics" aria-labelledby="metrics-title">
+        <div class="shell">
+          <p class="sc-kicker">06 Metrics</p>
+          <h2 id="metrics-title" data-reveal>What I'd test to measure success.</h2>
+          <p class="sc-text" data-reveal>
+            If these features shipped, I'd want to know whether they reduced the
+            friction users reported and whether the new features got used.
           </p>
-          <div class="possible-impact-grid" data-reveal>
-            <div class="possible-impact-card">
-              <span class="impact-metric-label">Review speed</span>
-              <p>Average time to complete a review from open to submit</p>
-            </div>
-            <div class="possible-impact-card">
-              <span class="impact-metric-label">Autofill adoption</span>
-              <p>
-                Rate at which users accept autofill suggestions when they appear
-              </p>
-            </div>
-            <div class="possible-impact-card">
-              <span class="impact-metric-label">Menu search usage</span>
-              <p>
-                Percentage of reviews that include a menu search interaction
-              </p>
-            </div>
-            <div class="possible-impact-card">
-              <span class="impact-metric-label">Ease rating</span>
-              <p>
-                Self-reported difficulty survey after completing a review
-              </p>
-            </div>
-          </div>
+          <ol class="plana-metrics" data-reveal>
+            <li><span class="pn" aria-hidden="true">01</span><div><strong>Review speed</strong><span>Average time to complete a review, from open to submit.</span></div></li>
+            <li><span class="pn" aria-hidden="true">02</span><div><strong>Autofill adoption</strong><span>How often users accept autofill suggestions when they appear.</span></div></li>
+            <li><span class="pn" aria-hidden="true">03</span><div><strong>Menu search usage</strong><span>Percentage of reviews that include a menu search interaction.</span></div></li>
+            <li><span class="pn" aria-hidden="true">04</span><div><strong>Ease rating</strong><span>Self-reported difficulty in a survey after completing a review.</span></div></li>
+          </ol>
         </div>
       </section>
 
       <!-- ── REFLECTION ── -->
-      <section
-        class="case-section"
-        id="reflection"
-        aria-labelledby="reflection-title"
-      >
-        <div class="shell narrative-block reflection-block">
-          <p class="section-kicker">07 Reflection</p>
-          <h2 id="reflection-title">My Takeaways</h2>
-          <p>
+      <section class="sc-section" id="reflection" aria-labelledby="reflection-title">
+        <div class="shell">
+          <p class="sc-kicker">07 Reflection</p>
+          <h2 id="reflection-title" data-reveal>My takeaways.</h2>
+          <p class="sc-text" data-reveal>
             This project taught me how much friction can hide in a seemingly
-            small interaction. The core problem sounds minor, but it exposed a
-            deeper misunderstanding between how the app was structured and how
-            people actually behave after a meal.
+            small interaction. It exposed a deeper mismatch between how the app
+            was structured and how people actually behave after a meal.
           </p>
-          <p>
-            It also showed me how simple features integrated directly into the
-            existing flow, paired with minor visual changes that emphasize
-            hierarchy, can change the whole experience.
+          <p class="sc-text" data-reveal>
+            It also showed me how simple features built into the existing flow,
+            paired with small visual changes that emphasize hierarchy, can
+            change the whole experience.
           </p>
           <a class="text-arrow back-top" href="#top">back to top ↑</a>
         </div>
@@ -701,28 +334,31 @@
           <h2 id="other-work-title">View Other Work</h2>
           <div class="other-work-grid three-cards">
             <a class="small-work-card" href="../project-dialogue/" data-reveal>
-              <img
+              <div class="work-image"><img
                 src="../assets/portfolio/thumb-dialogue.png"
                 alt="Project Dialogue case study"
                 loading="lazy"
-              />
-              <h3>Project Dialogue | Social Media Platform</h3>
+              /></div>
+              <h3>Project Dialogue</h3>
+              <p class="small-work-type">Social Media Platform</p>
             </a>
             <a class="small-work-card" href="../sorcea-labs/" data-reveal>
-              <img
+              <div class="work-image"><img
                 src="../assets/portfolio/thumb-sorcea.png"
                 alt="Sorcea Labs case study"
                 loading="lazy"
-              />
-              <h3>Sorcea Labs | Skincare Market Insights Platform</h3>
+              /></div>
+              <h3>Sorcea Labs</h3>
+              <p class="small-work-type">Skincare Market Intelligence Website</p>
             </a>
             <a class="small-work-card" href="../plana/" data-reveal>
-              <img
+              <div class="work-image"><img
                 src="../assets/portfolio/thumb-plana.png"
                 alt="Plana event planning app mockups"
                 loading="lazy"
-              />
-              <h3>Plana | Event Planning App</h3>
+              /></div>
+              <h3>Plana</h3>
+              <p class="small-work-type">Event Planning App</p>
             </a>
           </div>
         </div>
@@ -765,5 +401,36 @@
         </div>
       </div>
     </footer>
+  <script>
+      (function () {
+        var marks = document.querySelectorAll(".sc-hl");
+        if (marks.length) {
+          var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+          if (reduce || !("IntersectionObserver" in window)) {
+            marks.forEach(function (m) { m.classList.add("is-on"); });
+          } else {
+            var io = new IntersectionObserver(function (entries) {
+              entries.forEach(function (e) {
+                if (e.isIntersecting) { e.target.classList.add("is-on"); io.unobserve(e.target); }
+              });
+            }, { threshold: 0.9, rootMargin: "0px 0px -12% 0px" });
+            marks.forEach(function (m) { io.observe(m); });
+          }
+        }
+        var rail = document.getElementById("sc-rail");
+        if (!rail) return;
+        var links = Array.prototype.slice.call(rail.querySelectorAll("a"));
+        var secs = links.map(function (a) { return document.getElementById(a.dataset.sec); });
+        function spy() {
+          var probe = window.innerHeight * 0.4, idx = -1;
+          secs.forEach(function (el, i) { if (el && el.getBoundingClientRect().top <= probe) idx = i; });
+          links.forEach(function (a, i) { a.classList.toggle("is-active", i === idx); });
+          rail.classList.toggle("is-on", window.scrollY > window.innerHeight * 0.5);
+        }
+        window.addEventListener("scroll", spy, { passive: true });
+        window.addEventListener("resize", spy);
+        spy();
+      })();
+    </script>
   </body>
 </html>
