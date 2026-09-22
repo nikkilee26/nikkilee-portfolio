@@ -69,7 +69,7 @@
           <dl class="sc-meta" data-reveal>
             <div><dt>Role</dt><dd>UI/UX Designer</dd></div>
             <div><dt>Team</dt><dd>Founder, 1 UI/UX Designer, 3 Engineers</dd></div>
-            <div><dt>Timeline</dt><dd>Feb 2026 to present · Work in progress</dd></div>
+            <div><dt>Timeline</dt><dd>Feb 2026 - present</dd></div>
             <div><dt>Tools</dt><dd>Figma, Claude Design</dd></div>
           </dl>
           <dl class="sc-meta sc-meta-drove" data-reveal>
@@ -460,7 +460,7 @@
           var probe = window.innerHeight * 0.4, idx = -1;
           secs.forEach(function (el, i) { if (el && el.getBoundingClientRect().top <= probe) idx = i; });
           links.forEach(function (a, i) { a.classList.toggle("is-active", i === idx); });
-          rail.classList.toggle("is-on", window.scrollY > window.innerHeight * 0.5);
+          rail.classList.toggle("is-on", idx >= 0);
         }
         window.addEventListener("scroll", spy, { passive: true });
         window.addEventListener("resize", spy);

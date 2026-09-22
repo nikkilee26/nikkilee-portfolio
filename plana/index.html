@@ -58,9 +58,9 @@
             confirmed invite.
           </p>
           <dl class="sc-meta" data-reveal>
-            <div><dt>Role</dt><dd>UX/UI Designer</dd></div>
+            <div><dt>Role</dt><dd>UI/UX Designer</dd></div>
             <div><dt>Team</dt><dd>Solo</dd></div>
-            <div><dt>Timeline</dt><dd>2026 · 1 month</dd></div>
+            <div><dt>Timeline</dt><dd>Jul - Aug 2026</dd></div>
             <div><dt>Tools</dt><dd>Figma, Claude, Canva</dd></div>
           </dl>
           <dl class="sc-meta sc-meta-drove" data-reveal>
@@ -290,7 +290,7 @@
       >
         <div class="shell">
           <h2 id="other-work-title">View Other Work</h2>
-          <div class="other-work-grid three-cards">
+          <div class="other-work-grid">
             <a class="small-work-card" href="../sorcea-labs/" data-reveal>
               <div class="work-image"><img
                 src="../assets/portfolio/thumb-sorcea.png"
@@ -308,15 +308,6 @@
               /></div>
               <h3>Beli</h3>
               <p class="small-work-type">Food Rating App</p>
-            </a>
-            <a class="small-work-card" href="../project-dialogue/" data-reveal>
-              <div class="work-image"><img
-                src="../assets/portfolio/thumb-dialogue.png"
-                alt="Project Dialogue case study"
-                loading="lazy"
-              /></div>
-              <h3>Project Dialogue</h3>
-              <p class="small-work-type">Social Media Platform</p>
             </a>
           </div>
         </div>
@@ -383,7 +374,7 @@
           var probe = window.innerHeight * 0.4, idx = -1;
           secs.forEach(function (el, i) { if (el && el.getBoundingClientRect().top <= probe) idx = i; });
           links.forEach(function (a, i) { a.classList.toggle("is-active", i === idx); });
-          rail.classList.toggle("is-on", window.scrollY > window.innerHeight * 0.5);
+          rail.classList.toggle("is-on", idx >= 0);
         }
         window.addEventListener("scroll", spy, { passive: true });
         window.addEventListener("resize", spy);

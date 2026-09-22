@@ -574,7 +574,7 @@
 /* Play hover-only video thumbnails when the project card is hovered or focused */
 (function () {
   document.querySelectorAll('video[data-hover-play]').forEach(function (video) {
-    var card = video.closest('a, .work-card');
+    var card = video.closest('.work-image, a, .work-card');
     if (!card) return;
     function start() { var p = video.play(); if (p && p.catch) p.catch(function () {}); }
     function stop() { video.pause(); video.currentTime = 0; }

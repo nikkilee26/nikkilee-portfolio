@@ -70,7 +70,7 @@
           <dl class="sc-meta" data-reveal>
             <div><dt>Role</dt><dd>UI/UX Designer</dd></div>
             <div><dt>Team</dt><dd>3 Designers, 1 Developer, 2 Co-Founders*</dd></div>
-            <div><dt>Timeline</dt><dd>2026 · Independent redesign</dd></div>
+            <div><dt>Timeline</dt><dd>Aug - Sep 2026 (Independent redesign)</dd></div>
             <div><dt>Tools</dt><dd>Figma, Claude</dd></div>
           </dl>
           <dl class="sc-meta sc-meta-drove" data-reveal>
@@ -96,7 +96,7 @@
             </div>
           </dl>
           <p class="sc-note" data-reveal>
-            *Team from my 2025 internship at Sorcea. This is a revised redesign.
+            *Team from my 2025 internship at Sorcea. This is a revisited, independent redesign.
           </p>
         </div>
       </section>
@@ -128,7 +128,7 @@
             href="https://claude.ai/artifact/7Vore5Pg1SudF85JyvY7hy"
             target="_blank"
             rel="noreferrer"
-            >Explore the interactive prototype →</a
+            >Interactive prototype →</a
           >
         </div>
       </section>
@@ -327,16 +327,7 @@
       >
         <div class="shell">
           <h2 id="other-work-title">View Other Work</h2>
-          <div class="other-work-grid three-cards">
-            <a class="small-work-card" href="../project-dialogue/" data-reveal>
-              <div class="work-image"><img
-                src="../assets/portfolio/thumb-dialogue.png"
-                alt="Project Dialogue case study"
-                loading="lazy"
-              /></div>
-              <h3>Project Dialogue</h3>
-              <p class="small-work-type">Social Media Platform</p>
-            </a>
+          <div class="other-work-grid">
             <a class="small-work-card" href="../plana/" data-reveal>
               <div class="work-image"><img
                 src="../assets/portfolio/thumb-plana.png"
@@ -440,7 +431,7 @@
           var probe = window.innerHeight * 0.4, idx = -1;
           secs.forEach(function (el, i) { if (el && el.getBoundingClientRect().top <= probe) idx = i; });
           links.forEach(function (a, i) { a.classList.toggle("is-active", i === idx); });
-          rail.classList.toggle("is-on", window.scrollY > window.innerHeight * 0.5);
+          rail.classList.toggle("is-on", idx >= 0);
         }
         window.addEventListener("scroll", spy, { passive: true });
         window.addEventListener("resize", spy);
