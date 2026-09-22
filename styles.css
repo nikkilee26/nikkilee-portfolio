@@ -1639,6 +1639,16 @@ button {
   margin-top: 0;
 }
 
+.about-inline-link {
+  color: var(--plum);
+  transition: color 200ms ease;
+}
+
+.about-inline-link:hover,
+.about-inline-link:focus-visible {
+  color: var(--plum-deep);
+}
+
 .focus-cloud {
   display: flex;
   flex-wrap: wrap;
