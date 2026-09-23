@@ -681,43 +681,68 @@ button {
   background: rgba(255, 253, 244, 0.82);
   color: var(--forest-dark);
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
-.nav-toggle-line,
-.nav-toggle-line::before,
-.nav-toggle-line::after {
+/* Hamburger → X. The span is the middle bar; the pseudo-elements are the
+   top and bottom bars, positioned from the same center so they meet
+   symmetrically. The top/bottom bars slide to center, then rotate. */
+.nav-toggle-line {
+  position: relative;
   display: block;
   width: 18px;
   height: 2px;
-  margin-inline: auto;
   border-radius: 999px;
   background: currentColor;
-  transition: transform 220ms var(--ease), opacity 220ms var(--ease);
+  transition: background-color 0s linear 120ms;
 }
 
 .nav-toggle-line::before,
 .nav-toggle-line::after {
   content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transition: top 120ms ease 120ms, transform 160ms var(--ease) 0ms;
 }
 
 .nav-toggle-line::before {
-  transform: translateY(-6px);
+  top: -6px;
 }
 
 .nav-toggle-line::after {
-  transform: translateY(4px);
+  top: 6px;
 }
 
 .nav-toggle[aria-expanded="true"] .nav-toggle-line {
-  transform: rotate(45deg);
+  background-color: transparent;
+  transition-delay: 0ms;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-line::before,
+.nav-toggle[aria-expanded="true"] .nav-toggle-line::after {
+  top: 0;
+  transition: top 120ms ease 0ms, transform 160ms var(--ease) 120ms;
 }
 
 .nav-toggle[aria-expanded="true"] .nav-toggle-line::before {
-  transform: translateY(0) rotate(90deg);
+  transform: rotate(45deg);
 }
 
 .nav-toggle[aria-expanded="true"] .nav-toggle-line::after {
-  opacity: 0;
+  transform: rotate(-45deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-toggle-line,
+  .nav-toggle-line::before,
+  .nav-toggle-line::after {
+    transition: none !important;
+  }
 }
 
 /* Shared elements */
@@ -2553,10 +2578,12 @@ button {
     padding: 12px;
     border-radius: 24px;
     background: rgba(43, 96, 66, 0.95);
-    transform: translateY(-12px);
+    transform: translateY(-8px) scale(0.97);
+    transform-origin: calc(100% - 30px) 0;
     opacity: 0;
+    visibility: hidden;
     pointer-events: none;
-    transition: opacity 200ms ease, transform 200ms var(--ease);
+    transition: opacity 140ms ease, transform 220ms var(--ease), visibility 0s linear 220ms;
   }
 
   .chic-page .nav-pill {
@@ -2567,13 +2594,23 @@ button {
 
   .nav-pill.is-open {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
+    visibility: visible;
     pointer-events: auto;
+    transition: opacity 140ms ease, transform 220ms var(--ease), visibility 0s linear 0s;
   }
 
   .nav-pill a {
     padding: 13px 18px;
     text-align: center;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Touch: no hover lift, which sticks after a tap and makes links jump. */
+  .nav-pill a:hover,
+  .nav-pill a:focus-visible,
+  .nav-pill a.is-active {
+    transform: none !important;
   }
 
   .hero-copy h1 {
@@ -11249,5 +11286,58 @@ body.dialogue-page {
 @media (max-width: 520px) {
   .sc-tour-labels {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ── Plana mood board: desktop keeps three columns (tallest image in the
+   middle); DOM order is mid, left, right so phones can flow it into two
+   columns: [4, 5] and [3, 1, 2]. The left column is reversed on desktop
+   so it still reads 3 above 5. ── */
+.plana-mood .mood-left  { grid-column: 1; grid-row: 1; display: flex; flex-direction: column-reverse; }
+.plana-mood .mood-mid   { grid-column: 2; grid-row: 1; }
+.plana-mood .mood-right { grid-column: 3; grid-row: 1; }
+@media (max-width: 640px) {
+  .plana-mood {
+    display: block;
+    column-count: 2;
+    column-gap: 10px;
+  }
+  .plana-mood > div,
+  .plana-mood .mood-left {
+    display: contents;
+  }
+  .plana-mood img {
+    margin-bottom: 10px;
+    break-inside: avoid;
+  }
+  .plana-mood .mood-left img:last-child {
+    break-before: column;
+    -webkit-column-break-before: always;
+  }
+}
+
+/* ── Plana wireframes on phones: the two similar-height screens (poll,
+   home) share a row at exactly the same height; the shorter one sits
+   centered on its own row above them. ── */
+@media (max-width: 720px) {
+  .plana-shots.plana-wireframes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .plana-shots.plana-wireframes img {
+    width: 100%;
+    max-width: none;
+    height: auto;
+    max-height: none;
+  }
+  .plana-shots.plana-wireframes img:first-child {
+    grid-column: 1 / -1;
+    width: calc(50% - 5px);
+  }
+  .plana-shots.plana-wireframes img:nth-child(2),
+  .plana-shots.plana-wireframes img:nth-child(3) {
+    aspect-ratio: 601 / 1152;
+    object-fit: cover;
+    object-position: top;
   }
 }
