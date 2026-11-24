@@ -35,3 +35,5 @@ Upload the contents of this folder to a GitHub repository. In the repository set
 ## Editing notes
 
 The site has no build step. You can edit the HTML, CSS, and JavaScript directly. Keep the same folder structure so links like `assets/portfolio/thumb-sorcea.png` and `sorcea-labs/index.html` continue to work.
+
+Portfolio website updates
